@@ -1,0 +1,15 @@
+<populations>
+  <population Name="IssachariParty" Load="Merge">
+    <group Name="Creatures" Style="pickeach" Load="Merge">
+      <object Chance="40" Number="1" Blueprint="Gnarf_Issachari Water Guardian" />
+      <object Chance="10" Number="1-2" Blueprint="Gnarf_Issachari Sniper" />
+      <object Chance="3" Number="1" Blueprint="Gnarf_Issachari Elder" />
+    </group>
+  </population>
+  <population Name="LairOwners_Saltdunes" Load="Merge">
+    <group Name="Options" Load="Merge" Style="pickone">
+      <object Weight="2" Blueprint="Gnarf_Issachari Elder" />
+      <object Weight="2" Blueprint="Gnarf_Issachari Sniper" />
+    </group>
+  </population>
+</populations>

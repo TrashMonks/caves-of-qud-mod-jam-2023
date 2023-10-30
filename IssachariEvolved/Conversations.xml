@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+  <!-- some flavor writing from Caelyn - thanks! -->
+  <conversation ID="Gnarf_Water">
+    <node ID="Start">
+      <text>
+        No sudden moves.~
+        Keep your eyes moving, lack-salt.~
+        I don't think we have business.~
+        I can see through you. I can't walk through you. Stand aside.~
+        Am I being halted for a reason?~
+        Accosted by another lack-salt in need of attention.~
+        Remove your attention from me before I am forced to remove it for you.
+      </text>
+      <choice GotoID="End">Live and drink.</choice>
+    </node>
+  </conversation>  
+  
+  <conversation ID="Gnarf_Sniper">
+    <node ID="Start">
+      <text>
+        One shot, one kill? That's quitter talk.~
+        As many slugs as it takes, from as far as I can get.~
+        You're a bit close, lack-salt.~
+        Back up, lack-salt.~
+        Not a fan of company.~
+        Should you be over here? Must you be?~
+        Don't spoil my campsite.~
+        I didn't train for this so I could listen to strangers talk.
+      </text>
+      <choice GotoID="End">Live and drink.</choice>
+    </node>   
+  </conversation>
+
+  <conversation ID="Gnarf_Elder">
+    <node ID="Start">
+      <text>
+        Eh.~
+        Hm?~
+        Mm.~
+        Hmph.~
+        Ugh.~
+        Go away.~
+        Trundle on, salt-pup.~
+        Rather not talk.~
+        Leave me be, pup.~
+        You're courting a slap from my staff.
+      </text>
+      <choice GotoID="End">Live and drink.</choice>
+    </node>
+  </conversation>
+</conversations>

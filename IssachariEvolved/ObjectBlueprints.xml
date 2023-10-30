@@ -1,0 +1,67 @@
+<objects>
+  <object Name="Gnarf_Issachari Sniper" Inherits="BaseIssachari">
+    <part Name="Render" DisplayName="Issachari sniper" RenderString="w" Tile="gnarf/iss1.png" ColorString="&amp;Y" DetailColor="R" />
+    <stat Name="Hitpoints" Value="25" />
+    <stat Name="Level" Value="10" />
+    <part Name="Description" Short="Assiduous care and linseed oil protect the rifle from rust and salt. Moon-bright eyes trace the horizon against the tragedy of spying a dawnglider a second too late." />
+    <inventoryobject Blueprint="Sniper Rifle" Number="1" />
+    <inventoryobject Blueprint="Lead Slug" Number="8" />
+    <inventoryobject Blueprint="Dagger" Number="1" />
+    <tag Name="DynamicObjectsTable:Saltdunes_Creatures" />
+    <tag Name="DynamicObjectsTable:Saltdunes_Creatures:Weight" Value="1" />
+    <part Name="ConversationScript" ConversationID="Gnarf_Sniper" />
+  </object>
+  <object Name="Gnarf_Issachari Water Guardian" Inherits="BaseIssachari">
+    <part Name="Render" DisplayName="Issachari water guardian" RenderString="w" Tile="gnarf/iss2.png" ColorString="&amp;Y" DetailColor="R" />
+    <part Name="Description" Short="Crimson passementerie marks the careworn youth as the bearer of a sacred charge. =pronouns.Subjective= =verb:whisper:afterpronoun= a mnemonic older than the salt beneath =pronouns.possessive= boots." />
+    <stat Name="Hitpoints" Value="25" />
+    <stat Name="Level" Value="10" />
+    <mutation Name="FreezingHands" Level="4" />
+    <part Name="RandomMutations" Mental="1d1" MentalLevel="1d3" />
+    <inventoryobject Blueprint="Waterskin" Number="1" />
+    <tag Name="DynamicObjectsTable:Saltdunes_Creatures" />
+    <tag Name="DynamicObjectsTable:Saltdunes_Creatures:Weight" Value="1" />
+    <part Name="ConversationScript" ConversationID="Gnarf_Water" />
+  </object>
+  <object Name="Gnarf_Issachari Elder" Inherits="BaseIssachari">
+    <part Name="Render" DisplayName="Issachari elder" RenderString="w" Tile="gnarf/iss3.png" ColorString="&amp;Y" DetailColor="R" />
+    <part Name="Description" Short="The patterns etched into =pronouns.possessive= face and hands speak to decades beneath the pitiless sun, but those stitched into =pronouns.possessive= shawl speak to millenia. =pronouns.Subjective= =verb:expect:afterpronoun= little to change." />
+    <stat Name="Hitpoints" Value="35" />
+    <stat Name="Level" Value="12" />
+    <skill Name="SingleWeaponFighting" />
+    <skill Name="SingleWeaponFighting_OpportuneAttacks" />
+    <skill Name="SingleWeaponFighting_PenetratingStrikes" />
+    <skill Name="Cudgel" />
+    <skill Name="Cudgel_Bludgeon" />
+    <skill Name="Cudgel_Conk" />
+    <skill Name="Cudgel_Expertise" />
+    <skill Name="Persuasion" />
+    <skill Name="Persuasion_InspiringPresence" />
+    <skill Name="Persuasion_MenacingStare" />
+    <skill Name="Persuasion_Berate" />
+    <stat Name="Ego" Boost="1" />
+    <part Name="RandomMutations" Mental="1d1" MentalLevel="1d4" />
+    <inventoryobject Blueprint="Gnarf_Issachari Rod" Number="1" />
+    <tag Name="DynamicObjectsTable:Saltdunes_Creatures" />
+    <tag Name="DynamicObjectsTable:Saltdunes_Creatures:Weight" Value="1" />
+    <part Name="ConversationScript" ConversationID="Gnarf_Elder" />
+  </object>
+  <object Name="Gnarf_Issachari Rod" Inherits="BaseCudgel">
+    <part Name="Render" DisplayName="{{issachari|Issachari}} walking stick" Tile="Items/sw_cudgel_11.bmp" ColorString="&amp;R" />
+    <part Name="MeleeWeapon" PenBonus="1" MaxStrengthBonus="3" BaseDamage="2d4" Skill="Cudgel" Stat="Strength" />
+    <part Name="Commerce" Value="40" />
+    <part Name="Description" Short="The razor-clawed eons have long since stripped away this tall metal rod's chrome sheen, but the scored and salt-eaten metal beneath holds strong. Atop the staff, a much younger device shines a bright crimson boast: a shocking rebuke to any who dare approach its venerable mount." />
+    <part Name="Metal" />
+    <tag Name="Tier" Value="2" />
+    <part Name="Physics" Weight="9" UsesTwoSlots="true" />    
+    <tag Name="SwingSound" Value="Sounds/Melee/cudgels/sfx_melee_cudgel_oneHanded_metal_swing" />
+    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_metal_blocked" />
+    <part Name="EnergyCellSocket" SlotType="EnergyCell" />
+    <part Name="AIOffensiveEnergyCellReload" />
+    <part Name="AIPassiveEnergyCellReload" />
+    <part Name="StunOnHit" ChargeUse="10" Chance="25" Duration="1d4" />
+    <part Name="TinkerItem" Bits="001" CanDisassemble="true" CanBuild="true" />
+    <tag Name="Mods" Value="WeaponMods,CommonMods,ElectronicsMods" />
+    <tag Name="NoSparkingQuest" />    
+  </object>  
+</objects>
