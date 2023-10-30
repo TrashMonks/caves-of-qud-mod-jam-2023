@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+    <object Name="cpnk_smoke_SultanOfSmoke" Inherits="NPC">
+        <part Name="Description" Short="It's difficult to make out =pronouns.possessive= appearance through the smoke that surrounds =pronouns.objective=" />
+        <part Name="Render" DisplayName="{{Y-y|Tahokia, Sultan of Smoke}}" Tile="Assets_Content_Textures_Creatures_sw_stranger1.bmp" ColorString="&amp;C" DetailColor="c"/>
+        <stat Name="Level" Value="8" />
+        <stat Name="AV" Value="2" />
+        <stat Name="DV" Value="2" />
+        <stat Name="Hitpoints" Value="150" />
+        <part Name="Brain" Hostile="false" Wanders="false" Factions="Consortium-100" />
+        <stat Name="Strength" sValue="15,1d4" />
+        <stat Name="Agility" sValue="15,1d4" />
+        <stat Name="Toughness" sValue="15,1d4" />
+        <stat Name="Intelligence" sValue="15,1d4" />
+        <stat Name="Willpower" sValue="15,1d4" />
+        <stat Name="Ego" sValue="24,1d4" />
+        <tag Name="RandomGender" Value="elverson,males,females,collective,female,male,nonspecific,nonspecific,neuter,neuter,neuter" />
+        <part Name="ConversationScript" ConversationID="cpnk_smoke_SultanOfSmoke" />
+        <tag Name="Genotype" Value="Mutated Human" />
+        <tag Name="NoHateFactions" Value="Mechanimists,Merchants,Pariahs,Resheph" />
+        <inventoryobject Blueprint="Dried Vanta Petals" Number="3-9" />
+        <inventoryobject Blueprint="Fermented Yuckwheat Stem" Number="2-7" />
+        <inventoryobject Blueprint="Fermented Yondercane" Number="1-5" />
+        <inventoryobject Blueprint="Freeze-Dried Hoarshrooms" Number="2-6" />
+        <inventoryobject Blueprint="Dried Lah Petals" Number="5-15" />
+        <inventoryobject Blueprint="Crushed Grave Moss" Number="4-7" />
+        <inventoryobject Blueprint="Torch" Number="3-6" />
+        <inventoryobject Blueprint="Giant Beetle Corpse" Number="0-1" />
+        <inventoryobject Blueprint="SoupPhial" Number="0-1" />
+        <mutation Name="FlamingHands" Level="4" BodyPartType="Hands" />
+        <mutation Name="Kindle" Level="4" />
+        <part Name="Interesting" />
+        <xtagGrammar Proper="true" />
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    </object>
+</objects>

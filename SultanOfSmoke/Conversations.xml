@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+    <conversation ID="cpnk_smoke_SultanOfSmoke">
+        <start ID="Welcome">
+            <text>
+                I'm movin' different.~
+                This shit ain't nothin' to me, man.~
+                I'm a dog. I'm bitin' the force bubbles in the bath.~
+                We smokin' Primordial Sludge.~
+                Smokin' that Coiled Lamb stilt dweller Hot and Spiny deluxe smooth peridot scratcher skunk bubba kush.~
+                We smokin' beetlebum.~
+                They must have amnesia, they forgot that I'm Sultan~
+                I'm sick in the head~
+                Reach for my neck, you'll get turned into an example
+            </text>
+            <choice GotoID="Fr">Are you really a Sultan?</choice>
+            <choice GotoID="gamesonyophone">What do you sell?</choice>
+            <choice GotoID="End">Live and smoke, Sultan.</choice>
+        </start>
+        <node ID="Fr" Inherits="Welcome">
+            No, but the name sounds cool.
+        </node>
+        <node ID="gamesonyophone" Inherits="Welcome">
+            All kinds of grassy consumables. We straight gassin cutting straight to the bricks ha ha. I'm nice with it. Ha ha. I have no sympathy. I live for this shit. 
+        </node>
+    </conversation>
+</conversations>
