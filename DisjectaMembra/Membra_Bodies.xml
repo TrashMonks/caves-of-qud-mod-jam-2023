@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bodies>
+<bodyparttypevariants>
+    <bodyparttypevariant VariantOf="Roots" Type="Veins" />
+    <bodyparttypevariant VariantOf="Face" Type="Sensory Ganglia" Plural="true" />
+</bodyparttypevariants>
+<anatomies>
+ <anatomy Name="Headless">
+      <part Type="Back" />
+      <part Type="Arm" Laterality="Right">
+        <part Type="Hand" Laterality="Right" SupportsDependent="Hands" />
+      </part>
+      <part Type="Arm" Laterality="Left">
+        <part Type="Hand" Laterality="Left" SupportsDependent="Hands" />
+      </part>
+      <part Type="Missile Weapon" Laterality="Right" />
+      <part Type="Missile Weapon" Laterality="Left" />
+      <part Type="Hands" DependsOn="Hands" />
+      <part Type="Feet" />
+    </anatomy>
+ <anatomy Name="Polyp">
+      <part Type="Central Mass" >
+       <part Type="Sensory Ganglia" />
+      </part>
+      <part Type="Breadth" />
+      <part Type="Veins" />
+    </anatomy>
+</anatomies>
+</bodies>

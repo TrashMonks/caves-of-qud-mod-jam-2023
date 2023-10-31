@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+
+<conversation ID="WanderingPreacher" >
+    <node ID="Start">
+      <text>
+Those who walk beneath the sign of Resheph will be safe from the Walking-Wounds!~
+Paint the history of the Coiled Lamb upon your armor! Perhaps the Gibbering Maw will fall silent before you?~
+Carve the history of the Cerulean Ghost into your weapons! Perhaps the Unblinking Eye will avert its baleful gaze?~
+You must have heard the stories, have you not? Villages blessed with unprecedented vitality, severed limbs regrowing on their own, miraculous recoveries from all manner of illness and infection. The stories each begin on such a joyful note, and yet they all end in naught but bloodshed and tragedy.~
+No, I could not believe them myself when I first saw it either. Corpses that writhe like worms, growing mouths to feed on the living and hands to reach for their flesh? I would&apos;ve dismissed it as an Arconauts&apos; campfire-tale, had I not seen it with my very own eyes.~
+Unprecedented vitality and miraculous recovery from wounds, this is the first sign. A fondness for the scent of blood and a propensity towards eerie fits of rage, this is the second sign. The third sign appears only after death, but you do not want to stick around to witness it.~
+Once, the strange reports of walking wounds and writhing veins were a rarity in these lands. These days, they are growing more and more common. I worry, what will remain of Qud if it continues on like this?~
+Peace and health in the light of the Star, wanderer. May you stay safe from the writhing flesh, and may your own corpse be still when your own time comes.~
+All of Qud is a holy place, for it was here where Resheph walked amidst his people to heal the sick and the wounded. I weep to see it so ravaged by the writhing beneath the skin.~
+A thousand years, can you imagine? A thousand years since Resheph stood victorious against the horrors of the Gyre. This is what we have gathered here to commemorate.~
+We have not gathered in celebration. It&apos;s been a thousand years since Resheph healed the plagues of the Gyre and redeemed this doomed world, yes, but this is a solemn occasion. And the strange reports of hearts and brains outliving the bodies that held them are only making it more solemn indeed.~
+I worry about myself too, sometimes. At times, I swear I can feel something writhe beneath my skin.~
+I never expected so many of our order to come here, to commemorate. Qud is a holy place, yes, but it is also dangerous.~
+Sometimes I worry about the members of our Order who arrived here before me. Many in their midst have reported strange visions and revelations, but just as many have cut all contact and journeyed into the deeper ruins or the Tomb.~
+I don&apos;t believe I&apos;ll be staying in Qud for long once the commemorations are over. There&apos;s something strange going on with those who arrived before me, a frenzied tone to their sermons and an eerie hunger in their eyes.~
+Last night, I dreamt that I could sculpt my flesh like clay and that I shaped it into a thousand little men. It was such a sad dream, though I do not know why.~
+Last night, I dreamt that I woke up in a thousand beds at once. My head still hurts when I think about it.~
+Last night, I dreamt that the ruin I was sleeping in suddenly fell apart into sand. A scary thought, that a thing that&apos;s lasted a thousand years like that could fall apart so suddenly.~
+The bandages that our Order carries have always been a holy symbol as much as a practical aid, but as of recent they&apos;ve grown much more useful than I ever could have expected. Spilling blood unwisely can bring out all manners of things in people, these days.~
+Some amidst our Order have taken to claiming that the writhing masses of hands and teeth hold a special animosity towards art, and that they gather around statues to deface them. I&apos;m not sure I believe them, but there is still so much we do not know about those awful things that writhe beneath the skin.~
+It always lifts my spirit to see the little shrines that the people of this land have raised to Resheph. Makes me sick to think that someone or something is out there, defacing them into gruesome displays.~
+In the highest Tomb of the Spindle, they say, Resheph lies buried in a sarcophagus of burnished azzurum. The schismatics of the Sisterhood claim that all Histories are false and that the true History is written on the walls of these Tombs. I don&apos;t believe them, of course, but if it is true, I wonder what secrets the Tomb of Resheph could hold.~
+The thing about this strange new illness that perplexes me the most is how there doesn&apos;t seem to be any clear vector to it at all. There&apos;s nothing in the water, nothing in the air, and nothing in the wounds of those bit by the wretched things it leaves behind. One man dies peacefully while another&apos;s corpse splits open into a thousand horrors, with no rhyme or reason to it.~
+The only commonality that we have been able to identify between the various outbreaks of the writhing flesh is as follows: The stronger the being, be it in flesh or in mind, the worse the horrors that will crawl from its corpse once it perishes.~
+      </text>
+ <choice GotoID="Second">*sit and listen for a while.*</choice>
+      <choice GotoID="End">Live and drink, pilgrim.</choice>
+    </node>
+     <node ID="Third">
+      <text>
+Those who walk beneath the sign of Resheph will be safe from the Walking-Wounds!~
+Paint the history of the Coiled Lamb upon your armor! Perhaps the Gibbering Maw will fall silent before you?~
+Carve the history of the Cerulean Ghost into your weapons! Perhaps the Unblinking Eye will avert its baleful gaze?~
+You must have heard the stories, have you not? Villages blessed with unprecedented vitality, severed limbs regrowing on their own, miraculous recoveries from all manner of illness and infection. The stories each begin on such a joyful note, and yet they all end in naught but bloodshed and tragedy.~
+No, I could not believe them myself when I first saw it either. Corpses that writhe like worms, growing mouths to feed on the living and hands to reach for their flesh? I would&apos;ve dismissed it as an Arconauts&apos; campfire-tale, had I not seen it with my very own eyes.~
+Unprecedented vitality and miraculous recovery from wounds, this is the first sign. A fondness for the scent of blood and a propensity towards eerie fits of rage, this is the second sign. The third sign appears only after death, but you do not want to stick around to witness it.~
+Once, the strange reports of walking wounds and writhing veins were a rarity in these lands. These days, they are growing more and more common. I worry, what will remain of Qud if it continues on like this?~
+Peace and health in the light of the Star, wanderer. May you stay safe from the writhing flesh, and may your own corpse be still when your own time comes.~
+All of Qud is a holy place, for it was here where Resheph walked amidst his people to heal the sick and the wounded. I weep to see it so ravaged by the writhing beneath the skin.~
+A thousand years, can you imagine? A thousand years since Resheph stood victorious against the horrors of the Gyre. This is what we have gathered here to commemorate.~
+We have not gathered in celebration. It&apos;s been a thousand years since Resheph healed the plagues of the Gyre and redeemed this doomed world, yes, but this is a solemn occasion. And the strange reports of hearts and brains outliving the bodies that held them are only making it more solemn indeed.~
+I worry about myself too, sometimes. At times, I swear I can feel something writhe beneath my skin.~
+I never expected so many of our order to come here, to commemorate. Qud is a holy place, yes, but it is also dangerous.~
+Sometimes I worry about the members of our Order who arrived here before me. Many in their midst have reported strange visions and revelations, but just as many have cut all contact and journeyed into the deeper ruins or the Tomb.~
+I don&apos;t believe I&apos;ll be staying in Qud for long once the commemorations are over. There&apos;s something strange going on with those who arrived before me, a frenzied tone to their sermons and an eerie hunger in their eyes.~
+Last night, I dreamt that I could sculpt my flesh like clay and that I shaped it into a thousand little men. It was such a sad dream, though I do not know why.~
+Last night, I dreamt that I woke up in a thousand beds at once. My head still hurts when I think about it.~
+Last night, I dreamt that the ruin I was sleeping in suddenly fell apart into sand. A scary thought, that a thing that&apos;s lasted a thousand years like that could fall apart so suddenly.~
+The bandages that our Order carries have always been a holy symbol as much as a practical aid, but as of recent they&apos;ve grown much more useful than I ever could have expected. Spilling blood unwisely can bring out all manners of things in people, these days.~
+Some amidst our Order have taken to claiming that the writhing masses of hands and teeth hold a special animosity towards art, and that they gather around statues to deface them. I&apos;m not sure I believe them, but there is still so much we do not know about those awful things that writhe beneath the skin.~
+It always lifts my spirit to see the little shrines that the people of this land have raised to Resheph. Makes me sick to think that someone or something is out there, defacing them into gruesome displays.~
+In the highest Tomb of the Spindle, they say, Resheph lies buried in a sarcophagus of burnished azzurum. The schismatics of the Sisterhood claim that all Histories are false and that the true History is written on the walls of these Tombs. I don&apos;t believe them, of course, but if it is true, I wonder what secrets the Tomb of Resheph could hold.~
+The thing about this strange new illness that perplexes me the most is how there doesn&apos;t seem to be any clear vector to it at all. There&apos;s nothing in the water, nothing in the air, and nothing in the wounds of those bit by the wretched things it leaves behind. One man dies peacefully while another&apos;s corpse splits open into a thousand horrors, with no rhyme or reason to it.~
+The only commonality that we have been able to identify between the various outbreaks of the writhing flesh is as follows: The stronger the being, be it in flesh or in mind, the worse the horrors that will crawl from its corpse once it perishes.~
+      </text>
+ <choice GotoID="Second">*sit and listen for a while.*</choice>
+      <choice GotoID="End">Live and drink, pilgrim.</choice>
+    </node>
+    <node ID="Second">
+      <text>
+Those who walk beneath the sign of Resheph will be safe from the Walking-Wounds!~
+Paint the history of the Coiled Lamb upon your armor! Perhaps the Gibbering Maw will fall silent before you?~
+Carve the history of the Cerulean Ghost into your weapons! Perhaps the Unblinking Eye will avert its baleful gaze?~
+You must have heard the stories, have you not? Villages blessed with unprecedented vitality, severed limbs regrowing on their own, miraculous recoveries from all manner of illness and infection. The stories each begin on such a joyful note, and yet they all end in naught but bloodshed and tragedy.~
+No, I could not believe them myself when I first saw it either. Corpses that writhe like worms, growing mouths to feed on the living and hands to reach for their flesh? I would&apos;ve dismissed it as an Arconauts&apos; campfire-tale, had I not seen it with my very own eyes.~
+Unprecedented vitality and miraculous recovery from wounds, this is the first sign. A fondness for the scent of blood and a propensity towards eerie fits of rage, this is the second sign. The third sign appears only after death, but you do not want to stick around to witness it.~
+Once, the strange reports of walking wounds and writhing veins were a rarity in these lands. These days, they are growing more and more common. I worry, what will remain of Qud if it continues on like this?~
+Peace and health in the light of the Star, wanderer. May you stay safe from the writhing flesh, and may your own corpse be still when your own time comes.~
+All of Qud is a holy place, for it was here where Resheph walked amidst his people to heal the sick and the wounded. I weep to see it so ravaged by the writhing beneath the skin.~
+A thousand years, can you imagine? A thousand years since Resheph stood victorious against the horrors of the Gyre. This is what we have gathered here to commemorate.~
+We have not gathered in celebration. It&apos;s been a thousand years since Resheph healed the plagues of the Gyre and redeemed this doomed world, yes, but this is a solemn occasion. And the strange reports of hearts and brains outliving the bodies that held them are only making it more solemn indeed.~
+I worry about myself too, sometimes. At times, I swear I can feel something writhe beneath my skin.~
+I never expected so many of our order to come here, to commemorate. Qud is a holy place, yes, but it is also dangerous.~
+Sometimes I worry about the members of our Order who arrived here before me. Many in their midst have reported strange visions and revelations, but just as many have cut all contact and journeyed into the deeper ruins or the Tomb.~
+I don&apos;t believe I&apos;ll be staying in Qud for long once the commemorations are over. There&apos;s something strange going on with those who arrived before me, a frenzied tone to their sermons and an eerie hunger in their eyes.~
+Last night, I dreamt that I could sculpt my flesh like clay and that I shaped it into a thousand little men. It was such a sad dream, though I do not know why.~
+Last night, I dreamt that I woke up in a thousand beds at once. My head still hurts when I think about it.~
+Last night, I dreamt that the ruin I was sleeping in suddenly fell apart into sand. A scary thought, that a thing that&apos;s lasted a thousand years like that could fall apart so suddenly.~
+The bandages that our Order carries have always been a holy symbol as much as a practical aid, but as of recent they&apos;ve grown much more useful than I ever could have expected. Spilling blood unwisely can bring out all manners of things in people, these days.~
+Some amidst our Order have taken to claiming that the writhing masses of hands and teeth hold a special animosity towards art, and that they gather around statues to deface them. I&apos;m not sure I believe them, but there is still so much we do not know about those awful things that writhe beneath the skin.~
+It always lifts my spirit to see the little shrines that the people of this land have raised to Resheph. Makes me sick to think that someone or something is out there, defacing them into gruesome displays.~
+In the highest Tomb of the Spindle, they say, Resheph lies buried in a sarcophagus of burnished azzurum. The schismatics of the Sisterhood claim that all Histories are false and that the true History is written on the walls of these Tombs. I don&apos;t believe them, of course, but if it is true, I wonder what secrets the Tomb of Resheph could hold.~
+The thing about this strange new illness that perplexes me the most is how there doesn&apos;t seem to be any clear vector to it at all. There&apos;s nothing in the water, nothing in the air, and nothing in the wounds of those bit by the wretched things it leaves behind. One man dies peacefully while another&apos;s corpse splits open into a thousand horrors, with no rhyme or reason to it.~
+The only commonality that we have been able to identify between the various outbreaks of the writhing flesh is as follows: The stronger the being, be it in flesh or in mind, the worse the horrors that will crawl from its corpse once it perishes.~
+      </text>
+ <choice GotoID="Third">*sit and listen for a while.*</choice>
+      <choice GotoID="End">Live and drink, pilgrim.</choice>
+    </node>
+  </conversation>
+
+<conversation ID="WaywardPreacher" >
+    <node ID="Start">
+      <text>
+The others of my Order cast me out for my conduct with the knife. I only wished to show them the truth that they had been hiding beneath their very skin all along.~
+The others of my Order call me a heretic for the holiness of my sermons. They are too blinded by the lie of Resheph&apos;s glorious victory to understand the truth of his sacrifice.~
+Have you ever opened your mind to the dreams of a truly ripened Brain? Oh the sights that hide in our brains when they are finally free from the skull!~
+Have you felt it yourself as well? It writhes so gently beneath the skin.~
+Can you hear it? The elegy that the blood sings to the organs as it rouses them awake.~
+Peace and health in the light of the Star. Peace and health in the light of the Star. Peace and health in the light of the...~
+The Lamb has been coiled so tightly. To think it has taken this long for it all to come unwound.~
+He is called the Ghost-in-Cerulean, you see, but what does he haunt? What transgressions and what great matters unresolved keep him bound to this ragged world?~
+Throughout my time, I have seen so many shuffle off their mortal coil. Why is it called a mortal coil, I cannot help but to wonder? The Coiled Lamb was not mortal, or at least, he perished not.~
+Beneath the coldest roots of the Spindle, they say, lies a grave so vast that all the buried folk of Qud could fit into it a thousand times over, with plenty of room to spare. And yet, it is filled to the roof with the bones of the victims of the Gyre. How many was it truly that died under Resheph&apos;s watch? Because the numbers don&apos;t add up. If that many people had truly died, there would not be anyone left to populate Qud.~
+It is said that behind the great Door to the Tomb of the Eaters, a vast and ceaseless machine grinds the bones of the dead to ash. All of our history tells us that the Eaters had the utmost respect for their dead, and that the Tomb was a place of silence before the coming of the Gyre. How many must the corpses have been for such an edifice to be necessary? And how beautiful was Resheph&apos;s victory truly, if all he succeeded to defend was a mountain of corpses waiting to be churned to dust?~
+I have been told that Great Golgotha was first built as a dumping-ground for the plague-dead of the Gyre, one thousand years ago. If this is true, why does it still overflow with sickness and filth? All of our stories tell us what Resheph was the greatest of healers, but how many must there have been that Resheph could not heal?~
+The old world is dying, you see, and what we are seeing before us is the new world struggling to be born. Things have learnt to walk that ought to thrum beneath the skin. Now is the time of monsters.~
+Have you ever sat down and listened, truly listened, to what the Gibbering Maw has to say? Oh the stories it tells, believe me!~
+Amidst surgeons, Resheph is known as “He of the thousand graves.” And yet, every surgeon knows that Resheph was never buried. This is the first paradox of our Order.~
+It is not a disease, despite what the others would tell you. Say a man builds a house and says that it will last a hundred years. When the hundredth year comes, and the house falls to rubble, the man who says that the house died of a disease is the one who we laugh at.~
+      </text>
+ <choice GotoID="Second">*sit and listen for a while.*</choice>
+      <choice GotoID="End">Live and drink, pilgrim.</choice>
+    </node>
+     <node ID="Second">
+      <text>
+The others of my Order cast me out for my conduct with the knife. I only wished to show them the truth that they had been hiding beneath their very skin all along.~
+The others of my Order call me a heretic for the holiness of my sermons. They are too blinded by the lie of Resheph&apos;s glorious victory to understand the truth of his sacrifice.~
+Have you ever opened your mind to the dreams of a truly ripened Brain? Oh the sights that hide in our brains when they are finally free from the skull!~
+Have you felt it yourself as well? It writhes so gently beneath the skin.~
+Can you hear it? The elegy that the blood sings to the organs as it rouses them awake.~
+Peace and health in the light of the Star. Peace and health in the light of the Star. Peace and health in the light of the...~
+The Lamb has been coiled so tightly. To think it has taken this long for it all to come unwound.~
+He is called the Ghost-in-Cerulean, you see, but what does he haunt? What transgressions and what great matters unresolved keep him bound to this ragged world?~
+Throughout my time, I have seen so many shuffle off their mortal coil. Why is it called a mortal coil, I cannot help but to wonder? The Coiled Lamb was not mortal, or at least, he perished not.~
+Beneath the coldest roots of the Spindle, they say, lies a grave so vast that all the buried folk of Qud could fit into it a thousand times over, with plenty of room to spare. And yet, it is filled to the roof with the bones of the victims of the Gyre. How many was it truly that died under Resheph&apos;s watch? Because the numbers don&apos;t add up. If that many people had truly died, there would not be anyone left to populate Qud.~
+It is said that behind the great Door to the Tomb of the Eaters, a vast and ceaseless machine grinds the bones of the dead to ash. All of our history tells us that the Eaters had the utmost respect for their dead, and that the Tomb was a place of silence before the coming of the Gyre. How many must the corpses have been for such an edifice to be necessary? And how beautiful was Resheph&apos;s victory truly, if all he succeeded to defend was a mountain of corpses waiting to be churned to dust?~
+I have been told that Great Golgotha was first built as a dumping-ground for the plague-dead of the Gyre, one thousand years ago. If this is true, why does it still overflow with sickness and filth? All of our stories tell us what Resheph was the greatest of healers, but how many must there have been that Resheph could not heal?~
+The old world is dying, you see, and what we are seeing before us is the new world struggling to be born. Things have learnt to walk that ought to thrum beneath the skin. Now is the time of monsters.~
+Have you ever sat down and listened, truly listened, to what the Gibbering Maw has to say? Oh the stories it tells, believe me!~
+Amidst surgeons, Resheph is known as “He of the thousand graves.” And yet, every surgeon knows that Resheph was never buried. This is the first paradox of our Order.~
+It is not a disease, despite what the others would tell you. Say a man builds a house and says that it will last a hundred years. When the hundredth year comes, and the house falls to rubble, the man who says that the house died of a disease is the one who we laugh at.~
+      </text>
+ <choice GotoID="Third">*sit and listen for a while.*</choice>
+      <choice GotoID="End">Live and drink, pilgrim.</choice>
+    </node>
+     <node ID="Third">
+      <text>
+The others of my Order cast me out for my conduct with the knife. I only wished to show them the truth that they had been hiding beneath their very skin all along.~
+The others of my Order call me a heretic for the holiness of my sermons. They are too blinded by the lie of Resheph&apos;s glorious victory to understand the truth of his sacrifice.~
+Have you ever opened your mind to the dreams of a truly ripened Brain? Oh the sights that hide in our brains when they are finally free from the skull!~
+Have you felt it yourself as well? It writhes so gently beneath the skin.~
+Can you hear it? The elegy that the blood sings to the organs as it rouses them awake.~
+Peace and health in the light of the Star. Peace and health in the light of the Star. Peace and health in the light of the...~
+The Lamb has been coiled so tightly. To think it has taken this long for it all to come unwound.~
+He is called the Ghost-in-Cerulean, you see, but what does he haunt? What transgressions and what great matters unresolved keep him bound to this ragged world?~
+Throughout my time, I have seen so many shuffle off their mortal coil. Why is it called a mortal coil, I cannot help but to wonder? The Coiled Lamb was not mortal, or at least, he perished not.~
+Beneath the coldest roots of the Spindle, they say, lies a grave so vast that all the buried folk of Qud could fit into it a thousand times over, with plenty of room to spare. And yet, it is filled to the roof with the bones of the victims of the Gyre. How many was it truly that died under Resheph&apos;s watch? Because the numbers don&apos;t add up. If that many people had truly died, there would not be anyone left to populate Qud.~
+It is said that behind the great Door to the Tomb of the Eaters, a vast and ceaseless machine grinds the bones of the dead to ash. All of our history tells us that the Eaters had the utmost respect for their dead, and that the Tomb was a place of silence before the coming of the Gyre. How many must the corpses have been for such an edifice to be necessary? And how beautiful was Resheph&apos;s victory truly, if all he succeeded to defend was a mountain of corpses waiting to be churned to dust?~
+I have been told that Great Golgotha was first built as a dumping-ground for the plague-dead of the Gyre, one thousand years ago. If this is true, why does it still overflow with sickness and filth? All of our stories tell us what Resheph was the greatest of healers, but how many must there have been that Resheph could not heal?~
+The old world is dying, you see, and what we are seeing before us is the new world struggling to be born. Things have learnt to walk that ought to thrum beneath the skin. Now is the time of monsters.~
+Have you ever sat down and listened, truly listened, to what the Gibbering Maw has to say? Oh the stories it tells, believe me!~
+Amidst surgeons, Resheph is known as “He of the thousand graves.” And yet, every surgeon knows that Resheph was never buried. This is the first paradox of our Order.~
+It is not a disease, despite what the others would tell you. Say a man builds a house and says that it will last a hundred years. When the hundredth year comes, and the house falls to rubble, the man who says that the house died of a disease is the one who we laugh at.~
+      </text>
+ <choice GotoID="Second">*sit and listen for a while.*</choice>
+      <choice GotoID="End">Live and drink, pilgrim.</choice>
+    </node>
+  </conversation>
+
+<conversation ID="Viscera" >
+    <node ID="Start">
+      <text>
+I lament that things are as they are and
+I renounce the broken Face
+And renounce the voice
+Because I cannot hope to live again
+Consequently I lament, having to construct something
+About which to lament~
+...You could have taken them all and ran...
+...You could have led them all to safety...
+...But you knew what I had done to the others, and I could not let you...~
+...You could have protected them, better than I could...
+...You could have held your shining aegis to the heavens, and all would be...
+...But you were always the protective one, even of your...~
+...If only I had done as you said from the start...
+...If only I had let you speak your truth to them, as you said you would speak your truth to them, none of this would ever have...
+...But I was afraid, of the way you stirred the hearts of the people like I myself never could. I was so certain you would...~
+...You could have done a much better job at it than I&apos;ll have, to be honest...
+...Mine will last, what, a thousand years, but yours, yours could&apos;ve...
+...I regret the most, I think. You were always so trusting, all the way to the...~
+...I know the four of you can&apos;t hear me, but I apologize...
+...This will likely be the last time you hear me speak. After this, I will be...
+...I don&apos;t know what makes me feel worse, knowing you four can&apos;t understand me, or wishing you could so that you&apos;d know how deeply I have failed...~
+My nerves are bad tonight. Yes, bad. Stay with me.
+Speak to me. Why do you never speak. Speak.
+What are you thinking of? What thinking? What?
+I never know what you are thinking. Think.~
+Her heart is at Ezra, and her Mark
+Over her heart. After the event
+I wept. I promised a &apos;new start.&apos;
+She made no comment. Why did she resent?~
+I left them twisting, turning below;
+There were no more faces and the world was dark,
+Damp, jagged, like an old man&apos;s mouth drivelling, beyond
+repair,
+Or the toothed gullet of an aged shark.~
+The new years walk, restoring
+Through a bright cloud of tears, the years, restoring
+With a new flesh the ancient shape. Redeem
+The time. Redeem
+The unread vision in the higher dream~
+O my people, what have I done unto thee.~
+O my people... O my people... O my people...~
+May the judgement not be too heavy upon us.~
+...forgive me...~
+...please, forgive me...~
+...forgive me, please...~
+I could not save them... I could not save them all...~
+They will be born into a world without things like me. Perhaps they will venerate me. Perhaps they will raise monuments in my name.~
+It will not last forever, of course. I lack the skill to make it last forever. Sooner or later, it will all come apart. But this is all I can give them.~
+You know I have seen the way that the blood clouds in the waterglass whenever you raise it to your lips. I know you have seen the way my hands shake whenever I lay them on the stiffened legs of the people. You know you have the full right to resent me, after that I did to the others. I wish you would just let me heal you, as you healed me in Susa.~
+Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.~
+      </text>
+ <choice GotoID="Second">*sit and listen for a while.*</choice>
+      <choice GotoID="End">Live and drink, whatever it is that you are.</choice>
+    </node>
+     <node ID="Third">
+      <text>
+I lament that things are as they are and
+I renounce the broken Face
+And renounce the voice
+Because I cannot hope to live again
+Consequently I lament, having to construct something
+About which to lament~
+...You could have taken them all and ran...
+...You could have led them all to safety...
+...But you knew what I had done to the others, and I could not let you...~
+...You could have protected them, better than I could...
+...You could have held your shining aegis to the heavens, and all would be...
+...But you were always the protective one, even of your...~
+...If only I had done as you said from the start...
+...If only I had let you speak your truth to them, as you said you would speak your truth to them, none of this would ever have...
+...But I was afraid, of the way you stirred the hearts of the people like I myself never could. I was so certain you would...~
+...You could have done a much better job at it than I&apos;ll have, to be honest...
+...Mine will last, what, a thousand years, but yours, yours could&apos;ve...
+...I regret the most, I think. You were always so trusting, all the way to the...~
+...I know the four of you can&apos;t hear me, but I apologize...
+...This will likely be the last time you hear me speak. After this, I will be...
+...I don&apos;t know what makes me feel worse, knowing you four can&apos;t understand me, or wishing you could so that you&apos;d know how deeply I have failed...~
+My nerves are bad tonight. Yes, bad. Stay with me.
+Speak to me. Why do you never speak. Speak.
+What are you thinking of? What thinking? What?
+I never know what you are thinking. Think.~
+Her heart is at Ezra, and her Mark
+Over her heart. After the event
+I wept. I promised a &apos;new start.&apos;
+She made no comment. Why did she resent?~
+I left them twisting, turning below;
+There were no more faces and the world was dark,
+Damp, jagged, like an old man&apos;s mouth drivelling, beyond
+repair,
+Or the toothed gullet of an aged shark.~
+The new years walk, restoring
+Through a bright cloud of tears, the years, restoring
+With a new flesh the ancient shape. Redeem
+The time. Redeem
+The unread vision in the higher dream~
+O my people, what have I done unto thee.~
+O my people... O my people... O my people...~
+May the judgement not be too heavy upon us.~
+...forgive me...~
+...please, forgive me...~
+...forgive me, please...~
+I could not save them... I could not save them all...~
+They will be born into a world without things like me. Perhaps they will venerate me. Perhaps they will raise monuments in my name.~
+It will not last forever, of course. I lack the skill to make it last forever. Sooner or later, it will all come apart. But this is all I can give them.~
+You know I have seen the way that the blood clouds in the waterglass whenever you raise it to your lips. I know you have seen the way my hands shake whenever I lay them on the stiffened legs of the people. You know you have the full right to resent me, after that I did to the others. I wish you would just let me heal you, as you healed me in Susa.~
+Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.~
+      </text>
+ <choice GotoID="Second">*sit and listen for a while.*</choice>
+      <choice GotoID="End">Live and drink, whatever it is that you are.</choice>
+    </node>
+     <node ID="Second">
+      <text>
+I lament that things are as they are and
+I renounce the broken Face
+And renounce the voice
+Because I cannot hope to live again
+Consequently I lament, having to construct something
+About which to lament~
+...You could have taken them all and ran...
+...You could have led them all to safety...
+...But you knew what I had done to the others, and I could not let you...~
+...You could have protected them, better than I could...
+...You could have held your shining aegis to the heavens, and all would be...
+...But you were always the protective one, even of your...~
+...If only I had done as you said from the start...
+...If only I had let you speak your truth to them, as you said you would speak your truth to them, none of this would ever have...
+...But I was afraid, of the way you stirred the hearts of the people like I myself never could. I was so certain you would...~
+...You could have done a much better job at it than I&apos;ll have, to be honest...
+...Mine will last, what, a thousand years, but yours, yours could&apos;ve...
+...I regret the most, I think. You were always so trusting, all the way to the...~
+...I know the four of you can&apos;t hear me, but I apologize...
+...This will likely be the last time you hear me speak. After this, I will be...
+...I don&apos;t know what makes me feel worse, knowing you four can&apos;t understand me, or wishing you could so that you&apos;d know how deeply I have failed...~
+My nerves are bad tonight. Yes, bad. Stay with me.
+Speak to me. Why do you never speak. Speak.
+What are you thinking of? What thinking? What?
+I never know what you are thinking. Think.~
+Her heart is at Ezra, and her Mark
+Over her heart. After the event
+I wept. I promised a &apos;new start.&apos;
+She made no comment. Why did she resent?~
+I left them twisting, turning below;
+There were no more faces and the world was dark,
+Damp, jagged, like an old man&apos;s mouth drivelling, beyond
+repair,
+Or the toothed gullet of an aged shark.~
+The new years walk, restoring
+Through a bright cloud of tears, the years, restoring
+With a new flesh the ancient shape. Redeem
+The time. Redeem
+The unread vision in the higher dream~
+O my people, what have I done unto thee.~
+O my people... O my people... O my people...~
+May the judgement not be too heavy upon us.~
+...forgive me...~
+...please, forgive me...~
+...forgive me, please...~
+I could not save them... I could not save them all...~
+They will be born into a world without things like me. Perhaps they will venerate me. Perhaps they will raise monuments in my name.~
+It will not last forever, of course. I lack the skill to make it last forever. Sooner or later, it will all come apart. But this is all I can give them.~
+You know I have seen the way that the blood clouds in the waterglass whenever you raise it to your lips. I know you have seen the way my hands shake whenever I lay them on the stiffened legs of the people. You know you have the full right to resent me, after that I did to the others. I wish you would just let me heal you, as you healed me in Susa.~
+Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.~
+      </text>
+ <choice GotoID="Third">*sit and listen for a while.*</choice>
+      <choice GotoID="End">Live and drink, whatever it is that you are.</choice>
+    </node>
+  </conversation>
+
+<conversation ID="PsychicViscera" >
+    <node ID="Start">
+     <text>{{emote|*whatever this being is, it gives no indication of understanding you*}}.</text>
+      <text IfHavePart="Telepathy" Priority="1">
+I lament that things are as they are and
+I renounce the broken Face
+And renounce the voice
+Because I cannot hope to live again
+Consequently I lament, having to construct something
+About which to lament~
+...You could have taken them all and ran...
+...You could have led them all to safety...
+...But you knew what I had done to the others, and I could not let you...~
+...You could have protected them, better than I could...
+...You could have held your shining aegis to the heavens, and all would be...
+...But you were always the protective one, even of your...~
+...If only I had done as you said from the start...
+...If only I had let you speak your truth to them, as you said you would speak your truth to them, none of this would ever have...
+...But I was afraid, of the way you stirred the hearts of the people like I myself never could. I was so certain you would...~
+...You could have done a much better job at it than I&apos;ll have, to be honest...
+...Mine will last, what, a thousand years, but yours, yours could&apos;ve...
+...I regret the most, I think. You were always so trusting, all the way to the...~
+...I know the four of you can&apos;t hear me, but I apologize...
+...This will likely be the last time you hear me speak. After this, I will be...
+...I don&apos;t know what makes me feel worse, knowing you four can&apos;t understand me, or wishing you could so that you&apos;d know how deeply I have failed...~
+My nerves are bad tonight. Yes, bad. Stay with me.
+Speak to me. Why do you never speak. Speak.
+What are you thinking of? What thinking? What?
+I never know what you are thinking. Think.~
+Her heart is at Ezra, and her Mark
+Over her heart. After the event
+I wept. I promised a &apos;new start.&apos;
+She made no comment. Why did she resent?~
+I left them twisting, turning below;
+There were no more faces and the world was dark,
+Damp, jagged, like an old man&apos;s mouth drivelling, beyond
+repair,
+Or the toothed gullet of an aged shark.~
+The new years walk, restoring
+Through a bright cloud of tears, the years, restoring
+With a new flesh the ancient shape. Redeem
+The time. Redeem
+The unread vision in the higher dream~
+O my people, what have I done unto thee.~
+O my people... O my people... O my people...~
+May the judgement not be too heavy upon us.~
+...forgive me...~
+...please, forgive me...~
+...forgive me, please...~
+I could not save them... I could not save them all...~
+They will be born into a world without things like me. Perhaps they will venerate me. Perhaps they will raise monuments in my name.~
+It will not last forever, of course. I lack the skill to make it last forever. Sooner or later, it will all come apart. But this is all I can give them.~
+You know I have seen the way that the blood clouds in the waterglass whenever you raise it to your lips. I know you have seen the way my hands shake whenever I lay them on the stiffened legs of the people. You know you have the full right to resent me, after that I did to the others. I wish you would just let me heal you, as you healed me in Susa.~
+Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.~
+      </text>
+ <choice GotoID="Second">*sit and listen for a while.*</choice>
+      <choice GotoID="End">Live and drink, whatever it is that you are.</choice>
+    </node>
+    <node ID="Third">
+     <text>{{emote|*whatever this being is, it gives no indication of understanding you*}}.</text>
+      <text IfHavePart="Telepathy" Priority="1">
+I lament that things are as they are and
+I renounce the broken Face
+And renounce the voice
+Because I cannot hope to live again
+Consequently I lament, having to construct something
+About which to lament~
+...You could have taken them all and ran...
+...You could have led them all to safety...
+...But you knew what I had done to the others, and I could not let you...~
+...You could have protected them, better than I could...
+...You could have held your shining aegis to the heavens, and all would be...
+...But you were always the protective one, even of your...~
+...If only I had done as you said from the start...
+...If only I had let you speak your truth to them, as you said you would speak your truth to them, none of this would ever have...
+...But I was afraid, of the way you stirred the hearts of the people like I myself never could. I was so certain you would...~
+...You could have done a much better job at it than I&apos;ll have, to be honest...
+...Mine will last, what, a thousand years, but yours, yours could&apos;ve...
+...I regret the most, I think. You were always so trusting, all the way to the...~
+...I know the four of you can&apos;t hear me, but I apologize...
+...This will likely be the last time you hear me speak. After this, I will be...
+...I don&apos;t know what makes me feel worse, knowing you four can&apos;t understand me, or wishing you could so that you&apos;d know how deeply I have failed...~
+My nerves are bad tonight. Yes, bad. Stay with me.
+Speak to me. Why do you never speak. Speak.
+What are you thinking of? What thinking? What?
+I never know what you are thinking. Think.~
+Her heart is at Ezra, and her Mark
+Over her heart. After the event
+I wept. I promised a &apos;new start.&apos;
+She made no comment. Why did she resent?~
+I left them twisting, turning below;
+There were no more faces and the world was dark,
+Damp, jagged, like an old man&apos;s mouth drivelling, beyond
+repair,
+Or the toothed gullet of an aged shark.~
+The new years walk, restoring
+Through a bright cloud of tears, the years, restoring
+With a new flesh the ancient shape. Redeem
+The time. Redeem
+The unread vision in the higher dream~
+O my people, what have I done unto thee.~
+O my people... O my people... O my people...~
+May the judgement not be too heavy upon us.~
+...forgive me...~
+...please, forgive me...~
+...forgive me, please...~
+I could not save them... I could not save them all...~
+They will be born into a world without things like me. Perhaps they will venerate me. Perhaps they will raise monuments in my name.~
+It will not last forever, of course. I lack the skill to make it last forever. Sooner or later, it will all come apart. But this is all I can give them.~
+You know I have seen the way that the blood clouds in the waterglass whenever you raise it to your lips. I know you have seen the way my hands shake whenever I lay them on the stiffened legs of the people. You know you have the full right to resent me, after that I did to the others. I wish you would just let me heal you, as you healed me in Susa.~
+Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.~
+      </text>
+ <choice GotoID="Second">*sit and listen for a while.*</choice>
+      <choice GotoID="End">Live and drink, whatever it is that you are.</choice>
+    </node>
+    <node ID="Second">
+     <text>{{emote|*whatever this being is, it gives no indication of understanding you*}}.</text>
+      <text IfHavePart="Telepathy" Priority="1">
+I lament that things are as they are and
+I renounce the broken Face
+And renounce the voice
+Because I cannot hope to live again
+Consequently I lament, having to construct something
+About which to lament~
+...You could have taken them all and ran...
+...You could have led them all to safety...
+...But you knew what I had done to the others, and I could not let you...~
+...You could have protected them, better than I could...
+...You could have held your shining aegis to the heavens, and all would be...
+...But you were always the protective one, even of your...~
+...If only I had done as you said from the start...
+...If only I had let you speak your truth to them, as you said you would speak your truth to them, none of this would ever have...
+...But I was afraid, of the way you stirred the hearts of the people like I myself never could. I was so certain you would...~
+...You could have done a much better job at it than I&apos;ll have, to be honest...
+...Mine will last, what, a thousand years, but yours, yours could&apos;ve...
+...I regret the most, I think. You were always so trusting, all the way to the...~
+...I know the four of you can&apos;t hear me, but I apologize...
+...This will likely be the last time you hear me speak. After this, I will be...
+...I don&apos;t know what makes me feel worse, knowing you four can&apos;t understand me, or wishing you could so that you&apos;d know how deeply I have failed...~
+My nerves are bad tonight. Yes, bad. Stay with me.
+Speak to me. Why do you never speak. Speak.
+What are you thinking of? What thinking? What?
+I never know what you are thinking. Think.~
+Her heart is at Ezra, and her Mark
+Over her heart. After the event
+I wept. I promised a &apos;new start.&apos;
+She made no comment. Why did she resent?~
+I left them twisting, turning below;
+There were no more faces and the world was dark,
+Damp, jagged, like an old man&apos;s mouth drivelling, beyond
+repair,
+Or the toothed gullet of an aged shark.~
+The new years walk, restoring
+Through a bright cloud of tears, the years, restoring
+With a new flesh the ancient shape. Redeem
+The time. Redeem
+The unread vision in the higher dream~
+O my people, what have I done unto thee.~
+O my people... O my people... O my people...~
+May the judgement not be too heavy upon us.~
+...forgive me...~
+...please, forgive me...~
+...forgive me, please...~
+I could not save them... I could not save them all...~
+They will be born into a world without things like me. Perhaps they will venerate me. Perhaps they will raise monuments in my name.~
+It will not last forever, of course. I lack the skill to make it last forever. Sooner or later, it will all come apart. But this is all I can give them.~
+You know I have seen the way that the blood clouds in the waterglass whenever you raise it to your lips. I know you have seen the way my hands shake whenever I lay them on the stiffened legs of the people. You know you have the full right to resent me, after that I did to the others. I wish you would just let me heal you, as you healed me in Susa.~
+Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.~
+      </text>
+ <choice GotoID="Third">*sit and listen for a while.*</choice>
+      <choice GotoID="End">Live and drink, whatever it is that you are.</choice>
+    </node>
+  </conversation>
+
+
+</conversations>

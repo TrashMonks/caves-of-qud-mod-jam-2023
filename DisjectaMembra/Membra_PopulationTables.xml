@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+
+<!-- BELOW THIS POINT   -->
+
+<population Name="GrossStatues">
+    <group Name="Items" Style="pickone">
+      <object Blueprint="GrossShrine1" />
+      <object Blueprint="GrossShrine2" />
+      <object Blueprint="GrossShrine3" />
+      <object Blueprint="GrossShrine4" />
+      <object Blueprint="GrossShrine5" />
+      <object Blueprint="GrossShrine6" />
+      <object Blueprint="GrossShrine7" />
+      <object Blueprint="GrossShrine8" />
+      <object Blueprint="GrossShrine9" />
+      <object Blueprint="GrossShrine10" />
+      <object Blueprint="GrossShrine11" />
+    </group>
+  </population>
+
+ <population Name="CommonOddEncounters" Load="Merge">
+    <group Name="Types"  Load="Merge">
+   <group Name="GrossStatues" Weight="2" Style="pickeach">
+        <table Chance="100" Weight="5" Name="GrossEncounter" Number="1" />
+      </group>
+         </group>
+          </population>
+
+           <population Name="GrossEncounter" Style="pickeach">
+   <group Name="GrossStatues"  Style="pickeach">
+        <table Chance="100" Weight="5" Name="GrossStatues" Number="1" Hint="AlongWall" />
+        <object Number="0-10" Chance="25" Blueprint="Grave Goods" Hint="Adjacent:100,AdjacentToStartsWith:defaced" />
+      </group>
+       <table Number="3-7" Chance="75" Name="Membra_Stationary"  />
+  <group Name="GrossThings" Chance="50" Style="pickone">
+        <table Number="1" Weight="5" Name="Membra_Mobile"  />
+        <object Number="1" Chance="45" Blueprint="WaywardPreacher" />
+         </group>
+          </population>
+
+           <population Name="SecretRuinsZoneGlobals" Load="Merge">    
+<table Chance="1" Name="GrossEncounter" />
+  </population>
+
+   <population Name="RuinsZoneGlobals" Load="Merge">
+   <table Chance="1" Name="GrossEncounter" />
+  </population>
+
+   <population Name="BaroqueRuinsZoneGlobals" Load="Merge">
+   <table Chance="1" Name="GrossEncounter" />
+  </population>
+
+ <population Name="StandardSurfaceGlobals" Load="Merge">
+    <table Chance="1" Name="GrossEncounter" />
+  </population>
+
+ <population Name="Membra_Stationary" Style="pickone">
+    <object  Number="1" Blueprint="Gibbering Maw" />
+    <object  Number="1" Blueprint="Heart Relentless" />
+    <object Number="1"  Blueprint="Unblinking Eye" />
+    <object   Number="1" Blueprint="Swollen Brain" />
+    <object  Number="1"  Blueprint="Grasping Mass of Hands" />
+  </population>
+
+   <population Name="Membra_Mobile" Style="pickone">
+    <object  Number="1" Blueprint="Wound-that-Walks" />
+    <object  Number="1" Blueprint="Ascendant Watcher" />
+    <object  Number="1" Blueprint="Errant Myocardium" />
+    <object  Number="1"  Blueprint="Gruesome Hecatoncheire" />
+    <object   Number="1" Blueprint="Cerebromunculus" />
+  </population>
+
+ <population Name="SmallViscera0" Style="pickeach">
+ <object Chance="50" Number="1" Blueprint="Writhing Veins" />  
+      <table  Chance="100"  Number="1" Name="SmallVisceraSecond" />
+  </population>
+
+  <population Name="BigViscera0" Style="pickeach">
+<object Chance="75" Number="1" Blueprint="Writhing Veins" />
+<object Chance="25" Number="1" Blueprint="Writhing Veins" /> 
+      <table  Chance="100"  Number="1" Name="BigVisceraSecond" />
+  </population>
+
+  <population Name="SmallViscera" Style="pickeach">
+  <group Name="Veins" Chance="100" Style="pickeach">
+ <!-- -->  <object Chance="50" Number="1" Blueprint="Writhing Veins" />  <!--  -->
+ </group>
+ <group Name="Creatures" Chance="100" Style="pickeach">
+      <table  Chance="100"  Number="1" Name="Membra_Stationary" />
+         <table  Chance="100"  Number="1" Name="Membra_Stationary" />
+            <table  Chance="66"  Number="1" Name="Membra_Stationary" />
+               <table  Chance="33"  Number="1" Name="Membra_Stationary" />
+               </group>
+  </population>
+
+<population Name="BigViscera" Style="pickeach">
+  <group Name="Veins" Chance="100" Style="pickeach">
+<!-- --><object Chance="75,25" Number="1" Blueprint="Writhing Veins" />
+    </group>
+    <group Name="Creatures" Chance="100" Style="pickeach">
+      <group Name="First" Style="pickone">
+       <table  Weight="100" Name="Membra_Mobile" />
+      </group>
+       <group Name="Second" Chance="100" Style="pickone">
+       <table  Weight="100"  Number="1" Name="Membra_Mobile" />
+      </group>
+       <group Name="Third" Chance="100" Style="pickone">
+       <table  Weight="50"  Number="1" Name="Membra_Stationary" />
+       <table  Weight="50"  Number="1" Name="Membra_Mobile" />
+      </group>
+       <group Name="Fourth" Chance="75" Style="pickone">
+       <table  Weight="100"  Number="1" Name="Membra_Stationary" />
+      </group>
+       <group Name="Fifth" Chance="25" Style="pickone">
+       <table  Weight="100" Number="1"  Name="Membra_Stationary" />
+      </group>
+       <group Name="Sixth" Chance="100" Style="pickone">
+       <table  Weight="100"  Number="1" Name="Membra_Stationary" />
+      </group>
+    </group>
+  </population>
+
+
+
+
+
+
+
+  <population Name="HillsZoneGlobals-Reachable" Load="Merge">
+   <group Name="Creatures" Load="Merge">
+      <object Chance="5" Number="1" Blueprint="Hide-Sheathed Hermit_Frenzied"/>
+      <object Chance="2" Number="1" Blueprint="Novice of the Sightless Way 2_Frenzied" />
+   </group>
+</population>
+
+ <population Name="JungleZoneGlobals" Load="Merge">
+   <group Name="Creatures" Load="Merge">
+      <object Chance="1" Number="1" Blueprint="Hide-Sheathed Hermit_Frenzied"/>
+      <object Chance="1" Number="1" Blueprint="Novice of the Sightless Way 2_Frenzied" />
+    </group>
+</population>
+
+ <population Name="HillCreatures" Load="Merge">
+   <group Name="Creatures" Load="Merge">
+      <object Weight="1" Number="1" Blueprint="Hide-Sheathed Hermit_Frenzied"/>
+      <object Weight="1" Number="1" Blueprint="Novice of the Sightless Way 2_Frenzied" />
+   </group>
+</population>
+
+ <population Name="JungleCreatures" Load="Merge">
+   <group Name="Creatures" Load="Merge">
+      <object Weight="1" Number="1" Blueprint="Hide-Sheathed Hermit_Frenzied"/>
+      <object Weight="1" Number="1" Blueprint="Novice of the Sightless Way 2_Frenzied" />
+     </group>
+</population>
+
+<population Name="Tier3CavePopulation" Load="Merge">
+   <group Name="Creatures" Load="Merge">
+      <object Weight="1" Number="1" Blueprint="Hide-Sheathed Hermit_Frenzied"/>
+      <object Number="1" Weight="5" Blueprint="Wandering Preacher" />
+     <object Number="1" Weight="1" Blueprint="Cave Arconaut_Frenzied" />
+       <group Name="Snapjaws" Weight="10" Load="Merge">
+          <object Blueprint="Snapjaw Feeder_Frenzied" Number="1d6-4"  />
+          <object Blueprint="Snapjaw Spearfiend_Frenzied"  Number="0-1" />
+          <object Blueprint="Snapjaw Trapper_Frenzied"  Number="1d4-3" />
+          <object Blueprint="Snapjaw Howler_Frenzied" Number="1d3-2" />
+        </group>
+     </group>
+</population>
+
+<population Name="Tier4CavePopulation" Load="Merge">
+   <group Name="Creatures" Load="Merge">
+      <object Weight="2" Number="1" Blueprint="Mysterious Gunslinger_Frenzied"/>
+      <object Number="1" Weight="1" Blueprint="Cave Arconaut_Frenzied" />
+      <object Weight="1" Number="1" Blueprint="Dervish of the Sightless Way_Frenzied"/>
+      <object Number="1" Weight="10" Blueprint="Wandering Preacher" />
+     </group>
+</population>
+
+ <population Name="EmptyField" Load="Merge">
+    <group Name="Contents" Load="Merge">
+      <object Blueprint="Wandering Preacher" Number="0-2" Chance="37" />
+    </group>
+  </population>
+
+<population Name="Tier1RuinsCreatures" Load="Merge">
+   <group Name="Creatures" Load="Merge">
+      <object Weight="1" Number="1" Blueprint="Hide-Sheathed Hermit_Frenzied"/>
+      <object Weight="1" Number="1" Blueprint="Trash Monk_Frenzied" />
+      <object Weight="3" Number="1" Blueprint="Wandering Preacher" />
+    </group>
+</population>
+
+<population Name="Tier2RuinsCreatures" Load="Merge">
+   <group Name="Creatures" Load="Merge">
+      <object Weight="1" Number="1" Blueprint="Hide-Sheathed Hermit_Frenzied"/>
+      <object Weight="1" Number="1" Blueprint="Trash Monk_Frenzied" />
+      <object Weight="1" Number="1" Blueprint="Novice of the Sightless Way 2_Frenzied" />
+            <object Weight="5" Number="1" Blueprint="Wandering Preacher" />
+
+    </group>
+</population>
+
+<population Name="Tier3RuinsCreatures" Load="Merge">
+   <group Name="Creatures" Load="Merge">
+      <object Weight="1" Number="1" Blueprint="Hide-Sheathed Hermit_Frenzied"/>
+      <object Weight="1" Number="1" Blueprint="Trash Monk_Frenzied" />
+      <object Weight="1" Number="1" Blueprint="Novice of the Sightless Way 2_Frenzied" />
+      <object Weight="5" Number="1" Blueprint="Wandering Preacher" />
+    </group>
+</population>
+
+<population Name="Tier4RuinsCreatures" Load="Merge">
+   <group Name="Creatures" Load="Merge">
+      <object Weight="1" Number="1" Blueprint="Hide-Sheathed Hermit_Frenzied"/>
+      <object Weight="1" Number="1" Blueprint="Dervish of the Sightless Way_Frenzied" />
+      <object Weight="2" Number="1" Blueprint="Mysterious Gunslinger_Frenzied" />
+      <object Weight="5" Number="1" Blueprint="Wandering Preacher" />
+    </group>
+</population>
+
+<population Name="Tier5RuinsCreatures" Load="Merge">
+   <group Name="Creatures" Load="Merge">
+      <object Weight="1" Number="1" Blueprint="Hide-Sheathed Hermit_Frenzied"/>
+      <object Weight="1" Number="1" Blueprint="Dervish of the Sightless Way_Frenzied" />
+      <object Weight="2" Number="1" Blueprint="High Dervish of the Sightless Way_Frenzied" />
+      <object Weight="2" Number="1" Blueprint="Mysterious Gunslinger_Frenzied" />
+      <object Weight="1" Number="1" Blueprint="Trash Abbot_Frenzied" />
+      <object Weight="5" Number="1" Blueprint="Wandering Preacher" />
+      <object Weight="1" Number="1" Blueprint="Wayward Preacher" />
+    </group>
+</population>
+
+<population Name="Tier6RuinsCreatures" Load="Merge">
+   <group Name="Creatures" Load="Merge">
+      <object Weight="1" Number="1" Blueprint="Dervish of the Sightless Way_Frenzied" />
+      <object Weight="2" Number="1" Blueprint="High Dervish of the Sightless Way_Frenzied" />
+      <object Weight="1" Number="1" Blueprint="Trash Abbot_Frenzied" />
+      <object Weight="5" Number="1" Blueprint="Wayward Preacher" />
+    </group>
+</population>
+
+<population Name="Tier7RuinsCreatures" Load="Merge">
+   <group Name="Creatures" Load="Merge">
+      <object Weight="2" Number="1" Blueprint="High Dervish of the Sightless Way_Frenzied" />
+      <object Weight="2" Number="1" Blueprint="Trash Abbot_Frenzied" />
+      <object Weight="7" Number="1" Blueprint="Wayward Preacher" />
+    </group>
+</population>
+
+<population Name="Tier8RuinsCreatures" Load="Merge">
+   <group Name="Creatures" Load="Merge">
+      <object Weight="2" Number="1" Blueprint="Arch Dervish of the Sightless Way_Frenzied" />
+      <object Weight="1" Number="1" Blueprint="Trash Abbot_Frenzied" />
+      <object Weight="3" Number="1" Blueprint="Wayward Preacher" />
+    </group>
+</population>
+
+   <!-- BELOW THIS POINT   -->
+
+
+
+ <population Name="RustedArchwaySurfaceZoneGlobals" Load="Merge">
+   <group Name="RustedArchwayCreatures" Load="Merge">
+      <object Chance="4" Number="1" Blueprint="Hide-Sheathed Hermit_Frenzied"/>
+   </group>
+</population>
+
+<population Name="LowerRustedArchwayZoneGlobals" Load="Merge">
+   <group Name="RustedArchwayCreatures" Load="Merge">
+      <object Chance="4" Number="1" Blueprint="Hide-Sheathed Hermit_Frenzied"/>
+   </group>
+</population>
+
+      <!--
+
+<population Name="BottomRustedArchwayZoneGlobals" Load="Merge">
+  <group Load="Merge">
+   <group Name="RustedArchwayCreatures" Load="Merge">
+      <object Chance="8" Number="1" Blueprint="Hide-Sheathed Hermit_Frenzied"/>
+   </group>
+    </group>
+</population>
+
+
+
+ -->
+
+<population Name="GritGateSurfaceZoneGlobals" Load="Merge">
+      <object Chance="3" Blueprint="Hide-Sheathed Hermit_Frenzied"/>
+      <object Chance="1" Number="1" Blueprint="Novice of the Sightless Way 2_Frenzied" />
+</population>
+
+<population Name="GritGateDungeonEncounters" Load="Merge">
+      <object Chance="3" Blueprint="Hide-Sheathed Hermit_Frenzied"/>
+      <object Chance="1" Number="1" Blueprint="Novice of the Sightless Way 2_Frenzied" />
+</population>
+
+<population Name="GolgothaSurfaceZoneGlobals" Load="Merge">
+   <group Name="Creatures" Load="Merge">
+      <object Chance="1" Number="1" Blueprint="Hide-Sheathed Hermit_Frenzied"/>
+      <object Chance="1" Number="1" Blueprint="Novice of the Sightless Way 2_Frenzied" />
+   </group>
+</population>
+
+ <population Name="Shale Cave Critters 1" Load="Merge">
+    <object Chance="2" Number="1" Blueprint="Wandering Preacher" />
+  </population>
+
+ <population Name="Shale Cave Critters 2" Load="Merge">
+    <object Chance="5" Number="1" Blueprint="Wandering Preacher" />
+  </population>
+
+   <population Name="Redrock1PerSector-Creatures">
+    <group Load="Merge" Name="Creatures">
+      <object Weight="10" Number="1" Blueprint="Wandering Preacher" />
+    </group>
+  </population>
+
+    <population Name="Redrock2PerSector-Creatures">
+    <group Load="Merge" Name="Creatures">
+      <object Weight="10" Number="1" Blueprint="Wandering Preacher" />
+    </group>
+  </population>
+
+   
+<population Name="Redrock3PerSector-Creatures" Load="Merge">    
+    <group Name="Creatures" Load="Merge">
+      <object Weight="5" Number="1" Blueprint="Wandering Preacher" />
+      </group>
+  </population>
+
+
+
+<population Name="Tier2CaveCreatures" Load="Merge">
+<group Name="Creatures" Load="Merge">
+      <object Weight="1" Number="1" Blueprint="Trash Monk_Frenzied" />
+      <object Number="1" Weight="1" Blueprint="Cave Arconaut_Frenzied" />
+      <object Weight="5" Number="1" Blueprint="Wandering Preacher" />
+</group>
+</population>
+
+<population Name="MountainsZoneGlobals-Reachable" Load="Merge">
+   <group Name="Creatures" Load="Merge">
+      <object Chance="1" Number="1" Blueprint="Novice of the Sightless Way 2_Frenzied" />
+   </group>
+</population>
+
+<population Name="MountainCreatures" Load="Merge">
+   <group Name="Creatures" Load="Merge">
+      <object Weight="1" Number="1" Blueprint="Novice of the Sightless Way 2_Frenzied" />
+   </group>
+</population>
+
+ <population Name="IssachariParty" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Chance="9" Number="1d4" Blueprint="Issachari Raider_Frenzied" />
+      <object Chance="5" Number="1-2" Blueprint="Issachari Rifler_Frenzied" />
+      <object Chance="1" Number="1" Blueprint="Issachari Rifler_Frenzied" />
+    </group>
+  </population>
+
+<population Name="SaltDuneCreatures" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <group Name="Raiders" Load="Merge">
+        <object Weight="1" Chance="8" Number="1" Blueprint="Issachari Raider_Frenzied" />
+        <object Weight="1" Chance="6" Number="1" Blueprint="Issachari Rifler_Frenzied" />
+      </group>
+    </group>
+  </population>
+
+  <population Name="Pilgrims" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Blueprint="Mechanimist Pilgrim_Frenzied" Number="1" Weight="8" />
+      <object Blueprint="Wandering Preacher" Number="1" Weight="20" />
+    </group>
+  </population>
+
+<population Name="PilgrimEncounter" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Chance="15" Number="1" Blueprint="Mechanimist Pilgrim_Frenzied" />
+    </group>
+  </population>
+
+ <population Name="BethesdaSusaSurface" Load="Merge">
+      <object Chance="4" Number="1" Blueprint="Psyberneticist_Frenzied" />
+      <object Chance="15" Number="1" Blueprint="Wandering Preacher" />
+      <object Chance="5" Number="1" Blueprint="Mechnamist rummager_Frenzied"/>
+      <object Chance="3" Number="1" Blueprint="Disciple of the Sightless Way_Frenzied" />
+      <object Chance="1" Number="1" Blueprint="Juicing Cannibal_Frenzied" />
+      <object Chance="5" Number="1" Blueprint="Mysterious Gunslinger_Frenzied" />
+</population>
+
+<population Name="BethesdaSusaWharf" Load="Merge">
+      <object Chance="8" Number="1" Blueprint="Psyberneticist_Frenzied" />
+      <object Chance="16" Number="1-2" Blueprint="Mechnamist rummager_Frenzied"/>
+      <object Chance="8" Number="1" Blueprint="Disciple of the Sightless Way_Frenzied" />
+      <object Chance="15" Number="1" Blueprint="Wandering Preacher" />
+      <object Chance="1" Number="1" Blueprint="Juicing Cannibal_Frenzied" />
+      <object Chance="5" Number="1" Blueprint="Mysterious Gunslinger_Frenzied" />
+</population>
+
+<population Name="BethesdaSusaWharfOutskirts" Load="Merge">
+      <object Chance="1" Number="1" Blueprint="Psyberneticist_Frenzied" />
+      <object Chance="2" Number="1" Blueprint="Mechnamist rummager_Frenzied"/>
+      <object Chance="1" Number="1" Blueprint="Disciple of the Sightless Way_Frenzied" />
+      <object Chance="1" Number="1" Blueprint="Juicing Cannibal_Frenzied" />
+      <object Chance="5" Number="1" Blueprint="Mysterious Gunslinger_Frenzied" />
+      <object Chance="8" Number="1" Blueprint="Wandering Preacher" />
+</population>
+
+<population Name="BethesdaSusaStandardWard" Load="Merge">
+      <object Chance="8" Number="1" Blueprint="Psyberneticist_Frenzied" />
+      <object Chance="16" Number="1-2" Blueprint="Mechnamist rummager_Frenzied"/>
+      <object Chance="8" Number="1" Blueprint="Disciple of the Sightless Way_Frenzied" />
+      <object Chance="3" Number="1" Blueprint="Juicing Cannibal_Frenzied" />
+      <object Chance="5" Number="1" Blueprint="Mysterious Gunslinger_Frenzied" />
+      <object Chance="15" Number="1" Blueprint="Wandering Preacher" />
+</population>
+
+<population Name="BethesdaSusaUpperCryobarrio" Load="Merge">
+      <object Chance="1" Number="1" Blueprint="Psyberneticist_Frenzied" />
+      <object Chance="2" Number="1" Blueprint="Mechnamist rummager_Frenzied"/>
+      <object Chance="1" Number="1" Blueprint="Juicing Cannibal_Frenzied" />
+      <object Chance="3" Number="1" Blueprint="Wandering Preacher" />
+      <object Chance="2" Number="1" Blueprint="Mysterious Gunslinger_Frenzied" />
+</population>
+
+<population Name="BethesdaSusaRuinedWard" Load="Merge">
+      <object Chance="3" Number="1" Blueprint="Juicing Cannibal_Frenzied" />
+</population>
+
+
+
+ <population Name="NaphtaaliParty"  Load="Merge">
+    <group Name="HeroOrNot" Load="Merge">
+      <group  Load="Merge" Name="NoHero" >
+        <object Chance="3" Number="1" Blueprint="Naphtaali Runt_Frenzied" />
+        <object Chance="3" Number="1" Blueprint="Naphtaali Blowgunner_Frenzied" />
+      </group>
+    </group>
+  </population>
+
+ <population Name="GoatfolkVillageGlobalsRazed" Load="Merge">
+    <group Name="Contents" Load="Merge">
+      <object Number="1d4-2" Blueprint="Naphtaali Blowgunner_Frenzied" />
+      <object Number="1d3-2" Blueprint="Goatfolk Thrall_Frenzied" />
+    </group>
+  </population>
+
+<population Name="CommonOddEncounters"  Load="Merge">
+    <group Name="Types" Load="Merge" >
+ <group Name="TrashAndArconaut"  Load="Merge" >
+  <object Number="1" Chance="8" Blueprint="Cave Arconaut_Frenzied" />
+ </group>
+ </group>
+  </population>
+
+      <!--
+<population Name="RedrockLevel2Encounters" Load="Merge">
+    <group Load="Merge">
+<group Name="TrashAndArconaut"  Load="Merge" >
+  <object Number="1" Chance="9" Blueprint="Cave Arconaut_Frenzied" />
+ </group>
+ </group>
+  </population>
+
+ -->
+
+<population Name="SultanDungeons_Cubbies_*Default"  Load="Merge">
+ <group Name="Contents"  Load="Merge">
+<group Name="Arconauts"  Load="Merge">
+        <object Blueprint="Cave Arconaut_Frenzied" Number="1d4-2" Hint="RadialFromCenter:2" />
+</group>
+ </group>
+  </population>
+
+ 
+   <!-- ABOVE THIS POINT   -->
+
+ <population Name="GoatfolkParty" Load="Merge">
+    <group Name="HeroOrNot" Load="Merge">
+      <group  Name="NoHero" Load="Merge" >
+        <object Chance="10" Number="1-2" Blueprint="Goatfolk Bully_Frenzied" />
+        <object Chance="5" Number="1" Blueprint="Goatfolk Sower_Frenzied" />
+        <object Chance="5" Number="1" Blueprint="Goatfolk Yurtwarden_Frenzied" />
+        <object Chance="2" Number="1" Blueprint="Goatfolk Shaman_Frenzied" />
+      </group>
+    </group>
+  </population>
+
+<population Name="GoatfolkVillageYurt" Load="Merge">
+    <group Name="Contents" Load="Merge">
+      <object Chance="5" Number="1" Blueprint="Goatfolk Bully_Frenzied" />
+      <object Chance="3" Number="1" Blueprint="Goatfolk Sower_Frenzied" />
+      <object Chance="5" Number="1" Blueprint="Goatfolk Yurtwarden_Frenzied" />
+    </group>
+  </population>
+
+ <population Name="Omonporch Outskirts" Load="Merge">
+    <object Chance="8" Number="1" Blueprint="BananaRancher_Frenzied" />
+  </population>
+
+
+
+ <population Name="Templar War Party Minor" Load="Merge">
+    <group Name="Contents" Load="Merge">
+      <group Name="Group1" Load="Merge">
+        <table Weight="16" Name="FrenziedTemplar" />
+        <object Weight="2" Number="1d4" Blueprint="Templar Squire_Frenzied" />
+      </group>
+      <group Name="Group2" Load="Merge">
+        <table Weight="16" Name="FrenziedTemplar" />
+        <object Weight="2" Number="1d4" Blueprint="Templar Squire_Frenzied" />
+      </group>
+      <group Name="Group3" Load="Merge">
+        <table Weight="16" Name="FrenziedTemplar" />
+        <object Weight="2" Number="1d4" Blueprint="Templar Squire_Frenzied" />
+      </group>
+    </group>
+  </population>
+
+
+
+
+  <population Name="FrenziedTemplar">
+    <group Name="Creatures" Style="pickone">
+      <object Blueprint="Knight Templar_Frenzied" />
+      <object Blueprint="Gunner-Knight Templar_Frenzied" />
+      <object Blueprint="Banner-Knight Templar_Frenzied" />
+      <object Blueprint="Phylactery Squire_Frenzied" />
+      <object Blueprint="Newfather_Frenzied" />
+    </group>
+  </population>
+
+
+  <population Name="Templar Weighted Toward Knight" Load="Merge" >
+    <group Name="Creatures" Load="Merge">
+      <object Weight="18" Blueprint="Knight Templar_Frenzied" />
+      <table Weight="4" Name="FrenziedTemplar" />
+    </group>
+  </population>
+
+
+  <population Name="Templar Weighted Toward Gunner" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Weight="18" Blueprint="Gunner-Knight Templar_Frenzied" />
+      <table Weight="4" Name="FrenziedTemplar" />
+    </group>
+  </population>
+
+  <population Name="TombCreatures" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Weight="2" Number="1" Blueprint="Graverobber_Frenzied" />
+      <object Weight="8" Number="1" Blueprint="Wayward Preacher" />
+    </group>
+  </population>
+
+  <population Name="CryptCreatures" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Weight="2" Number="1" Blueprint="Graverobber_Frenzied" />
+      <object Weight="8" Number="1" Blueprint="Wayward Preacher" />
+    </group>
+  </population>
+
+ <population Name="MopangoHideout" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Blueprint="MopangoCharioteer_Frenzied" Number="1d3-1" />
+      <object Blueprint="MopangoTombdweller_Frenzied" Number="2d4-2" />
+    </group>
+  </population>
+
+ <population Name="BaroqueRuinsZoneGlobals-Creatures" Load="Merge">
+    <object Chance="2" Number="1" Blueprint="High Dervish of the Sightless Way_Frenzied" />
+    <object Chance="2" Number="1" Blueprint="Trash Abbot_Frenzied" />
+    <object Chance="5" Number="1" Blueprint="Wayward Preacher" />
+  </population>
+
+<population Name="Tier6CavePopulation" Load="Merge">
+  <group Name="Contents" Load="Merge">
+      <group Name="Creatures" Load="Merge">
+        <object Weight="2" Number="1" Blueprint="High Dervish of the Sightless Way_Frenzied" />
+      </group>
+      </group>
+  </population>
+
+  <population Name="Tier8CavePopulation" Load="Merge">
+    <group Name="Contents" Load="Merge" >
+      <group Name="Creatures" Load="Merge">
+        <object Weight="2" Number="1" Blueprint="Arch Dervish of the Sightless Way_Frenzied" />
+      </group>
+    </group>
+  </population>
+
+<population Name="PalladiumReefPerSector" Load="Merge">
+    <group Name="Contents" Load="Merge">
+      <group Name="Creatures" Load="Merge">
+        <object Weight="2" Number="1" Blueprint="Reef Hermit_Frenzied" />
+      </group>
+    </group>
+  </population>
+
+<population Name="MoonStairZoneGlobals-Creatures" Load="Merge">
+		<object Chance="2" Number="1-2" Blueprint="Glow Wight Apotheote_Frenzied" />
+	</population>
+
+
+
+  </populations> 

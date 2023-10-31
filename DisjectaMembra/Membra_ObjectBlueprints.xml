@@ -1,0 +1,1198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+
+   <!--    
+That corpse you planted last year in your garden,
+Has it begun to sprout? Will it bloom this year?
+Or has the Signal’s voice disturbed its bed?
+-->
+<object Name="BasePolyp" Inherits="Animal">
+    <part Name="Body" Anatomy="Polyp" />
+    <part Name="Brain" Hostile="true" Wanders="false" Mobile="false" Factions="Resheph-100" />
+    <stat Name="Strength" sValue="20,1d6,(t-1)d4" />
+   <!--     <stat Name="Agility" sValue="8,1d3,(t)d1" />  -->
+        <stat Name="Agility" sValue="14,1d2,(t-1)d2-1" />
+    <stat Name="Toughness" sValue="16,1d3,(t-1)d2" />
+    <stat Name="Intelligence" sValue="2,1d2,(t-1)d2-1" />
+   <stat Name="Willpower" sValue="2,1d2,(t-1)d2-1" />
+    <stat Name="Ego" sValue="2,1d2,(t-1)d2-1" />
+    <intproperty Name="Bleeds" Value="1" />
+    <tag Name="BleedLiquid" Value="blood-1000" />
+    <mutation Name="DarkVision" Level="1" />
+    <part Name="Render" RenderIfDark="true" Tile="Feline/BrainS.png" DisplayName="[polyp]" RenderString="234" ColorString="&amp;R" DetailColor="r" />
+    <part Name="Corpse" CorpseChance="0" />
+    <part Name="NoKnockdown" />
+    <tag Name="Noswap" />
+    <part Name="MentalShield" />
+    <tag Name="Class" Value="polyp" />		
+    <tag Name="Species" Value="polyp" />
+    <tag Name="BaseObject" Value="*noinherit" />
+    <tag Name="Gender" Value="neuter" />
+    <tag Name="Culture" Value="Polyp" />
+   <tag Name="WaterRitualLiquid" Value="blood" />
+    <part Name="ConversationScript" ConversationID="PsychicViscera" />
+    <xtagTextFragments Skin="flesh" PoeticFeatures="undulation,geometric simplicity,ageless bearing" YounglingNoise="*Glory!*" Activity="undulating spasmodically" VillageActivity="muttering incomprehensibilities" SacredThing="having neither arms nor legs nor a head" />
+    <stag Name="HardMaterial" Value="bones" />
+    <tag Name="SimpleConversation" Value="{{emote|*whatever this being is, it gives no indication of understanding you*}}" />
+    <tag Name="PetResponse" Value="=subject.T= =verb:undulate=." />
+    <tag Name="PrimaryLimbType" Value="Face" />
+    <tag Name="Grazer" />
+     <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="BaseHeadless" Inherits="Humanoid">
+   <part Name="Body" Anatomy="Headless" />
+    <part Name="Brain" Hostile="true" Wanders="true" Mobile="true" Factions="Resheph-100" />
+    <stat Name="Strength" sValue="20,1d6,(t-1)d4" />
+    <stat Name="Agility" sValue="14,1d3,(t)d1" />
+     <tag Name="ExcludeFromDynamicEncounters" />
+    <stat Name="Toughness" sValue="16,1d3,(t-1)d2" />
+    <stat Name="Intelligence" sValue="2,1d2,(t-1)d2-1" />
+    <stat Name="Willpower" sValue="2,1d2,(t-1)d2-1" />
+    <stat Name="Ego" sValue="2,1d2,(t-1)d2-1" />
+    <intproperty Name="Bleeds" Value="1" />
+    <tag Name="WaterRitualLiquid" Value="blood" />
+    <part Name="MentalShield" />
+    <tag Name="BleedLiquid" Value="blood-1000" />
+    <mutation Name="DarkVision" Level="1" />
+    <part Name="Render" Tile="creatures/sw_craigsmench.bmp" DisplayName="[headless]" RenderString="227" ColorString="&amp;R" DetailColor="r"  />
+    <tag Name="Class" Value="headless" />
+    <tag Name="Species" Value="headless" />
+    <tag Name="HeroHPBoost" Value="2" />
+    <tag Name="HeroStrBoost" Value="2" />
+    <tag Name="Gender" Value="neuter" />
+    <tag Name="BaseObject" Value="*noinherit" />
+    <part Name="ConversationScript" ConversationID="PsychicViscera" />
+    <xtagTextFragments Skin="flesh" PoeticFeatures="vast shoulders,eerie lack of a head,nightmarish bearing" YounglingNoise="*Glory!*" Activity="twitching spasmodiclly" VillageActivity="twitching spasmodically" SacredThing="being bereft of a head"></xtagTextFragments>
+    <tag Name="SimpleConversation" Value="&amp;w*undulates spasmodically*&amp;y" />
+    <tag Name="PetResponse" Value="=subject.T= =verb:gibber=." />
+    <tag Name="PrimaryLimbType" Value="Hand" />
+  </object>
+
+ <object Name="Gibbering Maw" Inherits="BasePolyp">
+    <part Name="Render" RenderIfDark="false" DisplayName="gibbering maw" Tile="Feline/MawS.png" ColorString="&amp;r" DetailColor="y"/>
+    <part Name="Description" Short="It permits no silence around the shape that is its self. Inscrutable ravings spill forth from the depths of its throat, only occasionally broken up by frenzied breathing or the sudden, agonied howl. Perhaps this is why it is so eager to sink its forearm-sized teeth into anything that happens to come close enough for it to reach: We are beings of silence, and it, to its essence, is not. Though of course, there is always the possibility that it simply bites because it is hungry." />
+     <tag Name="ExcludeFromDynamicEncounters" />
+    <part Name="Brain" PointBlankRange="false" />
+    <skill Name="Axe" />
+     <skill Name="Rifle_SteadyHands" />
+    <tag Name="AmbientIdleSound" Value="Sounds/StatusEffects/sfx_statusEffect_enraged" />
+    <tag Name="PrimaryLimbType" Value="Face" />
+    <skill Name="Axe_Cleave" />
+    <intproperty Name="Bleeds" Value="0" />
+    <stat Name="AV" Value="4" />
+    <stat Name="Level" Value="14" />
+    <part Name="ConversationScript" ConversationID="Viscera" />
+    <stat Name="Hitpoints" Value="36" />
+    <inventoryobject Blueprint="Gruesome Jaws" Number="1" />
+    <inventoryobject Blueprint="Wretched Throat" Number="1" />
+    <tag Name="Noswap" />
+    <skill Name="Snapjaw_Howl" />
+    <mutation Name="Carnivorous" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object>
+
+ <object Name="Gruesome Jaws" Inherits="Bite">
+    <part Name="Render" DisplayName="{{r|gruesome jaws}}" />
+    <part Name="MeleeWeapon" BaseDamage="2d2" />
+    <tag Name="Gender" Value="plural" />
+     <tag Name="UsesSlots" Value="Face" />
+  </object>
+
+  <object Name="Wretched Throat" Inherits="NaturalMissileWeapon">
+    <part Name="Render" DisplayName="{{g|wretched throat}}" ColorString="&amp;g" />
+     <tag Name="ExcludeFromDynamicEncounters" />
+    <part Name="Physics" Weight="1" />
+    <part Name="MissileWeapon" AmmoChar="&amp;g&#15;" Skill="Rifle" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="0" />
+    <part Name="BioAmmoLoader" MaxCapacity="1" Available="0" TurnsToGenerate="32" ProjectileObject="ProjectileVomit" />
+    <part Name="AIShootCooldown" Cooldown="1-50" />
+    <tag Name="UsesSlots" Value="Body" />
+    <tag Name="MissileFireSound" Value="LowSpit" />
+        <part Name="ProneOnHit" Chance="100" SaveTarget="30" />
+  </object>
+  <object Name="ProjectileVomit" Inherits="TemporaryProjectile">
+    <part Name="Render" Tile="Mutations/slime_glands.bmp" ColorString="&amp;g" DisplayName="{{g|vomit}}" />
+    <part Name="Projectile" BasePenetration="6" BaseDamage="1d8" ColorString="&amp;g" PassByVerb="arc" />
+    <xtagGrammar adjunctNoun="glob" massNoun="true" />
+    <part Name="PoisonOnHit" Chance="100" Strength="15" DamageIncrement="1d3" Duration="6-9" />
+    <part Name="ProneOnHit" Chance="100" SaveTarget="17" />
+  </object>
+
+<object Name="Unblinking Eye" Inherits="BasePolyp">
+    <part Name="Render" RenderIfDark="false" DisplayName="unblinking eye" Tile="Feline/EyeS.png" ColorString="&amp;Y" DetailColor="R"/>
+    <part Name="Description" Short="You tell yourself that it has no face, that it is only an eye without even as much as a lid. You tell yourself that out of all the emotions found in the world, there is none that can be displayed solely through the dilations and the contortions of an eye. You tell yourself that it has no brain, that surely it cannot think and that certainly it cannot judge. It does not help. Meeting the gaze of that vast and staring thing, you cannot shake the feeling that it looks at you as though it sees something inside you that nobody else ever has. " />
+    <part Name="Brain" PointBlankRange="true" />
+    <part Name="ConversationScript" ConversationID="PsychicViscera" />
+    <skill Name="Pistol_SteadyHands" />
+     <tag Name="BleedLiquid" Value="salt-100,water-1000,blood-100" />
+		<tag Name="BleedColor" Value="&amp;B" />
+		<tag Name="BleedPrefix" Value="{{B|teary}}" />
+    <stat Name="AV" Value="0" />
+     <tag Name="ExcludeFromDynamicEncounters" />
+    <tag Name="DeathSounds" Value="Sounds/StatusEffects/sfx_statusEffect_physicalRupture" />
+    <stat Name="Level" Value="14" />
+    <stat Name="Hitpoints" Value="32" />
+    <inventoryobject Blueprint="Bloodshot Retina" Number="1" />
+  </object>
+
+ <object Name="Bloodshot Retina" Inherits="NaturalMissileWeapon">
+    <part Name="Render" DisplayName="bloodshot retina" ColorString="&amp;R" />
+    <part Name="MissileWeapon" RangeIncrement="14" Skill="Pistol"  ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" />
+    <part Name="EnergyAmmoLoader" ChargeUse="0" ProjectileObject="Projectile_Recognition" />
+    <tag Name="UsesSlots" Value="Face" />
+   <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Pistols/sfx_missile_psychalFleshgun_fire" />
+  </object>
+  <object Name="Projectile_Recognition" Inherits="TemporaryEnergyProjectile">
+    <part Name="Render" DisplayName="{{G|flash of recognition}}" ColorString="&amp;G" />
+    <part Name="Projectile" BasePenetration="9" BaseDamage="1d6" ColorString="&amp;G" PassByVerb="glint" Attributes="Mental Psionic" />
+    <part Name="TreatAsSolid" GazeBased="true" RealityDistortionBased="true" Hits="false" RequiresPhaseMatch="false" Message="The darkness consumes =subject.t=!" />
+  </object>
+
+
+<object Name="Swollen Brain" Inherits="BasePolyp">
+    <part Name="Render" RenderIfDark="false" DisplayName="swollen brain" Tile="Feline/BrainS.png" ColorString="&amp;y" DetailColor="r"/>
+    <part Name="Description" Short="Countless ridges and valleys mar the surface of the grayish dome, and amidst these valleys, a pattern can be traced. What hand has carved the lines of a half-remembered poem into this vast and bulging cerebrum? Why are the shapes of the folds in this brain so similar to the shapes of the clouds around the Spindle? Is that the face of a loved one? Step closer, and you may come to understand." />
+    <skill Name="Shield_Block" />
+     <tag Name="ExcludeFromDynamicEncounters" />
+    <skill Name="ShortBlades_Expertise" />
+    <stat Name="AV" Value="4" />
+    <stat Name="Level" Value="14" />
+    <stat Name="Hitpoints" Value="32" />
+    <part Name="ConversationScript" ConversationID="PsychicViscera" />
+    <tag Name="PrimaryLimbType" Value="Roots" />
+    <mutation Name="Confusion" Level="1" />
+    <mutation Name="StunningForce" Level="15" />
+    <mutation Name="FearAura" EnergyCost="0" Chance="50" />
+    <inventoryobject Blueprint="Medulla Oblongata" Number="1" />
+    <inventoryobject Blueprint="Overgrown Cerebrum" Number="1" />
+    <removepart Name="MentalShield" />
+  </object>
+
+ <object Name="Medulla Oblongata" Inherits="NaturalWeapon">
+    <part Name="MeleeWeapon" BaseDamage="1d3" Skill="ShortBlades" Stat="Strength" Slot="Roots" />
+    <part Name="Render" DisplayName="{{r|medulla oblongata}}" />
+    <part Name="DischargeOnHit" ChargeUse="0" Voltage="1d6" DamageRange="1d6" />
+    <tag Name="Gender" Value="plural" />
+  </object>	
+
+<object Name="Overgrown Cerebrum" Inherits="NaturalWeapon">
+  <tag Name="UndesirableWeapon" />
+    <part Name="Render" DisplayName="{{y|overgrown cerebrum}}" />
+    <part Name="Shield" AV="2" DV="0" WornOn="Head" />
+        <tag Name="ShowMeleeWeaponStats" Value="false" />
+  </object>
+
+<object Name="Grasping Mass of Hands" Inherits="BasePolyp">
+    <part Name="Render" RenderIfDark="false" Tile="Feline/HandS.png" DisplayName="grasping mass of hands" ColorString="&amp;w" DetailColor="r"/>
+    <part Name="Description" Short="Stray elbows and shoulder-joints knot the inside of each appendage as they sway and wave in a wind unknown to all but them." />
+    <skill Name="Dual_Wield_Offhand_Strikes" />
+    <skill Name="LongBladesProficiency" />
+    <part Name="ConversationScript" ConversationID="PsychicViscera" />
+    <stat Name="AV" Value="0" />
+    <stat Name="Level" Value="14" />
+    <tag Name="PrimaryLimbType" Value="Face" />
+     <tag Name="ExcludeFromDynamicEncounters" />
+    <stat Name="Hitpoints" Value="48" />
+    <mutation Name="MultipleArms" Level="1" />
+    <inventoryobject Blueprint="Assemblage of Metacarpals" Number="2" />
+    <inventoryobject Blueprint="Assemblage of Metacarpals_Arm" Number="2" />
+    <inventoryobject Blueprint="Assemblage of Metacarpals_Face" Number="1" />
+  </object>
+
+<object Name="Assemblage of Metacarpals" Inherits="NaturalWeapon">
+    <part Name="MeleeWeapon" BaseDamage="1d3" HitBonus="5" Skill="LongBlades" Stat="Strength" Slot="Hand" />
+    <part Name="Render" DisplayName="{{r|assemblage of metacarpals}}" />
+    <tag Name="Gender" Value="plural" />
+    <part Name="LatchesOn" InitialSaveTarget="16" InitialSaveStat="Agility" InitialSaveDifficultyStat="Agility" MoveSaveTarget="16" MoveSaveStat="Strength" MoveSaveDifficultyStat="Strength" BreakSaveTarget="16" BreakSaveStat="Strength" BreakSaveDifficultyStat="Agility" Duration="3-9" AutoAttackOnMove="true" AutoAttackOnMoveAway="true" AutoAttackPerTurn="false" BloodSpatterOnLatch="false" />
+    <part Name="VampiricWeapon" Percent="0-100" Reduction="0" Maximum="1d6" RequiresLivingTarget="true" RealityDistortionBased="true" />
+  </object>	
+
+  <object Name="Assemblage of Metacarpals_Arm" Inherits="Assemblage of Metacarpals">
+    <part Name="MeleeWeapon" BaseDamage="1d3" HitBonus="5"  Skill="LongBlades" Stat="Agility" Slot="Arm" />
+  </object>	
+
+  <object Name="Assemblage of Metacarpals_Face" Inherits="Assemblage of Metacarpals">
+    <part Name="MeleeWeapon" BaseDamage="1d3" HitBonus="5" Skill="LongBlades" Stat="Agility" Slot="Face" />
+  </object>	
+
+<object Name="Heart Relentless" Inherits="BasePolyp">
+    <part Name="Render" RenderIfDark="false" Tile="Feline/HeartS.png" DisplayName="incessant heart" ColorString="&amp;R" DetailColor="r"/>
+    <part Name="Description" Short="Each heartbeat is a drumbeat is the rumbling of a thunder that compels you that demands you to come closer to indulge it in its cadence with the drumming of your fingers and the tapping of your shoe-tips that arises from your bloodstream with its origin in your heartbeat is a drumbeat is the rumbling of a thunder." />
+    <skill Name="Cudgel_Expertise" />
+     <tag Name="ExcludeFromDynamicEncounters" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="Writhing Veins_Temporary"/>
+    <skill Name="Cudgel_Slam" />
+    <skill Name="Endurance_ShakeItOff" />
+    <part Name="ConversationScript" ConversationID="PsychicViscera" />
+    <stat Name="AV" Value="0" />
+         <tag Name="DeathSounds" Value="Sounds/StatusEffects/sfx_statusEffect_physicalRupture" />
+    <stat Name="Level" Value="14" />
+    <tag Name="PrimaryLimbType" Value="Body" />
+    <stat Name="Hitpoints" Value="48" />
+    <mutation Name="Regeneration" Level="5" />
+    <part Name="Breeder" Blueprint="Writhing Veins_Temporary" Chance="25" ReductionChance="0" Range="1-8" />
+    <inventoryobject Blueprint="Massive Ventricles" Number="1" />
+   <part Name="LiquidBurst" EelChance="0" Liquid="Membra_BloodDeepPool" />
+  </object>
+
+ <object Name="Massive Ventricles" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="{{R|massive ventricles}}" />
+    <part Name="MeleeWeapon" BaseDamage="2d2" Skill="Cudgel" Stat="Strength" Slot="Body"/>
+    <tag Name="Gender" Value="plural" />
+  </object>
+
+  <object Name="Membra_BloodDeepPool" Inherits="Water">
+    <part Name="LiquidVolume" MaxVolume="-1" Volume="4000" InitialLiquid="blood-1000" />
+  </object>
+
+ <object Name="Writhing Veins" Inherits="BasePolyp">
+    <part Name="Render" RenderIfDark="true" DisplayName="writhing veins" RenderString="011" ColorString="&amp;R" DetailColor="r" />
+    <part Name="Brain" Hostile="true" Wanders="false" Mobile="false" Factions="Resheph-100" />
+    <stat Name="Hitpoints" Value="3" />
+    <part Name="Description" Short="Shivering capillaries reach up towards the shin, eager for the mingling of your blood with theirs" />
+     <tag Name="ExcludeFromDynamicEncounters" />
+     <removepart Name="Combat" />
+    <stat Name="Level" Value="14" />
+    <part Name="Impaler" ClusterSize="1d7+2" Damage="1d4" BleedDamage="1d2" AlternateBlueprintChance="0" AlternateBlueprint="Shuddering Clot"/>
+    <tag Name="Species" Value="veins" />
+    <tag Name="ExcludeFromHostiles" />
+    <removepart Name="ConversationScript" />
+    <tag Name="Gender" Value="plural" />
+    <tag Name="DeathSounds" Value="" />
+     <part Name="FallsApart" Duration="800-1600" Message="=subject.T= =verb:recede=." />
+    <!--<part Name="RandomTile" Tiles="Terrain/sw_fracti1.bmp,Terrain/sw_fracti2.bmp,Terrain/sw_fracti3.bmp,Terrain/sw_fracti4.bmp,Terrain/sw_fracti5.bmp,Terrain/sw_fracti6.bmp,Terrain/sw_fracti7.bmp,Terrain/sw_fracti8.bmp" /> -->
+ <part Name="RandomTile" Tiles="Creatures/sw_tendril_weird1.bmp,Creatures/sw_tendril_weird2.bmp,Creatures/sw_tendril_weird3.bmp,Creatures/sw_tendril_weird4.bmp" />
+  </object>  
+
+<!--    -->
+
+<object Name="Writhing Veins_Temporary" Inherits="Writhing Veins">
+    <stat Name="Level" Value="1" />
+     <tag Name="ExcludeFromDynamicEncounters" />
+    <part Name="Impaler" ClusterSize="1d7+2" Damage="1d4" BleedDamage="1d2-1" AlternateBlueprintChance="0" AlternateBlueprint="Shuddering Clot"/>
+    <tag Name="ExcludeFromHostiles" />
+    <part Name="FallsApart" Duration="8-16" Message="=subject.T= =verb:recede=." />
+  </object>  
+
+ <object Name="Wound-that-Walks" Inherits="BaseHeadless">
+    <part Name="Render" DisplayName="wound-that-walks" Tile="Feline/MawM.png" RenderString="227" ColorString="&amp;r" DetailColor="y" />
+    <part Name="Corpse" CorpseChance="0" />
+    <stat Name="AV" Value="6" />
+    <stat Name="Level" Value="24" />
+    <part Name="ConversationScript" ConversationID="Viscera" />
+    <stat Name="Hitpoints" Value="75" />
+    <part Name="Brain" Hostile="true" Factions="Resheph-100" />
+    <inventoryobject Blueprint="Wound_GruesomeJaws" Number="1" />
+     <tag Name="ExcludeFromDynamicEncounters" />
+    <inventoryobject Blueprint="Hand-Mouth" Number="2" />
+    <part Name="Description" Short="A wound that is deep enough has a tendency to reopen even long after it appears to have healed. A sudden motion or presistent strain may draw blood even from half-faded scars, and time itself can cause a hairline-crack in the base of a statue to spread until the stony edifice suddenly collapses into rubble. Tremors in the earth expose not only the hidden wounds in the buildings that collapse, but also the wounds in the minds of those that raised them. Such a wound stands before you now, rimmed with jagged teeth, its presence carving the questions into your head: Who first opened this wound, and for how long has it remained unopened? Why is it only now that it has reopened? " />
+    <skill Name="Axe_Expertise" />
+    <intproperty Name="Bleeds" Value="0" />
+    <skill Name="Axe_Cleave" />
+    <skill Name="Axe_Dismember" />
+    <mutation Name="Carnivorous" />
+    <tag Name="PrimaryLimbType" Value="Body" />
+    <stat Name="Speed" Value="75" />
+    <tag Name="Species" Value="Polyp" />    
+          <tag Name="AmbientIdleSound" Value="Sounds/StatusEffects/sfx_statusEffect_enraged" />
+  <!--  <part Name="LiquidProximityTriggersEffect" Range="5" Duration="16-32" LiquidMustBeConnectedByLiquid="false" EffectName="Running" /> -->
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object>
+
+<object Name="Wound_GruesomeJaws" Inherits="Bite">
+    <part Name="Render" DisplayName="{{r|gaping thorax}}" />
+    <part Name="MeleeWeapon" BaseDamage="1d14" Slot="Body" />
+    <tag Name="Gender" Value="plural" />
+  </object>
+
+<object Name="Hand-Mouth" Inherits="Bite">
+    <part Name="Render" DisplayName="{{r|hand-mouth}}" />
+    <part Name="MeleeWeapon" BaseDamage="2d2" Slot="Hand" />
+  </object>
+
+ <object Name="Cerebromunculus" Inherits="BaseHeadless">
+    <part Name="Render" DisplayName="cerebromunculus" Tile="Feline/BrainM.png" RenderString="227" ColorString="&amp;y" DetailColor="r" />
+    <tag Name="BodyDisplayName" Value="Humanoid" />
+    <part Name="Body" Anatomy="Humanoid" />
+    <part Name="Corpse" CorpseChance="0" />
+     <tag Name="ExcludeFromDynamicEncounters" />
+     <part Name="ConversationScript" ConversationID="PsychicViscera" />
+    <stat Name="AV" Value="3" />
+    <stat Name="Level" Value="24" />
+    <stat Name="Hitpoints" Value="64" />
+    <part Name="Brain" Hostile="true" Factions="Resheph-100" />
+    <inventoryobject Blueprint="Telodendral Rhizome" Number="2" />
+    <inventoryobject Blueprint="Cerebromonculus_Cerebrum" Number="1" />
+    <part Name="Description" Short="There is something profoundly ill about the notion of a brain contorted into human shape. Things that should only touch the walls of the skull now touch the ground, and substances which should be held within the spine now grasp for air. Even the thought of striking it feels like a blasphemy." />
+    <skill Name="Shield" />
+    <skill Name="Shield_Slam" />
+    <skill Name="Shield_StaggeringBlock" />
+    <skill Name="ShortBlades_Expertise" />
+    <skill Name="ShortBlades_Jab" />
+    <skill Name="ShortBlades_Bloodletter" />
+    <mutation Name="ElectromagneticPulse" Level="4" />
+    <mutation Name="ElectromagneticImpulse" />
+    <tag Name="Species" Value="Polyp" />    
+   <removepart Name="MentalShield" />
+  </object>
+
+ <object Name="Telodendral Rhizome" Inherits="NaturalWeapon">
+    <part Name="MeleeWeapon" BaseDamage="2d3" Skill="ShortBlades" Stat="Agility" Slot="Hand" />
+    <part Name="Render" DisplayName="{{r|telodendral rhizome}}" />
+    <part Name="DischargeOnHit" ChargeUse="0" Voltage="2d8" DamageRange="2d4" />
+  </object>	
+
+<object Name="Cerebromonculus_Cerebrum" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="{{y|massive prosencephalon}}" />
+      <tag Name="UndesirableWeapon" />
+    <part Name="Shield" AV="4" DV="0" WornOn="Head" />
+            <tag Name="ShowMeleeWeaponStats" Value="false" />
+  </object>
+
+<object Name="Ascendant Watcher" Inherits="BasePolyp">
+    <part Name="Render" DisplayName="ascendant watcher" Tile="Feline/EyeM.png" ColorString="&amp;Y" DetailColor="R"/>
+    <part Name="Description" Short="That same nerve that once hoisted images from the life-world into the mind-world now hoists the swollen eye-thing towards the heavens." />
+    <part Name="Brain" Hostile="true" Wanders="true" Mobile="true" Factions="Resheph-100" PointBlankRange="true" />
+    <skill Name="Pistol_SteadyHands" />
+     <tag Name="ExcludeFromDynamicEncounters" />
+    <skill Name="Pistol_DeadShot" />
+    <skill Name="Pistol_WeakSpotter" />
+    <tag Name="BleedLiquid" Value="salt-100,water-1000,blood-100" />
+		<tag Name="BleedColor" Value="&amp;B" />
+		<tag Name="BleedPrefix" Value="{{B|teary}}" />
+    <part Name="ConversationScript" ConversationID="PsychicViscera" />
+    <skill Name="Persuasion_MenacingStare" />
+    <removepart Name="NoKnockdown" />
+    <tag Name="Noswap"  Value="*delete" />
+    <skill Name="Acrobatics_SwiftReflexes" />
+     <tag Name="DeathSounds" Value="Sounds/StatusEffects/sfx_statusEffect_physicalRupture" />
+    <stat Name="AV" Value="0" />
+    <stat Name="Level" Value="24" />
+    <stat Name="Hitpoints" Value="82" />
+    <inventoryobject Blueprint="Watcher_Bloodshot Retina" Number="1" />
+    <part Name="AIShootAndScoot" Duration="1d2" />
+    <mutation Name="Wings" Level="6" />
+  </object>
+
+<object Name="Watcher_Bloodshot Retina" Inherits="NaturalMissileWeapon">
+    <part Name="Render" DisplayName="bloodshot retina" ColorString="&amp;R" />
+    <part Name="MissileWeapon" RangeIncrement="14" Skill="Pistol"  ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" />
+    <part Name="EnergyAmmoLoader" ChargeUse="0" ProjectileObject="Projectile_Regret" />
+    <tag Name="UsesSlots" Value="Face" />
+     <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Pistols/sfx_missile_psychalFleshgun_fire" />
+  </object>
+  <object Name="Projectile_Regret" Inherits="TemporaryEnergyProjectile">
+    <part Name="Render" DisplayName="{{c|flash of regret}}" ColorString="&amp;c" />
+    <part Name="Projectile" BasePenetration="10" BaseDamage="2d6" ColorString="&amp;c" PassByVerb="glint" Attributes="Mental Psionic" />
+    <part Name="TreatAsSolid" GazeBased="true" RealityDistortionBased="true" Hits="false" RequiresPhaseMatch="false" Message="The darkness consumes =subject.t=!" />
+  </object>
+
+ <object Name="Gruesome Hecatoncheire" Inherits="BaseHeadless">
+    <part Name="Render" DisplayName="gruesome hecatoncheire" Tile="Feline/HandM.png" RenderString="227" ColorString="&amp;w"  DetailColor="r" />
+    <part Name="Corpse" CorpseChance="0" />
+    <stat Name="AV" Value="0" />
+    <stat Name="Level" Value="24" />
+    <part Name="ConversationScript" ConversationID="PsychicViscera" />
+     <tag Name="ExcludeFromDynamicEncounters" />
+    <stat Name="Hitpoints" Value="64" />
+    <part Name="Brain" Hostile="true" Factions="Resheph-100" />
+    <inventoryobject Blueprint="Gruesome_Metacarpals" Number="4" />
+    <inventoryobject Blueprint="Gruesome_Metacarpals_Arm" Number="4" />
+    <inventoryobject Blueprint="Gruesome_Metacarpals_Back" Number="1" />
+    <inventoryobject Blueprint="Gruesome_Metacarpals_Body" Number="1" />
+    <part Name="Description" Short="Motions repeat in spasms as the hand-thing hobbles towards whatever its strange instinct drives it towards. Here is the instinctive grasp for the hand of a friend, here is the fond caress of a lover's face, here is the practiced mirroring of an unseen other's embrace. The pantomime folds in on itself, interrupts itself and returns to itself, all in service of a singular theme: Its player, with its countless ceaseless hands, is soething that wants to hold you very, very close." />
+    <skill Name="Dual_Wield_Offhand_Strikes" />
+    <skill Name="LongBladesProficiency" />
+    <skill Name="LongBladesImprovedAggressiveStance" />
+    <tag Name="PrimaryLimbType" Value="Hand" />
+    <skill Name="LongBladesLunge" />
+    <stat Name="Speed" Value="125" />
+    <mutation Name="MultipleArms" Level="5" />
+    <tag Name="Species" Value="Polyp" />    
+  </object>
+
+<object Name="Gruesome_Metacarpals" Inherits="NaturalWeapon">
+    <part Name="MeleeWeapon" BaseDamage="1d3" Skill="LongBlades" Stat="Strength" Slot="Hand" />
+    <part Name="Render" DisplayName="{{r|assemblage of metacarpals}}" />
+    <tag Name="Gender" Value="plural" />
+    <part Name="LatchesOn" InitialSaveTarget="16" InitialSaveStat="Agility" InitialSaveDifficultyStat="Agility" MoveSaveTarget="16" MoveSaveStat="Strength" MoveSaveDifficultyStat="Strength" BreakSaveTarget="16" BreakSaveStat="Strength" BreakSaveDifficultyStat="Agility" Duration="2d4" AutoAttackOnMove="true" AutoAttackOnMoveAway="true" AutoAttackPerTurn="false" BloodSpatterOnLatch="false" />
+    <part Name="VampiricWeapon" Percent="0-100" Reduction="0" Maximum="5+1d7" RequiresLivingTarget="true" RealityDistortionBased="true" />
+  </object>	
+
+  <object Name="Gruesome_Metacarpals_Arm" Inherits="Gruesome_Metacarpals">
+    <part Name="MeleeWeapon" BaseDamage="1d3" Skill="LongBlades" Stat="Strength" Slot="Arm" />
+  </object>	
+
+  <object Name="Gruesome_Metacarpals_Body" Inherits="Gruesome_Metacarpals">
+    <part Name="MeleeWeapon" BaseDamage="1d3" Skill="LongBlades" Stat="Strength" Slot="Body" />
+  </object>	
+
+  <object Name="Gruesome_Metacarpals_Back" Inherits="Gruesome_Metacarpals">
+    <part Name="MeleeWeapon" BaseDamage="1d3" Skill="LongBlades" Stat="Strength" Slot="Back" />
+  </object>	
+
+<object Name="Errant Myocardium" Inherits="BasePolyp">
+    <part Name="Render" DisplayName="errant myocardium" Tile="Feline/HeartM.png" ColorString="&amp;R" DetailColor="r"/>
+    <part Name="Description" Short="A beating human heart is held aloft by a crooked neck of thrumming flesh. Despite the mass of thumping muscle where a face should be, it carries itself with an almost regal bearing as though it were a hierarch to the restless pools of blood that surround its wake." />
+    <part Name="Brain" Hostile="true" Wanders="true" Mobile="true" Factions="Resheph-100" PointBlankRange="true" />
+    <part Name="Body" Anatomy="Worm" />
+    <skill Name="Cudgel_Expertise" />
+    <part Name="ConversationScript" ConversationID="PsychicViscera" />
+     <removepart Name="NoKnockdown" />
+          <tag Name="DeathSounds" Value="Sounds/StatusEffects/sfx_statusEffect_physicalRupture" />
+     <tag Name="ExcludeFromDynamicEncounters" />
+    <skill Name="Cudgel_Slam" />
+    <skill Name="Cudgel_Backswing" />
+    <skill Name="Acrobatics_SwiftReflexes" />
+        <part Name="Corpse" CorpseChance="100" CorpseBlueprint="Membra_BloodDeepPool"/>
+     <tag Name="Noswap" Value="*delete" />
+    <stat Name="AV" Value="0" />
+    <stat Name="Level" Value="24" />
+    <tag Name="PrimaryLimbType" Value="Head" />
+    <stat Name="Hitpoints" Value="100" />
+    <skill Name="Endurance_ShakeItOff" />
+    <mutation Name="Regeneration" Level="10" />
+    <part Name="Breeder" Blueprint="Shuddering Clot" Chance="75" ReductionChance="0" Range="1" />
+    <inventoryobject Blueprint="Myocardium_Massive Ventricles" Number="1" />
+    <part Name="LiquidBurst" EelChance="0" Liquid="Membra_BloodDeepPool" />
+    <part Name="AISelfPreservation" Threshold="25" />
+    <stat Name="Speed" Value="75" />
+  </object>
+
+<object Name="Shuddering Clot" Inherits="BaseOoze">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BloodSplash" />
+    <part Name="Brain" Hostile="true"  Factions="Resheph-100,Oozes--100" />
+    <part Name="Render" DisplayName="{{r|shuddering clot}}" Tile="Feline/BloodSludge.png" RenderString="j" ColorString="&amp;r" DetailColor="R" />
+    <stat Name="Level" Value="18" />
+    <stat Name="AV" Value="3" />
+    <stat Name="Hitpoints" Value="25" />
+     <tag Name="ExcludeFromDynamicEncounters" />
+     <tag Name="SimpleConversation" Value="&amp;w*undulates spasmodically*&amp;y" />
+    <inventoryobject Blueprint="Membra_Bloody Pseudopod" Number="1" />
+    <part Name="Description" Short="Blood has always held a position of esteem amidst the metaphors we reach for when we wish to elucidate the acts and the aftermaths of violence. It is the substance in which generals drown their battlefields, it is the sacrament that the frenzied crowd thirsts for, it is the currency in which striving families pay for their gathered misdeeds, back and forth and then back again. But to see blood itself as a fighting thing, as the agent of violence rather than its result, is a thing for which no metaphor truly fits. If you were a poet, perhaps you could invent one, but you are no poet. And neither is the blood." />
+    <tag Name="SeveredLimbBlueprint" Value="BloodSplash" />
+    <tag Name="SeveredHeadBlueprint" Value="BloodSplash" />
+    <tag Name="SeveredFaceBlueprint" Value="BloodSplash" />
+    <tag Name="SeveredArmBlueprint" Value="BloodSplash" />
+    <tag Name="SeveredHandBlueprint" Value="BloodSplash" />
+    <tag Name="SeveredLegBlueprint" Value="BloodSplash" />
+    <tag Name="SeveredFootBlueprint" Value="BloodSplash" />
+    <tag Name="SeveredFeetBlueprint" Value="BloodSplash" />
+    <tag Name="SeveredTailBlueprint" Value="BloodSplash" />
+    <tag Name="SeveredRootsBlueprint" Value="BloodSplash" />
+    <tag Name="SeveredFinBlueprint" Value="BloodSplash" />		
+     <tag Name="TakeDamageSound" Value="Sounds/StatusEffects/sfx_statusEffect_organicEngulfment"/>
+    <tag Name="BleedLiquid" Value="blood-1000" />
+    <tag Name="BleedPrefix" Value="{{r|bloody}}" />
+    <tag Name="BleedColor" Value="&amp;r" />
+    <skill Name="Cudgel_Expertise" />
+    <stat Name="Speed" Value="125" />
+    <part Name="FallsApart" Duration="6-12" Message="{{r|=subject.T= =verb:liquify= into a puddle of blood.}}" />
+          <tag Name="DeathSounds" Value="" />
+  </object>
+
+<object Name="Membra_Bloody Pseudopod" Inherits="NaturalWeapon">
+    <part Name="MeleeWeapon" BaseDamage="1d4" Skill="Cudgel" Stat="Agility" Slot="Body" />
+    <part Name="Render" DisplayName="{{R|bloody pseudopod}}" />
+    <part Name="VampiricWeapon" Percent="0-100" Reduction="0" Maximum="5+1d7" RequiresLivingTarget="true" RealityDistortionBased="false" />
+  </object>	
+
+<object Name="Myocardium_Massive Ventricles" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="{{R|massive ventricles}}" />
+    <part Name="MeleeWeapon" BaseDamage="2d8" Skill="Cudgel" Stat="Strength" Slot="Head"/>
+    <tag Name="Gender" Value="plural" />
+  </object>
+
+ <object Name="Wandering Preacher" Inherits="BaseHumanoid">
+    <part Name="Render" DisplayName="wandering preacher" Tile="creatures/sw_stranger1.bmp" RenderString="h" ColorString="&amp;Y" DetailColor="c" />
+    <part Name="Corpse" CorpseChance="50" CorpseBlueprint="SmallViscera" />
+    <part Name="Brain" Hostile="false" Wanders="true" Mobile="true" Factions="Resheph-100" />
+    <stat Name="AV" Value="3" />
+    <stat Name="Level" Value="14" />
+    <stat Name="Hitpoints" Value="36" />
+         <part Name="ConversationScript" ConversationID="WanderingPreacher" />
+    <part Name="Description" Short="The pilgrim-physician steadies =pronouns.reflexive= on a gnarled wooden stick, and wraps the folds of coarse-weave tighter around =pronouns.possessive= slender frame. They have returned to Qud en masse, they say, to commemorate an occasion most solemn to their Order." />
+    <property Name="Role" Value="Skirmisher" />
+    <skill Name="Pistol_SteadyHands" />
+    <skill Name="Pistol_DeadShot" />
+    <skill Name="Pistol_WeakSpotter" />
+    <skill Name="Cudgel_Expertise" />
+    <skill Name="Cudgel_Conk" />
+    <skill Name="Cudgel_Bludgeon" />
+    <skill Name="Discipline_Meditate" />
+    <part Name="AISelfPreservation" Threshold="25" />
+    <inventoryobject Blueprint="Wide-brimmed Hat" Number="1" Chance="100" />
+    <inventoryobject Blueprint="Worn Burnoose" Number="1" Chance="100" />
+    <inventoryobject Blueprint="Slate Frock" Number="1" Chance="100" />
+    <inventoryobject Blueprint="Sandals" Number="1" Chance="100" />
+    <inventoryobject Blueprint="Borderlands Revolver" Number="1" Chance="100" />
+    <inventoryobject Blueprint="Walking Stick" Number="1" Chance="100" />
+    <inventoryobject Blueprint="Lead Slug" Number="8-64" />
+    <inventoryobject Blueprint="SalveTonic" Number="1d6-4" />
+    <inventoryobject Blueprint="UbernostrumTonic" Number="1d8-7" />
+    <inventoryobject Blueprint="Witchwood Bark" Number="1d4-2" />
+    <inventoryobject Blueprint="Membra_Gel Phial" Number="1d4-3" />
+    <inventoryobject Blueprint="Convalessence Phial" Number="1d8-7" />
+    <inventoryobject Blueprint="Bandage" Number="0-6" Chance="100" />
+    <part Name="AIShootAndScoot" Duration="1d1" />
+    <tag Name="RandomPronounSet" Value="genericpersonal,personal,any,generate,generate" />
+  </object>
+
+  <object Name="Membra_Gel Phial" Inherits="Phial">
+    <part Name="LiquidVolume" StartVolume="1" InitialLiquid="gel-100" />
+    <tag Name="NoSparkingQuest" />
+  </object>
+
+<object Name="Wayward Preacher" Inherits="NPC">
+    <part Name="Render" DisplayName="wayward preacher" Tile="Feline/WaywardPreacher.png"  RenderString="h" ColorString="&amp;Y" DetailColor="r" />
+    <part Name="ConversationScript" ConversationID="WaywardPreacher" />
+    <part Name="Brain" Factions="Resheph-100" Wanders="true" Mobile="true"/>
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <stat Name="Agility" Boost="1" />
+    <stat Name="Hitpoints" Value="75" />
+    <stat Name="Level" Value="26" />
+    <stat Name="AV" Value="5" />
+    <part Name="Description" Short="Only scraps remain of that mendicant regality with which the preachers carried themselves when they first began to wander into Qud a month or so ago, singing monodies to their Sultan and whispering hurriedly among themselves of a new and unknown plague. Gone is the trained precision of the surgeon&apos;s hands, and something strange and restless has grown into =pronouns.subjective= motions in its place. =pronouns.Subjective=  traveler&apos;s frock is ragged, =pronouns.subjective=  shawl is stained in grime, and though it is hard to make out in the shadow cast by =pronouns.subjective=  wide-brimmed hat, you swear you can see a glint of eerie hunger in =pronouns.subjective=  eyes. Something small catches the light beneath =pronouns.subjective=  dirty robes. A knife?" />
+    <property Name="Role" Value="Skirmisher" />
+    <skill Name="Acrobatics_Dodge" />
+    <skill Name="CookingAndGathering_Butchery" />
+    <skill Name="Cudgel_Expertise" />
+    <skill Name="Cudgel_Conk" />
+    <skill Name="Cudgel_Bludgeon" />
+    <skill Name="Discipline_Meditate" />
+    <skill Name="Discipline_Lionheart" />
+    <skill Name="ShortBlades_Expertise" />
+    <skill Name="ShortBlades_Jab" />
+    <skill Name="ShortBlades_Hobble" />
+    <skill Name="Tactics_Juke" />
+    <skill Name="ShortBlades_PointedCircle" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="NoLibrarian" />
+    <inventoryobject Blueprint="Umber Frock" />
+    <inventoryobject Blueprint="Leather Boots" Number="1" Chance="100" />
+    <inventoryobject Blueprint="Wide-brimmed Hat" Number="1" Chance="100" />
+    <inventoryobject Blueprint="Worn Burnoose" Number="1" Chance="100" />
+    <inventoryobject Blueprint="Steel Butcher Knife" Number="1" Chance="100" />
+    <inventoryobject Blueprint="Walking Stick" Number="1" Chance="100" />
+    <inventoryobject Blueprint="SalveTonic" Number="1d6-3" />
+    <inventoryobject Blueprint="UbernostrumTonic" Number="1d4-3" />
+    <inventoryobject Blueprint="Witchwood Bark" Number="1d6-3" />
+    <inventoryobject Blueprint="Membra_Gel Phial" Number="1d4-3" />
+    <inventoryobject Blueprint="Urberry" Number="1d8-7" />
+    <inventoryobject Blueprint="Bandage" Number="0-6" Chance="100" />
+    <inventoryobject Blueprint="Grave Goods" Number="0-4" Chance="100" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object>
+
+ <object Name="BaseGrossShrine" Inherits="Statue">
+    <part Name="Render" DisplayName="gruesome shrine" ColorString="&amp;y" DetailColor="r" Occluding="false" Tile="Feline/GrossStatue.png" />
+             <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <part Name="Shrine" />
+        <tag Name="BaseObject" Value="*noinherit" />
+            <removepart Name="UnityPrefabImposter"  />
+  </object>
+  
+  <object Name="GrossShrine1" Inherits="BaseGrossShrine">
+    <part Name="Render" DisplayName="defaced shrine" ColorString="&amp;y" DetailColor="r" Occluding="false" Tile="Feline/GrossStatue.png" />
+<part Name="Description" Short="This shrine depicts a gruesome event of unknown significance: 
+  
+  A tall figure steadies themselves on an ornate scepter, bowing their head to the ground in mourning. All around them, tattered corpses litter the ground."/>
+  </object>
+
+  <object Name="GrossShrine2" Inherits="BaseGrossShrine">
+    <part Name="Render" DisplayName="defaced shrine" ColorString="&amp;y" DetailColor="r" Occluding="false" Tile="Feline/GrossStatue.png" />
+<part Name="Description" Short="This shrine depicts a gruesome event of unknown significance: 
+  
+  A tall and hooded figure huddles beneath an elaborately embroidered robe. Closer inspection reveals that the figure is in fact composed of a myriad small humanoid sculptures, humans, mopango, and urshiib, arranged into the form of a single shape beneath the robe."/>
+  </object>
+
+  <object Name="GrossShrine3" Inherits="BaseGrossShrine">
+    <part Name="Render" DisplayName="defaced shrine" ColorString="&amp;y" DetailColor="r" Occluding="false" Tile="Feline/GrossStatue.png" />
+<part Name="Description" Short="This shrine depicts a gruesome event of unknown significance: 
+  
+A congregation of small humanoid figures kneel on an empty field, bowing their heads to the ground and weeping. Seen from afar, the combined shapes of the figures form the outline of a single large figure laid on its back like a corpse."/>
+  </object>
+
+    <object Name="GrossShrine4" Inherits="BaseGrossShrine">
+    <part Name="Render" DisplayName="defaced shrine" ColorString="&amp;y" DetailColor="r" Occluding="false" Tile="Feline/GrossStatue.png" />
+<part Name="Description" Short="This shrine depicts a gruesome event of unknown significance: 
+  
+A massive, weeping human head, its features hidden beneath a smooth and unadorned mask. In the stead of tears, small humanoid figures are climbing down across its cheeks.  "/>
+  </object>
+
+    <object Name="GrossShrine5" Inherits="BaseGrossShrine">
+    <part Name="Render" DisplayName="defaced shrine" ColorString="&amp;y" DetailColor="r" Occluding="false" Tile="Feline/GrossStatue.png" />
+<part Name="Description" Short="This shrine depicts a gruesome event of unknown significance: 
+  
+A massive human torso, dismembered and disemboweled. From the gaping wound in its chest, a winding procession of little humans, snapjaws, goatfolk and other humanoid shapes are marching out across a scarred and blighted wasteland.  "/>
+  </object>
+
+    <object Name="GrossShrine6" Inherits="BaseGrossShrine">
+    <part Name="Render" DisplayName="defaced shrine" ColorString="&amp;y" DetailColor="r" Occluding="false" Tile="Feline/GrossStatue.png" />
+<part Name="Description" Short="This shrine depicts a gruesome event of unknown significance: 
+  
+Two humanoid figures in the apparel of physicians, standing over a hospital bed. One figure&apos;s face is hidden beneath an unadorned mask, while the other, clad in a habit and bearing an unfamiliar symbol in her brow, has an expression of anger and grief on her gaunt-looking face. The bed between them is empty, aside from a single severed tongue."/>
+  </object>
+
+      <object Name="GrossShrine7" Inherits="BaseGrossShrine">
+    <part Name="Render" DisplayName="defaced shrine" ColorString="&amp;y" DetailColor="r" Occluding="false" Tile="Feline/GrossStatue.png" />
+<part Name="Description" Short="This shrine depicts a gruesome event of unknown significance: 
+  
+An armored figure wielding an ornate spear gazes out over a large battlefield, tears streaking their masked face. Everywhere below, a multitude of various shapes, small and large, living and mechanical, are being devoured by an unending onslaught of strange and spiderlike things of varying shapes and sizes."/>
+  </object>
+
+      <object Name="GrossShrine8" Inherits="BaseGrossShrine">
+    <part Name="Render" DisplayName="defaced shrine" ColorString="&amp;y" DetailColor="r" Occluding="false" Tile="Feline/GrossStatue.png" />
+<part Name="Description" Short="This shrine depicts a gruesome event of unknown significance: 
+  
+A figure in an ornate crown pushes a shovel into the muddy earth beneath their jeweled sandals. All around them, open graves await their inhabitants. "/>
+  </object>
+
+      <object Name="GrossShrine9" Inherits="BaseGrossShrine">
+    <part Name="Render" DisplayName="defaced shrine" ColorString="&amp;y" DetailColor="r" Occluding="false" Tile="Feline/GrossStatue.png" />
+<part Name="Description" Short="This shrine depicts a gruesome event of unknown significance: 
+  
+A tall figure in an unadorned mask cradles the shape of a woman in their arms. The woman is dressed in a long, austere robe, and an unfamiliar symbol has been carved into her forehead. From her eyes and her mouth, a viscous substance drips into a puddle on the ground before them."/>
+  </object>
+
+      <object Name="GrossShrine10" Inherits="BaseGrossShrine">
+    <part Name="Render" DisplayName="defaced shrine" ColorString="&amp;y" DetailColor="r" Occluding="false" Tile="Feline/GrossStatue.png" />
+<part Name="Description" Short="This shrine depicts a gruesome event of unknown significance: 
+  
+A tall and regal figure in a heavy robe kneels on a scarred plain. A single hand extends from within the robe, contorting and transforming into a shoal of small human figures where it makes contact with the ground. From what little can be seen of the figure&apos;s cheek beneath the hood, a circuit pattern extends down from its lower lip."/>
+  </object>
+
+      <object Name="GrossShrine11" Inherits="BaseGrossShrine">
+    <part Name="Render" DisplayName="defaced shrine" ColorString="&amp;y" DetailColor="r" Occluding="false" Tile="Feline/GrossStatue.png" />
+<part Name="Description" Short="This shrine depicts a gruesome event of unknown significance: 
+  
+A kneeling figure ritually disemboweling themselves. One hand holds a knife, while the intestines that have coiled around the other hand are covered in eyes and mouths."/>
+  </object>
+
+
+
+
+
+
+
+
+
+<object Name="SmallViscera" Inherits="BasePolyp">
+    <part Name="Render" DisplayName="{{R|viscera}}" ColorString="&amp;R" DetailColor="r" Tile="Items/sw_splat1.bmp" />
+    <part Name="Description" Short="The forces of slaughter have rearranged the parts of the body, and here they lie, rearranging themselves in accordance to the will of some other, stranger force. Forms of motion once confined to the world of the living are now writhing through the skin of the dead, and the corpse shudders and spasms like a sleeper in the thores of a nightmare. Something has died here, and something else is struggling to be born. " />
+    <part Name="Brain" Hostile="false" Wanders="false" Mobile="false" Factions="Resheph-100" PointBlankRange="true" />
+    <stat Name="AV" Value="0" />
+    <removepart Name="Combat" />
+         <tag Name="ExcludeFromDynamicEncounters" />
+        <part Name="AmbientSoundGenerator" Sounds="Sounds/Damage/sfx_damage_elemental_bleeding-001,Sounds/Damage/sfx_damage_elemental_bleeding-002,Sounds/Damage/sfx_damage_elemental_bleeding-003,Sounds/Damage/sfx_damage_elemental_bleeding-004,Sounds/Damage/sfx_damage_elemental_bleeding-005" ChancePerThousand="500" />
+    <part Name="RandomTile" Tiles="Items/sw_splat1.bmp,Items/sw_splat2.bmp,Items/sw_splat3.bmp,Items/sw_splat4.bmp" />
+   <part Name="AnimatedMaterialGeneric" AnimationLength="100" ColorStringAnimationFrames="0=&amp;r,50=&amp;R" TileColorAnimationFrames="0=&amp;r,50=&amp;R" DetailColorAnimationFrames="0=R,50=r" />
+    <stat Name="Level" Value="1" />
+    <stat Name="Hitpoints" Value="1" />
+    <part Name="FallsApart" Duration="5-10" Message="{{r|The mass of viscera =verb:contort=, and a number of terrifying shapes take form.}}" />
+    <tag Name="NoXP" />
+      <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallVisceraSpawner" />
+  </object>
+
+<object Name="BigViscera" Inherits="SmallViscera">
+    <part Name="FallsApart" Duration="6-12" Message="{{r|The mass of viscera =verb:contort=, and a number of terrifying shapes take form.}}" />
+    <tag Name="NoXP" />
+         <tag Name="ExcludeFromDynamicEncounters" />
+      <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <part Name="RandomTile" Tiles="Items/sw_splat1.bmp,Items/sw_splat2.bmp,Items/sw_splat3.bmp,Items/sw_splat4.bmp" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigVisceraSpawner" />
+    <part Name="AnimatedMaterialGeneric" AnimationLength="50" ColorStringAnimationFrames="0=&amp;r,25=&amp;R" TileColorAnimationFrames="0=&amp;r,25=&amp;R" DetailColorAnimationFrames="0=R,25=r" />
+  </object>
+
+<object Name="SmallVisceraSpawner" Inherits="Widget">
+      <part Name="PopulationSpawner" Specification="@SmallViscera" DestroyAfterSpawn="true" Range="3" />
+  </object>
+
+<object Name="BigVisceraSpawner" Inherits="Widget">
+      <part Name="PopulationSpawner" Range="3" Specification="@BigViscera" DestroyAfterSpawn="true" />
+  </object>
+
+ <object Name="Hide-Sheathed Hermit_Frenzied" Inherits="Hide-Sheathed Hermit">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Trash Monk_Frenzied" Inherits="Trash Monk">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Hero" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Novice of the Sightless Way 2_Frenzied" Inherits="Novice of the Sightless Way 2">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Issachari Raider_Frenzied" Inherits="Issachari Raider">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="NoLibrarian" />
+    <mutation Name="Regeneration" Level="5" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Issachari Rifler_Frenzied" Inherits="Issachari Rifler">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Rare" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Mechanimist Pilgrim_Frenzied" Inherits="Mechanimist Pilgrim">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Hero" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Mechnamist rummager_Frenzied" Inherits="Mechnamist rummager">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Hero" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Templar Squire_Frenzied" Inherits="Templar Squire">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Naphtaali Stalker_Frenzied" Inherits="Naphtaali Stalker">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Naphtaali Runt_Frenzied" Inherits="Naphtaali Runt">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Rare" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Snapjaw Feeder_Frenzied" Inherits="Snapjaw Feeder">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Rare" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Snapjaw Spearfiend_Frenzied" Inherits="Snapjaw Spearfiend">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Uncommon" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Disciple of the Sightless Way_Frenzied" Inherits="Disciple of the Sightless Way">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Snapjaw Trapper_Frenzied" Inherits="Snapjaw Trapper">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Uncommon" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Cave Arconaut_Frenzied" Inherits="Cave Arconaut">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Hero" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="NoLibrarian" />
+    <mutation Name="Regeneration" Level="5" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="HindrenPariah_Frenzied" Inherits="HindrenPariah">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Uncommon" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="HindrenScoutPariah_Frenzied" Inherits="HindrenScoutPariah">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Uncommon" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Snapjaw Howler_Frenzied" Inherits="Snapjaw Howler">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Uncommon" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Goatfolk Bully_Frenzied" Inherits="Goatfolk Bully">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Goatfolk Hornblower_Frenzied" Inherits="Goatfolk Hornblower">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Goatfolk Sower_Frenzied" Inherits="Goatfolk Sower">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Goatfolk Yurtwarden_Frenzied" Inherits="Goatfolk Yurtwarden">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Goatfolk Shaman_Frenzied" Inherits="Goatfolk Shaman">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Hero" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Goatfolk Thrall_Frenzied" Inherits="Goatfolk Thrall">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Psyberneticist_Frenzied" Inherits="Psyberneticist">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Psyberneticist_Frenzied" Inherits="Psyberneticist">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Barathrumite Tinker_Frenzied" Inherits="Barathrumite Tinker">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Barathrumite Arconaut_Frenzied" Inherits="Barathrumite Arconaut">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Rare" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="NoLibrarian" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Dervish of the Sightless Way_Frenzied" Inherits="Dervish of the Sightless Way">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Mysterious Gunslinger_Frenzied" Inherits="Mysterious Gunslinger">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Hero" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Juicing Cannibal_Frenzied" Inherits="Juicing Cannibal">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="BananaRancher_Frenzied" Inherits="BananaRancher">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Hero" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Knight Templar_Frenzied" Inherits="Knight Templar">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Hero" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Gunner-Knight Templar_Frenzied" Inherits="Gunner-Knight Templar">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Hero" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Banner-Knight Templar_Frenzied" Inherits="Banner-Knight Templar">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Uncommon" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Newfather_Frenzied" Inherits="Newfather">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Hero" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="NoLibrarian" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Knight Commander of the Holy Temple_Frenzied" Inherits="Knight Commander of the Holy Temple">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Uncommon" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Phylactery Squire_Frenzied" Inherits="Phylactery Squire">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Hero" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Graverobber_Frenzied" Inherits="Graverobber">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="MopangoCharioteer_Frenzied" Inherits="MopangoCharioteer">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="MopangoTombdweller_Frenzied" Inherits="MopangoTombdweller">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="High Dervish of the Sightless Way_Frenzied" Inherits="High Dervish of the Sightless Way">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Hero" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Trash Abbot_Frenzied" Inherits="Trash Abbot">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Hero" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Reef Hermit_Frenzied" Inherits="Reef Hermit">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Hero" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Glow Wight Apotheote_Frenzied" Inherits="Glow Wight Apotheote">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Hero" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Arch Dervish of the Sightless Way_Frenzied" Inherits="Arch Dervish of the Sightless Way">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <property Name="Role" Value="Hero" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<object Name="InnerSultanWall_Period6" Load="Merge">
+        <part Name="SometimesBloody" Chance="5" />
+  </object>
+<object Name="The Nil Face" Load="Merge">
+        <part Name="SometimesBloody" Chance="100" />
+ <part Name="Description" Short="A bowed lune is cracked from where it was smashed off the gallium lathe. The shedim had no eyes left to color the dim and final Face, and it lay too long discarded in a pool of warm static. The sultanate is broken, and in its interregnum a great variety of morbid symptoms have appeared.
+
+In ageless blood, a single phrase has been smeared onto its surface by a shivering hand:
+
+{{r|&quot;FORGIVE ME&quot;}}" />
+  </object>
+</objects>

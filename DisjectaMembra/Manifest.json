@@ -1,0 +1,37 @@
+{
+
+
+
+	"id": "Disjecta Membra",
+
+
+
+	"loadorder": 1,
+
+
+
+	"title": "{{r|Disjecta Membra}}",
+
+
+
+	"description": "\u2019That corpse you planted last year in your garden,\n\u2019Has it begun to sprout? Will it bloom this year?\n\u2019Or has the sudden frost disturbed its bed?\n\n- The Waste Land, T. S. Eliot",
+
+
+
+	"tags": "Qud Modding Jam 2023, Creature, Faction, Lore",
+
+
+
+	"version": "1.0",
+
+
+
+	"author": "{{m|A Blessed Feline}}",
+
+
+
+	"previewImage": "preview.png"
+
+
+
+}
