@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+<object Name="xtinak_CavesOfCudJam_Aurochs" Inherits="BaseHumanoid">
+    <part Name="Render" DisplayName="auroch" Tile="xtinak_CavesOfCudJam/aurochs.png" RenderString="C" ColorString="&amp;W" />
+    <part Name="Corpse" CorpseChance="5" CorpseBlueprint="xtinak_CavesOfCudJam_Aurochs Corpse" />
+    <stat Name="Level" Value="15" />
+    <part Name="Body" Anatomy="Humanoid" />
+    <stat Name="AV" Value="3" />
+    <stat Name="Hitpoints" Value="20" />
+    <stat Name="Strength" Boost="2" />
+    <stat Name="Intelligence" Boost="1" />
+    <stat Name="Willpower" Boost="2" />
+    <stat Name="Ego" Boost="1" />
+    <part Name="Brain" Hostile="false" Factions="xtinak_CavesOfCudJam_Aurochs-100" />
+    <part Name="ConversationScript" ConversationID="xtinak_CavesOfCudJam_Aurochs" ClearLost="true" />
+    <part Name="Description" Short="The broad, shaggy-furred body is covered with leathery clothes. A soft chewing can be heard from =pronouns.possesive= horned, bovine-like head." />
+    <skill Name="Endurance" />
+    <skill Name="Shield" />
+    <property Name="Role" Value="Brute" />
+    <tag Name="Species" Value="xtinak_CavesOfCudJam_aurochs" />
+    <tag Name="Culture" Value="xtinak_CavesOfCudJam_Aurochs" />
+    <tag Name="SecretAdjectives" Value="humanoid" />
+    <mutation Name="Horns" Level="1" HornsName="horn" DisplayName="Horn"/>
+    <mutation Name="HeightenedHearing" Level="2" />
+    <mutation Name="HeightenedSmell" Level="3" />
+    <mutation Name="ThickFur" Level="1" />
+    <mutation Name="DarkVision" Level="1" />
+    <tag Name="InventoryPopulationTable" Value="HumanoidEquipment" />
+    <part Name="AIPilgrim" Chance="10" MapNoteAttributes="xtinak_CavesOfCudJam_aurochs" />
+    <xtagTextFragments YounglingNoise="*mmooo*,*nnrroo*,*mmmm*" Activity="pracing in the fields, snickering with friends" VillageActivity="hanging out with their friends." />
+    <tag Name="PrimaryLimbType" Value="Hand" />
+    <tag Name="BaseObject" Value="*noinherit" />
+</object>
+<object Name="xtinak_CavesOfCudJam_Aurochs Corpse" Inherits="Humanoid Corpse">
+	<part Name="Render" DisplayName="aurochs corpse" />
+	<part Name="Description" Short="A mess of unfortuntely fine looking meat and flesh is all that remains of this Aurochs." />
+	<part Name="Physics" Weight="400" />
+    <part Name="Commerce" Value="20" />
+    <tag Name="Tier" Value="3" />    
+  </object>
+    <object Name="xtinak_CavesOfCudJam_Aurochs Firebreather" Inherits="xtinak_CavesOfCudJam_Aurochs">
+    <part Name="Render" DisplayName="aurochs firebreather" ColorString="&amp;y" DetailColor="R" />
+    <stat Name="AV" Value="5" />
+    <stat Name="Hitpoints" Value="60" />
+    <part Name="Description" Short="A soft hiss of gas eminates from =pronouns.possessive= mouth, along with a tube-like tongue. One misplaced spark could set the gas ablaze." />
+    <mutation Name="FireBreather" Level="1" />
+    <stat Name="ElectricResistance" Value="-50" />
+    <tag Name="DynamicObjectsTable:Goatfolk" />
+    <tag Name="DynamicObjectsTable:Jungle_Creatures" />
+    <tag Name="DynamicObjectsTable:Ruins_Creatures" />s
+  </object>
+</objects>

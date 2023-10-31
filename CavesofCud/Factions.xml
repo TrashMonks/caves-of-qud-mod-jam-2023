@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<factions>
+    <faction Name="xtinak_CavesOfCudJam_Aurochs" DisplayName="aurochs" Old="false" Parent="Humanoids" InitialPlayerReputation="-475">
+        <waterritual Skill="Endurance_Weathered" SkillCost="300" />
+        <interests>
+            <interest Tags="gossip" />
+        </interests>
+  </faction>
+</factions>

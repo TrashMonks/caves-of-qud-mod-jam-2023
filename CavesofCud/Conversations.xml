@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conversations> 
+  <conversation ID="xtinak_CavesOfCudJam_Aurochs">
+    <node ID="Start">
+      <text>
+        Mmmooo! Live and drink.~
+        {{emote|*bellow*}}~
+        Hrrrmmmm! What is it?~
+        Hrrrrnnnnnn!~
+        Live and drink.~
+        Mooo.~
+        Hhrrrrnnn! Well met!~
+        Walk softly, friend.
+      </text>
+      <choice GotoID="End">Live and drink.</choice>
+    </node>
+  </conversation>
+</conversations>
