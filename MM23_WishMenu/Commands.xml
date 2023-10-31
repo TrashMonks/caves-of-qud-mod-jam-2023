@@ -1,0 +1,5 @@
+<commands>
+    <command ID="MM23_Wish_Menu" DisplayText="Monster Mash-Up Wish Menu" Category="Debug" Layer="Adventure" Auto="DownPass">
+        <keyboardBind Modifier="ctrl,shift" Key="w" />
+    </command>
+</commands>

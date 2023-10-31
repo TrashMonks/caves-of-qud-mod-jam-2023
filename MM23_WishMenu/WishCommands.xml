@@ -1,0 +1,5 @@
+<wishcommands>
+    <wish DisplayName="Toggle God Mode" Commands="idkfa" />
+    <wish Commands="Gnarf_Halloween Vendor" Author="gnarf" ModName="{{halloween}} costumer" />
+    <wish Commands="Gnarf_Issachari Water Guardian,Gnarf_Issachari Sniper,Gnarf_Issachari Elder" Author="gnarf" ModName="Issachari Evolved" />
+</wishcommands>
