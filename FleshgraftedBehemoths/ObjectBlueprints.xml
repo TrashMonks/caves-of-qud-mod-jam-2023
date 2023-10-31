@@ -85,6 +85,12 @@
     <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Pistols/sfx_missile_psychalFleshgun_fire" />
     <tag Name="ReloadSound" Value="Sounds/Missile/Reloads/sfx_missile_handVacuum_reload" />
   </object>
+  <object Name="Satiating Fangs" Inherits="BaseFangs">
+		<part Name="Render" DisplayName="{{r|satiating}} fangs" ColorString="&amp;m" DetailColor="r" />
+		<part Name="LifeDrainOnHit" Damage="5-10" Chance="100" />
+		<part Name="DiseaseOnHit" Chance="5" />
+		<part Name="BleedingOnHit" Amount="1d2" SaveTarget="20" Stack="true" />
+	</object>
   <object Name="Profaned Banner" Inherits="BaseCloak">
     <part Name="Armor" AV="0" DV="1" WornOn="Back" />
     <part Name="Render" DisplayName="profaned banner" RenderString="]" Tile="sw_profaned_banner" ColorString="&amp;m" DetailColor="K" />
@@ -96,34 +102,35 @@
     <part Name="Springy" Factor="0.9" />
     <tag Name="UsesSlots" Value="Back,Hand" />
   </object>
-  <object Name="Filth Figurine" Inherits="Item">
+  <object Name="Filth Figurine" Inherits="BaseCurrency">
     <part Name="Render" DisplayName="{{filthy|apotheote}} figurine" Tile="sw_apotheote_figurine.png" DetailColor="w" RenderString="*" ColorString="&amp;r" RenderLayer="5" />
     <part Name="Description" Short="A disgusting depiction of an apotheote, cast in flesh and aged bone." />
     <part Name="Commerce" Value="60" />
+    <part Name="WantToAutoexplore" AdjacentAction="Autoget" />
     <tag Name="Tier" Value="1" />
   </object>
   <object Name="Agolgot Figurine" Inherits="Filth Figurine">
     <part Name="Render" DisplayName="{{filthy|Agolgot}} figurine" Tile="sw_agolgot_figurine.png" DetailColor="w" RenderString="*" ColorString="&amp;r" RenderLayer="5" />
-    <part Name="Description" Short="A disgusting depiction of an apotheote, cast in flesh and aged bone." />
+    <part Name="Description" Short="A disgusting depiction of Agolgot, cast in flesh and aged bone." />
   </object>
   <object Name="Bethsaida Figurine" Inherits="Filth Figurine">
     <part Name="Render" DisplayName="{{filthy|Bethsaida}} figurine" Tile="sw_bethsaida_figurine.png" DetailColor="w" RenderString="*" ColorString="&amp;r" RenderLayer="5" />
-    <part Name="Description" Short="A horrid depiction of an apotheote, cast in flesh and aged bone." />
+    <part Name="Description" Short="A horrid depiction of Bethsaida, cast in flesh and aged bone." />
   </object>
   <object Name="Qas Figurine" Inherits="Filth Figurine">
     <part Name="Render" DisplayName="{{filthy|Qas}} figurine" Tile="sw_qas_figurine.png" DetailColor="w" RenderString="*" ColorString="&amp;r" RenderLayer="5" />
-    <part Name="Description" Short="A nauseating depiction of an apotheote, cast in flesh and aged bone." />
+    <part Name="Description" Short="A nauseating depiction of Qas, cast in flesh and aged bone." />
   </object>
   <object Name="Qon Figurine" Inherits="Filth Figurine">
     <part Name="Render" DisplayName="{{filthy|Qon}} figurine" Tile="sw_qon_figurine.png" DetailColor="w" RenderString="*" ColorString="&amp;r" RenderLayer="5" />
-    <part Name="Description" Short="A vile depiction of an apotheote, cast in flesh and aged bone." />
+    <part Name="Description" Short="A vile depiction of Qon, cast in flesh and aged bone." />
   </object>
   <object Name="Rermadon Figurine" Inherits="Filth Figurine">
     <part Name="Render" DisplayName="{{filthy|Rermadon}} figurine" Tile="sw_rermadon_figurine.png" DetailColor="w" RenderString="*" ColorString="&amp;r" RenderLayer="5" />
-    <part Name="Description" Short="A hideous depiction of an Rermadon, cast in flesh and aged bone." />
+    <part Name="Description" Short="A hideous depiction of Rermadon, cast in flesh and aged bone." />
   </object>
   <object Name="Shug'ruith Figurine" Inherits="Filth Figurine">
     <part Name="Render" DisplayName="{{filthy|Shug'Ruith}} figurine" Tile="sw_shug'ruith_figurine.png" DetailColor="w" RenderString="*" ColorString="&amp;r" RenderLayer="5" />
-    <part Name="Description" Short="A foul depiction of an Shug'Ruith, cast in flesh and aged bone." />
+    <part Name="Description" Short="A foul depiction of Shug'Ruith, cast in flesh and aged bone." />
   </object>
 </objects>

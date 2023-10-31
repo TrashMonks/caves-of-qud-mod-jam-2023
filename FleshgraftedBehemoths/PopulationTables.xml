@@ -29,12 +29,12 @@
             <object Weight="2" Number="1" Blueprint="Spinal Fleshgraft"/>
         </group>
     </population>
-    <population Name="Glow Wight Siegedriver">
+    <population Name="Glow Wight Linksib">
         <group Style="pickone">
-          <object Chance="100" Blueprint="Nothing" />
-          <object Chance="70" Blueprint="HumanoidEquipment 2" />
-          <object Chance="20" Blueprint="HumanoidEquipment 3" />
-          <object Chance="10" Blueprint="HumanoidEquipment 4" />
+          <object Weight="100" Blueprint="Nothing" />
+          <object Weight="70" Blueprint="HumanoidEquipment 2" />
+          <object Weight="20" Blueprint="HumanoidEquipment 3" />
+          <object Weight="10" Blueprint="HumanoidEquipment 4" />
         </group>
     </population>
     <population Name="GlowWightWarParty">

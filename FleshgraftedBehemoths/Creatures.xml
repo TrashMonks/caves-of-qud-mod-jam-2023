@@ -6,7 +6,7 @@
 		<part Name="Brain" Factions="Glow Wights-100,Girsh-50" />
         <part Name="Corpse" CorpseChance="50" CorpseBlueprint="Base Glow Wight Behemoth Corpse" />
         <part Name="Interior" Cell="Glow Wight Behemoth" FallDistance="1" /> 
-        <part Name="VehiclePilotPopulation" Blueprint="Glow Wight Siegedriver"/>
+        <part Name="VehiclePilotPopulation" Blueprint="Glow Wight Linksib"/>
         <part Name="Vehicle" Type="Glow Wight Behemoth" Passengers="8" Autonomous="true" />
         <part Name="RandomMutations" Mental="0" Physical="3-4" PhysicalLevel="8-12" />
         <mutation Name="DarkVision" Level="1" />
@@ -48,6 +48,7 @@
         <skill Name="Endurance_Calloused" />
         <tag Name="Gigantic" />
 		<tag Name="Culture" Value="Glow-Wight" />
+        <tag Name="PrimaryLimbType" Value="Hand" />
 		<tag Name="WaterRitualLiquid" Value="blood" />
         <tag Name="DynamicObjectsTable:MoonStair_Creatures" Value="*noinherit" />
         <property Name="Role" Value="Tank" />
@@ -121,14 +122,14 @@
     <object Name="Furious Gyre Wight of Shug'ruith" Inherits="Gyre Wight of Shug'ruith">
         <part Name="Brain" Feelings="Player:-650"/>
     </object>
-    <object Name="Glow Wight Siegedriver" Inherits="Glow Wight">
-        <part Name="Render" DisplayName="glow-wight siegedriver" RenderString="z" ColorString="&amp;m" DetailColor="c" Tile="sw_glow_wight_siegedriver.png" />
+    <object Name="Glow Wight Linksib" Inherits="Glow Wight">
+        <part Name="Render" DisplayName="gyre wight linksib" RenderString="z" ColorString="&amp;m" DetailColor="c" Tile="sw_glow_wight_siegedriver.png" />
         <part Name="AIVehiclePilot" Type="Base Glow Wight Behemoth" SearchRadius="15" OnCombatStart="true" />
         <part Name="Description" Short="Sworn on oaths of blood between two wights, the concepts of transmutation and kinship are entwined. Now they go as one, ferrying kin and swearing no other allegiances." />
         <part Name="Brain" Feelings="Player:-650"/>
-        <inventoryobject Blueprint="Apotheote_Claws" Number="2" />
         <inventoryobject Blueprint="Leather Whip" Number="1" />
         <inventoryobject Blueprint="Profaned Banner" Number="1" />
+        <inventoryobject Blueprint="Satiating Fangs" Number="1" />
         <property Name="Role" Value="Brute" />
         <stat Name="Hitpoints" Value="100" />
         <stat Name="Level" Value="20" />
@@ -146,8 +147,8 @@
         <skill Name="ShortBlades_Bloodletter" />
         <skill Name="Persuasion_Intimidate" />
         <skill Name="Persuasion_Berate" />
-        <tag Name="InventoryPopulationTable" Value="Glow Wight Siegedriver" />
+        <tag Name="PrimaryLimbType" Value="Face" />
+        <tag Name="InventoryPopulationTable" Value="Glow Wight Linksib" />
         <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"/>
-        <inventoryobject Blueprint="@Glow Wight Siegedriver" Number="1" />
     </object>
 </objects>
