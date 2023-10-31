@@ -16,7 +16,7 @@
 			<object Blueprint="Unze_Mechannibal_Mechannibal_Primary5" />
 			<object Blueprint="Unze_Mechannibal_Mechannibal_Primary6" />
 		</group>
-		
+
 	</population>
 	<population Name="Unze_Mechannibal_Mechannibal_Secondary">
 		<group Name="Items" Style="pickone">
@@ -27,42 +27,42 @@
 			<object Blueprint="Unze_Mechannibal_Mechannibal_Secondary5" />
 			<object Blueprint="Unze_Mechannibal_Mechannibal_Secondary6" /> <!-- Weight="9999" -->
 		</group>
-		
+
 	</population>
-	
-    <population Name="HillsZoneGlobals-Reachable" Load="Merge">
+
+  <population Name="HillsZoneGlobals-Reachable" Load="Merge">
 		<group Name="Creatures" Load="Merge">
 			<object Chance="25" Number="1d2" Blueprint="Unze_Mechannibal_Mechannibal" />
 		</group>
-    </population>
-    <population Name="MountainsZoneGlobals-Reachable" Load="Merge">
+  </population>
+  <population Name="MountainsZoneGlobals-Reachable" Load="Merge">
 		<group Name="Creatures" Load="Merge">
 			<object Chance="25" Number="1d2" Blueprint="Unze_Mechannibal_Mechannibal" />
 		</group>
-    </population>
-    <population Name="HillsCreatures" Load="Merge">
+  </population>
+  <!-- <population Name="HillsCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
 			<object Weight="3" Number="1" Blueprint="Unze_Mechannibal_Mechannibal" />
 		</group>
-    </population>
-    <population Name="MountainsCreatures" Load="Merge">
+  </population>
+  <population Name="MountainsCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
 			<object Weight="3" Number="1" Blueprint="Unze_Mechannibal_Mechannibal" />
 		</group>
-    </population>
-    <population Name="Shale Cave Critters 2" Load="Merge">
+  </population> -->
+  <population Name="Shale Cave Critters 2" Load="Merge">
 		<object Chance="15" Number="1-2" Blueprint="Unze_Mechannibal_Mechannibal" />
-    </population>
-    <population Name="LairOwners_Hills" Load="Merge">
+  </population>
+  <population Name="LairOwners_Hills" Load="Merge">
 		<group Name="Options" Load="Merge">
 			<object Blueprint="Unze_Mechannibal_Mechannibal" />
 		</group>
-    </population>
-    <population Name="LairOwners_Mountains" Load="Merge">
+  </population>
+  <population Name="LairOwners_Mountains" Load="Merge">
 		<group Name="Options" Load="Merge">
 			<object Blueprint="Unze_Mechannibal_Mechannibal" />
 		</group>
-    </population>
-	
-	
+  </population>
+
+
 </populations>

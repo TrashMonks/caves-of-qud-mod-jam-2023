@@ -7,11 +7,11 @@
     </group>
   </population>
 
-  <population Name="Mollusks" Load="Merge">
+  <!-- <population Name="Mollusks" Load="Merge">
     <group Name="Creatures" Load="Merge">
       <table Name="KabiKaj_MuckSquid_Muck_Squids" />
     </group>
-  </population>
+  </population> -->
 
   <population Name="Rustwells 3" Load="Merge">
     <group Name="Creatures" Load="Merge">
