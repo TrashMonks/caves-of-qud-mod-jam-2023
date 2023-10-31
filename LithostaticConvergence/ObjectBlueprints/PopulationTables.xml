@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+	<population Name="Monosophy_LithConv_MonsterManual">
+		<group Name="Creatures" Style="pickone">      
+			<object Weight="10" Number="1" Blueprint="Monosophy_LithConv_LumberingCrabhound" />      
+			<object Weight="10" Number="1" Blueprint="Monosophy_LithConv_DecadentCannibal" />
+			<object Weight="10" Number="1" Blueprint="Monosophy_LithConv_TwoHeadedAdynaton" />
+			<object Weight="10" Number="1" Blueprint="Monosophy_LithConv_GenerousAmbulbush" /> 
+			<object Weight="10" Number="1" Blueprint="Monosophy_LithConv_SunOracleSeeker" /> 
+			<object Weight="10" Number="1" Blueprint="Monosophy_LithConv_Nightmare" /> 
+			<object Weight="10" Number="1" Blueprint="Monosophy_LithConv_QuiveringNervestack" /> 
+			<object Weight="10" Number="1" Blueprint="Monosophy_LithConv_HeraldicAntelope" /> 
+			<object Weight="10" Number="1" Blueprint="Monosophy_LithConv_DeComposer" /> 
+			<object Weight="10" Number="1" Blueprint="Monosophy_LithConv_SackclothSultan" /> 
+			<!--object Weight="10" Number="1" Blueprint="Monosophy_LithConv_StreetUrchin"/--> 
+			<object Weight="10" Number="1" Blueprint="Monosophy_LithConv_FractusStalker" /> 
+			<object Weight="10" Number="1" Blueprint="Monosophy_LithConv_TimeGrazer" /> 
+			<object Weight="10" Number="1" Blueprint="Monosophy_LithConv_QudzuAlumni" /> 
+			<object Weight="10" Number="1" Blueprint="Monosophy_LithConv_MycorhizzalForester" /> 
+			<object Weight="10" Number="1" Blueprint="Monosophy_LithConv_BaubledBirdAndBear" /> 
+			<!--object Weight="10" Number="1" Blueprint="Monosophy_LithConv_GiantSmithApe" /--> 
+			<object Weight="10" Number="1" Blueprint="Monosophy_LithConv_SvardymToadcarrier" /> 
+			<object Weight="10" Number="1" Blueprint="Monosophy_LithConv_DistantFriend" /> 
+		</group>
+  </population>
+  <population Name="Monosophy_LithConv_ToadcarrierSpawns">
+		<group Name="Creatures" Style="pickone">
+			<object Weight="20" Number="1" Blueprint="Svardym Egg Sac" />
+			<object Weight="20" Number="2" Blueprint="Svardym Hatchling" />
+			<object Weight="10" Number="1" Blueprint="Svardym Jut" />    
+			<object Weight="5" Number="1" Blueprint="Svardym Eld" />    
+			<object Weight="1" Number="1" Blueprint="Svardym Scrounge" />    
+		</group>
+  </population>
+  <population Name="Monosophy_LithConv_VantaTrail">
+		<group Name="Creatures" Style="pickone">
+			<object Weight="20" Number="1" Blueprint="Vantabud" />
+			<object Weight="5" Number="1" Blueprint="Vanta Petals" />
+			<object Weight="1" Number="1" Blueprint="Vantabloom" />    
+    
+		</group>
+  </population>
+  <!--Modified tables-->
+   <population Name="Tier8CavePopulation" Load="Merge">
+    <group Name="Contents" Load="Merge">  <!-- Add the Load="Merge" attribute to each nested group, mimicking the base game's PopulationTables.xml structure -->
+      <table Name="Monosophy_LithConv_MonsterManual" Weight="75" /> <!-- Insert your new item! -->
+    </group>
+  </population>
+</populations>

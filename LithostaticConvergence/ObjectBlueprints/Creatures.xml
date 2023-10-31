@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+	<!-- needs a corpse -->
+	<object Name="Monosophy_LithConv_LumberingCrabhound" Inherits="BaseDog">
+		<part Name="Body" Anatomy="TailedBiped"/>
+		<!-- This description was written by my friend Ryan. I have been given permission to release it under CC 0. -->
+		<part Name="Description" Short="What once was friend to surface-men has been carcinized. Untold generations of cave-damp and sunless day have whitened =pronouns.possessive= fur and dimmed =pronouns.possessive= eyes, but =pronouns.possessive= fuzzy carapace and pinching forelimbs are proof of life's tenacity, and its underlying order. Every shape strays eventually, inevitably, towards the single canonical form." />
+		<part Name="Render" DisplayName="lumbering crabhound" Tile="Monosophy_LithConv/crabhoundbig.png" ColorString="&amp;Y" DetailColor="w" />
+		<part Name="Brain" Factions="Dogs-100,Crabs-100" />
+		<inventoryobject Blueprint="Monosophy_LithConv_CrabhoundCheliped" Number="2" />
+		<mutation Name="Carapace" Level="6" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="300" />
+		<stat Name="AV" Value="17" />
+		<stat Name="DV" Value="8" />
+		<stat Name="Speed" Value="50" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Charge" />
+		<skill Name="Cudgel" />
+		<skill Name="Cudgel_Bludgeon" />
+		<skill Name="Cudgel_ChargingStrike" />
+		<skill Name="Cudgel_Expertise" />
+		<skill Name="Cudgel_Slam" />
+		<skill Name="Dual_Wield" />
+	</object>
+	<!-- basically only exists because i liked my old sprite more but it didnt feel big -->
+	<object Name="Monosophy_LithConv_LumberingCrabhoundSmall" Inherits="BaseDog">
+		<part Name="Body" Anatomy="TailedBiped"/>
+		<part Name="Description" Short="What once was friend to surface-men has been carcinized. Untold generations of cave-damp and sunless day have whitened =pronouns.possessive= fur and dimmed =pronouns.possessive= eyes, but =pronouns.possessive= fuzzy carapace and pinching forelimbs are proof of life's tenacity, and its underlying order. Every shape strays eventually, inevitably, towards the single canonical form." />
+		<part Name="Render" DisplayName="lumbering crabhound" Tile="Monosophy_LithConv/crabhound.png" ColorString="&amp;Y" DetailColor="w" />
+		<part Name="Brain" Factions="Dogs-100,Crabs-100" />
+		<inventoryobject Blueprint="Monosophy_LithConv_CrabhoundCheliped" Number="2" />
+		<mutation Name="Carapace" Level="6" />
+		<stat Name="Level" Value="20" />
+		<stat Name="Hitpoints" Value="180" />
+		<stat Name="AV" Value="7" />
+		<stat Name="DV" Value="8" />
+		<stat Name="Speed" Value="50" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Charge" />
+		<skill Name="Cudgel" />
+		<skill Name="Cudgel_Bludgeon" />
+		<skill Name="Cudgel_ChargingStrike" />
+		<skill Name="Cudgel_Expertise" />
+		<skill Name="Cudgel_Slam" />
+		<skill Name="Dual_Wield" />
+	</object>
+	<!-- needs a description, mechanics, and a corpse. maybe it carries a bunch of figurines? -->
+	<object Name="Monosophy_LithConv_DecadentCannibal" Inherits="BaseCannibal">
+		<part Name="Body" Anatomy="TailedBiped"/>
+		<part Name="Description" Short="Over many centuries of unrestrained consumption, this cannibal's form softened into ooze. =pronouns.Subjective= is pure in =pronouns.possessive= hunger, and for that, the others regard =pronouns.objective= as a sort of king." />
+		<part Name="Render" DisplayName="decadent cannibal" Tile="Monosophy_LithConv/decadentcannibal.png" ColorString="&amp;Y" DetailColor="r" />
+		<part Name="Brain" Factions="Cannibals-100,Oozes-100" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="180" />
+		<stat Name="AV" Value="7" />
+		<stat Name="DV" Value="8" />
+		<stat Name="Speed" Value="50" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Charge" />
+		<skill Name="Cudgel" />
+		<skill Name="Cudgel_Bludgeon" />
+		<skill Name="Cudgel_ChargingStrike" />
+		<skill Name="Cudgel_Expertise" />
+		<skill Name="Cudgel_Slam" />
+		<skill Name="Dual_Wield" />
+		<part Name="LeavesTrail" TrailChance="100" TrailBlueprint="@DynamicObjectsTable:Corpses" OnEnter="false" />
+	</object>
+	<!-- needs a corpse, and a better sprite -->
+	<object Name="Monosophy_LithConv_TwoHeadedAdynaton" Inherits="BaseSlugsnout">
+		<part Name="Description" Short="In the distant past, a corrupt administrator put into place a square-cube law, imposing limits on muscular strength according to geometry. Insects shrank to the size of grains of rice, arachnids would shatter on the ballroom floor, and the hearts of kings failed in their chests. In protest, an army of tremendous boars led a revolt against the corrupt administrator, putting an end to the unpopular policy. The world is free from that law for as long the adynaton flies." />
+		<part Name="Render" DisplayName="two-headed adynaton" Tile="Monosophy_LithConv/twoheadedadynaton.png" ColorString="&amp;r" DetailColor="B" />
+		<part Name="Brain" Factions="Swine-100,WingedMammals-100" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="210" />
+		<stat Name="AV" Value="16" />
+		<stat Name="DV" Value="8" />
+		<stat Name="Speed" sValue="100" />
+		<stat Name="HeatResistance" Value="80" />
+		<stat Name="ColdResistance" Value="80" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Charge" />
+		<skill Name="Pistol" />
+		<skill Name="Pistol_Akimbo" />
+		<skill Name="HeavyWeapons" />
+		<skill Name="HeavyWeapons_StrappingShoulders" />
+		<skill Name="HeavyWeapons_Tank" />
+		<skill Name="HeavyWeapons_Sweep" />
+		<tag Name="Gender" Value="plural" />
+		<mutation Name="TwoHeaded" />
+		<mutation Name="Wings" Level="10"/>
+		<inventoryobject Blueprint="Monosophy_LithConv_AdynatonSnoutF" Number="1" />
+		<inventoryobject Blueprint="Monosophy_LithConv_AdynatonSnoutC" Number="1" />
+		<inventoryobject Blueprint="Monosophy_LithConv_AdynatonTusks" Number="2" />
+	</object>
+	<!-- needs a corpse maybe, and possibly stat updates/group spawn considerations -->
+	<object Name="Monosophy_LithConv_GenerousAmbulbush" Inherits="BaseBaboon">
+		<part Name="Description" Short="A multifarious collection of fruits hangs from the leafy mane of the self-harvesting, self-planting Ambulbush. Taking on the form of a four-armed baboon, =pronouns.subjective= shares =pronouns.possessive= bounty with gnarled boughs optimized for throwing." />
+		<part Name="Render" DisplayName="generous ambulbush" Tile="Monosophy_LithConv/generousambulbush.png" ColorString="&amp;G" DetailColor="w" />
+		<part Name="Brain" Factions="Trees-100,Baboons-100" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Willpower" Boost="2" />
+		<stat Name="Hitpoints" Value="150" />
+		<stat Name="AV" Value="4" />
+		<stat Name="DV" Value="12" />
+		<stat Name="HeatResistance" Value="-50" />
+		<stat Name="Speed" sValue="200" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Throwing" />
+		<skill Name="Acrobatics" />
+		<skill Name="Acrobatics_SwiftReflexes" />
+		<skill Name="Acrobatics_Dodge" />
+		<skill Name="Acrobatics_Jump" />
+		<part Name="FabricateFromSelf" ChargeUse="0" FabricateBlueprint="Sowers_Seed" FabricateVerb="grow" BatchSize="1" HitpointsPer="0" AIUseForThrowing="true" AIHitpointsThreshold="10" HitpointsThreshold="5" EnergyCost="100" Cooldown="1" IsBioScannable="true" />
+		<mutation Name="PhotosyntheticSkin" Level="8"/>
+		<mutation Name="MultipleArms"/>
+		<property Name="Role" Value="Artillery" />
+		<inventoryobject Blueprint="Urberry" Number="0-1" />
+		<inventoryobject Blueprint="Witchwood Bark" Number="1-2" />
+		<inventoryobject Blueprint="Starapple" Number="2-4" />
+		<inventoryobject Blueprint="Banana" Number="1-2" />
+		<inventoryobject Blueprint="Sowers_Seed" Number="2-4" />
+	</object>
+	<!-- should drop a wreck that can be butchered for an octagon -->
+	<object Name="Monosophy_LithConv_SunOracleSeeker" Inherits="BaseRobot">
+		<part Name="Body" Anatomy="Octohedron"/>
+		<part Name="Description" Short="In order to rediscover the precise mixture of earth-gases necessary to imbue minds with the gift of prophecy, ancient Eaters gifted this star-stone an octagonal loop of vents, from which any combination of gases could be produced. Desperate to fulfill =pronouns.possessive= duty, the snail-covered baetyl now offers =pronouns.possessive= latest mixtures to any who come near." />
+		<part Name="Render" DisplayName="sun oracle seeker" Tile="Monosophy_LithConv/sunoracleseeker.png" ColorString="&amp;B" DetailColor="W" />
+		<part Name="Brain" Wanders="true" Calm="true" Factions="Baetyls-100,Mollusks-100" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Willpower" sValue="60" />
+		<stat Name="Willpower" Boost="2" />
+		<stat Name="Hitpoints" Value="150" />
+		<stat Name="AV" Value="8" />
+		<stat Name="DV" Value="2" />
+		<stat Name="Speed" sValue="50" />
+		<stat Name="MoveSpeed" sValue="50" />
+		<part Name="PartsGas" ChargeUse="0" Radius="1" Chance="100" WorksOnSelf="true" NameForStatus="ParticulateRepulsion" />
+		<property Name="Role" Value="Artillery" />
+		<inventoryobject Blueprint="Gas Tumbler" Number="1" />
+		<inventoryobject Blueprint="Monosophy_LithConv_OracleBillowers" Number="8" />
+	</object>
+	<!-- possibly needs some sort of trail mechanic where it rarely spreads vantabloom? needs a corpse -->
+	<object Name="Monosophy_LithConv_Nightmare" Inherits="BaseAnimal">
+		<part Name="Description" Short="When the arcologies were evacuated, this prized horse was left behind. =pronouns.Subjective= learned to feed on the darkness blooming in =pronouns.possessive= home. Over time, this diet changed the material of =pronouns.possessive= body to that of the dark. Now, =pronouns.subjective= serves as a herald for the oncoming night, as the barbed seeds of vantabloom flowers stick well in matted hair." />
+		<part Name="Render" DisplayName="nightmare" Tile="Monosophy_LithConv/nightmare.png" ColorString="&amp;k" DetailColor="K" />
+		<part Name="Brain" Wanders="true" Factions="Equines-100,Flowers-100" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="110" />
+		<stat Name="AV" Value="1" />
+		<stat Name="DV" Value="12" />
+		<stat Name="MoveSpeed" sValue="50" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Charge" />
+		<skill Name="Tactics_Juke" />
+		<skill Name="Acrobatics" />
+		<skill Name="Acrobatics_SwiftReflexes" />
+		<skill Name="Acrobatics_Dodge" />
+		<skill Name="Acrobatics_Jump" />
+		<skill Name="Acrobatics_Tumble" />
+		<skill Name="ShortBlades" />
+		<skill Name="ShortBlades_Expertise" />
+		<skill Name="ShortBlades_Hobble" />
+		<skill Name="ShortBlades_PointedCircle" />
+		<mutation Name="HeightenedAgility" Level="6"/>
+		<part Name="Blackout" Radius="3" />
+		<part Name="AIJuker" />
+		<part Name="LeavesTrail" TrailChance="5" TrailBlueprint="@Monosophy_LithConv_VantaTrail" OnEnter="false" />
+		<property Name="Role" Value="Skirmisher" />
+		<inventoryobject Blueprint="Monosophy_LithConv_NightmareHorn" Number="1" />
+	</object>
+	<!-- should drop scrap -->
+	<object Name="Monosophy_LithConv_QuiveringNervestack" Inherits="BaseRobot">
+		<part Name="Body" Anatomy="QuadrupedalRobot" />
+		<part Name="Description" Short="A slab of chrome shot through with a web of gallium nerves, balanced atop a ramshackle crawling base. =pronouns.Subjective= is covered in expensive dials and monitors to proudly display how accurately they've modelled the experience of pain. =pronouns.Subjective= was clearly a precursor to more advanced artificial life, so why was =pronouns.subjective= manufactured well into the Fourth Sultanate?" />
+		<part Name="Render" DisplayName="quivering nervestack" Tile="Monosophy_LithConv/quiveringnervestack.png" ColorString="&amp;c" DetailColor="w" />
+		<part Name="Brain" Wanders="true" Calm="true" Factions="Robots-100,Tortoises-100" />
+		<part Name="AISelfPreservation" Threshold="90" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="2000" />
+		<stat Name="AV" Value="0" />
+		<stat Name="DV" Value="-10" />
+		<stat Name="MoveSpeed" sValue="200" />
+		<stat Name="Agility" sValue="2" />
+		<stat Name="Ego" sValue="2" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Juke" />
+		<skill Name="Endurance_Calloused" />
+	</object>
+	<!-- sprite only, no corpse, kind of boring -->
+	<object Name="Monosophy_LithConv_HeraldicAntelope" Inherits="BaseAnimal">
+		<part Name="Description" Short="Scholars have found evidence in the ancient bestiaries of the north that would suggest that the modern-day gnu and puma were ironically once one and the same. The ancient Antelope was described as a cloven-hooved creature with the face of a lion, bearing serrated horns and a tusk for a snout." />
+		<part Name="Render" DisplayName="heraldic antelope" Tile="Monosophy_LithConv/heraldicantelope.png" ColorString="&amp;Y" DetailColor="W" />
+		<part Name="Brain" Wanders="true" Factions="Antelopes-100,Cats-100" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="200" />
+		<stat Name="AV" Value="4" />
+		<stat Name="DV" Value="8" />
+		<stat Name="MoveSpeed" sValue="50" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Charge" />
+		<skill Name="Tactics_Juke" />
+		<skill Name="Acrobatics" />
+		<skill Name="Acrobatics_SwiftReflexes" />
+		<skill Name="Acrobatics_Dodge" />
+		<skill Name="Acrobatics_Jump" />
+		<skill Name="Acrobatics_Tumble" />
+		<skill Name="ShortBlades" />
+		<skill Name="ShortBlades_Expertise" />
+		<skill Name="ShortBlades_Hobble" />
+		<skill Name="ShortBlades_PointedCircle" />
+		<mutation Name="HeightenedAgility" Level="6"/>
+		<inventoryobject Blueprint="Monosophy_LithConv_SerratedHorn" Number="1" />
+	</object>
+	<!-- sprite only, no corpse, kind of boring -->
+	<object Name="Monosophy_LithConv_DeComposer" Inherits="BaseAnimal">
+		<part Name="Description" Short="?" />
+		<part Name="Render" DisplayName="de composer" Tile="Monosophy_LithConv/decomposer.png" ColorString="&amp;K" DetailColor="y" />
+		<part Name="Brain" Wanders="true" Factions="Worms-100,highly entropic beings-100" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="400" />
+		<stat Name="AV" Value="8" />
+		<stat Name="DV" Value="8" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Juke" />
+		<mutation Name="Disintegration" Level="20"/>
+		<mutation Name="WaveformWorm" Level="15"/>
+	</object>
+	<!-- basically done? could maybe use more stat tweaking -->
+	<object Name="Monosophy_LithConv_SackclothSultan" Inherits="BaseHumanoid">
+		<part Name="Corpse" CorpseChance="100" CorpseBlueprint="Monosophy_LithConv_FallenRaineater" />
+		<part Name="Description" Short="The shrouded figure laughs incoherently, and carries =pronouns.object=self with the confidence and gait of a noble. Cerulean light glows from within =pronouns.possessive= cloak." />
+		<part Name="Render" DisplayName="sackcloth sultan" Tile="Monosophy_LithConv/sackclothsultan.png" ColorString="&amp;w" DetailColor="B" />
+		<part Name="Brain" Wanders="true" Calm="true" Factions="Pariahs-100,Water-100" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="111" />
+		<stat Name="AV" Value="0" />
+		<stat Name="DV" Value="-10" />
+		<stat Name="MoveSpeed" sValue="200" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Juke" />
+		<skill Name="Endurance_Calloused" />
+	</object>
+	<!-- needs a fang natural weapon and should drop eaters nectar injectors -->
+	<object Name="Monosophy_LithConv_FallenRaineater" Inherits="BaseHumanoid">
+		<part Name="Description" Short="It's kind of like a holographic vampire noble that wishes to reclaim its lost grace and return to its place among the other Saads. Sadly, its description is unfinished and does not sell this premise as well as I'd like it to." />
+		<part Name="Render" DisplayName="fallen raineater" Tile="Monosophy_LithConv/fallenraineater.png" ColorString="&amp;w" DetailColor="B" />
+		<part Name="Brain" Hostile="true" Factions="Water-100,Pariahs-100" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="555" />
+		<stat Name="AV" Value="8" />
+		<stat Name="DV" Value="8" />
+		<stat Name="MoveSpeed" sValue="50" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Juke" />
+		<skill Name="Endurance_Calloused" />
+		<part Name="SapOnPenetration" Stat="Level" />
+	</object>
+	<!-- sprite only, no corpse, kind of boring -->
+	<object Name="Monosophy_LithConv_StreetUrchin" Inherits="BaseAnimal">
+		<part Name="Description" Short="An ancient network of roadways was granted life through the twin miracles of littering and leakage. Confused about its new existence, it tore itself from the ground, and folded itself, road signs and all, into a dense ball. The hill-sized creature fearfully points the remnants of light-poles and signs at approaching dragonflies." />
+		<part Name="Render" DisplayName="street urchin" Tile="Monosophy_LithConv/streeturchin.png" ColorString="&amp;K" DetailColor="W" />
+		<part Name="Brain" Wanders="true" Calm="true" Factions="Newly Sentient Beings-100,Urchins-100" />
+		<part Name="AISelfPreservation" Threshold="90" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="2000" />
+		<stat Name="AV" Value="0" />
+		<stat Name="DV" Value="-10" />
+		<stat Name="MoveSpeed" sValue="200" />
+		<stat Name="Agility" sValue="2" />
+		<stat Name="Ego" sValue="2" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Juke" />
+		<skill Name="Endurance_Calloused" />
+	</object>
+	<!-- sprite only, no corpse, kind of boring -->
+	<object Name="Monosophy_LithConv_FractusStalker" Inherits="BaseAnimal">
+		<part Name="Description" Short="This is a large, dangerous scorpion with a cactus growing on its back. Of the myriad tricks and treats you've found in the deep earth, this is probably the least inspired." />
+		<part Name="Render" DisplayName="fractus stalker" Tile="Monosophy_LithConv/fractusstalker.png" ColorString="&amp;w" DetailColor="G" />
+		<part Name="Brain" Factions="Arachnids-100,Succulents-100" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="50" />
+		<stat Name="AV" Value="0" />
+		<stat Name="DV" Value="8" />
+		<stat Name="MoveSpeed" sValue="75" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Charge" />
+		<skill Name="Tactics_Juke" />
+		<mutation Name="StingerPoison" Level="15"/>
+	</object>
+	<!-- sprite only, no corpse, kind of boring -->
+	<object Name="Monosophy_LithConv_TimeGrazer" Inherits="BaseAnimal">
+		<part Name="Description" Short="The massive whale inhales, taking in a great mouthful of reality, and the strings in =pronouns.possessive mouth sort out edible knots in space from gristled scraps of time. =pronouns.subjective= swims through a different sort of ocean from your own." />
+		<part Name="Render" DisplayName="time grazer" Tile="Monosophy_LithConv/timegrazer.png" ColorString="&amp;b" DetailColor="K" />
+		<part Name="Brain" Wanders="true" Factions="Prey-100,Fish-100" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="500" />
+		<stat Name="AV" Value="10" />
+		<stat Name="DV" Value="-10" />
+		<stat Name="MoveSpeed" sValue="200" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Juke" />
+		<skill Name="Endurance_Calloused" />
+		<mutation Name="Astral" />
+		<mutation Name="TimeDilation" Level="15"/>
+		<mutation Name="StunningForce" Level="15"/>
+		<mutation Name="SpacetimeVortex" Level="10"/>
+	</object>
+	<!-- sprite only, no corpse, kind of boring -->
+	<object Name="Monosophy_LithConv_QudzuAlumni" Inherits="BaseInsect">
+		<part Name="Description" Short="An aluminum ant and rusting vines work together in beautiful symbiosis to burn brighter than either could individually. Its transparent abdomen is filled with rust powder." />
+		<part Name="Render" DisplayName="qudzu alumni" Tile="Monosophy_LithConv/qudzualumni.png" ColorString="&amp;C" DetailColor="r" />
+		<part Name="Brain" Factions="Insects-100,Vines-100" />
+		<part Name="AISelfPreservation" Threshold="50" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="120" />
+		<stat Name="AV" Value="10" />
+		<stat Name="DV" Value="12" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Juke" />
+		<skill Name="Acrobatics_Jump" />
+		<skill Name="Endurance_Calloused" />
+		<mutation Name="StickyTongue" Level="5"/>
+		<mutation Name="FireBreather" Level="10"/>
+		<inventoryobject Blueprint="Monosophy_LithConv_QudzuFeeler" Number="1" />
+	</object>
+	<!-- sprite only, no corpse, kind of boring -->
+	<object Name="Monosophy_LithConv_MycorhizzalForester" Inherits="SapientMutatedFungus">
+		<part Name="Body" Anatomy="Humanoid" />
+		<part Name="Description" Short="The heart of the woods, uprooted and uplifted. =pronouns.subjective= calls forth forests in even the poorest of soils. =pronouns.possessive> shirt is in remarkably good condition. " />
+		<part Name="Render" DisplayName="mycorhizzal forester" Tile="Monosophy_LithConv/mycorhizzalforester.png" ColorString="&amp;R" DetailColor="w" />
+		<part Name="Brain" Factions="Fungi-100,Roots-100" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="300" />
+		<stat Name="AV" Value="0" />
+		<stat Name="DV" Value="2" />
+		<stat Name="MoveSpeed" sValue="100" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Juke" />
+		<skill Name="Endurance_Calloused" />
+		<mutation Name="Burgeoning" Level="9"/>
+		<mutation Name="TemporalFugue" Level="3"/>
+		<inventoryobject Blueprint="Plastifer Jerkin" Number="1" />
+	</object>
+	<!-- sprite only, no corpse, kind of boring -->
+	<object Name="Monosophy_LithConv_BaubledBirdAndBear" Inherits="BaseAnimal">
+		<part Name="Description" Short="The blind bear is directed by the bird's song, and together, they gather whatever shiny things catch their fancy" />
+		<part Name="Render" DisplayName="baubled bird and bear" Tile="Monosophy_LithConv/baubledbirdandbear.png" ColorString="&amp;w" DetailColor="R" />
+		<part Name="Brain" Factions="Bears-100,Birds-100" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="500" />
+		<stat Name="AV" Value="8" />
+		<stat Name="DV" Value="2" />
+		<stat Name="MoveSpeed" sValue="200" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Juke" />
+		<skill Name="Acrobatics_Jump" />
+		<skill Name="Endurance_Calloused" />
+		<mutation Name="Precognition" Level="9"/>
+		<mutation Name="WillForce" Level="9"/>
+		<inventoryobject Blueprint="Bear_Bite" Number="1" />
+	</object>
+	<!-- sprite only, no corpse, kind of boring -->
+	<object Name="Monosophy_LithConv_GiantSmithApe" Inherits="BaseAnimal">
+		<part Name="Description" Short="Only one other ape could hope to match the size of the ape-smith in front of you. =pronouns.subjective= calls to mind the image of the smiths of the gods, and the size of the armor =pronouns.objective= produces only reinforces it." />
+		<part Name="Render" DisplayName="giant smith ape" Tile="Monosophy_LithConv/giantsmithape.png" ColorString="&amp;Y" DetailColor="w" />
+		<part Name="Brain" Wanders="true" Calm="true" Factions="Apes-100,Hermits-100" />
+		<part Name="AISelfPreservation" Threshold="90" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="2000" />
+		<stat Name="AV" Value="0" />
+		<stat Name="DV" Value="-10" />
+		<stat Name="MoveSpeed" sValue="200" />
+		<stat Name="Agility" sValue="2" />
+		<stat Name="Ego" sValue="2" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Juke" />
+		<skill Name="Endurance_Calloused" />
+	</object>
+	<!-- finished, actually -->
+	<object Name="Monosophy_LithConv_SvardymToadcarrier" Inherits="BaseAnimal">
+		<part Name="Description" Short="A cacophanous croaking approaches. Countless svardym pour from holes in the rectangular back of a bedraggled yellow toad. " />
+		<part Name="Render" DisplayName="svardym toadcarrier" Tile="Monosophy_LithConv/svardymtoadcarrier.png" ColorString="&amp;W" DetailColor="g" />
+		<part Name="Brain" Wanders="true" Factions="Frogs-100,Svardym-100" />
+		<part Name="AISelfPreservation" Threshold="30" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="400" />
+		<stat Name="AV" Value="0" />
+		<stat Name="DV" Value="-10" />
+		<stat Name="MoveSpeed" sValue="100" />
+		<stat Name="Agility" sValue="2" />
+		<stat Name="Ego" sValue="2" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Juke" />
+		<skill Name="Acrobatics_Jump" />
+		<skill Name="Endurance_Calloused" />
+		<part Name="LeavesTrail" TrailChance="50" TrailBlueprint="@Monosophy_LithConv_ToadcarrierSpawns" OnEnter="false" />
+	</object>
+	<!-- sprite only, no corpse, kind of boring -->
+	<object Name="Monosophy_LithConv_DistantFriend" Inherits="BaseReptile">
+		<part Name="Description" Short="This shy creature appreciates any excuse to costume =pronouns.object=self for a day." />
+		<part Name="Render" DisplayName="distant friend" Tile="Monosophy_LithConv/distantfriend.png" ColorString="&amp;w" DetailColor="m" />
+		<part Name="Brain" Wanders="true" Calm="true" Factions="Unshelled Reptiles-100,Strangers-100" />
+		<part Name="AISelfPreservation" Threshold="90" />
+		<stat Name="Level" Value="40" />
+		<stat Name="Hitpoints" Value="200" />
+		<stat Name="AV" Value="2" />
+		<stat Name="DV" Value="20" />
+		<stat Name="MoveSpeed" sValue="100" />
+		<skill Name="Tactics" />
+		<skill Name="Tactics_Hurdle" />
+		<skill Name="Tactics_Juke" />
+		<skill Name="Endurance_Calloused" />
+		<inventoryobject Blueprint="Monosophy_LithConv_UnusualDepiction" Number="1" />
+	</object>
+	
+	<!-- start of natural weapons -->
+	<object Name="Monosophy_LithConv_CrabhoundCheliped" Inherits="NaturalWeapon">
+		<part Name="Render" DisplayName="cheliped" />
+		<part Name="DisplayNameColor" Color="&amp;Y" Priority="5" />
+		<part Name="MeleeWeapon" BaseDamage="4d4" Skill="Cudgel" Stat="Strength" Slot="Hand" />
+	</object>
+	
+	<object Name="Monosophy_LithConv_AdynatonSnoutF" Inherits="NaturalMissileWeapon">
+		<part Name="Render" DisplayName="{{R|more threatening snout}}" ColorString="&amp;R" RenderString="*" />
+		<part Name="MissileWeapon" AnimationDelay="0" Skill="HeavyWeapons" ShotsPerAction="6" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="16" RangeIncrement="6" />
+		<part Name="BioAmmoLoader" MaxCapacity="12" Available="12" TurnsToGenerate="1" ProjectileObject="Monosophy_LithConv_SnowballChanceF" />
+		<tag Name="MissileFireSound" Value="rifle_regularChainGun_1" />
+		<tag Name="UsesSlots" Value="Face" />
+	</object>
+	
+	<object Name="Monosophy_LithConv_SnowballChanceF" Inherits="TemporaryProjectile">
+		<part Name="Render" DisplayName="{{R|snowball chance}}" ColorString="&amp;R"/>
+		<part Name="Projectile" BaseDamage="1d8" Attributes="Fire NonPenetrating" ColorString="&amp;R" PassByVerb="whiz" />
+		<part Name="TemperatureOnHit" Amount="1d8-22" Max="false" OnWielderHit="true" />
+	</object>
+	
+	<object Name="Monosophy_LithConv_AdynatonSnoutC" Inherits="NaturalMissileWeapon">
+		<part Name="Render" DisplayName="{{C|more threatening snout}}" ColorString="&amp;C" RenderString="*" />
+		<part Name="MissileWeapon" AnimationDelay="0" Skill="HeavyWeapons" ShotsPerAction="6" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="16" RangeIncrement="6" />
+		<part Name="BioAmmoLoader" MaxCapacity="12" Available="12" TurnsToGenerate="1" ProjectileObject="Monosophy_LithConv_SnowballChanceC" />
+		<tag Name="MissileFireSound" Value="rifle_regularChainGun_1" />
+		<tag Name="UsesSlots" Value="Face" />
+	</object>
+	
+	<object Name="Monosophy_LithConv_SnowballChanceC" Inherits="TemporaryProjectile">
+		<part Name="Render" DisplayName="{{C|snowball chance}}" ColorString="&amp;C"/>
+		<part Name="Projectile" BaseDamage="1d8" Attributes="Cold NonPenetrating" ColorString="&amp;R" PassByVerb="whiz" />
+		<part Name="TemperatureOnHit" Amount="50-75" Max="false" OnWielderHit="true" />
+	</object>
+	
+	<object Name="Monosophy_LithConv_AdynatonTusks" Inherits="NaturalWeapon">
+		<part Name="Render" DisplayName="threatening tusks" />
+		<part Name="MeleeWeapon" BaseDamage="2d8" Skill="ShortBlades" Stat="Strength" Slot="Head" />
+		<tag Name="Gender" Value="plural" />
+	</object>
+	<object Name="Monosophy_LithConv_OracleBillowers" Inherits="NaturalWeapon">
+		<part Name="Render" DisplayName="spiral cone exhaust" />
+		<part Name="MeleeWeapon" BaseDamage="2d2" Skill="Cudgel" Stat="Strength" Slot="Face" />
+		<part Name="AjiConch" />
+		<part Name="ModSnailEncrusted" /> 
+	</object> 
+	<object Name="Monosophy_LithConv_NightmareHorn" Inherits="NaturalWeapon">
+		<part Name="Render" DisplayName="umbral horn" />
+		<part Name="DisplayNameColor" Color="&amp;k" Priority="5" />
+		<part Name="Armor" AV="5" DV="0" WornOn="Head" />
+		<part Name="MeleeWeapon" BaseDamage="0" HitBonus="15" Skill="ShortBlades" Stat="Strength" Slot="Head" />
+		<part Name="ElementalDamage" Damage="2d10" Attributes="Umbral" />
+	</object>
+	<object Name="Monosophy_LithConv_QudzuFeeler" Inherits="NaturalWeapon">
+		<part Name="Render" DisplayName="rusted feelers" />
+		<part Name="MeleeWeapon" BaseDamage="2d8" Skill="Cudgel" Stat="Strength" Slot="Face" />
+		<part Name="RustOnHit" />
+	</object>
+	<object Name="Monosophy_LithConv_SerratedHorn" Inherits="NaturalWeapon">
+		<part Name="Render" DisplayName="horns" />
+		<part Name="DisplayNameColor" Color="&amp;y" Priority="5" />
+		<part Name="Armor" AV="5" DV="0" WornOn="Head" />
+		<part Name="MeleeWeapon" BaseDamage="2d10" HitBonus="15" Skill="LongBlades" Stat="Strength" Slot="Head" />
+		<part Name="ModRazored"/>
+	</object>
+</objects>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+	<object Name="Monosophy_LithConv_UnusualDepiction" Inherits="BaseArmor">
+		<part Name="Render" DisplayName="{{K|unusual depiction}}" RenderString="]" Tile="Items/sw_chainmail.bmp" ColorString="&amp;y" DetailColor="C" />
+		<part Name="Description" Short="disguise" />
+		<part Name="Armor" AV="0" DV="0" WornOn="Back" />
+		<part Name="ModDisguise" />
+	</object>
+	<object Name="Monosophy_LithConv_SunOctagon">
+		<part Name="Render" DisplayName="{{K|sun octagon}}" RenderString="]" Tile="Items/sw_mask_mummer.bmp" ColorString="&amp;y" DetailColor="C" />
+		<part Name="Description" Short="Over the centuries, the hollow octagon's gas ports grew sedimentary cones, made from vapor residue and residents that feed on vapor." />
+		<part Name="ModDisguise" />
+	</object>
+	
+</objects>
