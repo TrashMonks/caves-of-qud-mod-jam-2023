@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+	<object Name="Unze_Mechannibal_Mechannibal" Inherits="BaseRobot">
+		<part Name="Body" Anatomy="HumanoidRobot" />
+		<part Name="Render" DisplayName="{{c|me}}c{{c|h}}annibal" RenderString="5" ColorString="&amp;c" Tile="Creatures/mechannibal.bmp" DetailColor="y" />
+		<stat Name="Level" Value="10" />
+		<stat Name="AV" Value="1" />
+		<stat Name="Hitpoints" Value="25" />
+		<part Name="Brain" Wanders="true" Hostile="false" Factions="Cannibals-100" />
+		<part Name="Description" Short="An eye-sore of aggregated mechanisms shambles forwards on a set of legs each with a different rightful owner. These chrome abominations share a philiosophy with the blood-thirsty cannibals of the hills, and in them find unlikely company." />
+		<inventoryobject Chance="4" Blueprint="Chem Cell" />
+		<tag Name="Species" Value="bipedal robot" />
+		<property Name="Role" Value="Brute" />
+		<tag Name="SeveredHeadBlueprint" Value="RobotHead2" />
+		<part Name="ConversationScript" ConversationID="Mechannibal" />
+		<part Name="RandomMutations" Mental="1" MentalLevel="1-3" Physical="1" PhysicalLevel="1-3" />
+		<mutation Name="SpontaneousCombustion" />
+		<skill Name="Shield" />
+		<tag Name="DynamicObjectsTable:Hills_Creatures" />
+		<tag Name="DynamicObjectsTable:Mountains_Creatures" />
+		<tag Name="InventoryPopulationTable" Value="Unze_Mechannibal_Mechannibal_Equipment" />
+		<part Name="BodyPartInventory" ByInherit="BaseRobot:0-2" />
+		
+	</object>
+</objects>

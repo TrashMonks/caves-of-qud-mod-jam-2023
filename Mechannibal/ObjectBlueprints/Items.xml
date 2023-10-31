@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+	<object Name="Unze_Mechannibal_Mechannibal_Primary1" Inherits="NaturalWeapon">
+		<part Name="MeleeWeapon" BaseDamage="1d4" Skill="LongBlades" Stat="Strength" Slot="Hand" />
+		<part Name="Render" DisplayName="{{C|blade}} {{c|arm}}" />
+		<part Name="Metal" />
+	</object>
+	<object Name="Unze_Mechannibal_Mechannibal_Primary2" Inherits="NaturalWeapon">
+		<part Name="MeleeWeapon" BaseDamage="1d4" Skill="Cudgel" Stat="Strength" Slot="Hand" />
+		<part Name="Render" DisplayName="{{K|wrecking-ball}} {{c|arm}}" />
+		<part Name="Metal" />
+	</object>
+	<object Name="Unze_Mechannibal_Mechannibal_Primary3" Inherits="NaturalWeapon">
+		<part Name="MeleeWeapon" BaseDamage="1d4" Skill="Axe" Stat="Strength" Slot="Hand" />
+		<part Name="Render" DisplayName="{{r|axe}} {{c|hand}}" />
+		<part Name="Metal" />
+	</object>
+	<object Name="Unze_Mechannibal_Mechannibal_Primary4" Inherits="NaturalWeapon">
+		<part Name="MeleeWeapon" BaseDamage="1d2" Skill="ShortBlades" Stat="Strength" Slot="Hand" />
+		<part Name="ElementalDamage" Damage="1d4" Attributes="Heat" />
+		<part Name="Render" DisplayName="{{R|red-hot}} {{c|spike}}" />
+		<part Name="Metal" />
+	</object>
+	<object Name="Unze_Mechannibal_Mechannibal_Primary5" Inherits="NaturalWeapon">
+		<part Name="MeleeWeapon" BaseDamage="1d2" Skill="Cudgel" Stat="Strength" Slot="Hand" />
+		<part Name="ElementalDamage" Damage="1d4" Attributes="Acid" />
+		<part Name="Render" DisplayName="{{tarnished|corroded}} {{c|grasper}}" />
+		<part Name="Metal" />
+	</object>
+	<object Name="Unze_Mechannibal_Mechannibal_Primary6" Inherits="NaturalWeapon">
+		<part Name="MeleeWeapon" BaseDamage="1d2" Skill="Cudgel" Stat="Strength" Slot="Hand" />
+		<part Name="ElementalDamage" Damage="1d4" Attributes="Electric" />
+		<part Name="Render" DisplayName="{{electrical|electrified}} {{c|shock-rod}}" />
+		<part Name="Metal" />
+	</object>
+	<object Name="Unze_Mechannibal_Mechannibal_Secondary1" Inherits="NaturalWeapon">
+		<removepart Name="MeleeWeapon" />
+		<part Name="Shield" AV="5" DV="-4" Value="1" WornOn="Hand" />
+		<part Name="Render" DisplayName="{{b|carbide}} {{c|shield-plate}}" />
+		<part Name="Metal" />
+	</object>
+	<object Name="Unze_Mechannibal_Mechannibal_Secondary2" Inherits="NaturalWeapon">
+		<removepart Name="MeleeWeapon" />
+		<part Name="Armor" AV="3" DV="-4" WornOn="Body" />
+		<part Name="Render" DisplayName="{{b|carbide}} {{c|hardshell}}" />
+		<part Name="Metal" />
+	</object>
+	<object Name="Unze_Mechannibal_Mechannibal_Secondary3" Inherits="NaturalWeapon">
+		<removepart Name="MeleeWeapon" />
+		<part Name="Armor" AV="1" DV="-2" Elec="20" Cold="20" Heat="20" Acid="20" WornOn="Body" />
+		<part Name="Render" DisplayName="{{plastifier|plastifier}} {{c|hardshell}}" />
+		<part Name="Springy" Factor="0.8" />
+	</object>
+	<object Name="Unze_Mechannibal_Mechannibal_Secondary4" Inherits="NaturalMissileWeapon">
+		<part Name="Render" DisplayName="{{w|shotgun}} {{c|armcannon}}" />
+		<part Name="MissileWeapon" Skill="Rifle" NoWildfire="true" ShotsPerAction="8" AmmoPerAction="1" ShotsPerAnimation="8" WeaponAccuracy="30" RangeIncrement="6" />
+		<part Name="BioAmmoLoader" MaxCapacity="6" Available="6" TurnsToGenerate="4" ProjectileObject="ProjectileShotgunPellet" />
+		<tag Name="MissileFireSound" Value="shotgun1_2" />
+		<part Name="Metal" />
+		<tag Name="UsesSlots" Value="Hand" />
+	</object>
+	<object Name="Unze_Mechannibal_Mechannibal_Secondary5" Inherits="NaturalMissileWeapon">
+		<part Name="Render" DisplayName="{{rocket|flamethrower}} {{c|armcannon}}" />
+		<part Name="MissileWeapon" Skill="Rifle" bShowShotsPerAction="false" NoWildfire="true" MaxRange="12" AnimationDelay="20" AmmoChar="f" ShotsPerAction="3" AmmoPerAction="3" ShotsPerAnimation="1" WeaponAccuracy="10" />
+		<part Name="BioAmmoLoader" MaxCapacity="6" Available="6" TurnsToGenerate="2" ProjectileObject="Unze_Mechannibal_Fireball" />
+		<tag Name="MissileFireSound" Value="flamethrower" />
+		<part Name="Metal" />
+		<tag Name="UsesSlots" Value="Hand" />
+	</object>
+    <object Name="Unze_Mechannibal_Fireball" Inherits="TemporaryProjectile">
+		<part Name="Render" DisplayName="{{R|ball of fire}}" ColorString="&amp;R" />
+		<part Name="Projectile" BaseDamage="1d4+2" Attributes="Heat Fire NonPenetrating" ColorString="&amp;R" PassByVerb="whoosh" />
+		<part Name="TemperatureOnHit" Amount="4d20" Max="false" OnWielderHit="true" />
+		<part Name="TemperatureOnEntering" Amount="8d20" Max="false" OnWielderHit="true" />
+	</object>
+	<object Name="Unze_Mechannibal_Mechannibal_Secondary6" Inherits="NaturalWeapon">
+		<removepart Name="MeleeWeapon" />
+		<part Name="Armor" AV="0" DV="1" />
+		<part Name="Render" DisplayName="{{rocket|rocket}} {{c|boosters}}" RenderString="]" Tile="Items/sw_rocketskates.bmp" ColorString="&amp;K" DetailColor="R" />
+		<part Name="Commerce" Value="400" />
+		<part Name="Physics" Weight="6" />
+		<part Name="MoveCostMultiplier" Amount="-5" />
+		<part Name="Description" Short="hello welcome to the secret mechannibal rocket boosters text" />
+		<part Name="RocketSkates" ChargeUse="1" IsEMPSensitive="false" IsBootSensitive="false" WorksOnWearer="true" PlumeLevel="3" />
+		<part Name="SaveModifier" Vs="Move,Knockdown,Restraint" Amount="-4" IsTechScannable="true" NameForStatus="DriveTrain" />
+		<part Name="LiquidFueledPowerPlant" Liquid="oil" ChargePerDram="750" />
+		<part Name="TemperatureAdjuster" ChargeUse="1" InactiveOnWorldMap="true" IsEMPSensitive="false" IsBootSensitive="false" TemperatureAmount="10" TemperatureThreshold="100" ThresholdAbove="true" AlwaysUseCharge="true" WorksOnSelf="true" WorksOnWearer="true" WorksOnCarrier="false" WorksOnCellContents="true" WorksOnAdjacentCellContents="true" NeedsOtherActivePartOperational="RocketSkates" NameForStatus="EmissionsControl" BehaviorDescription="Heats up the area around the wearer when in operation." />
+		<part Name="LiquidVolume" MaxVolume="32" Volume="0" StartVolume="16-32" InitialLiquid="oil-1000" />
+		<part Name="LeakWhenBroken" />
+		<part Name="Metal" />
+		<property Name="Role" Value="Uncommon" />
+		<tag Name="Tier" Value="5" />
+		<tag Name="UsesSlots" Value="Feet" />
+	</object>
+</objects>

@@ -1,0 +1,9 @@
+{
+    "id": "Unze_Mechannibal",
+    "title": "Mechannibal",
+    "description": "Adds a new uncommon creature to encounter in the hills and mountains.",
+    "version": "1.0",
+    "author": "Unze",
+    "tags": "Creature",
+    "PreviewImage": "preview.png"
+}

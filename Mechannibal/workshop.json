@@ -1,0 +1,8 @@
+{
+  "WorkshopId": 3065730279,
+  "Title": "Mechannibal",
+  "Description": "Adds a new creature you can encounter in the hills and mountains: the mechannibal.\n\nMechannibals are level 10 robotic creatures aligned with the cannibals faction.\n* Spawns with a random low level physical mutation.\n* Spawns with a random low level mental mutation.\n* Spawns with a random natural weapon chosen from a set of 6, such as a red-hot spike or a wrecking-ball arm.\n* Spawns with a random piece of extra natural equipment chosen from a different set of 6, such as a shotgun armcannon or a carbide hardshell.\n* Small chance for it to spontaneously combust during combat.\n* Spawns with some scrap in it's inventory.\n* Spawns with a small assortment of severed robot body parts in it's inventory.",
+  "Tags": "Creature",
+  "Visibility": "2",
+  "ImagePath": "Preview.png"
+}

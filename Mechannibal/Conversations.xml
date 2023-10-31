@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<conversations>
+	<conversation ID="Mechannibal">
+		<node ID="Start">
+			<text>
+				HA. HA.~
+				OXIDIZATION.~
+				THESEUS.~
+				WEAR AND TEAR. TEAR THEN WEAR.~
+				NEAREST JUNKYARD. NEAREST JUNKYARD. NEAREST JUNKYARD.~
+				SCRAP FOR THE SCRAPPER.~
+				NEW MOTHERBOARD. FEELS FUNNY.~
+				NEW SERVO. FEELS FUNNY.~
+				NEW DRIVETRAIN. FEELS FUNNY.~
+				RECYCLE.~
+				{{emote|*makes an ear-piercing tone*}}~
+				{{emote|*makes an ear-piercing scraping noise*}}~
+				{{emote|*mechanical sputtering*}}~
+				METAL.
+			</text>
+			<choice GotoID="End">Keep your distance, friend.</choice>
+		</node>
+	</conversation>
+</conversations>
