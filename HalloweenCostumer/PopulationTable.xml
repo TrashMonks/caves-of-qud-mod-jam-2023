@@ -1,0 +1,8 @@
+<populations>
+  <population Name="Gnarf_Halloween Costumes Inventory">
+    <object Chance="100" Number="10" Blueprint="Gnarf_Halloween Costume" />
+  </population>
+  <population Name="Gnarf_Halloween Costumes Inventory_Legendary">
+    <object Chance="100" Number="10" Blueprint="Gnarf_Halloween Costume" Hint="SetBonusModChance:100"/>
+  </population>
+</populations>
