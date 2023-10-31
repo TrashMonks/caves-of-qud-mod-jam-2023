@@ -1,0 +1,9 @@
+<populations>
+    <population Name="Tier8CavePopulation" Load="Merge">
+        <group Name="Contents" Load="Merge">
+            <group Name="Creatures" Load="Merge">
+                <object Weight="1" Number="1" Blueprint="IlluminatiSwag_Jam_EaterGhost" />
+            </group>
+        </group>
+    </population>
+</populations>

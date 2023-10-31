@@ -1,0 +1,89 @@
+<objects>
+    <object Name="IlluminatiSwag_Jam_EaterGhost" Inherits="BaseTrueKin">
+        <part Name="Render" DisplayName="antediluvian specter" Tile="Creatures/sw_eater_8.bmp" ColorString="&amp;y" TileColor="&amp;y" DetailColor="Y" RenderString="U" Occluding="false"/>
+        <part Name="RandomTile" Tiles="Creatures/sw_eater_1.bmp,Creatures/sw_eater_2.bmp,Creatures/sw_eater_3.bmp,Creatures/sw_eater_4.bmp,Creatures/sw_eater_5.bmp,Creatures/sw_eater_6.bmp,Creatures/sw_eater_7.bmp,Creatures/sw_eater_8.bmp,Creatures/sw_eater_9.bmp,Creatures/sw_eater_10.bmp,Creatures/sw_eater_11.bmp,Creatures/sw_eater_12.bmp,Creatures/sw_eater_13.bmp,Creatures/sw_eater_14.bmp,Creatures/sw_eater_15.bmp,Creatures/sw_eater_16.bmp,Creatures/sw_eater_17.bmp,Creatures/sw_eater_18.bmp,Creatures/sw_eater_19.bmp,Creatures/sw_eater_20.bmp,Creatures/sw_eater_21.bmp,Creatures/sw_eater_22.bmp,Creatures/sw_eater_23.bmp,Creatures/sw_eater_24.bmp,Creatures/sw_eater_25.bmp,Creatures/sw_eater_26.bmp,Creatures/sw_eater_27.bmp,Creatures/sw_eater_28.bmp,Creatures/sw_eater_ruined_1.bmp,Creatures/sw_eater_ruined_2.bmp,Creatures/sw_eater_ruined_3.bmp,Creatures/sw_eater_ruined_4.bmp,Creatures/sw_eater_ruined_5.bmp,Creatures/sw_eater_ruined_1.bmp,Creatures/sw_eater_ruined_2.bmp,Creatures/sw_eater_ruined_3.bmp,Creatures/sw_eater_ruined_4.bmp,Creatures/sw_eater_ruined_5.bmp" />
+        <part Name="Brain" Wanders="true" Hostile="true" />
+        <part Name="MentalShield"/>
+        <part Name="HologramMaterial" ColorStrings="&amp;y,&amp;K,&amp;B,&amp;Y" DetailColors="y,M,K,y"/>
+        <part Name="HologramInvulnerability" />
+        <part Name="Temporary" Duration="-1" TurnInto="*fugue"/>
+        <part Name="OmniphaseObject"/>
+        <part Name="Interesting" />
+        <stat Name="Level" Value="40" />
+        <stat Name="Agility" Boost="2" />
+        <stat Name="Willpower" Boost="3" />
+        <stat Name="Ego" Boost="2" />
+        <!-- <stat Name="Speed" Value="160" /> -->
+        <stat Name="ColdResistance" Value="100" />
+        <stat Name="HeatResistance" Value="100" />
+        <stat Name="Hitpoints" Value="1" />
+        <part Name="Description" Short="Light and shadow trace the cold, silent outline of a body long returned to the dust. Whatever joys and sorrows =pronouns.subjective= felt in life, whatever glories and defeats =pronouns.subjective= engraved in the spacetime braid, whatever age-lost marvels =pronouns.subjective= knew as commonplace — all have been eroded by untold millennia, leaving only ravening hunger." />
+        <mutation Name="LifeDrain" Level="4"/>
+        <tag Name="IgnoresWalls" />
+        <skill Name="Tactics_Charge" />
+        <skill Name="Axe" />
+        <skill Name="Axe_Dismember" />
+        <skill Name="Axe_Cleave" />
+        <skill Name="Axe_HookAndDrag" />
+        <skill Name="Axe_Berserk" />
+        <tag Name="RandomGender" Value="male,female,neuter,neuter,neuter" />
+        <tag Name="Culture" Value="Eater" />
+        <tag Name="PunchSound" Value="*remove"/>
+		<tag Name="DeathSounds" Value="*remove" />
+		<tag Name="TakeDamageSound" Value="*remove"/>
+		<tag Name="AmbientIdleSound" Value="*remove"/>
+        <tag Name="LairAmbientBed" Value="*remove" />
+        <inventoryobject Blueprint="IlluminatiSwag_Jam_GhostBlade" />
+        <inventoryobject Blueprint="IlluminatiSwag_Jam_GhostBlade" />
+    </object>
+    <object Name="IlluminatiSwag_Jam_GhostBlade" Inherits="NaturalWeapon">
+        <part Name="Render" DisplayName="{{ghostly|phantasmal}} touch" Tile="items/sw_kopesh.bmp" ColorString="&amp;y" />
+        <part Name="MeleeWeapon" BaseDamage="1d10+2" Stat="Ego" Skill="Axe" />
+        <part Name="ElementalDamage" Damage="2d3" Attributes="Cold" />
+        <tag Name="SwingSound" Value="*remove" />
+        <tag Name="BlockedSound" Value="*remove" />
+    </object>
+    <object Name="IlluminatiSwag_Jam_Ghost_Brief" Inherits="IlluminatiSwag_Jam_EaterGhost">
+        <part Name="Temporary" Duration="75" TurnInto="*fugue"/>
+    </object>
+    <object Name="IlluminatiSwag_Jam_GhostHero" Inherits="IlluminatiSwag_Jam_EaterGhost">
+        <part Name="Description" Short="Light and shadow trace the cold, silent outline of a body long returned to the dust. Whatever joys and sorrows =pronouns.subjective= felt in life, whatever glories and defeats =pronouns.subjective= engraved in =pronouns.possessive= phylactery, whatever age-lost marvels =pronouns.subjective= knew as commonplace — all have been corroded by untold millennia, leaving only ravening hunger." />
+        <part Name="Uplift"/>
+        <tag Name="HeroNoWaterRitual" Value="true" />
+        <tag Name="RandomGender" Value="male,female,neuter,nonspecific" />
+        <tag Name="NamingTag" Value="IlluminatiSwag_Jam_GhostTitle"/>
+        <tag Name="ExcludeFromDynamicEncounters" />
+    </object>
+    <object Name="Ancient Corpse" Load="Merge">
+        <part Name="Corpse" CorpseChance="100" CorpseBlueprint="IlluminatiSwag_Jam_Ghost_Brief" />
+    </object>
+    <object Name="IlluminatiSwag_Jam_GhostPhylactery" Inherits="Tool">
+        <part Name="Render" DisplayName="ancient phylactery" RenderString="004" Tile="sw_phylactery_5.png" ColorString="&amp;g" DetailColor="y" />
+        <part Name="Commerce" Value="300" />
+        <part Name="Description" Short="Ornately carved crysteel covers the reliquary of an ancient aristocrat. A runic inscription's meaning is lost to the ages, but certain repeated glyphs suggest a name." />
+        <part Name="Physics" Weight="8" Category="Tools" />
+        <part Name="PetPhylactery" wraithBlueprint="IlluminatiSwag_Jam_GhostHero"/>
+        <part Name="MeleeWeapon" MaxStrengthBonus="1" /><!-- to prevent it from being considered an improvised weapon -->
+        <part Name="Examiner" Alternate="UnknownSmallMetalBox" Complexity="7" />
+        <tag Name="Tier" Value="7" />
+        <tag Name="MeleeWeapon" Value="1" />
+        <part Name="TinkerItem" Bits="0047" CanDisassemble="true" CanBuild="false" />
+        <part Name="EnergyCellSocket" SlotType="EnergyCell" ChanceSlotted="100" ChanceFullCell="100" />
+        <part Name="AIOffensiveEnergyCellReload" />
+        <part Name="AIPassiveEnergyCellReload" />
+    </object>
+    <object Name="IlluminatiSwag_Jam_GhostCaller" Inherits="Mechanimist">
+        <part Name="Render" DisplayName="Mechanimist phylacter" ColorString="&amp;B" DetailColor="Y" RenderString="m" />
+        <stat Name="Level" Value="30" />
+        <stat Name="Hitpoints" Value="100" />
+        <stat Name="Speed" Value="100" />
+        <part Name="Description" Short="=pronouns.Possessive= eyes are fierce and wild. =pronouns.Subjective= =verb:bear:afterpronoun= as a talisman one of the holiest relics of =pronouns.possessive= faith, and =pronouns.subjective= =verb:chant:afterpronoun= ecstatic prayers for its guidance" />
+        <inventoryobject Blueprint="Sandals" Number="1" />
+        <inventoryobject Blueprint="Slate Frock" Number="1" />
+        <inventoryobject Blueprint="Prayer Rod" Number="1" CellChance="100" CellFullChance="80"/> 
+        <inventoryobject Blueprint="IlluminatiSwag_Jam_GhostPhylactery" Number="1" />
+        <part Name="AITryKeepDistance" NotStuck="true" />
+        <tag Name="RandomPronounSetChance" Value="0" />
+        <part Name="Ecstasy" />
+    </object>
+</objects>

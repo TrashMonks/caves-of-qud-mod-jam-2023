@@ -1,0 +1,12 @@
+<naming>
+    <namestyles>
+        <namestyle Name="IlluminatiSwag_Jam_GhostTitle">
+            <scopes>
+                <scope Name="Main" Type="Title" Special="Hero" Tag="IlluminatiSwag_Jam_GhostTitle" Priority="300" Combine="false" />
+            </scopes>
+            <titletemplates>
+                <titletemplate Name="wraith-remnant of the Eaters of Earth" />
+            </titletemplates>
+        </namestyle>
+    </namestyles>
+</naming>

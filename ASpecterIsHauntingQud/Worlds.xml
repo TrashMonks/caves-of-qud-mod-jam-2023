@@ -1,0 +1,17 @@
+<worlds Load="Merge">
+    <world Name="JoppaWorld" Load="Merge">
+        <cell Name="TheSpindle" Inherits="TheSpindle" ApplyTo="TerrainTheSpindle" Mutable="false">
+            <zone Level="11" x="2" y="1" Name="Folk Catacombs"  NameContext="Tomb of the Eaters" DisableForcedConnections="Yes">
+                <builder Class="CatacombsPublicus"></builder>
+                <builder Class="Music" Track="AmongTheTombs" Chance="100"></builder>
+                <builder Class="AddBlueprintBuilder" Object="IlluminatiSwag_Jam_EaterGhost"/>
+            </zone>
+            <zone Level="7" x="2" y="2" Name="Upper Crypts: Priests and Royal Families"  NameContext="Tomb of the Eaters" DisableForcedConnections="Yes">
+                <builder Class="CryptOfWarriors"/>
+                <builder Class="Music" Track="AmongTheTombs" Chance="100"/>
+                <builder Class="FlagInside"/>
+                <builder Class="AddBlueprintBuilder" Object="IlluminatiSwag_Jam_EaterGhost"/>
+            </zone>
+        </cell>
+    </world>
+</worlds>
