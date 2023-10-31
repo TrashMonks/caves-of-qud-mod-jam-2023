@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+    <object Name="TrystVar_Cyberbaboons_Implanted Baboon" Inherits="Baboon">
+        <part Name="Description" Short="Analyzing you through =pronouns.possessive= visor, you feel as if you're being read like a book. Under =pronouns.possessive= fur, the implants give a certain calculation to =pronouns.possessive= unpredictable motion." />
+        <part Name="Render" DisplayName="cyber baboon" Tile="TrystVar_BaboonsCyber/baboons_cyber.png" RenderString="a" DetailColor="w"/>
+        <stat Name="Level" Value="25" />
+        <stat Name="Hitpoints" Value="90" />
+        <stat Name="Strength" sValue="21" />
+        <stat Name="Agility" sValue="20" />
+        <stat Name="Toughness" sValue="18" />
+        <stat Name="Intelligence" sValue="30" />
+        <stat Name="Willpower" sValue="26" />
+        <stat Name="Ego" sValue="21" />
+
+        <stat Name="AV" Value="10" />
+        <stat Name="DV" Value="7" />
+
+        <inventoryobject Blueprint="StandaloneMarkovBook" Number="1-2" Chance="40" />
+        <inventoryobject Blueprint="Dagger5" Number="1-2" Chance="50" />
+        <part Name="CyberneticsHasRandomImplants" ImplantChance="100" ImplantTable="Cybernetics4" LicensesAtLeast="6" />
+
+        <tag Name="DynamicObjectsTable:Baboons" Value="{{{remove}}}"/> 
+        <tag Name="NonMutant" />
+    </object>
+
+
+    <object Name="TrystVar_Cyberbaboons_Implanted Hulking Baboon" Inherits="TrystVar_Cyberbaboons_Implanted Baboon">
+        <part Name="Render" DisplayName="hulking baboon" Tile="TrystVar_BaboonsCyber/baboons_cyber.png" DetailColor="W"/>
+
+        <stat Name="Strength" sValue="32" />
+        <stat Name="Toughness" sValue="24" />
+
+        <inventoryobject Blueprint="Cudgel5th"/>
+        <tag Name="InventoryPopulationTable" Value="TrystVar_BaboonHeavyArmor" Number="2" />
+
+        <skill Name="Cudgel" />
+        <skill Name="Cudgel_ChargingStrike" />
+        <skill Name="Cudgel_Bludgeon" />
+        <skill Name="Cudgel_Slam" />
+        <skill Name="Cudgel_Conk" />
+        <skill Name="Cudgel_Backswing" />
+        <skill Name="Cudgel_Slam" />
+        <skill Name="Tactics_Charge" />
+        <skill Name="Tactics_Kickback" />
+
+    </object>
+    <object Name="TrystVar_Cyberbaboons_Implanted Grenadier Baboon" Inherits="TrystVar_Cyberbaboons_Implanted Baboon">
+        <part Name="Render" DisplayName="grenadier baboon" Tile="TrystVar_BaboonsCyber/baboons_cyber.png" DetailColor="w" />
+
+        <stat Name="Agility" sValue="28" />
+        <stat Name="Intelligence" sValue="35" />
+
+        <inventoryobject Blueprint="@GrenadierInventory_Legendary" Number="10" />
+        <tag Name="InventoryPopulationTable" Value="TrystVar_BaboonLightArmor" Number="1" />
+
+        <skill Name="Tinkering_Scavenger" />
+        <skill Name="Tinkering_Disassemble" />
+        <skill Name="Tinkering_Tinker2" />
+        <skill Name="Tactics" />
+        <skill Name="Tactics_Juke" />
+        
+    </object>
+    <object Name="TrystVar_Cyberbaboons_Implanted Gunner Baboon" Inherits="TrystVar_Cyberbaboons_Implanted Baboon">
+        <part Name="Render" DisplayName="gunner baboon" Tile="TrystVar_BaboonsCyber/baboons_cyber.png" DetailColor="r"/>
+        <stat Name="Agility" sValue="28" />
+        <stat Name="Toughness" sValue="24" />
+        <stat Name="Strength" sValue="26" />
+
+        <inventoryobject Blueprint="Laser Rifle" Number="1" CellChance="100" CellFullChance="100" CellType="Chem Cell" />
+        <tag Name="InventoryPopulationTable" Value="TrystVar_BaboonLightArmor" Number="1" />
+
+        <skill Name="Rifles" />
+        <skill Name="Rifle_DrawABead" />
+        <skill Name="Rifle_SteadyHands" />
+        <skill Name="Tactics" />
+        <skill Name="Tactics_Juke" />      
+    </object>
+</objects>

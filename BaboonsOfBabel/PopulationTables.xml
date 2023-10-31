@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<populations>
+    <population Name="TrystVar_BaboonHeavyArmor">
+        <group Name="Items" Style="pickone">
+            <group Name="Fullerite" Style="pickeach" Weight="5">
+                <object Blueprint="Fullerite Plate Mail"/>
+                <group Name="Items" Style="pickone" >
+                    <object Blueprint="Fullerite Armet" Weight="5" />
+                    <object Blueprint="Fullerite Boots" Weight="5" />
+                    <object Blueprint="Fullerite Gauntlets" Weight="5" />   
+                </group>
+            </group>
+            <group Name="Carbide" Style="pickeach" Weight="5">
+                <object Blueprint="Carbide Plate Mail"/>
+                <group Name="Items" Style="pickone" >
+                    <object Blueprint="Carbide Boots" Weight="5" />
+                    <object Blueprint="Carbide Gauntlets" Weight="5" />   
+                </group>
+            </group>
+        </group>
+  </population>
+  <population Name="TrystVar_BaboonLightArmor">
+    <group Name="Items" Style="pickone">
+        <object Blueprint="Nanoweave Vest" Weight="5"/>
+        <object Blueprint="Flexivest" Weight="5"/>     
+    </group>
+  </population>
+</populations>
