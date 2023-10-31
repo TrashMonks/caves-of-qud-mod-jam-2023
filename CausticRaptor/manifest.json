@@ -1,0 +1,9 @@
+{
+    "id": "visceralfield_monstermash",
+    "title": "{{G|caustic}} raptor",
+    "description": "Created for the Monster Mash jam in October 2023",
+    "version": "1.0.0",
+    "author": "visceralfield",
+    "tags": "Creature", 
+    "PreviewImage": "preview.png"
+}

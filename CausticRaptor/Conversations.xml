@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+    <conversation ID="visceralfield_monstermash_raptor">
+        <node ID="Start">
+            <text>
+              {{emote|*guurgle-SCREECH*}} =MARKOVSENTENCE= {{emote|*guurgle-SCREECH*}}
+            </text>
+            <choice GotoID="End">Live and drink, nonsense bird.</choice>
+        </node>
+    </conversation>
+</conversations>

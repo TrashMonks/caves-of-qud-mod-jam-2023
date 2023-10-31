@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+    <object Name="visceralfield_monstermash_raptor_corpse" Inherits="Animal Corpse">
+        <part Name="Render" DisplayName="caustic raptor corpse" />
+        <part Name="Butcherable" OnSuccess="visceralfield_monstermash_wristblade" />
+        <part Name="Food" Message="IT {{G|BURNS}}!" />		    
+        <part Name="Commerce" Value="20" />
+        <tag Name="Tier" Value="1" />    
+    </object>  
+    <object Name="visceralfield_monstermash_wristblade" Inherits="BaseDagger">
+        <part Name="Render" DisplayName="{{G|caustic}} wristblade" Tile="flightless bird wristblade.png" ColorString="&amp;y" DetailColor="G" />
+        <part Name="MeleeWeapon" MaxStrengthBonus="5" BaseDamage="1d3" Slot="Arm" />
+        <part Name="Description" Short="A sizzling severed spur splays upwards from straps of greasy tendon affixed to the wearer's wrist." />
+        <part Name="Commerce" Value="60" />
+        <tag Name="Tier" Value="3" />
+        <part Name="ElementalDamage" Damage="1d4" Attributes="Acid" />
+        <tag Name="Mods" Value="" />
+        <part Name="ModFeathered" />
+      </object>
+</objects>

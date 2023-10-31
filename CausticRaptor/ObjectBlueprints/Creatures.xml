@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+    <object Name="visceralfield_monstermash_talons" Inherits="NaturalWeapon">
+        <part Name="Render" DisplayName="{{G|acrid}} talon" Tile="flightless bird talon.png" ColorString="&amp;r" DetailColor="y" />
+        <part Name="MeleeWeapon" BaseDamage="1d2" Skill="ShortBlades" Stat="Strength" Slot="Foot" />
+        <tag Name="Gender" Value="plural" />
+        <part Name="ElementalDamage" Damage="1" Attributes="Acid" />
+    </object>
+
+    <object Name="visceralfield_monstermash_beak" Inherits="NaturalMissileWeapon">
+        <part Name="Render" DisplayName="{{G|scathing}} beak" Tile="flightless bird beak.png" ColorString="&amp;G" RenderString="*" />
+        <part Name="MissileWeapon" RangeIncrement="3" Skill="Pistol" />
+        <part Name="BioAmmoLoader" MaxCapacity="4" Available="4" TurnsToGenerate="4" ProjectileObject="visceralfield_monstermash_projectile" />
+        <tag Name="MissileFireSound" Value="LowSpit" />
+        <tag Name="UsesSlots" Value="Face" />
+        <part Name="AIShootCooldown" Cooldown="1-2" />
+      </object>
+
+    <object Name="visceralfield_monstermash_projectile" Inherits="TemporaryProjectile">
+        <part Name="Render" DisplayName="{{G|acrid}} glob" />
+        <part Name="Projectile" BasePenetration="5" BaseDamage="1" ColorString="&amp;y" Attributes="Acid" PassByVerb="spew" />
+        <part Name="GroundOnHit" ChargeUse="0" Chance="100" Duration="20-30" SaveTarget="40" SaveStat="Agility" SaveVs="Acrid Glob Grounding" FlyingLevelAidsSave="true" />
+    </object>
+    
+    <object Name="visceralfield_monstermash_raptor" Inherits="BaseBird">
+        <part Name="Description" Short="=pronouns.Possessive= own wings are tarred with the oily, acrid globs that drip from =pronouns.possessive= beak between regurgitated words. =pronouns.Subjective= =verb:are= confined from true flight, relegated to sticky leaps across the ground - a portent of =pronouns.possessive= prey's nearing fate. On =pronouns.possessive= feet, one huge, pitted, slick talon arches above the rest."/>
+        <part Name="Render" DisplayName="{{G|caustic}} raptor" Tile="flightless bird.png" ColorString="&amp;r" DetailColor="G"/>
+        
+        <removemutation Name="Wings" />
+        <mutation Name="BrittleBones" />
+        <mutation Name="HeightenedAgility" Level="2"/>
+        
+        <inventoryobject Blueprint="visceralfield_monstermash_talons" Number="2" />
+        <inventoryobject Blueprint="visceralfield_monstermash_beak" Number="1" />
+        
+        <skill Name="ShortBlades" />
+        <skill Name="ShortBlades_Jab" />
+        <skill Name="ShortBlades_Bloodletter" />
+        <skill Name="ShortBlades_Hobble" />
+        <skill Name="Acrobatics" />
+        <skill Name="Acrobatics_Jump" />
+        
+        <stat Name="Hitpoints" Value="24" />
+        <stat Name="DV" Value="7" />
+        <stat Name="Level" Value="10" />
+        
+        <part Name="Corpse" CorpseChance="5" CorpseBlueprint="visceralfield_monstermash_raptor_corpse" />
+        <part Name="ConversationScript" ConversationID="visceralfield_monstermash_raptor" />
+        <part Name="Pettable" UseFactionForFeelingFloor="Birds" />
+        
+        <tag Name="PetResponse" Value="=subject.T= =verb:coo= awfully." />
+    </object>
+</objects>
