@@ -125,8 +125,8 @@ namespace XRL.World.Parts
                 // xml.HandleException(e);
             }
             data.DisplayName = xml.ParseAttribute("DisplayName", data.DisplayName);
-            data.Author = xml.ParseAttribute("Author", data.Author, required: true);
-            data.ModName = xml.ParseAttribute("ModName", data.ModName, required: true);
+            data.Author = xml.ParseAttribute("Author", data.Author, required: false);
+            data.ModName = xml.ParseAttribute("ModName", data.ModName, required: false);
             var icon = xml.ParseAttribute<string>("Icon", null);
             if (!string.IsNullOrEmpty(icon))
             {
