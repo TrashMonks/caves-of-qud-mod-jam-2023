@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+
+<population Name="LairOwners_Mountains" Load="Merge">
+    <group Name="Options" Load="Merge">
+      <object Weight="1" Blueprint="lichenthrope" />
+    </group>
+</population>
+
+<population Name="MountainsZoneGlobals-Reachable" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Chance="3" Number="1" Blueprint="lichenthrope"/>
+    </group>
+</population>
+
+</populations>

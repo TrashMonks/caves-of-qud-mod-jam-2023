@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+
+<object Name="lichenthrope" Inherits="BaseDog">
+    <part Name="Render" DisplayName="Lichenthrope" Tile="lichenthrope.png" TileColor="y" DetailColor="g" RenderString="u" ColorString="&amp;W" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="Grave Moss" />
+    <stat Name="Level" Value="24" />
+    <stat Name="AV" Value="12" />
+    <stat Name="DV" Value="8" />
+    <stat Name="Hitpoints" Value="100" />
+    <part Name="Body" Anatomy="TailedBiped" />
+    <part Name="Brain" Hostile="true" Factions="Roots-100" />
+    <part Name="LeavesTrail" TrailChance="100" TrailBlueprint="Grave Moss" OnEnter="false" />
+    <part Name="Description" Short="Where water is scarce, the treaties of algae and bacteria are penned instead in blood. Grave moss arbitrates along the host-wolf's hackles." />
+        <stat Name="Level" sValue="24" />
+        <stat Name="Strength" sValue="24,1d4" />
+        <stat Name="Agility" sValue="20,1d4" />
+        <stat Name="Toughness" sValue="26,1d4" />
+        <stat Name="Intelligence" sValue="6,1d4" />
+        <stat Name="Willpower" sValue="16,1d4" />
+        <stat Name="Ego" Value="12,1d4" />
+    <inventoryobject Blueprint="Barkbiter_Bite" Number="1" />
+        <mutation Name="Carnivorous" />
+        <mutation Name="PhotosyntheticSkin" Level="10" />
+        <mutation Name="BurrowingClaws" Level="10" />
+    <skill Name="ShortBlades" />
+    <skill Name="ShortBlades_Expertise" />
+    <skill Name="ShortBlades_Bloodletter" />
+    <skill Name="Dual_Wield" />
+    <skill Name="Dual_Wield_Ambidexterity" />
+    <skill Name="Dual_Wield_Offhand_Strikes" />
+    <skill Name="Dual_Wield_Two_Weapon_Fighting" />
+    <property Name="Role" Value="Brute" />
+    <tag Name="DynamicObjectsTable:Mountains_Creatures" />
+  </object>
+  
+</objects>

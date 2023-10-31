@@ -1,0 +1,10 @@
+{
+	"id": "Lichenthrope",
+	"loadorder": 0,
+	"title": "Qudtober Monster Mash: {{g|LICHENTHROPE!}}",
+	"description": "Adds the Lichenthrope, a terrifying hunter that stalks the stony mountains!",
+	"tags": "Creature",
+	"version": "1.0",
+	"author": "{{radiant|A Nonsense Bird!}}",
+    "previewImage": "lichenthrope_mod.png"
+}
