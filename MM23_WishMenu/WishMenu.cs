@@ -88,6 +88,26 @@ namespace XRL.World.Parts
         // also for 204.x compat - remove in 206.x there is default
         private static List<string> parseCSV(string s) => s.Split(',').ToList();
 
+        /// <summary>
+        ///  A really quiet attempt at creating a blueprint hopefully.  The normal createSample throws loud errors
+        /// </summary>
+        private static bool TryCreateSample(string blueprint, out GameObject result)
+        {
+            result = null;
+            try {
+                result = GameObjectFactory.Factory.CreateObject(
+                    blueprint,
+                    BonusModChance: -9999,
+                    Context: "Sample"
+                );
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public static void HandleWishNode(XmlDataHelper xml)
         {
             WishCommandXML data = new WishCommandXML();
@@ -114,8 +134,7 @@ namespace XRL.World.Parts
                 else
                 {
                     if (firstCommand.StartsWith("item:")) firstCommand = firstCommand.Substring(5);
-                    GameObject sample = null;
-                    sample = GameObject.createSample(firstCommand);
+                    TryCreateSample(firstCommand, out var sample);
                     data.DisplayName = $"Spawn {sample.a}{sample.DisplayName}";
                     data.Renderable = new Renderable(sample.RenderForUI());
                 }
