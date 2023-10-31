@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<populations>
+    <population Name="PalladiumReefCavePopulation" Load="Merge">
+        <group Name="Creatures" Load="Merge">
+            <object Blueprint="Jellyface" Number="1" />
+        </group>
+    </population>
+    <population Name="WaterCavePopulation" Load="Merge">
+        <group Name="Creatures" Load="Merge">
+            <object Blueprint="Jellyface" Number="2-5" />
+        </group>
+    </population>
+    <population Name="WaterCreatures" Load="Merge">
+        <group Name="Creatures" Load="Merge">
+            <object Blueprint="Jellyface" Weight="10" Number="2-5" />
+        </group>
+    </population>
+    <population Name="LairOwners_PalladiumReef" Load="Merge">
+        <group Name="Options" Load="Merge">
+            <object Weight="10" Blueprint="Jellyface" />
+        </group>
+    </population>
+    <population Name="PalladiumReefZoneGlobals" Load="Merge">
+        <object Chance="50" Blueprint="Jellyface" Number="3-6" Hint="Aquatic" />
+    </population>
+    <population Name="PalladiumReefCaveZoneGlobals" Load="Merge">
+        <object Chance="20" Blueprint="Jellyface" Number="7-8" Hint="Aquatic" />
+    </population>
+    <population Name="LairOwners_Water" Load="Merge">
+        <group Name="Options" Load="Merge">
+            <object Blueprint="Jellyface" Hint="Aquatic" />
+        </group>
+    </population>
+    <population Name="LakeHinnomZoneGlobals" Load="Merge">
+            <object Blueprint="Jellyface" Chance="75" Hint="Aquatic" />
+    </population>
+</populations>

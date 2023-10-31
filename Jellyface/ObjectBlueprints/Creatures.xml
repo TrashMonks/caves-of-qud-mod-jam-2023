@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+<!-- JELLYFACE -->
+  <object Name="Jellyface" Inherits="Creature">
+    <part Name="Description" Short="Jellyface stands as serene sentinel, melding the gaze of a =player.apparentSpecies= with the fluid elegance of maintaining some semblance of a morose smile. Their radiant aura echoes from their telepathic shields, resonating the ancestral prowess of the Eaters.
+    
+&amp;Mluminescent&amp;y" />
+    <part Name="Render" DisplayName="{{C|jellyface}}" Tile="jellyface.png" ColorString="&amp;Y" DetailColor="M" />
+    <part Name="Body" Anatomy="Ooze" />
+    <part Name="Brain" WandersRandomly="true" Hostile="false" Wanders="true" Aquatic="true" Calm="true" Factions="Oozes-100" />
+    <part Name="LightSource" Lit="true" Radius="4" />
+    <part Name="Aquatic" />
+    <part Name="SpawnWithLiquid" />
+    <part Name="ConversationScript" ConversationID="Jellyface" />
+    <stat Name="Speed" Value="100" />
+    <mutation Name="Stinger" Constructor="Paralyze" Level="15" />
+    <mutation Name="Telepathy" Level="10" />
+    <mutation Name="SunderMind" Level="10" />
+    <skill Name="Endurance_Swimming" />
+    <skill Name="Dual_Wield" />
+    <skill Name="Dual_Wield_Ambidexterity" />
+    <skill Name="Dual_Wield_Two_Weapon_Fighting" /> 
+    <stat Name="AV" Value="0" />
+    <stat Name="Level" Value="40" />
+    <stat Name="Hitpoints" Value="400" />
+    <stat Name="Strength" sValue="12,1d2,(t-1)d3" />
+    <stat Name="Agility" sValue="14,1d2,(t-1)d2-1" />
+    <stat Name="Toughness" sValue="12,1d3,(t-1)d2" />
+    <stat Name="Intelligence" sValue="18" />
+    <stat Name="Willpower" sValue="20" />
+    <stat Name="Ego" sValue="16" />
+    <stat Name="ElectricResistance" Value="400" />
+    <stat Name="HeatResistance" Value="30" />
+    <stat Name="ColdResistance" Value="30" />
+    <stat Name="AcidResistance" Value="30" />
+    <inventoryobject Blueprint="Jellyzap" Number="1" />
+    <tag Name="Gender" Value="collective" />
+    <tag Name="WaterRitualLiquid" Value="warmstatic" />
+    <tag Name="PlacementHint" Value="Aquatic" />
+    <tag Name="BleedLiquid" Value="slime-1000" />
+    <tag Name="BleedColor" Value="&amp;M" />
+    <tag Name="BleedPrefix" Value="{{M|luminous}}" />
+    <tag Name="Class" Value="jelly" />
+    <tag Name="Species" Value="jelly" />
+    <tag Name="Culture" Value="jelly" />
+  </object>
+<!-- JELLYZAP -->
+  <object Name="Jellyzap" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="zap" />
+    <part Name="MeleeWeapon" BaseDamage="0" />
+    <part Name="ElementalDamage" Damage="4d6" Attributes="Electric" />
+  </object>
+</objects>

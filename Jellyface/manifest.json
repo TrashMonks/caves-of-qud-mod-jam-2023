@@ -1,0 +1,9 @@
+{
+    "id": "Jellyface",
+    "title": "Jellyface",
+    "description": "Adds the new Jellyface creature to Caves of Qud.",
+    "version": "0.1.0",
+    "author": "Miliv, k0ba",
+    "tags": "Creature",
+    "PreviewImage": "preview.png"
+}

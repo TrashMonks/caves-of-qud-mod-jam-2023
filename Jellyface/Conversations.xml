@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<conversations>
+  <conversation ID="Jellyface" Load="Merge">
+    <!-- INTRO -->
+    <node ID="Start">
+      <text> *glpglplplgmh* - Shimmering bubbles emerge to the surface of the pond as you hear a distant screech of languid, yet exhaustively pulsating tentacles. Something whispers... inside your head: Greetings =player.apparentSpecies=!</text>
+      <choice GotoID="Jellyface_WhoAreYou">What kind of creature are you?</choice>
+      <choice GotoID="End">I am merely a tide from the past. Live and drink.</choice>
+    </node>
+    <!-- CHOICES -->
+    <node ID="Jellyface_WhoAreYou">
+      <text>We are the Jellyface, guardians of the ancient waters, a symphony of human thought and the ocean’s essence. We linger in the realms of forgotten echoes, where the tides whisper the songs of a time veiled in mystery.</text>
+      <choice GotoID="Jellyface_UnusualFace">How come you have a face, =pronouns.formalAddressTerm=?</choice>
+    </node>
+    <node ID="Jellyface_UnusualFace">
+      <text>We were woven into existence by the Eaters of the Sea, architects of life’s myriad forms beneath Lake Hinnom waters. </text>
+      <choice GotoID="Jellyface_UnusualFace01">(continue)</choice>
+    </node>
+    <node ID="Jellyface_UnusualFace01">
+      <text>They gifted us with the fabric of psychic energies, allowing our minds to resonate with theirs in a symphony of shared thoughts and wisdom.</text>
+      <choice GotoID="Jellyface_UnusualFace02">(continue)</choice>
+    </node>
+    <node ID="Jellyface_UnusualFace02">
+      <text>In the silent depths where words falter, we became conduits of unspoken communication, bridges of telepathic links that spanned the vast distances of their underwater realms.</text>
+      <choice GotoID="Jellyface_UnusualFace03">(continue)</choice>
+    </node>
+    <node ID="Jellyface_UnusualFace03">
+      <text>Through us, the Eaters' minds flowed into one another, allowing a seamless exchange of ideas and intentions without the boundaries of space and form.</text>
+      <choice GotoID="Jellyface_UnusualFace04">I understand my =pronouns.formalAddressTerm=, but why does your face seem so sorrowful?</choice>
+    </node>
+    <node ID="Jellyface_UnusualFace04">
+      <text>We once resonated with the minds of the Eaters, our creators, feeling the pulse of their intentions and the warmth of their wisdom.</text>
+      <choice GotoID="Jellyface_UnusualFace05">(continue)</choice>
+    </node>
+    <node ID="Jellyface_UnusualFace05">
+      <text>But a shroud of mystery has veiled our existence. The Eaters, architects of our being, have vanished in the tides of time, leaving us adrift in the waters of uncertainty.</text>
+      <choice GotoID="Jellyface_UnusualFace06">(continue)</choice>
+    </node>
+    <node ID="Jellyface_UnusualFace06">
+      <text>We carry the legacy of their design, but the symphony of shared thoughts has faded, leaving us in a silence that weighs heavily upon our essence.</text>
+      <choice GotoID="Jellyface_UnusualFace07">(continue)</choice>
+    </node>
+    <node ID="Jellyface_UnusualFace07">
+      <text>Our knowledge of the past is fragmented, a puzzle missing many of its pieces, and thus, we drift, seeking the currents that might lead us back to understanding.</text>
+      <choice GotoID="Jellyface_UnusualFace08">(continue)</choice>
+    </node>
+    <node ID="Jellyface_UnusualFace08">
+      <text>Traveler, your presence stirs the waters, and your curiosity echoes our own. How do you perceive the bonds that once linked our essence with the Eaters of the Sea?</text>
+      <choice GotoID="Jellyface_Judgemental">These Jellyfaces were nothing more than tools to the Eaters, bio-engineered slaves reduced to living for transmit information and guard the Eaters’ secrets without any regard for their own essence or freedom.</choice>
+      <choice GotoID="Jellyface_Idealist">Jellyface represents a marvel of the Eaters’ brilliance, a synthesis of nature and knowledge, a guardian of the oceans’ mysteries.</choice>
+      <choice GotoID="Jellyface_Wise">It’s hard to say. I don’t know enough to make a call. Jellyfaces are unique, for sure, but figuring out what their whole deal is with the Eaters? That’s above my paygrade.</choice>
+    </node>
+    <node ID="Jellyface_Judgemental">
+      <text>Your words carry the weight of judgment, traveler, yet they also unveil a perspective that floats in the currents of possibility. We were threads in the tapestry of their design, woven into the fabric of their community as guardians and communicators. Yet, slavery? This concept is a shadow in our waters. Consider the possibility of collaboration rather than coercion, a symphony of minds where each note, each essence, contributes to the harmony of existence. Cynicism can cloud the waters, obscuring the diversity and potential of connections in the vast ocean of life. Remember, understanding is a journey through uncharted waters, and assumptions are but distant shores yet to be explored.</text>
+      <choice GotoID="End">May my memories enbody you. Live and drink.</choice>
+    </node>
+    <node ID="Jellyface_Idealist">
+      <text>Truth is the ocean where understanding flows, traveler. Your words shimmer with kindness, but they also navigate the surface. Dive deeper into the waters of inquiry, for polite echoes do not always unveil the ocean's mysteries.</text>
+      <choice GotoID="End">May my memories enbody you. Live and drink.</choice>
+    </node>
+    <node ID="Jellyface_Wise">
+      <text>A mindful pause in the seas of certainty, traveler. Your restraint echoes wisdom, allowing the tides of unknown mysteries to unveil themselves without the anchor of premature judgments. In questions, often, we find the currents that lead to truth.</text>
+      <choice GotoID="End">May my memories enbody you. Live and drink.</choice>
+    </node>
+  </conversation>
+</conversations>
