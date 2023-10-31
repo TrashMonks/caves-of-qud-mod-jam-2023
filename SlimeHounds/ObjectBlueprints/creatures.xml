@@ -1,0 +1,19 @@
+
+<objects>
+    <object Name="WileyBeast_SlimeHound" Inherits="Dog">
+
+        <part Name="Description" Short="A gurgling mass of glistening slime "/>
+        <part Name="Render" DisplayName="Slime Hound" Tile="WileyBeast_SlimeHounds/SlimeHound.png" ColorString="&amp;m" DetailColor="c" />
+ 
+        <stat Name="Hitpoints" Value="12" />
+        <stat Name="AV" Value="3" />
+        <stat Name="DV" Value="4" />
+        <stat Name="Ego" Value="10" />
+        <stat Name="WillPower" Value="10" />
+
+        <mutation Name="SlimeGlands" Level="1" />
+
+
+    </object>
+
+</objects>

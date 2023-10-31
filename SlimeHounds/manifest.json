@@ -1,0 +1,10 @@
+{
+    "id": "WileyBeast",
+    "title": "Slime Hounds",
+    "description": "Adds a new creature to caves of qud, dogs that produce slime!",
+    "author": "WileyBeast",
+    "version": "0.1.0",
+    "tags":"creature",
+    "PreviewImage": "SlimeHoundPreview.png"
+
+}

@@ -1,0 +1,6 @@
+
+<populations>
+    <population Name="SaltMarshZoneGlobals" Load="Merge">
+        <object Chance="30" Number="2d3" Blueprint="WileyBeast_SlimeHound" />
+    </population>
+</populations>
