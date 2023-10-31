@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+Mixins designed for use by other objects.
+-->
+<objects>
+  <object Name="Kernelmethod_MM23_Fungal Equipment">
+    <part Name="Springy" Factor="0.8" />
+    <part Name="Cursed" RevealInDescription="false" />
+    <part Name="AddsRep" Faction="Fungi:100,Consortium:-100" />
+    <part Name="Examiner" Unknown="UnknownStrangeMeat" Alternate="Kernelmethod_MM23_UnknownFungalGraft" Complexity="7" Difficulty="3" />
+    <intproperty Name="Inorganic" Value="0" />
+    <intproperty Name="Bleeds" Value="0" />
+    <tag Name="Fungus" />
+    <tag Name="LiveFungus" />
+    <tag Name="Species" Value="living flesh" />
+    <tag Name="ShowAsPhysicalFeature" />
+  </object>
+
+  <object Name="Kernelmethod_MM23_Natural Fungal Equipment">
+    <mixin Name="Kernelmethod_MM23_Fungal Equipment" />
+    <!-- Copied from the NaturalWeapon object -->
+    <part Name="NaturalEquipment" />
+    <part Name="NoBreak" />
+    <part Name="NoDamage" />
+    <part Name="Physics" IsReal="false" Solid="false" Takeable="false" Weight="0" Category="Natural Weapon" FreezeTemperature="-99999" BrittleTemperature="-99999" FlameTemperature="99999" VaporTemperature="99999" />
+    <removepart Name="Examiner" />
+    <intproperty Name="Natural" Value="1" />
+    <tag Name="NaturalGear" />
+    <tag Name="NoDefaultBehavior" />
+    <tag Name="NoSparkingQuest" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+</objects>

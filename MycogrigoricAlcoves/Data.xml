@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <object Name="Kernelmethod_MM23_UnknownFungalGraft" Inherits="BaseUnknown">
+    <part Name="Render" DisplayName="fungal graft" Tile="Items/sw_tuber.bmp" ColorString="&amp;r" TileColor="&amp;r" DetailColor="m" />
+    <part Name="Description" Short="A puzzling artifact consisting of a strange fungal graft." />
+  </object>
+</objects>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+
+  <object Name="Kernelmethod_MM23_Regen Tank" Inherits="Regen Tank">
+    <part Name="LiquidVolume" StartVolume="128" InitialLiquid="convalessence-126,cloning-2" />
+    <part Name="Capacitor" StartCharge="20000" />
+    <removepart Name="PopulationLiquidFiller" />
+    <part Name="TinkerItem" SubstituteBlueprint="Regen Tank" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="Kernelmethod_MM23_Bookshelf" Inherits="Bookshelf">
+    <part Name="Physics" Owner="Fungi" />
+    <tag Name="InventoryPopulationTable" Value="VillageBookshelf" />
+  </object>
+
+  <!--
+    *****************
+    Portals
+    *****************
+  -->
+  <object Name="Kernelmethod_MM23_Portal Holder L" Inherits="SolidHighTechInstallation">
+    <part Name="Render" DisplayName="waygate" Tile="Kernelmethod_MM23/PortalHolder.png" RenderString="186" ColorString="&amp;c" DetailColor="W" />
+    <part Name="Description" Short="Energy courses through ancient palladium beams, holding in place a doorway across the stars." />
+    <part Name="Physics" FlameTemperature="99999" VaporTemperature="1500" />
+    <part Name="NoDamage" />
+    <part Name="Examiner" Complexity="6" Difficulty="3" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="Kernelmethod_MM23_Portal Holder R" Inherits="Kernelmethod_MM23_Portal Holder L">
+    <part Name="Render" HFlip="true" />
+  </object>
+</objects>

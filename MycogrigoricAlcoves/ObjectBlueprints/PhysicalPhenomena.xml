@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <object Name="Kernelmethod_MM23_BasePortal" Inherits="InertObject">
+    <part Name="Render" DisplayName="portal" RenderString="O" ColorString="&amp;o"/>
+    <part Name="Physics" Solid="true" Weight="10000" />
+    <part Name="Springy" Factor="0.0" />
+    <part Name="Description" Short="The shimmering folds of space grant passage across vast distances." />
+    <part Name="AnimatedMaterialGeneric" AnimationLength="36" LowFrameOffset="1" HighFrameOffset="1" TileAnimationFrames="0=Kernelmethod_MM23/Portal1.png,6=Kernelmethod_MM23/Portal2.png,12=Kernelmethod_MM23/Portal3.png,18=Kernelmethod_MM23/Portal4.png,24=Kernelmethod_MM23/Portal5.png,30=Kernelmethod_MM23/Portal6.png" ColorStringAnimationFrames="0=default,12=&amp;R,24=&amp;r"/>
+    <part Name="SoundRender" Sound="Sounds/Abilities/sfx_ability_spacetimeVortex_lp" />
+    <part Name="NoDamage" />
+    <stat Name="DV" Value="1000" />
+    <tag Name="IgnoresGravity" />
+    <tag Name="NoSparkingQuest" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="Kernelmethod_MM23_Entry Portal" Inherits="Kernelmethod_MM23_BasePortal">
+    <part Name="Interior" Cell="Kernelmethod_MM23_DefaultWaygateRoom" />
+  </object>
+
+  <object Name="Kernelmethod_MM23_Exit Portal" Inherits="Kernelmethod_MM23_BasePortal">
+    <part Name="InteriorPortal" />
+  </object>
+</objects>

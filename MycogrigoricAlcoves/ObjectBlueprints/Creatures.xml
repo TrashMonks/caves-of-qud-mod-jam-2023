@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <object Name="Kernelmethod_MM23_BaseMycogrigori" Inherits="SapientMutatedFungus">
+    <part Name="Render" DisplayName="mycogrigori" Tile="Kernelmethod_MM23/Merchant.png" RenderString="F" ColorString="&amp;w" DetailColor="w" />
+    <part Name="Brain" Mobile="true" Wanders="true" />
+    <part Name="Description" Short="Flesh and fungus meld before you in a dizzying dance of natural symbiosis. Mycelial threads run up and down =pronouns.possessive= body; tentacles jut out from what you surmise was once a face." />
+    <part Name="Corpse" CorpseChance="15" CorpseBlueprint="Kernelmethod_MM23_Mycogrigori Corpse" />
+    <part Name="ConversationScript" ConversationID="Kernelmethod_MM23_Mycogrigori" />
+    <stat Name="Level" Value="30" />
+    <stat Name="AV" Value="3" />
+    <stat Name="Hitpoints" Value="180" />
+    <skill Name="Pistol" />
+    <skill Name="Pistol_SteadyHands" />
+    <skill Name="Rifles" />
+    <skill Name="Rifle_SteadyHands" />
+    <skill Name="Tactics_Throwing" />
+    <!-- For versions < 2.0.206.0 -->
+    <skill Name="Dual_Wield" />
+    <skill Name="Dual_Wield_Offhand_Strikes" />
+    <!-- For versions > 2.0.206.0 -->
+    <skill Name="Multiweapon_Proficiency" />
+    <skill Name="Multiweapon_Expertise" />
+    <mutation Name="Telepathy" />
+    <inventoryobject Blueprint="Kernelmethod_MM23_Natural Extrasensory Tentacles" />
+    <inventoryobject Blueprint="@Kernelmethod_MM23_Fungal Infections" Number="1-2" />
+    <tag Name="RandomGender" Value="nonspecific" />
+    <tag Name="SeveredFaceBlueprint" Value="Kernelmethod_MM23_Extrasensory Tentacles" />
+    <tag Name="BaseObject" Value="*delete" />
+    <tag Name="ImmuneToFungus" />
+  </object>
+
+  <object Name="Kernelmethod_MM23_Mycogrigori Corpse" Inherits="Corpse">
+    <part Name="Render" DisplayName="mycogrigori corpse" />
+    <part Name="Food" Message="It's sickening!" />
+    <part Name="Description" Short="Life has ceased to flow through the mycelium woven between their limbs." />
+    <part Name="Physics" Weight="120" />
+    <part Name="Butcherable" OnSuccess="@Kernelmethod_MM23_Mycogrigori Corpse" />
+    <part Name="Commerce" Value="15" />
+    <tag Name="Tier" Value="7" />
+  </object>
+
+  <object Name="Kernelmethod_MM23_Natural Extrasensory Tentacles" Inherits="Kernelmethod_MM23_Extrasensory Tentacles">
+    <mixin Name="Kernelmethod_MM23_Natural Fungal Equipment" />
+  </object>
+
+  <!-- Brainspike egregore -->
+  <object Name="Kernelmethod_MM23_Spiking Mycogrigori" Inherits="Kernelmethod_MM23_BaseMycogrigori">
+    <part Name="Render" DisplayName="{{nanoneuro|spiking}} mycogrigori" Tile="Kernelmethod_MM23/Spiker.png" ColorString="&amp;m" DetailColor="w" />
+    <part Name="Corpse" CorpseChance="15" CorpseBlueprint="Kernelmethod_MM23_Spiking Mycogrigori Corpse" />
+    <stat Name="Ego" sValue="24,(t-1)d2" />
+    <stat Name="AV" Value="8" />
+    <skill Name="LongBlades" />
+    <skill Name="LongBladesProficiency" />
+    <skill Name="LongBladesSwipe" />
+    <skill Name="LongBladesLunge" />
+    <mutation Name="Confusion" Level="1" />
+    <inventoryobject Blueprint="Kernelmethod_MM23_Natural Fungal Brainspike" Number="2" />
+    <property Name="Role" Value="Brute" />
+    <tag Name="SeveredHandBlueprint" Value="Kernelmethod_MM23_Fungal Brainspike" />
+    <tag Name="NoSleep" />
+  </object>
+
+  <object Name="Kernelmethod_MM23_Spiking Mycogrigori Corpse" Inherits="Kernelmethod_MM23_Mycogrigori Corpse">
+    <part Name="Butcherable" OnSuccess="@Kernelmethod_MM23_Spiking Mycogrigori Corpse" />
+  </object>
+
+  <object Name="Kernelmethod_MM23_Natural Fungal Brainspike" Inherits="Kernelmethod_MM23_Fungal Brainspike">
+    <mixin Name="Kernelmethod_MM23_Natural Fungal Equipment" />
+  </object>
+
+  <!-- Cleaving egregore -->
+  <object Name="Kernelmethod_MM23_Cleaving Mycogrigori" Inherits="Kernelmethod_MM23_BaseMycogrigori">
+    <part Name="Render" DisplayName="{{psychalflesh|cleaving}} mycogrigori" Tile="Kernelmethod_MM23/Cleaver.png" ColorString="&amp;R" DetailColor="w" />
+    <part Name="Corpse" CorpseChance="15" CorpseBlueprint="Kernelmethod_MM23_Cleaving Mycogrigori Corpse" />
+    <stat Name="Agility" sValue="24,(t-1)d2" />
+    <stat Name="AV" Value="8" />
+    <skill Name="Axe" />
+    <skill Name="Axe_Expertise" />
+    <skill Name="Axe_Cleave" />
+    <skill Name="Axe_HookAndDrag" />
+    <inventoryobject Blueprint="Kernelmethod_MM23_Natural Fungal Whipcleave" Number="2" />
+    <property Name="Role" Value="Brute" />
+    <tag Name="SeveredHandBlueprint" Value="Kernelmethod_MM23_Fungal Whipcleave" />
+    <tag Name="NoSleep" />
+  </object>
+
+  <object Name="Kernelmethod_MM23_Cleaving Mycogrigori Corpse" Inherits="Kernelmethod_MM23_Mycogrigori Corpse">
+    <part Name="Butcherable" OnSuccess="@Kernelmethod_MM23_Cleaving Mycogrigori Corpse" />
+  </object>
+
+  <object Name="Kernelmethod_MM23_Natural Fungal Whipcleave" Inherits="Kernelmethod_MM23_Fungal Whipcleave">
+    <mixin Name="Kernelmethod_MM23_Natural Fungal Equipment" />
+  </object>
+
+  <!-- Other creatures -->
+  <object Name="Kernelmethod_MM23_Merchant Fungus" Inherits="Kernelmethod_MM23_BaseMycogrigori">
+    <part Name="Render" DisplayName="mycogrigori merchant" ColorString="&amp;W" />
+    <part Name="Brain" Wanders="false" />
+    <stat Name="Ego" sValue="20,(t-1)d2" />
+    <skill Name="Persuasion" />
+    <skill Name="Persuasion_Intimidate" />
+    <skill Name="Persuasion_SnakeOiler" />
+    <mutation Name="ForceBubble" Level="4" />
+    <builder Name="Tier7Wares" />
+    <tag Name="Merchant" />
+    <tag Name="InventoryPopulationTable" Value="Kernelmethod_MM23_BaseFungusInventory" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="Kernelmethod_MM23_Tinker Fungus" Inherits="Kernelmethod_MM23_BaseMycogrigori">
+    <part Name="Render" DisplayName="mycogrigori tinkerer" ColorString="&amp;c" />
+    <part Name="Brain" Wanders="false" />
+    <skill Name="Tinkering" />
+    <skill Name="Tinkering_Tinker1" />
+    <skill Name="Tinkering_Tinker2" />
+    <skill Name="Tinkering_Tinker3" />
+    <mutation Name="ForceBubble" Level="4" />
+    <inventoryobject Blueprint="Leather Apron" />
+    <tag Name="Merchant" />
+    <tag Name="InventoryPopulationTable" Value="Kernelmethod_MM23_BaseFungusInventory" />
+    <tag Name="GenericInventoryRestockerPopulationTable" Value="DiskMerchantInventory" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="Kernelmethod_MM23_Elder Fungus" Inherits="Kernelmethod_MM23_BaseMycogrigori">
+    <part Name="Render" DisplayName="mycogrigori elder" ColorString="&amp;y" Tile="Kernelmethod_MM23/Elder.png" />
+    <part Name="ConversationScript" ConversationID="Kernelmethod_MM23_MycogrigoriElder" />
+    <stat Name="Ego" sValue="20,(t-1)d2" />
+    <skill Name="Persuasion" />
+    <skill Name="Persuasion_Berate" />
+    <skill Name="Persuasion_Intimidate" />
+    <inventoryobject Blueprint="Cloth Robe" />
+    <tag Name="InventoryPopulationTable" Value="Kernelmethod_MM23_BaseFungusInventory" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+</objects>

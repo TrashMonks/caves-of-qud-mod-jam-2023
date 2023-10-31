@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<populations>
+  <population Name="Kernelmethod_MM23_WaygateZonePopulation">
+    <object Blueprint="Kernelmethod_MM23_Widget Placement" Number="1" />
+  </population>
+
+  <population Name="Kernelmethod_MM23_Fungal Guards">
+    <group Name="Guards" Style="pickone">
+      <object Blueprint="Kernelmethod_MM23_Cleaving Mycogrigori" Weight="60" />
+      <object Blueprint="Kernelmethod_MM23_Spiking Mycogrigori" Weight="40" />
+    </group>
+  </population>
+
+  <population Name="Kernelmethod_MM23_Fungi">
+    <group Name="Fungi" Number="2-3" Style="pickone">
+      <table Name="Kernelmethod_MM23_Fungal Guards" />
+    </group>
+  </population>
+
+  <population Name="Kernelmethod_MM23_Fungal Infections">
+    <group Style="pickone">
+      <object Blueprint="WaxInfection" />
+      <object Blueprint="MumblesInfection" />
+      <object Blueprint="LuminousInfection" />
+      <object Blueprint="PuffInfection" />
+    </group>
+  </population>
+
+  <!--
+    **********************
+    Table merges
+    **********************
+  -->
+  <population Name="BaroqueRuinsZoneGlobals-Surface" Load="Merge">
+    <object Blueprint="Kernelmethod_MM23_Waygate Spawner" Chance="15" />
+  </population>
+
+  <population Name="BaroqueRuinsZoneGlobals-Underground" Load="Merge">
+    <object Blueprint="Kernelmethod_MM23_Waygate Spawner" Chance="5" />
+  </population>
+
+  <!--
+    **********************
+    Creature inventories
+    **********************
+  -->
+  <population Name="Kernelmethod_MM23_BaseFungusInventory">
+    <table Name="DynamicInheritsTable:MeleeWeapon:Tier7" Number="1" />
+    <table Name="DynamicInheritsTable:MissileWeapon:Tier6-8" Number="1" />
+    <table Name="DynamicInheritsTable:Energy Cell:Tier4-8" Number="3" />
+    <table Name="DynamicObjectsTable:Grenades:Tier6-8" Number="4-5" />
+  </population>
+
+  <!--
+    **********************
+    Butchery
+    **********************
+  -->
+  <population Name="Kernelmethod_MM23_Mycogrigori Corpse">
+    <object Blueprint="Kernelmethod_MM23_Extrasensory Tentacles" />
+  </population>
+
+  <population Name="Kernelmethod_MM23_Spiking Mycogrigori Corpse">
+    <group Style="pickone">
+      <table Name="Kernelmethod_MM23_Mycogrigori Corpse" />
+      <object Blueprint="Kernelmethod_MM23_Fungal Brainspike" />
+    </group>
+  </population>
+
+  <population Name="Kernelmethod_MM23_Cleaving Mycogrigori Corpse">
+    <group Style="pickone">
+      <table Name="Kernelmethod_MM23_Mycogrigori Corpse" />
+      <object Blueprint="Kernelmethod_MM23_Fungal Whipcleave" />
+    </group>
+  </population>
+
+  <!--
+    **********************
+    Item spawners
+    **********************
+  -->
+
+  <!-- Generic collections -->
+  <population Name="Kernelmethod_MM23_ScienceObjects">
+    <group Style="pickone">
+      <object Blueprint="Light Sculpture" Weight="80" />
+      <object Blueprint="Globe" Weight="50" />
+      <object Blueprint="Orrery" Weight="50" />
+      <object Blueprint="Clockthing" Weight="50" />
+      <object Blueprint="Brain Sculpture" Weight="50" />
+    </group>
+  </population>
+
+  <population Name="Kernelmethod_MM23_Seats">
+    <group Style="pickone">
+      <object Blueprint="Floor Cushion" Weight="50" />
+      <object Blueprint="Kline" Weight="50" />
+      <object Blueprint="Stool" Weight="50" />
+      <object Blueprint="Armchair" Weight="50" />
+      <object Blueprint="Massage Chair" Weight="10" />
+      <object Blueprint="Throne" Weight="10" />
+    </group>
+  </population>
+
+  <!-- Hookah spots -->
+  <population Name="Kernelmethod_MM23_HookahSpotSeats">
+    <group Style="pickone">
+      <object Blueprint="Floor Cushion" Weight="100" />
+      <object Blueprint="Kline" Weight="50" />
+      <object Blueprint="Massage Chair" Weight="10" />
+    </group>
+  </population>
+
+  <population Name="Kernelmethod_MM23_HookahSpotRefreshments">
+    <group Style="pickone" Chance="40">
+      <object Blueprint="Preserved Food Basket" Weight="80" />
+      <object Blueprint="Woven Basket" Weight="20" />
+      <object Blueprint="Jug" Weight="50" />
+      <object Blueprint="Long Jug" Weight="50" />
+      <object Blueprint="Honey Vase" Weight="50" />
+      <object Blueprint="Wine Vase" Weight="50" />
+    </group>
+  </population>
+
+  <population Name="Kernelmethod_MM23_HookahSpotObjects">
+    <group Style="pickone">
+      <object Blueprint="Rectangular Bells" Weight="100" />
+      <object Blueprint="Harp" Weight="100" />
+      <object Blueprint="Chalkboard" Weight="100" />
+      <object Blueprint="Sewing Machine" Weight="100" />
+      <object Blueprint="Painting" Weight="100" />
+      <object Blueprint="Mannequin" Weight="100" />
+      <object Blueprint="Light Sculpture" Weight="20" />
+    </group>
+  </population>
+
+  <!-- Tinker's workshops -->
+  <population Name="Kernelmethod_MM23_TinkerWorkshopObjects">
+    <table Name="Kernelmethod_MM23_ScienceObjects" />
+  </population>
+
+  <!-- Garbage dumps -->
+  <population Name="Kernelmethod_MM23_Garbage">
+    <object Blueprint="Garbage" Chance="60" />
+  </population>
+
+  <!--
+    **********************
+    Zone chunks
+    **********************
+  -->
+  <population Name="Kernelmethod_MM23_3x3 Zone Chunks">
+    <group Style="pickone">
+      <object Blueprint="Kernelmethod_MM23_Hookah Spot" Weight="50" />
+      <object Blueprint="Kernelmethod_MM23_Library 3x3" Weight="50" />
+      <object Blueprint="Kernelmethod_MM23_Starapple Farm 3x3" Weight="50" />
+      <object Blueprint="Kernelmethod_MM23_Tinker Workshop" Weight="50" />
+      <object Blueprint="Kernelmethod_MM23_Merchant Stall 3x3" Weight="50" />
+      <object Blueprint="Kernelmethod_MM23_Mushroom Farm 3x3" Weight="50" />
+      <object Blueprint="Kernelmethod_MM23_Garbage Dump 3x3" Weight="30" />
+    </group>
+  </population>
+
+  <population Name="Kernelmethod_MM23_6x5 Zone Chunks">
+    <group Style="pickone">
+      <object Blueprint="Kernelmethod_MM23_Large Hookah Spot" Weight="50" />
+      <object Blueprint="Kernelmethod_MM23_Library 6x5" Weight="50" />
+      <object Blueprint="Kernelmethod_MM23_Starapple Farm 6x5" Weight="50" />
+      <object Blueprint="Kernelmethod_MM23_Training Room 6x5" Weight="50" />
+      <object Blueprint="Kernelmethod_MM23_Bedroom 6x5" Weight="50" />
+      <object Blueprint="Kernelmethod_MM23_Merchant Stall 6x5" Weight="50" />
+      <object Blueprint="Kernelmethod_MM23_Mushroom Farm 6x5" Weight="50" />
+      <object Blueprint="Kernelmethod_MM23_Medbay" Weight="50" />
+      <object Blueprint="Kernelmethod_MM23_Garbage Dump 6x5" Weight="30" />
+    </group>
+  </population>
+
+</populations>

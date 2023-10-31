@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <!--
+    ******************
+    Fungal equipment
+    ******************
+  -->
+
+  <object Name="Kernelmethod_MM23_Fungal Brainspike" Inherits="BaseLongBlade">
+    <mixin Name="Kernelmethod_MM23_Fungal Equipment" />
+    <part Name="Render" DisplayName="{{nanoneuro|fungal brainspike}}" RenderString="/" Tile="Kernelmethod_MM23/FungalBrainSpike.png" ColorString="&amp;w" DetailColor="m" />
+    <part Name="Description" Short="A magnificent stump of fungus-ridden flesh ends in a sharpened tip, delivering neurotoxins unto its target." />
+    <part Name="MeleeWeapon" Stat="Ego" MaxStrengthBonus="8" BaseDamage="2d5" />
+    <part Name="BleedingOnHit" Holographic="true" Amount="1d3" SaveTarget="35" Stack="true" />
+    <tag Name="Tier" Value="7" />
+  </object>
+
+  <object Name="Kernelmethod_MM23_Fungal Whipcleave" Inherits="BaseAxe">
+    <mixin Name="Kernelmethod_MM23_Fungal Equipment" />
+    <part Name="Render" DisplayName="{{psychalflesh|fungal whipcleave}}" RenderString="P" Tile="Kernelmethod_MM23/FungalWhipCleave.png" ColorString="&amp;w" DetailColor="r" />
+    <part Name="Description" Short="Lightweight chitin slashes at empty air, swinging from the end of a writhing rope of flesh." />
+    <part Name="MeleeWeapon" Stat="Agility" MaxStrengthBonus="8" BaseDamage="1d8+2" />
+    <part Name="MutationOnEquip" ClassName="AdrenalControl2" Level="3" />
+    <tag Name="HitSound" Value="Sounds/Abilities/sfx_ability_mutation_stinger_tailWhip" />
+    <tag Name="Tier" Value="7" />
+  </object>
+
+  <!--
+  <object Name="Kernelmethod_MM23_Cranial Symbiote" Inherits="BaseHelmet">
+    <mixin Name="Kernelmethod_MM23_Fungal Equipment" />
+    <part Name="Render" DisplayName="cranial symbiote" />
+  </object>
+
+  <object Name="Kernelmethod_MM23_Mycelial Threads" Inherits="BaseBoot">
+    <mixin Name="Kernelmethod_MM23_Fungal Equipment" />
+    <part Name="Render" DisplayName="mycelial threads" />
+  </object>
+  -->
+
+  <object Name="Kernelmethod_MM23_Extrasensory Tentacles" Inherits="BaseMask">
+    <mixin Name="Kernelmethod_MM23_Fungal Equipment" />
+    <part Name="Render" DisplayName="{{w|extrasensory tentacles}}" RenderString="247" Tile="Kernelmethod_MM23/FaceTentacles.png" ColorString="&amp;w" DetailColor="R" />
+    <part Name="Description" Short="Hyphae protrude from several attachment points in the back, an invitation to intrepid adventurers." />
+    <part Name="Physics" Weight="4" />
+    <part Name="Armor" AV="0" DV="1" />
+    <part Name="IntPropertyChanger" AffectedProperty="BioScannerEquipped" Amount="1" ChargeUse="0" WorksOnWearer="true" NameForStatus="Bioscanning" />
+    <part Name="MutationOnEquip" ClassName="SensePsychic" />
+    <tag Name="Tier" Value="7" />
+  </object>
+</objects>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <object Name="Kernelmethod_MM23_Extradimensional Wall" Inherits="Black Shale">
+    <part Name="NoDamage" />
+  </object>
+</objects>

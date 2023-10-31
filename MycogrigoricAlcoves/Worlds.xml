@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<worlds>
+  <world Name="Interior" Load="Merge">
+    <cell Name="Kernelmethod_MM23_DefaultWaygateRoom">
+      <boolproperty Name="JoinPartyLeaderPossible" Value="false" />
+      <zone Level="10" x="1" y="1" Name="fungal alcove" IncludeStratumInZoneDisplay="false">
+        <builder Class="InteriorGround" />
+        <builder Class="MapBuilder" FileName="Kernelmethod_MM23_DefaultWaygateRoom.rpm" Width="20" Height="10" ClearBeforePlace="true" />
+        <builder Class="AddWidgetBuilder" Blueprint="AmbientLight" />
+        <intproperty Name="AmbushChance" Value="10" />
+        <population Table="Kernelmethod_MM23_WaygateZonePopulation" />
+        <music Track="MehmetsMorning" />
+      </zone>
+    </cell>
+  </world>
+</worlds>

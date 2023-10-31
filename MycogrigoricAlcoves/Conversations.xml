@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<conversations>
+  <conversation ID="Kernelmethod_MM23_Mycogrigori">
+    <node ID="Start">
+      <text>
+        Be at peace, traveler.~
+        Live and drink, metazoon.~
+        Live and drink, =player.formalAddressTerm=.
+      </text>
+      <choice GotoID="End">Live and drink.</choice>
+    </node>
+  </conversation>
+
+  <conversation ID="Kernelmethod_MM23_MycogrigoriElder">
+    <node ID="Start">
+      <text>
+        Welcome to our abode, wanderer.~
+        Be at peace, traveler.~
+        Live and drink, metazoon.~
+        Live and drink, =player.formalAddressTerm=.
+      </text>
+      <choice GotoID="AboutTheMycogrigori">What kind of creature are you?</choice>
+      <choice GotoID="AboutTheAlcove">What is this place?</choice>
+      <choice GotoID="AboutTheWaygate">What was that device I stepped through to get here?</choice>
+      <choice GotoID="End">Live and drink.</choice>
+    </node>
+
+    <node ID="AboutTheMycogrigori">
+      <text>
+        We are mycogrigori, the union of humanity and fungi, who have shed the solitude of single-beingness.
+      </text>
+      <choice GotoID="AboutTheWaygate">What was that device I stepped through to get here?</choice>
+      <choice GotoID="AboutTheAlcove">What is this place?</choice>
+      <choice GotoID="End">Live and drink, elder.</choice>
+    </node>
+
+    <node ID="AboutTheAlcove">
+      <text>
+        This hideaway provides asylum to our fellow mycogrigori. Many humans do not look kindly upon the idea of collective existence. We challenge their self-concept, so more often than not we are met with violence.
+
+        As for this alcove? It lies on the other end of a great tunnel across the cosmos. Sadly, the Eaters never left a starmap for their waygates; so we cannot say where we are in relation to Qud.
+      </text>
+      <choice GotoID="AboutTheMycogrigori">What kind of creature are you?</choice>
+      <choice GotoID="AboutTheWaygate">What was that device I stepped through to get here?</choice>
+      <choice GotoID="End">Live and drink.</choice>
+    </node>
+
+    <node ID="AboutTheWaygate">
+      <text>
+        A waygate, =player.formalAddressTerm=, a passage across the stars.
+
+        From what we can gather, as the Eater's interstellar empire approached its zenith, the land of Qud was carved up and staked out by aristocrats. Many in the lower castes were forced out of their homes; those who were allowed to remain had astronomical rents levied upon them.
+      </text>
+      <choice GotoID="AboutTheWaygate2">...</choice>
+    </node>
+
+    <node ID="AboutTheWaygate2">
+      <text>
+        As the heavens above reached down and beckoned the denizens of Qud into its embrace, the cybernauts of the time concocted a solution: a contraption that could spacefold passengers across vast distances. Hundreds of hermetically-sealed alcoves were constructed on remote asteroids and connected via a waygate network, providing shelter for those who had suffered under the rule of the landed gentry.
+
+        Alas, waygates posed an existential threat to one of the aristocracy's most powerful yokes, and they were quickly outlawed. Few were ever produced, and fewer yet remain functional to this day. Yet the last waygates retain their original function: providing refuge for the dispossessed.
+      </text>
+      <choice GotoID="AboutTheMycogrigori">What kind of creature are you?</choice>
+      <choice GotoID="AboutTheAlcove">What is this place?</choice>
+      <choice GotoID="End">Thank you for the explanation. Live and drink.</choice>
+    </node>
+  </conversation>
+</conversations>
