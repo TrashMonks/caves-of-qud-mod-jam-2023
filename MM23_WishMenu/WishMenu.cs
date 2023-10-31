@@ -144,11 +144,6 @@ namespace XRL.World.Parts
         [ModSensitiveStaticCache]
         public static List<WishCommandXML> MenuItems = new List<WishCommandXML>();
 
-        public override bool WantEvent(int ID, int cascade)
-        {
-            return base.WantEvent(ID, cascade) || ID == CommandEvent.ID;
-        }
-
         [WishCommand("mashup")]
         public static void MashupWish()
         {
@@ -169,6 +164,11 @@ namespace XRL.World.Parts
             }
         }
 
+        public override bool WantEvent(int ID, int cascade)
+        {
+            return base.WantEvent(ID, cascade) || ID == CommandEvent.ID;
+        }
+
         public override bool HandleEvent(CommandEvent E)
         {
             if (E.Command == COMMAND_NAME) {
@@ -180,7 +180,7 @@ namespace XRL.World.Parts
 }
 
 [PlayerMutator]
-public class MyPlayerMutator : IPlayerMutator
+public class MM23_PlayerMutator : IPlayerMutator
 {
     public void mutate(GameObject player)
     {
