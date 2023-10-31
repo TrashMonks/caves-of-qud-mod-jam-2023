@@ -1,0 +1,69 @@
+<worlds>
+  <world Name="Interior" ZoneFactory="InteriorWorldZoneFactory" ZoneFactoryRegex="^Interior" DisplayName="Inside" Plane="Inherit" Protocol="Inherit">
+    <cell Name="Glow Wight Behemoth">
+      <boolproperty Name="JoinPartyLeaderPossible" Value="false" />
+      <zone Level="10" x="1" y="1" Name="Glow Wight Behemoth Saddle" IncludeStratumInZoneDisplay="false">
+      <builder Class="InteriorGround" />
+      <builder Class="MapBuilder" FileName="Glow Wight Behemoth Saddle.rpm" Width="14" Height="10" ClearBeforePlace="true" />
+      <widget Blueprint="AmbientLight" />
+      <intproperty Name="AmbushChance" Value="10" />
+      <widget Blueprint="HolyPlaceNephilimWidget" />
+      <population Table="GlowWightWarParty" /> 
+    </zone>
+    </cell>
+    <cell Name="Glow Wight Behemoth of Agolgot" Inherits="Glow Wight Behemoth">
+      <boolproperty Name="JoinPartyLeaderPossible" Value="false" />
+      <zone Level="10" x="1" y="1" Name="Glow Wight Behemoth Saddle" IncludeStratumInZoneDisplay="false">
+      <builder Class="InteriorGround" />
+      <builder Class="MapBuilder" FileName="Glow Wight Behemoth Saddle.rpm" Width="14" Height="10" ClearBeforePlace="true" />
+      <widget Blueprint="AmbientLight" />
+      <intproperty Name="AmbushChance" Value="10" />
+      <widget Blueprint="HolyPlaceNephilimWidget" />
+      <population Table="AgolgotSiegeParty" />
+      </zone>
+    </cell>
+    <cell Name="Glow Wight Behemoth of Bethsaida" Inherits="Glow Wight Behemoth">
+      <boolproperty Name="JoinPartyLeaderPossible" Value="false" />
+      <zone Level="10" x="1" y="1" Name="Glow Wight Behemoth Saddle" IncludeStratumInZoneDisplay="false">
+      <builder Class="InteriorGround" />
+      <builder Class="MapBuilder" FileName="Glow Wight Behemoth Saddle.rpm" Width="14" Height="10" ClearBeforePlace="true" />
+      <widget Blueprint="AmbientLight" />
+      <intproperty Name="AmbushChance" Value="10" />
+      <widget Blueprint="HolyPlaceNephilimWidget" />
+      <population Table="BethsaidaSiegeParty" />
+      </zone>
+    </cell>
+    <cell Name="Glow Wight Behemoth of QasQon" Inherits="Glow Wight Behemoth">
+      <boolproperty Name="JoinPartyLeaderPossible" Value="false" />
+      <zone Level="10" x="1" y="1" Name="Glow Wight Behemoth Saddle" IncludeStratumInZoneDisplay="false">
+      <builder Class="InteriorGround" />
+      <builder Class="MapBuilder" FileName="Glow Wight Behemoth Saddle.rpm" Width="14" Height="10" ClearBeforePlace="true" />
+      <widget Blueprint="AmbientLight" />
+      <intproperty Name="AmbushChance" Value="10" />
+      <widget Blueprint="HolyPlaceNephilimWidget" />
+      <population Table="QasQonSiegeParty" />
+    </zone>
+    </cell>
+    <cell Name="Glow Wight Behemoth of Rermadon" Inherits="Glow Wight Behemoth">
+      <boolproperty Name="JoinPartyLeaderPossible" Value="false" />
+      <zone Level="10" x="1" y="1" Name="Glow Wight Behemoth Saddle" IncludeStratumInZoneDisplay="false">
+      <builder Class="InteriorGround" />
+      <builder Class="MapBuilder" FileName="Glow Wight Behemoth Saddle.rpm" Width="14" Height="10" ClearBeforePlace="true" />
+      <widget Blueprint="AmbientLight" />
+      <intproperty Name="AmbushChance" Value="10" />
+      <widget Blueprint="HolyPlaceNephilimWidget" />
+      <population Table="RermadonSiegeParty" />
+      </zone>
+    </cell>
+    <cell Name="Glow Wight Behemoth of Shug'ruith" Inherits="Glow Wight Behemoth">        <boolproperty Name="JoinPartyLeaderPossible" Value="false" />
+      <zone Level="10" x="1" y="1" Name="Glow Wight Behemoth Saddle" IncludeStratumInZoneDisplay="false">
+      <builder Class="InteriorGround" />
+      <builder Class="MapBuilder" FileName="Glow Wight Behemoth Saddle.rpm" Width="14" Height="10" ClearBeforePlace="true" />
+      <widget Blueprint="AmbientLight" />
+      <intproperty Name="AmbushChance" Value="10" />
+      <widget Blueprint="HolyPlaceNephilimWidget" />
+      <population Table="Shug'ruithSiegeParty" />
+      </zone>
+    </cell>
+  </world>
+</worlds>

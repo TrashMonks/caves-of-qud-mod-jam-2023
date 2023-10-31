@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="Glow Wight Behemoth Saddle Floor" Inherits="Floor">
+    <part Name="Render" DisplayName="saddle floor" RenderString="#" RenderLayer="0" ColorString="&amp;m" Tile="Tiles/sw_behemoth_saddle_floor.png" DetailColor="K" Occluding="false" RenderIfDark="true" />
+    <part Name="Physics" Weight="50" Takeable="false" Solid="false" Organic="true" />
+    <tag Name="NoSparkingQuest" />
+    <intproperty Name="InteriorRequired" Value="1" />
+  </object>
+</objects>

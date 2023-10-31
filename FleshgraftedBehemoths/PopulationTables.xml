@@ -1,0 +1,186 @@
+
+<populations>
+    <population Name="Glow Wight Behemoth Corpse">
+        <group Name="Items" Style="pickone">
+            <object Blueprint="Spinal Fleshgraft"/>
+            <object Blueprint="Psychal Fleshgun"/>
+        </group>
+    </population>
+    <population Name="LairOwners_MoonStair" Load="merge">
+      <group Name="Options" Load="merge">
+        <object Weight="10" Blueprint="Base Glow Wight Behemoth" />
+      </group>
+    </population> 
+    <population Name="MoonStairZoneGlobals-Creatures" Load="merge">
+      <object Chance="3" Number="1-3" Blueprint="Base Glow Wight Behemoth" />
+    </population>
+    <population Name="VileBasinFluids">
+        <object Blueprint="empty" Chance="20" />
+        <group Name="Liquid" Style="pickone" Chance="80">
+          <object Blueprint="ooze" />
+          <object Blueprint="asphalt" />
+          <object Blueprint="goo" />
+          <object Blueprint="blood" />
+          <object Blueprint="sludge" />
+        </group>
+    </population>
+    <population Name="Armor 7R" Load="merge">
+        <group Name="Items" Style="pickone" Load="merge">
+            <object Weight="2" Number="1" Blueprint="Spinal Fleshgraft"/>
+        </group>
+    </population>
+    <population Name="Glow Wight Siegedriver">
+        <group Style="pickone">
+          <object Chance="100" Blueprint="Nothing" />
+          <object Chance="70" Blueprint="HumanoidEquipment 2" />
+          <object Chance="20" Blueprint="HumanoidEquipment 3" />
+          <object Chance="10" Blueprint="HumanoidEquipment 4" />
+        </group>
+    </population>
+    <population Name="GlowWightWarParty">
+        <group Style="pickeach">
+          <object Chance="10" Blueprint="Gyre Wight of Agolgot" />
+          <object Chance="10" Blueprint="Gyre Wight of Bethsaida" />
+          <object Chance="10" Blueprint="Gyre Wight of Qas" />
+          <object Chance="10" Blueprint="Gyre Wight of Qon" />
+          <object Chance="10" Blueprint="Gyre Wight of Rermadon" />
+          <object Chance="10" Blueprint="Gyre Wight of Shug'ruith" />
+          <object Chance="100" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+          <object Chance="100" Blueprint="Filth Figurine" />
+        </group>
+     </population>
+    <population Name="AgolgotSiegeParty">
+        <group Style="pickeach">
+          <object Chance="20" Blueprint="Gyre Wight of Agolgot" />
+          <object Chance="100" Blueprint="Gyre Wight of Agolgot" />
+          <object Chance="100" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+          <object Chance="100" Blueprint="Agolgot Figurine" />
+        </group>
+      </population>
+      <population Name="BethsaidaSiegeParty">
+        <group Style="pickeach">
+          <object Chance="20" Blueprint="Gyre Wight of Bethsaida" />
+          <object Chance="100" Blueprint="Gyre Wight of Bethsaida" />
+          <object Chance="100" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+          <object Chance="100" Blueprint="Bethsaida Figurine" />
+        </group>
+      </population>
+      <population Name="QasQonSiegeParty">
+        <group Style="pickeach">
+          <object Chance="80" Blueprint="Gyre Wight of Qas" />
+          <object Chance="80" Blueprint="Gyre Wight of Qon" />
+          <object Chance="100" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Qas Figurine" />
+          <object Chance="50" Blueprint="Qon Figurine" />
+        </group>
+      </population>
+      <population Name="RermadonSiegeParty">
+        <group Style="pickeach">
+          <object Chance="20" Blueprint="Gyre Wight of Rermadon" />
+          <object Chance="100" Blueprint="Gyre Wight of Rermadon" />
+          <object Chance="100" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+          <object Chance="100" Blueprint="Rermadon Figurine" />
+        </group>
+      </population>
+      <population Name="Shug'ruithSiegeParty">
+        <group Style="pickeach" >
+          <object Chance="20" Blueprint="Gyre Wight of Shug'ruith" />
+          <object Chance="100" Blueprint="Gyre Wight of Shug'ruith" />
+          <object Chance="100" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+          <object Chance="100" Blueprint="Shug'ruith Figurine" />
+        </group>
+      </population>
+      <population Name="GlowWightCorpseParty">
+        <group Style="pickeach">
+          <object Chance="10" Blueprint="Furious Gyre Wight of Agolgot" />
+          <object Chance="10" Blueprint="Furious Gyre Wight of Bethsaida" />
+          <object Chance="10" Blueprint="Furious Gyre Wight of Qas" />
+          <object Chance="10" Blueprint="Furious Gyre Wight of Qon" />
+          <object Chance="10" Blueprint="Furious Gyre Wight of Rermadon" />
+          <object Chance="10" Blueprint="Furious Gyre Wight of Shug'ruith" />
+          <object Chance="100" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+        </group>
+     </population>
+    <population Name="AgolgotCorpseParty">
+        <group Style="pickeach">
+          <object Chance="20" Blueprint="Furious Gyre Wight of Agolgot" />
+          <object Chance="100" Blueprint="Furious Gyre Wight of Agolgot" />
+          <object Chance="100" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+        </group>
+      </population>
+      <population Name="BethsaidaCorpseParty">
+        <group Style="pickeach">
+          <object Chance="20" Blueprint="Furious Gyre Wight of Bethsaida" />
+          <object Chance="100" Blueprint="Furious Gyre Wight of Bethsaida" />
+          <object Chance="100" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+        </group>
+      </population>
+      <population Name="QasQonCorpseParty">
+        <group Style="pickeach">
+          <object Chance="80" Blueprint="Furious Gyre Wight of Qas" />
+          <object Chance="80" Blueprint="Furious Gyre Wight of Qon" />
+          <object Chance="100" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+        </group>
+      </population>
+      <population Name="RermadonCorpseParty">
+        <group Style="pickeach">
+          <object Chance="20" Blueprint="Furious Gyre Wight of Rermadon" />
+          <object Chance="100" Blueprint="Furious Gyre Wight of Rermadon" />
+          <object Chance="100" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+        </group>
+      </population>
+      <population Name="Shug'ruithCorpseParty">
+        <group Style="pickeach" >
+          <object Chance="20" Blueprint="Furious Gyre Wight of Shug'ruith" />
+          <object Chance="100" Blueprint="Furious Gyre Wight of Shug'ruith" />
+          <object Chance="100" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+          <object Chance="50" Blueprint="Glow Wight Apotheote" />
+        </group>
+      </population>
+      <population Name="AgolgotCyst" Load="merge">
+        <group Name="Options" Style="pickeach" Load="merge">
+            <object Chance="10" Blueprint="Glow Wight Behemoth of Algogot"/>
+        </group>
+      </population>
+      <population Name="BethsaidaCyst" Load="merge">
+        <group Name="Options" Style="pickeach" Load="merge">
+            <object Chance="10" Blueprint="Glow Wight Behemoth of Bethsaida"/>
+        </group>
+      </population>
+      <population Name="QasQonCyst" Load="merge">
+        <group Name="Options" Style="pickeach" Load="merge">
+            <object Chance="10" Blueprint="Glow Wight Behemoth of QasQon"/>
+        </group>
+      </population>
+      <population Name="RermadonCyst" Load="merge">
+        <group Name="Options" Style="pickeach" Load="merge">
+            <object Chance="10" Blueprint="Glow Wight Behemoth of Rermadon"/>
+        </group>
+      </population>
+      <population Name="ShugruithCyst" Load="merge">
+        <group Name="Options" Style="pickeach" Load="merge">
+            <object Chance="10" Blueprint="Glow Wight Behemoth of Shug'ruith"/>
+        </group>
+      </population>
+</populations>

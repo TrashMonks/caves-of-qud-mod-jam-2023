@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+<object Name="Base Fleshgraft" Inherits="Armor">
+    <part Name="Render" DisplayName= "Spinal Fleshgraft" ColorString="&amp;m" TileColor="&amp;r" Tile="sw_flesh_exoskeleton.png" DetailColor="M" />
+    <part Name="Armor" AV="2" DV="-2" WornOn="Back" CarryBonus="10" />
+    <part Name="ArmsOnEquip" BaseHands="Pincers" DefaultHandBehavior="Nephal_Claw_Chord" Category="Arthropod"/>
+    <part Name="MutationOnEquip" ClassName="Analgesia"/>
+    <part Name="LeakWhenBroken" Liquid="blood" />
+    <tag Name="BleedLiquid" Value="blood-1000" />
+    <tag Name="Species" Value="living flesh" />
+    <tag Name="LiveAnimal" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"/>
+    <tag Name="NoSparkingQuest" Value="*noinherit"/>
+    <tag Name="GiganticEquippable" />
+    <removepart Name="Examiner" />
+    <part Name="EquipStatBoost" Boosts="Toughness:2" ChargeUse="1" IsBioScannable="true" IsEMPSensitive="true" IsPowerLoadSensitive="true" NameForStatus="FleshReinforcement" />
+    <part Name="LiquidFueledPowerPlant" Liquid="blood" ChargePerDram="2500" IsBioScannable="true" IsEMPSensitive="true" NameForStatus="BiodynamicProcessor" />
+    <part Name="LiquidVolume" MaxVolume="16" StartVolume="0-16" InitialLiquid="blood-1000" />
+    <part Name="LiquidProducer" Liquid="blood" Rate="800" FillSelfOnly="true" IsBioScannable="true" IsEMPSensitive="true" WorksOnEquipper="true" WorksOnSelf="false" RequiresBodyPartCategory="Animal" NameForStatus="CirculatoryGraft" />
+</object>
+<object Name="Glow Wight Behemoth Fleshgraft" Inherits="Base Fleshgraft">
+    <part Name="NoBreak" />
+    <part Name="NoDamage" />
+    <part Name="Render" DisplayName="spinal fleshgraft" RenderString="*" Tile="sw_flesh_exoskeleton.png" DetailColor="M" />
+    <part Name="Commerce" Value="0" />
+    <part Name="Description" Short="Shaped in the metamorphic numen, this squirming casque of flesh encases its host and imbues them with lifestuff. Two limbs jut out from it, needlepoint edges searching for prey." />
+    <part Name="NaturalEquipment" />
+    <part Name="Physics" Category="Natural Armor" IsReal="false" Weight="0" />
+    <removepart Name="TinkerItem" />
+    <intproperty Name="Natural" Value="1" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+    <tag Name="NoSparkingQuest" />
+    <tag Name="AllowArmorDefaultBehavior" />
+    <tag Name="NaturalGear" />
+    <removepart Name="Examiner" />
+    <tag Name="PartDescription" Value="Worn around Fleshgraft" />
+    <tag Name="InsertPartAfter" Value="Head" />
+    <tag Name="VisibleAsDefaultBehavior" />
+    <tag Name="ShowAsPhysicalFeature" />
+</object>
+<object Name="Spinal Fleshgraft" Inherits="Base Fleshgraft">
+    <part Name="Render" DisplayName= "{{psychalflesh|spinal fleshgraft}}" ColorString="&amp;m" TileColor="&amp;r" Tile="sw_flesh_exoskeleton.png" DetailColor="m" />
+    <part Name="Description" Short="Shaped in the metamorphic numen, this squirming casque of flesh encases its host and imbues them with lifestuff. Two limbs jut out from it, needlepoint edges searching for prey." />
+    <part Name="AnimatedMaterialGeneric" AnimationLength="200" DetailColorAnimationFrames="0=r,50=R,100=M,150=w" MustBeUnderstood="true" />
+    <part Name="Physics" Weight="15" />
+    <part Name="Commerce" Value="1666" />
+    <part Name="BootSequence" BootTime="10" VerbOnBootInitialized="screech" VerbOnBootAborted="shudder" VerbOnBootDone="pulse" ComputePowerFactor="0" />
+    <part Name="Cursed" RevealInDescription="false"/>
+    <part Name="EquipStatBoost" IsBootSensitive="true" />
+    <part Name="LiquidProducer" IsBootSensitive="true" />
+    <part Name="Examiner" Unknown="UnknownStrangeMeat" Alternate="UnknownStrangeOrgan" Complexity="7" Difficulty="4" />
+    <part Name="CauseBleedingWhenDestroyed" Damage="8-12" SaveTarget="30" Stack="true" />
+    <tag Name="Tier" Value="8" />
+    <stat Name="Hitpoints" Value="500" />
+</object>
+<object Name="Glow Wight Behemoth Fist" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="colossal fist" />
+    <part Name="Description" Short="A hulking, overgrown fist. It writhes with violent impulse."/>
+    <part Name="MeleeWeapon" MaxStrengthBonus="1000" BaseDamage="3d6+1" Skill="Cudgel" Stat="Strength" Slot="Hand"/>
+    <tag Name="ShowAsPhysicalFeature" />
+    <tag Name="VisibleAsDefaultBehavior" />
+    <tag Name="NaturalGear" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+    <tag Name="NoSparkingQuest" />
+    <tag Name="AllowArmorDefaultBehavior" />
+    <intproperty Name="Natural" Value="1" />
+    <part Name="NaturalEquipment" />
+    <part Name="NoBreak" />
+    <part Name="NoDamage" />
+  </object>
+  <object Name="Glow Wight Behemoth Gaze" Inherits="NaturalMissileWeapon">
+    <part Name="Render" DisplayName="psychal gaze" ColorString="&amp;K" DetailColor="M" Tile="sw_behemoth_gaze.png" />
+    <part Name="Description" Short="The eyes of the slouching behemoth pulse with otherworldly light. Three beams of light conjoin to pierce the minds of =pronouns.possessive= prey."/>
+    <part Name="Physics" Weight="0" Organic="True" />
+    <part Name="MissileWeapon" Skill="Pistol" AmmoChar="&amp;M-" ShotsPerAction="3" AmmoPerAction="1" ShotsPerAnimation="3" WeaponAccuracy="2" />
+    <part Name="Commerce" Value="0" />
+    <part Name="EnergyAmmoLoader" ChargeUse="100" ProjectileObject="ProjectilePsychalFleshgun" IsBioScannable="true" NameForStatus="MetamorphicLensing" />
+    <part Name="AIShootCooldown" Cooldown="5-10" />
+    <part Name="AIStopShootingImmuneTargets" />
+    <part Name="LiquidFueledPowerPlant" Liquid="blood" ChargePerDram="5000" IsBioScannable="true" IsEMPSensitive="true" NameForStatus="BiodynamicProcessor" />
+    <part Name="LiquidVolume" MaxVolume="32" StartVolume="16-32" InitialLiquid="blood-1000" />
+    <part Name="LiquidProducer" Liquid="blood" Rate="1600" FillSelfOnly="true" IsBioScannable="true" IsEMPSensitive="true" WorksOnEquipper="true" WorksOnSelf="false" RequiresBodyPartCategory="Animal" NameForStatus="CirculatoryGraft" />
+    <tag Name="Tier" Value="8" />
+    <tag Name="UsesSlots" Value="Face" /> 
+    <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Pistols/sfx_missile_psychalFleshgun_fire" />
+    <tag Name="ReloadSound" Value="Sounds/Missile/Reloads/sfx_missile_handVacuum_reload" />
+  </object>
+  <object Name="Profaned Banner" Inherits="BaseCloak">
+    <part Name="Armor" AV="0" DV="1" WornOn="Back" />
+    <part Name="Render" DisplayName="profaned banner" RenderString="]" Tile="sw_profaned_banner" ColorString="&amp;m" DetailColor="K" />
+    <part Name="Commerce" Value="20" />
+    <part Name="Description" Short="A ruined scrap of foul hide flaps rhythmically in the salt wind. A plague looms on the horizon, its flagbearers drawing close." />
+    <tag Name="Tier" Value="5" />
+    <part Name="Banner" Faction="Glow Wights" Effect="WarTrance" />
+    <part Name="Physics" Weight="15" Organic="true" />
+    <part Name="Springy" Factor="0.9" />
+    <tag Name="UsesSlots" Value="Back,Hand" />
+  </object>
+  <object Name="Filth Figurine" Inherits="Item">
+    <part Name="Render" DisplayName="{{filthy|apotheote}} figurine" Tile="sw_apotheote_figurine.png" DetailColor="w" RenderString="*" ColorString="&amp;r" RenderLayer="5" />
+    <part Name="Description" Short="A disgusting depiction of an apotheote, cast in flesh and aged bone." />
+    <part Name="Commerce" Value="60" />
+    <tag Name="Tier" Value="1" />
+  </object>
+  <object Name="Agolgot Figurine" Inherits="Filth Figurine">
+    <part Name="Render" DisplayName="{{filthy|Agolgot}} figurine" Tile="sw_agolgot_figurine.png" DetailColor="w" RenderString="*" ColorString="&amp;r" RenderLayer="5" />
+    <part Name="Description" Short="A disgusting depiction of an apotheote, cast in flesh and aged bone." />
+  </object>
+  <object Name="Bethsaida Figurine" Inherits="Filth Figurine">
+    <part Name="Render" DisplayName="{{filthy|Bethsaida}} figurine" Tile="sw_bethsaida_figurine.png" DetailColor="w" RenderString="*" ColorString="&amp;r" RenderLayer="5" />
+    <part Name="Description" Short="A horrid depiction of an apotheote, cast in flesh and aged bone." />
+  </object>
+  <object Name="Qas Figurine" Inherits="Filth Figurine">
+    <part Name="Render" DisplayName="{{filthy|Qas}} figurine" Tile="sw_qas_figurine.png" DetailColor="w" RenderString="*" ColorString="&amp;r" RenderLayer="5" />
+    <part Name="Description" Short="A nauseating depiction of an apotheote, cast in flesh and aged bone." />
+  </object>
+  <object Name="Qon Figurine" Inherits="Filth Figurine">
+    <part Name="Render" DisplayName="{{filthy|Qon}} figurine" Tile="sw_qon_figurine.png" DetailColor="w" RenderString="*" ColorString="&amp;r" RenderLayer="5" />
+    <part Name="Description" Short="A vile depiction of an apotheote, cast in flesh and aged bone." />
+  </object>
+  <object Name="Rermadon Figurine" Inherits="Filth Figurine">
+    <part Name="Render" DisplayName="{{filthy|Rermadon}} figurine" Tile="sw_rermadon_figurine.png" DetailColor="w" RenderString="*" ColorString="&amp;r" RenderLayer="5" />
+    <part Name="Description" Short="A hideous depiction of an Rermadon, cast in flesh and aged bone." />
+  </object>
+  <object Name="Shug'ruith Figurine" Inherits="Filth Figurine">
+    <part Name="Render" DisplayName="{{filthy|Shug'Ruith}} figurine" Tile="sw_shug'ruith_figurine.png" DetailColor="w" RenderString="*" ColorString="&amp;r" RenderLayer="5" />
+    <part Name="Description" Short="A foul depiction of an Shug'Ruith, cast in flesh and aged bone." />
+  </object>
+</objects>

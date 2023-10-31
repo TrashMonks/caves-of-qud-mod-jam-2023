@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+    <object Name="Glow Wight Behemoth Saddle Wall" Inherits="Wall">
+        <part Name="Render" DisplayName="gazing canvas" RenderString="216" ColorString="&amp;K" DetailColor="M" Occluding="true" Tile="sw_gazing_canvas.png" />
+        <part Name="Physics" Weight="50" Takeable="false" Solid="true" Organic="true" />
+        <part Name="Description" Short="Foul hides and stitched eyes glare back at you from all angles." />
+        <stat Name="AV" Value="5" />
+        <stat Name="Hitpoints" Value="100" />
+        <tag Name="BodyType" Value="ClothWall" />
+        <tag Name="ImmutableWhenUnexplored" Value="1" />
+        <tag Name="PaintedFence" Value="sw_gazing_canvas" />
+        <tag Name="PaintedFenceAtlas" Value="Walls/" />
+        <tag Name="PaintedFenceExtension" Value=".png" />
+        <tag Name="Tier" Value="1" />
+        <stat Name="AcidResistance" Value="50" />
+        <stat Name="HeatResistance" Value="50" />
+        <stat Name="ColdResistance" Value="50" />
+        <stat Name="ElectricResistance" Value="50" />
+        <part Name="Graffitied" ChanceOneIn="300" />
+        <tag Name="UsesGate" Value="Glow Wight Behemoth Saddle Gate" />
+        <tag Name="PaintWith" Value="Glow Wight Behemoth Saddle Wall" />
+        <tag Name="ImpactSound" Value="Sounds/Throw/sfx_throwing_generic_hitFabric"></tag>
+        <intproperty Name="InteriorRequired" Value="1" />
+      </object>
+      <object Name="Glow Wight Behemoth Saddle Gate" Inherits="VehicleGolemExit">
+		<part Name="Render" DisplayName="gazing gate" RenderLayer="1" ColorString="&amp;W" TileColor="&amp;K" DetailColor="m" RenderString="008" Tile="Furniture/sw_gazing_gate_closed.png" />
+		<part Name="Description" Short="Mesmerizing hides coalesce and separate in the form of a door." />
+		<part Name="InteriorPortal" OpenTile="Furniture/sw_gazing_gate_opened.png" ExitOnEnteredCell="true"/>
+		<tag Name="Gender" Value="neuter" />
+        <tag Name="PaintWith" Value="Glow Wight Behemoth Saddle Wall" />
+        <intproperty Name="InteriorRequired" Value="1" />
+		<xtagGrammar iArticle="" />
+	</object>
+      <object Name="Vile Basin" Inherits="Vessel">
+        <part Name="Render" DisplayName="vile basin" ColorString="&amp;m" DetailColor="K" Tile="Furniture/sw_vile_basin_empty.png" RenderLayer="6" Occluding="false" />
+        <part Name="RandomTile" Tiles="Furniture/sw_vile_basin_1.png,Furniture/sw_vile_basin_2.png,Furniture/sw_vile_basin_3.png" />
+        <part Name="Physics" Weight="5" Takeable="true" />
+        <part Name="Description" Short="A hastily constructed vessel, uneven and lumpy. The stench of the liquids it once carried never goes away." />
+        <part Name="LiquidVolume" StartVolume="0" MaxVolume="16" ManualSeal="true" LiquidVisibleWhenSealed="true" />
+        <tag Name="DetailColorByLiquid" Value="K" />
+        <tag Name="Transparent" />
+        <part Name="ShattersOnHit" />
+        <part Name="PopulationLiquidFiller" Table="VileBasinFluids" Volume="1d8" />
+        <intproperty Name="InteriorRequired" Value="1" />
+      </object>
+      <object Name="VehicleBehemothSaddle" Inherits="BasePortableChair">
+		<part Name="Render" DisplayName="yawning saddle" ColorString="&amp;y" TileColor="&amp;g" DetailColor="M" Tile="Furniture/sw_yawning_saddle.png" />
+		<part Name="Description" Short="A flesh maw opens, and within it a simple cushion rests." />
+		<part Name="Physics" Weight="100" />
+		<part Name="Chair" Level="2" Securing="true" />
+		<stat Name="Hitpoints" Value="1000" />
+		<part Name="VehicleSeat" />
+		<tag Name="BodyType" Value="AnimalChair" />
+		<tag Name="ExcludeFromDynamicEncounters" />
+        <intproperty Name="InteriorRequired" Value="1" />
+	</object>
+    <object Name="Cystic Lounger" Inherits="BaseChair">
+        <part Name="Render" DisplayName="cystic lounger" ColorString="&amp;K" DetailColor="R" Tile="Furniture/sw_cystic_lounger.png" />
+        <part Name="Physics" Weight="50" />
+        <part Name="Springy" Factor="0.5" />
+        <part Name="Description" Short="Flesh was twisted into a sickening bowl. Its ports screech in delight as lifestuff is pumped inwards, ensuring it is pre-warmed for your comfort." />
+        <part Name="Chair" Level="3" />
+        <part Name="Commerce" Value="10" />
+        <part Name="Examiner" Complexity="4" />
+        <stat Name="AV" Value="6" />
+        <stat Name="DV" Value="0" />
+        <stat Name="Hitpoints" Value="80" />
+        <tag Name="BodyType" Value="PlasticChair" />
+        <tag Name="HeroNameTitleDescriptor" Value="Sickening,Gross,Vile,Foul,Putrid,Disgusting,Filthy,Repulsive,Hideous" />
+        <part Name="LiquidVolume" MaxVolume="128" Volume="128" StartVolume="64-128" InitialLiquid="blood-800,ooze-100,slime-100" />
+        <tag Name="NamingTag" Value="Animated" />
+        <tag Name="Tier" Value="6" />
+        <stag Name="Torture" />
+        <intproperty Name="InteriorRequired" Value="1" />
+      </object>
+      <object Name="Glowing Pustule" Inherits="MountedFurniture">
+        <part Name="Render" DisplayName="glowing pustule" RenderString="249" ColorString="&amp;m" DetailColor="Y" Occluding="false" Tile="Furniture/sw_glowing_pustule.png" />
+        <part Name="Physics" Weight="20" />
+        <part Name="LightSource" Lit="true" Radius="6" />
+        <part Name="Description" Short="A swelling of flesh overflowing with prismatic light illuminates its surroundings." />
+        <tag Name="LiveAnimal" />
+        <stag Name="LightSource" />
+        <tag Name="TechTier" Value="6" />
+        <part Name="Harvestable" OnSuccess="Glowsphere" StartRipeChance="2:3" DestroyOnHarvest="false" HarvestVerb="burst" RipeColor="&amp;M" RipeTileColor="&amp;M" RipeDetailColor="Y" UnripeColor="&amp;m" UnripeTileColor="&amp;m" UnripeDetailColor="k" />
+        <intproperty Name="InteriorRequired" Value="1" />
+      </object>
+      <object Name="Hollowed Pod" Inherits="BaseBed">
+        <part Name="Render" DisplayName="empty pod" ColorString="&amp;b" TileColor="&amp;K" DetailColor="r" Tile="Furniture/sw_empty_pod.png" Occluding="false" RenderIfDark="true" />
+        <part Name="Physics" Weight="260" />
+        <part Name="Description" Short="Blood pumps through the once-egg, filling it with traces of warm life." />
+        <part Name="Bed" BreakIfUserHasPart="Quills" />
+        <part Name="LiquidVolume" MaxVolume="256" Volume="256" StartVolume="128-256" InitialLiquid="blood-800,ooze-100,slime-100" />
+        <part Name="LeakWhenBroken" />
+        <part Name="Examiner" Complexity="2" />
+        <tag Name="HeroNameTitleDescriptor" Value="Sickening,Damp,Bleeding,Swollen and Wet" />
+        <tag Name="HeroNameTitleClientele" Value="the Plagues,the Sick,the Unborn, Mutated Ones" />
+        <tag Name="Tier" Value="3" />
+        <stag Name="Torture" />
+        <intproperty Name="InteriorRequired" Value="1" />
+      </object>
+      <object Name="Warpglass Table" Inherits="Table">
+        <part Name="Render" DisplayName="warpglass table" ColorString="&amp;K" DetailColor="M" RenderString="227" Tile="Furniture/sw_warpglass_table_1.png" Occluding="false" RenderIfDark="true" />
+        <part Name="RandomTile" Tiles="Furniture/sw_warpglass_table_1.png,Furniture/sw_warpglass_table_2.png,Furniture/sw_warpglass_table_3.png" />
+        <tag Name="EmptyTile" Value="*delete" />
+        <tag Name="FullTile" Value="*delete" />
+        <tag Name="EmptyDetailColor" Value="M" />
+        <tag Name="FullDetailColor" Value="M" />
+        <part Name="Physics" Weight="100" Organic="false" />
+        <tag Name="HeroNameTitleDescriptor" Value="Flat,Level,L-Shaped,Sturdy" />
+        <part Name="Description" Short="Glass was shaped on a cosmic loom, imbuing it with an unearthly glow." />
+        <part Name="LightSource" Lit="true" Radius="2" />
+        <tag Name="TakeDamageSound" Value="Sounds/Damage/sfx_damage_glass" />
+        <tag Name="DeathSounds" Value="Sounds/Damage/sfx_destroy_glass" />
+        <part Name="Metal" />
+        <intproperty Name="InteriorRequired" Value="1" />
+    </object>
+    <object Name="Putrid Rotisserie" Inherits="Furniture">
+        <part Name="Render" DisplayName="putrid rotisserie" Tile="Furniture/sw_meat_rack_empty.png" DetailColor="r" ColorString="&amp;w" RenderString="182" />
+        <part Name="Container" />
+        <part Name="Inventory" />
+        <part Name="Description" Short="The flesh of wretched creatures has been skewered and left to rot. Bits of gore collect on the chopping block below." />
+        <part Name="Physics" Weight="50" Owner="Glow-Wights" />
+        <part Name="LiquidProducer" Liquid="blood" VariableRate="50-100" ChanceSkipSameCell="50" PureOnFloor="true" />
+        <tag Name="EmptyTile" Value="Furniture/sw_meat_rack_empty.png" />
+        <tag Name="FullTile" Value="Furniture/sw_meat_rack_full.png" />
+        <tag Name="NoSparkingQuest" />
+        <tag Name="OverlayColor" Value="&amp;r" />
+        <tag Name="HangingSupport" />
+        <inventoryobject Blueprint="@Ingredients_Meat" Number="3" />
+        <intproperty Name="InteriorRequired" Value="1" />
+      </object>
+</objects>

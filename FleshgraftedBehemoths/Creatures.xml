@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+    <object Name="Base Glow Wight Behemoth" Inherits="BaseHumanoid">
+		<part Name="Render" DisplayName="gyre wight behemoth" Tile="sw_glow_wight_behemoth.png" RenderString="Z" ColorString="&amp;m" TileColor="&amp;G" DetailColor="m" />
+		<part Name="Description" Short="This hulking beast feels no pain, no fear of war. =pronouns.Subjective= =verb:press:afterpronoun= forwards resolutely, linksib at =pronouns.possessive= back, urging =pronouns.objective= on. =pronouns.Possessive= eyes glow with an ominous hue, and =pronouns.possessive= needlepoint shoulder limbs lash out at perceived threats." />
+		<part Name="Brain" Factions="Glow Wights-100,Girsh-50" />
+        <part Name="Corpse" CorpseChance="50" CorpseBlueprint="Base Glow Wight Behemoth Corpse" />
+        <part Name="Interior" Cell="Glow Wight Behemoth" FallDistance="1" /> 
+        <part Name="VehiclePilotPopulation" Blueprint="Glow Wight Siegedriver"/>
+        <part Name="Vehicle" Type="Glow Wight Behemoth" Passengers="8" Autonomous="true" />
+        <part Name="RandomMutations" Mental="0" Physical="3-4" PhysicalLevel="8-12" />
+        <mutation Name="DarkVision" Level="1" />
+        <stat Name="AV" Boost="6" />
+        <stat Name="DV" Boost="-3" />
+		<stat Name="Strength" Boost="2" />
+		<stat Name="Toughness" Boost="3" />
+        <stat Name="Ego" Boost="-1" />
+        <stat Name="Intelligence" Boost="-1" />
+		<stat Name="Level" Value="45" />
+		<stat Name="Hitpoints" Value="750" />
+		<inventoryobject Blueprint="Glow Wight Behemoth Fist" Number="2" />
+		<inventoryobject Blueprint="Glow Wight Behemoth Fleshgraft" Number="1" />
+        <inventoryobject Blueprint="Glow Wight Behemoth Gaze" Number="1" />
+        <skill Name="LongBlades" />
+        <skill Name="LongBladesProficiency" />
+        <skill Name="LongBladesImprovedAggressiveStance" />
+        <skill Name="LongBladesImprovedDefensiveStance" />
+        <skill Name="Cudgel" />
+        <skill Name="Cudgel_Bludgeon" />
+        <skill Name="Cudgel_Expertise" />
+        <skill Name="Cudgel_Slam" />
+        <skill Name="Cudgel_SmashUp" />
+        <skill Name="Cudgel_Backswing" />
+        <skill Name="Cudgel_Conk" />
+        <skill Name="Cudgel_ChargingStrike" />
+        <skill Name="Multiweapon_Fighting" />
+        <skill Name="Multiweapon_Proficiency" />
+        <skill Name="Multiweapon_Expertise" />
+        <skill Name="Multiweapon_Mastery" />
+        <skill Name="Pistol" />
+        <skill Name="Pistol_SteadyHands" />
+        <skill Name="Pistol_WeakSpotter" />
+        <skill Name="Pistol_DeadShot" />
+        <skill Name="Tactics" />
+        <skill Name="Tactics_Charge" />
+        <skill Name="Endurance_ShakeItOff" />
+        <skill Name="Endurance_Weathered" />
+        <skill Name="Endurance_Calloused" />
+        <tag Name="Gigantic" />
+		<tag Name="Culture" Value="Glow-Wight" />
+		<tag Name="WaterRitualLiquid" Value="blood" />
+        <tag Name="DynamicObjectsTable:MoonStair_Creatures" Value="*noinherit" />
+        <property Name="Role" Value="Tank" />
+	</object>
+    <object Name="Base Glow Wight Behemoth Corpse" Inherits="Corpse">
+        <part Name="Render" DisplayName="gyre wight behemoth corpse" />
+        <part Name="Butcherable" OnSuccess="@Glow Wight Behemoth Corpse" />
+        <part Name="Description" Short="A strewn pile of flesh and viscera coats the battlefield pools of blood and red mist. A strange piece of meat sticking from it still squirms."/>
+        <part Name="PopulationSpawner" Specification="@GlowWightWarParty" DestroyAfterSpawn="false" />
+        <part Name="Food" IllOnEat="true" Message="You feel a horrible nausea set in." />
+        <tag Name="Tier" Value="8" />
+        <part Name="Physics" Weight="500" />
+        <part Name="Commerce" Value="750" />
+        <tag Name="DynamicObjectsTable:Corpses" />
+    </object>
+    <object Name="Glow Wight Behemoth of Algogot" Inherits="Base Glow Wight Behemoth">
+        <part Name="Render" DisplayName="gyre wight behemoth" ColorString="&amp;m" TileColor="&amp;G" DetailColor="m" />
+        <part Name="Corpse" CorpseChance="50" CorpseBlueprint="Glow Wight Behemoth of Algogot Corpse" />
+        <part Name="Interior" Cell="Glow Wight Behemoth of Agolgot" FallDistance="1" /> 
+    </object>
+    <object Name="Glow Wight Behemoth of Bethsaida" Inherits="Base Glow Wight Behemoth">
+        <part Name="Render" DisplayName="gyre wight behemoth" ColorString="&amp;m" TileColor="&amp;W" DetailColor="m" />
+        <part Name="Corpse" CorpseChance="50" CorpseBlueprint="Glow Wight Behemoth of Bethsaida Corpse" />
+        <part Name="Interior" Cell="Glow Wight Behemoth of Bethsaida" FallDistance="1" /> 
+    </object>
+    <object Name="Glow Wight Behemoth of QasQon" Inherits="Base Glow Wight Behemoth">
+        <part Name="Render" DisplayName="gyre wight behemoth" ColorString="&amp;m" TileColor="&amp;b" DetailColor="m" />
+        <part Name="Corpse" CorpseChance="50" CorpseBlueprint="Glow Wight Behemoth of QasQon Corpse" />
+        <part Name="Interior" Cell="Glow Wight Behemoth of QasQon" FallDistance="1" /> 
+    </object>
+    <object Name="Glow Wight Behemoth of Rermadon" Inherits="Base Glow Wight Behemoth">
+        <part Name="Render" DisplayName="gyre wight behemoth" ColorString="&amp;m" TileColor="&amp;G" DetailColor="M" />
+        <part Name="Corpse" CorpseChance="50" CorpseBlueprint="Glow Wight Behemoth of Rermadon Corpse" />
+        <part Name="Interior" Cell="Glow Wight Behemoth of Rermadon" FallDistance="1" /> 
+    </object>
+    <object Name="Glow Wight Behemoth of Shug'ruith" Inherits="Base Glow Wight Behemoth">
+        <part Name="Render" DisplayName="gyre wight behemoth" ColorString="&amp;m" TileColor="&amp;w" DetailColor="m" />
+        <part Name="Corpse" CorpseChance="50" CorpseBlueprint="Glow Wight Behemoth of Shug'ruith Corpse" />
+        <part Name="Interior" Cell="Glow Wight Behemoth of Shug'ruith" FallDistance="1" /> 
+    </object>
+    <object Name="Glow Wight Behemoth of Algogot Corpse" Inherits="Base Glow Wight Behemoth Corpse">
+        <part Name="PopulationSpawner" Specification="@AlgogotCorpseParty" DestroyAfterSpawn="false" />
+    </object>
+    <object Name="Glow Wight Behemoth of Bethsaida Corpse" Inherits="Base Glow Wight Behemoth Corpse">
+        <part Name="PopulationSpawner" Specification="@BethsaidaCorpseParty" DestroyAfterSpawn="false" />
+    </object>
+    <object Name="Glow Wight Behemoth of QasQon Corpse" Inherits="Base Glow Wight Behemoth Corpse">
+        <part Name="PopulationSpawner" Specification="@QasQonCorpseParty" DestroyAfterSpawn="false" />
+    </object>
+    <object Name="Glow Wight Behemoth of Rermadon Corpse" Inherits="Base Glow Wight Behemoth Corpse">
+        <part Name="PopulationSpawner" Specification="@RermadonCorpseParty" DestroyAfterSpawn="false" />
+    </object>
+    <object Name="Glow Wight Behemoth of Shug'ruith Corpse" Inherits="Base Glow Wight Behemoth Corpse">
+        <part Name="PopulationSpawner" Specification="@Shug'ruithCorpseParty" DestroyAfterSpawn="false" />
+    </object>
+    <object Name="Furious Gyre Wight of Agolgot" Inherits="Gyre Wight of Agolgot">
+        <part Name="Brain" Feelings="Player:-650"/>
+    </object>
+    <object Name="Furious Gyre Wight of Bethsaida" Inherits="Gyre Wight of Bethsaida">
+        <part Name="Brain" Feelings="Player:-650"/>
+    </object>
+    <object Name="Furious Gyre Wight of Qas" Inherits="Gyre Wight of Qas">
+        <part Name="Brain" Feelings="Player:-650"/>
+    </object>
+    <object Name="Furious Gyre Wight of Qon" Inherits="Gyre Wight of Qon">
+        <part Name="Brain" Feelings="Player:-650"/>
+    </object>
+    <object Name="Furious Gyre Wight of Rermadon" Inherits="Gyre Wight of Rermadon">
+        <part Name="Brain" Feelings="Player:-650"/>
+    </object>
+    <object Name="Furious Gyre Wight of Shug'ruith" Inherits="Gyre Wight of Shug'ruith">
+        <part Name="Brain" Feelings="Player:-650"/>
+    </object>
+    <object Name="Glow Wight Siegedriver" Inherits="Glow Wight">
+        <part Name="Render" DisplayName="glow-wight siegedriver" RenderString="z" ColorString="&amp;m" DetailColor="c" Tile="sw_glow_wight_siegedriver.png" />
+        <part Name="AIVehiclePilot" Type="Base Glow Wight Behemoth" SearchRadius="15" OnCombatStart="true" />
+        <part Name="Description" Short="Sworn on oaths of blood between two wights, the concepts of transmutation and kinship are entwined. Now they go as one, ferrying kin and swearing no other allegiances." />
+        <part Name="Brain" Feelings="Player:-650"/>
+        <inventoryobject Blueprint="Apotheote_Claws" Number="2" />
+        <inventoryobject Blueprint="Leather Whip" Number="1" />
+        <inventoryobject Blueprint="Profaned Banner" Number="1" />
+        <property Name="Role" Value="Brute" />
+        <stat Name="Hitpoints" Value="100" />
+        <stat Name="Level" Value="20" />
+        <stat Name="Strength" Boost="1" />
+        <stat Name="Toughness" Boost="1" />
+        <stat Name="Ego" Boost="-2" />
+        <stat Name="Intelligence" Boost="-2" />
+        <stat Name="Willpower" Boost="1" />
+        <stat Name="AV" Value="4" />
+        <skill Name="Endurance_ShakeItOff" />
+        <skill Name="Endurance_PoisonTolerance" />
+        <skill Name="Endurance_Calloused" />
+        <skill Name="ShortBlades_Jab" />
+        <skill Name="ShortBlades" />
+        <skill Name="ShortBlades_Bloodletter" />
+        <skill Name="Persuasion_Intimidate" />
+        <skill Name="Persuasion_Berate" />
+        <tag Name="InventoryPopulationTable" Value="Glow Wight Siegedriver" />
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"/>
+        <inventoryobject Blueprint="@Glow Wight Siegedriver" Number="1" />
+    </object>
+</objects>

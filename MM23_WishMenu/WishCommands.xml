@@ -9,7 +9,7 @@
   <wish Commands="goto:JoppaWorld.42.20.1.1.15" Author="CPNK" ModName="Chiromorphs"/>
   <wish Commands="goto:JoppaWorld.6.16.1.1.10" Author="Caelyn Sandel" ModName="Knife Fight at Eddy's"/>
   <wish DisplayName="Deploy waygate" Commands="Kernelmethod_MM23_Waygate Spawner" Icon="Kernelmethod_MM23/Portal1.png" ColorPair="Rr" Author="kernelmethod" ModName="Mycogrigoric Alcoves"/>
-  <!-- beta only: <wish DisplayName="Spawn behemoth" Commands="Glow Wight Behemoth of Rermadon" Author="coiledlamb" ModName="Fleshgrafted Behemoths"/> -->
+  <wish DisplayName="Spawn behemoth" Commands="Glow Wight Behemoth of Rermadon" Author="coiledlamb" ModName="Fleshgrafted Behemoths"/>
   <wish DisplayName="Spawn issachari" Commands="Gnarf_Issachari Water Guardian,Gnarf_Issachari Sniper,Gnarf_Issachari Elder" Author="gnarf, Caelyn Sandel, ontoclasm" ModName="Issachari Evolved"/>
   <wish Commands="Radiant Sun" Author="acegiak" ModName="Radiant Sun"/>
   <wish Commands="Flaborized_Apiarchs_Apiarch" Author="Flaborized" ModName="Apiarchs of Qud"/>
