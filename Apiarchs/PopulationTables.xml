@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<populations>
+    <population Name="LairOwners_Hills" Load="Merge">
+        <group Name="Options" Load="Merge">
+            <object Blueprint="Flaborized_Apiarchs_Apiarch" />
+        </group>
+    </population>
+
+    <population Name="LairOwners_Flowerfields" Load="Merge">
+        <group Name="Options" Load="Merge">
+            <object Blueprint="Flaborized_Apiarchs_Apiarch" />
+        </group>
+    </population>
+
+    <population Name="FlowerFieldGlobals" Load="Merge">
+        <group Name="Creatures" Load="Merge">
+            <object Chance="15" Number="1-2" Blueprint="Flaborized_Apiarchs_Apiarch_Hostile" />
+        </group>
+    </population>
+</populations>

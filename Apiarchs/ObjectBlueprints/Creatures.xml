@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+    <object Name="Flaborized_Apiarchs_Apiarch" Inherits="BaseInsect">
+        <part Name="Description" Short="Thick patches of setae coat =pronouns.possessive= outline, ommatidia in =pronouns.possessive= glossy compound eyes involuntarily focus on you as you approach. Beneath =pronouns.possessive= silky cloak, two small wings rest, barely able to keep a full humanoid body afloat." />
+        <part Name="Render" DisplayName="apiarch" Tile="Flaborized_Apiarch/apiarch.png" ColorString="&amp;W" DetailColor="y" />
+
+        <part Name="ConversationScript" ConversationID="Flaborized_Apiarchs_Apiarch" />
+        <tag Name="SimpleConversation" Value="Live and bzzz.~Bzzz and live.~Live and bzzzzzz bzzz bzz... and bz.~Bzz and bz." />
+
+        <part Name="Brain" Hostile="false" Factions="Insects-25"/>
+        <stat Name="Hitpoints" Value="15" />
+        <stat Name="AV" Value="2" />
+        <stat Name="DV" Value="4" />
+        <stat Name="Strength" sValue="14" />
+
+        <tag Name="BleedLiquid" Value="honey-1000" />
+        <tag Name="BleedColor" Value="&amp;W" />
+        <tag Name="WaterRitualLiquid" Value="honey" />
+
+        <inventoryobject Blueprint="HoneyWaterskin" Number="1-3" />
+        <inventoryobject Blueprint="Cloth Robe" Number="1" />
+        <inventoryobject Blueprint="Leather Boots" Number="1" />
+        <inventoryobject Blueprint="HulkHoneyTonic" Number="1" Chance="20" />
+
+        <skill Name="ShortBlades" />
+        <skill Name="ShortBlades_Puncture" />
+        <mutation Name="Stinger" Level="3" />
+        <mutation Name="Wings" Level="1" />
+    </object>
+
+    <object Name="Flaborized_Apiarchs_Apiarch_Hostile" Inherits="Flaborized_Apiarchs_Apiarch">
+        <part Name="Render" DisplayName="feisty apiarch" Tile="Flaborized_Apiarch/apiarch.png" ColorString="&amp;W" DetailColor="R" />
+        <part Name="Brain" Factions="Insects-100"/>
+    </object>
+</objects>

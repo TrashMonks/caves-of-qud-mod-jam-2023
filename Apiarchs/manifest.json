@@ -1,0 +1,9 @@
+{
+    "id": "Flaborized_Apiarch",
+    "title": "Apiarchs",
+    "description": "Adds Apiarchs to the game. Peaceful and not-so-peaceful beefolk who bleed honey, fly, and sting with venom. For the October 2023 Qud Modding Jam. Find hostile apiarchs in the flower fields!",
+    "version": "1.0",
+    "author": "Flaborized",
+    "tags": "Creature",
+    "PreviewImage": "preview.png"
+}

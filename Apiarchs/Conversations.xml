@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+    <conversation ID="Flaborized_Apiarchs_Apiarch">
+        <start ID="Welcome">
+            <text>
+            Live and bzzzt.~
+            Bzzz and live.~
+            Live and bzzzzzz bzzz bzzt... and bzt.~
+            Bzz and bzt.~
+            Moon and bzz...~
+            Honey is sweet and honey is sweeter... Bzt.~
+            Live and... beeee nice.
+            </text>
+        <choice Target="End">Live and pollinate, beefriend.</choice>
+        </start>
+    </conversation>
+</conversations>
