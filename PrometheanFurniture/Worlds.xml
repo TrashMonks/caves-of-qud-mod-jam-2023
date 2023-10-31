@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<worlds Load="Merge">
+    <world Name="JoppaWorld" ZoneFactory="JoppaWorldZoneFactory" Map="JoppaWorldNew8.rpm" DisplayName="Qud" Load="Merge">
+        <cell Name="Gritgate" Inherits="Gritgate" ApplyTo="TerrainGritGate" Mutable="false" >
+            <zone Level="14" x="2" y="0" Name="lower tunnels" NameContext="Grit Gate">
+                <builder Class="Spire"></builder>
+                <builder Class="StairsUp" x="13-57" y="5-19"></builder>
+                <builder Class="StairsDown" x="13-57" y="5-19"></builder>
+                <builder Class="Connecter"></builder>
+                <builder Class="ForceConnectionsPlus"></builder>
+                <postbuilder Class="ZoneTemplate:Grit Gate Dungeon"></postbuilder>
+                <!--<encounter Table="Grit Gate 1" Amount="low"></encounter>-->
+                <builder Class="Music" Track="Caves1" Chance="5"></builder>
+                <population Table="MAFT_MadSciEncounter"></population>
+            </zone>
+        </cell>
+    </world>
+</worlds>

@@ -1,0 +1,8 @@
+{
+	"id": "Promethean Furniture",
+	"loadorder": 1,
+	"title": "{{biomech|Promethean}} {{y|Furniture}}",
+	"description": "Grants a kind of terrible life to chairbears and their ilk, and adds a new encounter beneath Grit Gate.",
+	"author": "{{c|MAFT}}",
+	"previewImage": "icon.png"
+}

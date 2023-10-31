@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+
+    <!-- SCALPELS -->
+
+    <object Name="MAFT_Scalpel" Inherits="BaseDagger">
+        <part Name="Render" DisplayName="{{Y|scalpel}}" Tile="MAFT_scalpel.png" ColorString="&amp;y" DetailColor="Y"/>
+        <part Name="MeleeWeapon" MaxStrengthBonus="6" BaseDamage="2d3" Skill="ShortBlades" />
+        <part Name="Commerce" Value="35" />
+        <part Name="Description" Short="It's sharp enough to cut through imperfection." />
+        <part Name="Metal" />
+        <tag Name="Tier" Value="3" />
+        <part Name="Physics" Weight="1" />
+        <part Name="IntPropertyChanger" AffectedProperty="ButcheryToolEquipped" Amount="1" ChargeUse="0" IsEMPSensitive="false" IsBootSensitive="false" IsTechScannable="false" WorksOnHolder="true" WorksOnWearer="false" NameForStatus="Edge" />
+    </object>
+    <object Name="MAFT_RustyScalpel" Inherits="MAFT_Scalpel">
+        <part Name="SpawnWithEffect" Effect="Rusted" Chance="100" />
+        <tag Name="NoSparkingQuest" />
+        <tag Name="ExcludeFromDynamicEncounters" />
+    </object>
+    <object Name="MAFT_BloodStainedScalpel" Inherits="MAFT_Scalpel">
+        <part Name="LiquidStainedObject" Liquid="blood" Volume="3d4" />
+        <part Name="SpawnWithEffect" Effect="Rusted" Chance="10" />
+        <tag Name="NoSparkingQuest" />
+        <tag Name="ExcludeFromDynamicEncounters" />
+    </object>
+    <object Name="MAFT_GelStainedScalpel" Inherits="MAFT_Scalpel">
+        <part Name="LiquidStainedObject" Liquid="gel" Volume="3d4" />
+        <part Name="SpawnWithEffect" Effect="Rusted" Chance="10" />
+        <tag Name="NoSparkingQuest" />
+        <tag Name="ExcludeFromDynamicEncounters" />
+    </object>
+
+    <!-- MAD SCIENTIST EQUIPMENT -->
+
+    <object Name="MAFT_LabCoat" Inherits="BaseArmor">
+        <part Name="Armor" AV="0" DV="2" Intelligence="1" Ego="1" Acid="6" WornOn="Body" />
+        <part Name="Render" DisplayName="{{Y|lab coat}}" RenderString="]" ColorString="&amp;Y" DetailColor="y" Tile="Items/sw_vest.bmp"/>
+        <part Name="Commerce" Value="55" />
+        <part Name="Description" Short="This long white coat was dyed twice: once with bleach and calcofluor, and once again with all the colours of misery." />
+        <part Name="Physics" Weight="5" />
+        <part Name="Springy" Factor="0.9" />
+        <tag Name="Tier" Value="1" />
+        <stag Name="Scholarly" />
+        <intproperty Name="Inorganic" Value="0" />
+    </object>
+
+    <object Name="MAFT_TetraGoggles" Inherits="Goggles">
+        <part Name="Render" DisplayName="{{Y-Y-y-c-C-C-Y alternation|tetraxenonoglass}} goggles" RenderString="]" Tile="Items/sw_goggles.bmp" ColorString="&amp;k" DetailColor="Y" />
+        <part Name="Commerce" Value="85" />
+        <part Name="Description" Short="A pair of prismic lenses are pulled sharply to the skull by black elastyne strips. Together they frame a world up close." />
+        <part Name="Spectacles" />
+        <tag Name="Tier" Value="4" />
+        <part Name="RefractLight" Chance="2" RetroVariance="1d121-61" Verb="reflect" />
+        <part Name="TinkerItem" Bits="33" CanDisassemble="true" CanBuild="true" />
+        <tag Name="Mods" Value="CommonMods,EyewearMods" />
+        <part Name="Toolbox" UnpoweredInspectBonus="6" ChargeUse="0" WorksOnWearer="true" WorksOnEquipper="false" WorksOnCarrier="false" IsTechScannable="true" TrackAsToolbox="false" NameForStatus="PrismicMagnification" BehaviorDescription="Grants a bonus to identifying artifacts as if your Intelligence score were increased by 6."/>
+    </object>
+
+    <!-- PHIALS -->
+    
+    <object Name="MAFT_BloodPhial" Inherits="Phial">
+        <part Name="LiquidVolume" StartVolume="1" InitialLiquid="blood-100" />
+        <tag Name="NoSparkingQuest" />
+    </object>
+
+    <object Name="MAFT_GelPhial" Inherits="Phial">
+        <part Name="LiquidVolume" StartVolume="1" InitialLiquid="gel-100" />
+        <tag Name="NoSparkingQuest" />
+    </object>
+</objects>

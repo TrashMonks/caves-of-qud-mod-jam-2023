@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+    <population Name="MAFT_MadSciInventory" >
+        <group Name="Items" Style="pickeach" >
+            <object Blueprint="MAFT_TetraGoggles" />
+            <object Blueprint="MAFT_LabCoat" />
+            <table Name="MAFT_RandomScalpel" Number="2" />
+
+            <object Blueprint="Neuro Animator" />
+            <object Blueprint="Ganglionic Teleprojector" />
+            <object Blueprint="Spray-a-Brain" Number="0-2" />
+            <table Name="DynamicObjectsTable:EnergyCells" Number="3" />
+            <object Blueprint="MAFT_BloodPhial" />
+            <object Blueprint="MAFT_GelPhial" />
+            
+            <object Blueprint="Empty Booster" Number="6-12" />
+            <table Name="DynamicObjectsTable:Tonics_NonRare" Number="2-3" />
+            <table Name="Scrap {zonetier}" Number="2-4" />
+            <object Blueprint="Raw Bear Meat" Number="6-7" Chance="80" />
+            <object Blueprint="Bones" Chance="20" />
+        </group>
+    </population>
+
+    <population Name="MAFT_MadSciEncounter" >
+        <group Name="Items" Style="pickeach">
+            <!-- CORE -->
+            <object Blueprint="MAFT_MadSciAtWorkbench" Hint="AlongWall" />
+
+            <!-- STAGING -->
+            <object Blueprint="Bear Corpse" Number="4-5" />
+            <object Blueprint="BloodSplash" Number="5-7" />
+            <object Blueprint="Garbage" Number="10-12" />
+
+            <!-- CLONELINGS-->
+            <object Blueprint="MAFT_ReprogrammedCloneling" Number="1-2"/>
+
+            <!-- CHROMELINGS -->
+            <object Blueprint="MAFT_RustedReprogrammedChromeling" Number="2" />
+            <object Blueprint="MAFT_ReprogrammedChromeling" Number="3-5"/>
+
+            <!-- FURNITURE -->
+            <object Blueprint="MAFT_LivingChairbear" />
+            <object Blueprint="MAFT_LivingBedger" />
+            <object Blueprint="MAFT_LivingStarmchair" />
+            <table Name="MAFT_RandomLivingFurniture" Number="2-3" />
+        </group>
+    </population>
+
+    <population Name="MAFT_MadSciFollowers" >
+        <group Name="Creatures" Style="pickeach">
+            <object Blueprint="MAFT_ReprogrammedCloneling" Number="1" />
+            <object Blueprint="MAFT_ReprogrammedChromeling" Number="2-3" />
+            <object Blueprint="MAFT_RustedReprogrammedChromeling" Number="1" />
+        </group>
+    </population>
+
+    <population Name="MAFT_RandomLivingFurniture" >
+        <group Name="Creatures" Style="pickone">
+            <object Blueprint="MAFT_LivingChairbear" Weight="50" />
+            <object Blueprint="MAFT_LivingBedger" Weight="30" />
+            <object Blueprint="MAFT_LivingStarmchair" Weight="20" />
+        </group>
+    </population>
+
+    <population Name="MAFT_RandomScalpel" >
+        <group Name="Items" Style="pickone">
+            <object Blueprint="MAFT_Scalpel" Weight="30" />
+            <object Blueprint="MAFT_RustyScalpel" Weight="10" />
+            <object Blueprint="MAFT_BloodStainedScalpel" Weight="10" />
+            <object Blueprint="MAFT_GelStainedScalpel" Weight="10" />
+        </group>
+    </population>
+
+    <population Name="GritGateDungeonEncounters" Load="Merge">
+        <object Blueprint="MAFT_LivingChairbear" Number="1" Chance="3" />
+        <object Blueprint="MAFT_LivingBedger" Number="1" Chance="2" />
+        <object Blueprint="MAFT_LivingStarmchair" Number="1" Chance="1" />
+        <table Name="MAFT_RandomLivingFurniture" Number="3" Chance="1" />
+    </population>
+</populations>

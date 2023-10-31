@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+
+    <!-- LIVING FURNITURE -->
+
+    <object Name="MAFT_BaseLivingFurniture" Inherits="BaseAnimatedObject" >
+        <stat Name="Strength" sValue="16,1d3,(t-1)d2" />
+        <stat Name="Agility" sValue="14,1d3,(t-1)d1" />
+        <stat Name="Toughness" sValue="16,1d3,(t-1)d2" />
+        <stat Name="Intelligence" sValue="7,1d3,(t-1)d2-1" />
+        <stat Name="Willpower" sValue="7,1d3,(t-1)d2-1" />
+        <stat Name="Ego" sValue="7,1d3,(t-1)d2-1" />
+        <stat Name="Level" sValue="18-29" />
+        <intproperty Name="Bleeds" Value="1" />
+        <tag Name="BleedLiquid" Value="blood-300,gel-700" />
+		<tag Name="BaseObject" Value="*noinherit" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+        <part Name="Corpse" CorpseChance="90" CorpseBlueprint="MAFT_LivingFurnitureCorpse" />
+    </object>
+    <object Name="MAFT_LivingFurnitureCorpse" Inherits="Corpse">
+        <part Name="Render" DisplayName="misplaced guts" ColorString="&amp;w" RenderLayer="6" />
+        <part Name="Description" Short="Craftsmanship was permanently disarranged. It's better this way." />
+        <part Name="Food" Message="It tastes like failure." />
+        <part Name="Physics" Weight="430" />
+        <part Name="Commerce" Value="100" />
+        <tag Name="NoSparkingQuest" />
+        <tag Name="ExcludeFromDynamicEncounters" />
+        <tag Name="Gender" Value="plural" />
+    </object>
+
+    <object Name="MAFT_LivingChairbear" Inherits="Chairbear">
+        <part Name="Render" DisplayName="{{biomech|promethean}} chairbear" Tile="MAFT_chairbear.png" ColorString="&amp;w" DetailColor="r" />
+        <part Name="Description" Short="The work of some amateur fleshsmith or grandmaster chairbler. =pronouns.Possessive= stitches creak with the burden of implanted organics." />
+        <mixin Name="MAFT_BaseLivingFurniture" Load="Fill" />
+        <part Name="Brain" Hostile="true" Factions="Bears-100,Newly Sentient Beings-100" Calm="false" Wanders="true" />
+        <skill Name="Cudgel" />
+        <skill Name="Cudgel_Bludgeon" />
+        <skill Name="Cudgel_Expertise" />
+        <skill Name="Cudgel_Slam" />
+        <stat Name="Strength" Boost="4" />
+        <intproperty Name="SlamDistanceBonus" Value="2" />
+        <property Name="Role" Value="Brute" />
+        <inventoryobject Blueprint="MAFT_LivingChairbearFists" Number="2"/>
+    </object>
+    <object Name="MAFT_LivingChairbearFists" Inherits="NaturalWeapon" >
+        <part Name="Render" DisplayName="overstuffed fist" />
+        <part Name="MeleeWeapon" BaseDamage="4d2" Skill="ShortBlades" Stat="Strength" Slot="Hand" />
+    </object>
+
+    <object Name="MAFT_LivingBedger" Inherits="Bedger">
+        <mixin Name="MAFT_BaseLivingFurniture" Load="Fill" />
+        <part Name="Render" DisplayName="{{biomech|promethean}} bedger" Tile="MAFT_bedger.png" ColorString="&amp;w" DetailColor="y" />
+        <part Name="Description" Short="Alive in the worst way, =pronouns.subjective= =verb:crabwalk:afterpronoun= through the bedrooms of the world and =verb:keen= a harrowing howl." />
+        <part Name="Brain" Hostile="true" Factions="Newly Sentient Beings-100" Calm="false" Wanders="true" />
+        <stat Name="Ego" Boost="4" />
+        <stat Name="Wisdom" Boost="4" />
+        <skill Name="Persuasion_MenacingStare" />
+        <skill Name="Persuasion_Intimidate" />
+        <property Name="Role" Value="Brute" />
+        <inventoryobject Blueprint="MAFT_LivingBedgerSheets" />
+    </object>
+    <object Name="MAFT_LivingBedgerSheets" Inherits="BaseCloak" >
+        <part Name="Armor" AV="0" DV="2" WornOn="Back" />
+        <part Name="Render" DisplayName="{{y|sheets}}" RenderString="]" Tile="Items/sw_banner.bmp" ColorString="&amp;r" DetailColor="R" />
+        <part Name="Physics" Weight="18" />
+        <part Name="Description" Short="Linen was stained along the stitch-lines of its leaking host. Dried blood crunches as it drapes." />
+        <part Name="RulesDescription" Text="Horrifying: This item reduces the cooldowns of Berate, Intimidate, and Menacing Stare by 10 rounds." />
+        <part Name="IntPropertyChanger" AffectedProperty="Horrifying" Amount="1" />
+        <tag Name="UsesSlots" Value="Back" />
+        <part Name="LiquidStainedObject" Liquid="blood" Volume="3d4" />
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+        <tag Name="Gender" Value="plural" />
+    </object>
+
+    <object Name="Starmchair" Load="Merge">
+        <tag Name="BodyType" Value="StarChair" />
+    </object>
+    <object Name="MAFT_LivingStarmchair" Inherits="Starmchair">
+        <mixin Name="MAFT_BaseLivingFurniture" Load="Fill" />
+        <part Name="Render" DisplayName="{{biomech|promethean}} starmchair" Tile="MAFT_starmchair.png" ColorString="&amp;M" DetailColor="m" />
+        <part Name="Description" Short="=pronouns.Possessive= stuffing was messily threaded with all the mechanisms of life unaskedfor. Five spined orchid-arms crack and break their lining, and ragged nerves twitch in the salty air." />
+        <part Name="Brain" Hostile="true" Factions="Strangers-100,Newly Sentient Beings-100" Calm="false" Wanders="true" />
+        <tag Name="BodyType" Value="StarChair" />
+        <stat Name="Agility" Boost="4" />
+        <property Name="Role" Value="Brute" />
+        <skill Name="ShortBlades" />
+        <skill Name="ShortBlades_Bloodletter" />
+        <skill Name="Dual_Wield" />
+        <skill Name="Dual_Wield_Ambidexterity" />
+        <skill Name="Dual_Wield_Two_Weapon_Fighting" />
+        <inventoryobject Blueprint="MAFT_LivingStarmchairSpines" Number="5"/>
+    </object>
+    <object Name="MAFT_LivingStarmchairSpines" Inherits="NaturalWeapon" >
+        <part Name="Render" DisplayName="wired underspines" />
+        <part Name="MeleeWeapon" BaseDamage="2d5" Skill="ShortBlades" Stat="Strength" Slot="Hand" />
+        <part Name="StickOnHit" Chance="40" SaveTarget="25"/>
+    </object>
+    
+    <!-- MAD SCIENTISTS -->
+    
+    <object Name="MAFT_MadSci" Inherits="Urshiib">
+        <part Name="Render" DisplayName="urshiib scientist" />
+        <part Name="Titles" Ordinary="Barathrumite pariah" />
+        <part Name="Brain" Hostile="false" Factions="Pariahs-100" />
+        <part Name="Description" Short="Quills were shorn from =pronouns.possessive= back and cauterised, and =pronouns.possessive= hands are stained to the elbows with blood and pale gel. =pronouns.Subjective= =verb:stare:afterpronoun= at you, and everything, with a butcher's eye." />
+        <removemutation Name="Quills" />
+        <stat Name="Level" sValue="18-29" />
+        <tag Name="InventoryPopulationTable" Value="MAFT_MadSciInventory" />
+        <tag Name="staticFaction2" Value="Newly Sentient Beings,hate,creating misery where there was none" />
+        <tag Name="staticFaction1" Value="Barathrumites,hate,catastrophic lapses in ethical judgement" />
+    </object>
+
+    <object Name="MAFT_MadSciHero" Inherits="MAFT_MadSci">
+        <part Name="Render" DisplayName="Barathrumite" />
+        <part Name="Titles" Ordinary="disgraced urshiib scientist" />
+        
+        <part Name="Uplift" />
+        <property Name="Role" Value="Hero" />
+        <part Name="Followers" Table="MAFT_MadSciFollowers" />
+        <inventoryobject Blueprint="Force Bracelet" Number="1" />
+        <!--part Name="GivesRep" /-->
+        <tag Name="ExcludeFromDynamicEncounters" />
+    </object>
+
+    <!-- REPROGRAMMED ROBOTS -->
+
+    <object Name="MAFT_ReprogrammedCloneling" Inherits="Cloneling">
+        <part Name="Render" DisplayName="reprogrammed {{c|cloneling}}" />
+        <part Name="Description" Short="An inverted pyramid is suspended in lethargy, in ready cutting distance of anything nearby. Where once an amniotic broth was tenderly dispensed, its scalpels now froth with infusions of malice." />
+        <removepart Name="Cloneling" />
+        <stat Name="Speed" Value="140" />
+        <part Name="Brain" Hostile="true" Factions="Pariahs-100" MinKillRadius="1" MaxKillRadius="1"/>
+        <part Name="SpawnWithEffect" Effect="Rusted" Chance="15" />
+    </object>
+    <object Name="MAFT_ReprogrammedChromeling" Inherits="Plated Chromeling">
+        <part Name="Render" DisplayName="reprogrammed {{c|chromeling}}" />
+        <part Name="Description" Short="The scrap-child has rusted over time, but flits about with frantic speed even greater than =pronouns.possessive= kin. Steam erupts beneath =pronouns.possessive= cheeks, and =pronouns.possessive= motherboard crackles overclockwise. " />
+        <stat Name="Speed" Value="140" />
+        <part Name="Brain" Hostile="false" Factions="Pariahs-100" />
+        <part Name="SpawnWithEffect" Effect="Rusted" Chance="15" />
+    </object>
+    <object Name="MAFT_RustedReprogrammedChromeling" Inherits="MAFT_ReprogrammedChromeling">
+        <part Name="SpawnWithEffect" Effect="Rusted" Chance="100" />
+        <tag Name="ExcludeFromDynamicEncounters" />
+    </object>
+
+    <!-- ENCOUNTER OBJECTS -->
+
+    <object Name="MAFT_MadSciAtWorkbench" Inherits="Metal Workbench">
+        <part Name="DeployWith" Blueprint="MAFT_MadSciHero" />
+        <tag Name="ExcludeFromDynamicEncounters" />
+    </object>
+    
+</objects>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<bodies>
+    <bodyparttypevariants>
+        <bodyparttypevariant VariantOf="Head" Type="Axial Arm" />
+    </bodyparttypevariants>
+
+    <anatomies>
+        <anatomy Name="StarChair" Category="Animal">
+            <part Type="Axial Arm" >
+                <part Type="Arm Stump" />
+            </part>
+            <part Type="Splat" />
+            <part Type="Breadth" />
+            <part Type="Arm" Laterality="Upper Right">
+                <part Type="Arm Stump" Laterality="Upper Right" SupportsDependent="Upper Arm Stumps" />
+            </part>
+            <part Type="Arm" Laterality="Upper Left">
+                <part Type="Arm Stump" Laterality="Upper Left" SupportsDependent="Upper Arm Stumps" />
+            </part>
+            <part Type="Arm" Laterality="Lower Right">
+                <part Type="Arm Stump" Laterality="Lower Right" SupportsDependent="Lower Arm Stumps" />
+            </part>
+            <part Type="Arm" Laterality="Lower Left">
+                <part Type="Arm Stump" Laterality="Lower Left" SupportsDependent="Lower Arm Stumps" />
+            </part>
+            <part Type="Missile Weapon" Laterality="Right" />
+            <part Type="Missile Weapon" Laterality="Left" />
+            <part Type="Arm Stumps" DependsOn="Upper Arm Stumps" Laterality="Upper" />
+            <part Type="Arm Stumps" DependsOn="Lower Arm Stumps" Laterality="Lower" />
+        </anatomy>
+    </anatomies>
+</bodies>
