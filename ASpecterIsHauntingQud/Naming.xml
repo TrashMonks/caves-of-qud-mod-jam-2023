@@ -4,9 +4,9 @@
             <scopes>
                 <scope Name="Main" Type="Title" Special="Hero" Tag="IlluminatiSwag_Jam_GhostTitle" Priority="300" Combine="false" />
             </scopes>
-            <titletemplates>
-                <titletemplate Name="wraith-remnant of the Eaters of Earth" />
-            </titletemplates>
+            <templates>
+                <template Name="wraith-remnant of the Eaters of Earth" />
+            </templates>
         </namestyle>
     </namestyles>
 </naming>
