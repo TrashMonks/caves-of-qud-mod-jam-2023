@@ -1,14 +1,14 @@
 // note from gnarf: I wrote this in like 1 hour at midnight, I'm not proud of it
 // open to PR's to clean up syntax/code organization of this little tool
 
-using ConsoleLib.Console;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ConsoleLib.Console;
 using XRL;
-using XRL.World;
 using XRL.UI;
 using XRL.Wish;
+using XRL.World;
 
 namespace XRL.World.Parts
 {
@@ -101,14 +101,26 @@ namespace XRL.World.Parts
                 parse: parseCSV
             );
             var firstCommand = data.Commands[0];
-            if (firstCommand.StartsWith("item:"))
-                firstCommand = firstCommand.Substring(5);
-            GameObject sample = null;
             try
             {
-                sample = GameObject.createSample(firstCommand);
-                data.DisplayName = $"Spawn {sample.DisplayName}";
-                data.Renderable = new Renderable(sample.RenderForUI());
+                if (firstCommand.StartsWith("goto:"))
+                {
+                    var location = firstCommand.Substring(5);
+                    var z = The.ZoneManager.GetZone(location);
+                    var world = The.ZoneManager.GetZone(z.GetZoneWorld());
+                    var cell = world.GetCell(z.wX, z.wY);
+                    var tile = cell.GetFirstObjectWithPart("TerrainTravel");
+                    data.DisplayName = $"Teleport to {tile.the}{tile.DisplayName}";
+                    data.Renderable = new Renderable(tile.RenderForUI());
+                }
+                else
+                {
+                    if (firstCommand.StartsWith("item:")) firstCommand = firstCommand.Substring(5);
+                    GameObject sample = null;
+                    sample = GameObject.createSample(firstCommand);
+                    data.DisplayName = $"Spawn {sample.a}{sample.DisplayName}";
+                    data.Renderable = new Renderable(sample.RenderForUI());
+                }
             }
             catch (Exception e)
             {
