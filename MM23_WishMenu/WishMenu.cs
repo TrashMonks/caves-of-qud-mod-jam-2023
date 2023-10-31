@@ -152,6 +152,8 @@ namespace XRL.World.Parts
         [WishCommand("mashup")]
         public static void MashupWish()
         {
+            if (MenuItems == null || MenuItems.Count == 0)
+                CacheInit();
             var choice = Popup.ShowOptionList(
                 "Monster Mash-Up Wish Menu",
                 MenuItems.Select(a => a.DisplayText).ToArray(),
@@ -169,9 +171,9 @@ namespace XRL.World.Parts
 
         public override bool HandleEvent(CommandEvent E)
         {
-            if (MenuItems == null || MenuItems.Count == 0)
-                CacheInit();
-            if (E.Command == COMMAND_NAME) { }
+            if (E.Command == COMMAND_NAME) {
+                MashupWish();
+            }
             return base.HandleEvent(E);
         }
     }
