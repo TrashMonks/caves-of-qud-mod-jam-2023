@@ -18,7 +18,7 @@
         <stat Name="Toughness" sValue="26,1d4" />
         <stat Name="Intelligence" sValue="6,1d4" />
         <stat Name="Willpower" sValue="16,1d4" />
-        <stat Name="Ego" Value="12,1d4" />
+        <stat Name="Ego" sValue="12,1d4" />
     <inventoryobject Blueprint="Barkbiter_Bite" Number="1" />
         <mutation Name="Carnivorous" />
         <mutation Name="PhotosyntheticSkin" Level="10" />
@@ -33,5 +33,5 @@
     <property Name="Role" Value="Brute" />
     <tag Name="DynamicObjectsTable:Mountains_Creatures" />
   </object>
-  
+
 </objects>
