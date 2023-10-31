@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+    <object Name="cpnk_chiromorphs_MiquonocoChest" Inherits="Chest1">
+        <part Name="Inventory" Builder="InventoryChestJunk" />
+        <part Name="Container" />
+        <part Name="Physics" Owner="cpnk_chiromorphs_MiquonocoFaction" />
+        <tag Name="ExcludeFromDynamicEncounters" />
+        <tag Name="NoSparkingQuest" />
+    </object>
+    <object Name="cpnk_chiromorphs_MiquonocoBookshelf" Inherits="UndergroundBookshelf">
+        <part Name="Physics" Owner="cpnk_chiromorphs_MiquonocoFaction" />
+        <tag Name="ExcludeFromDynamicEncounters" />
+        <part Name="MarkovBookshelf" BookTable="MarkovCorpus_Hydropon" />
+        <tag Name="InventoryPopulationTable" Value="GritGateBookshelf" />
+    </object>
+</objects>

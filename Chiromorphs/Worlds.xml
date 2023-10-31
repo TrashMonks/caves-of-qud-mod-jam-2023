@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<worlds>
+	<world Name="JoppaWorld" Load="Merge">
+        <cell Name="cpnk_chiromorphs_CellMiquonoco" Inherits="Jungle" ApplyTo="cpnk_chiromorphs_TerrainMiquonoco" Mutable="false">
+            <zone Level="5-9" x="0-2" y="0-2" Name="sky above Miquonoco" IndefiniteArticle="the">
+                <builder Class="Sky"></builder>
+            </zone>
+
+            <zone Level="10" x="0-2" y="0-2" Name="outskirts" NameContext="Miquonoco" IndefiniteArticle="some" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000">
+                <postbuilder Class="ZoneTemplate:Jungle"></postbuilder>
+                <builder Class="FactionEncounters" Population="GenericFactionPopulation"></builder>
+                <builder Class="Music" Track="Overworld1" Chance="10"></builder>
+            </zone>
+
+            <zone Level="10" x="1" y="1" NameContext="Miquonoco" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000">
+                <builder Class="StairsDown" x="13-57" y="5-19"></builder>
+                <postbuilder Class="ZoneTemplate:Jungle"></postbuilder>
+                <builder Class="Music" Track="Overworld1" Chance="10"></builder>
+            </zone>
+
+            <zone Level="11-29" x="0-2" y="0-2" Name="caves" NameContext="Miquonoco">
+                <builder Class="StairsUp" x="13-57" y="5-19"></builder>
+                <builder Class="StairsDown" x="13-57" y="5-19"></builder>
+                <builder Class="Connecter"></builder>
+                <builder Class="ForceConnectionsPlus"></builder>
+                <postbuilder Class="ZoneTemplate:JungleCaves"></postbuilder>
+                <builder Class="Music" Track="Caves1" Chance="5"></builder>
+            </zone>
+
+            <zone Level="14" x="1" y="1" Name="caves" NameContext="Miquonoco">
+                <builder Class="StairsUp" x="13-57" y="5-19"></builder>
+                <builder Class="Connecter"></builder>
+                <postbuilder Class="ZoneTemplate:JungleCaves"></postbuilder>
+                <builder Class="Music" Track="Caves1" Chance="5"></builder>
+                <builder Class="StairsDown" x="73" y="4"></builder>
+            </zone>
+
+            <zone Level="15" x="1" y="1" Name="Miquonoco" ProperName="true" IncludeStratumInZoneDisplay="false" DisableForcedConnections="Yes">
+                <map FileName="Miquonoco.rpm"></map>
+                <builder Class="Music" Track="StoicPorridge"></builder>
+                <builder Class="IsCheckpoint" Key="Miquonoco"></builder>
+            </zone>
+        </cell>
+    </world>
+</worlds>

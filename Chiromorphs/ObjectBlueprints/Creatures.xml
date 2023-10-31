@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+    <object Name="cpnk_chiromorphs_Chiromorph" Inherits="Bat">
+        <part Name="Description" Short="Short and scraggly. An assortment of fur and scarves shroud =pronouns.possessive= small body. =pronouns.possessive= =verb:has:afterpronoun= ears the size of dinner plates and large wings that can wrap around =pronouns.possessive= entire body. Large black eyes peer at you curiously." />
+        <part Name="Render" DisplayName="chiromorph" Tile="cpnk_chiromorphs/chiromorph.png" ColorString="&amp;M" DetailColor="y"/>
+        <stat Name="Level" Value="8" />
+        <stat Name="AV" Value="2" />
+        <stat Name="DV" Value="2" />
+        <stat Name="Hitpoints" Value="50" />
+        <part Name="Brain" Hostile="false" Wanders="true" Factions="Winged Mammals-100,cpnk_chiromorphs_MiquonocoFaction-200" />
+        <stat Name="Strength" sValue="15,1d4" />
+        <stat Name="Agility" sValue="18,1d4" />
+        <stat Name="Toughness" sValue="15,1d4" />
+        <stat Name="Intelligence" sValue="18,1d4" />
+        <stat Name="Willpower" sValue="18,1d4" />
+        <stat Name="Ego" sValue="15,1d4" />
+        <tag Name="RandomGender" Value="elverson,males,females,collective,female,male,female,male,nonspecific,nonspecific,neuter,neuter,neuter" />
+        <part Name="Corpse" CorpseChance="20" CorpseBlueprint="cpnk_chiromorphs_Chiromorph Corpse" />
+        <inventoryobject Blueprint="Bat_Bite" Number="1" />
+        <inventoryobject Blueprint="cpnk_chiromorphs_Quaint Shawl" Number="1" />
+        <inventoryobject Blueprint="Urberry" Number="0-1" />
+        <inventoryobject Blueprint="Dagger2" Number="1" />
+        <part Name="ConversationScript" ConversationID="cpnk_chiromorphs_Chiromorph" />
+    </object>
+    <object Name="cpnk_chiromorphs_Chiromorph Corpse" Inherits="Humanoid Corpse">
+        <part Name="Render" DisplayName="chiromorph corpse" />
+        <part Name="Food" Message="Guilt washes over you." />
+        <part Name="Physics" Weight="180" />
+        <part Name="Commerce" Value="1" />
+    </object>
+    <object Name="cpnk_chiromorphs_Kealak" Inherits="cpnk_chiromorphs_Chiromorph">
+        <part Name="Brain" Hostile="false" Wanders="false" Factions="Winged Mammals-100,cpnk_chiromorphs_MiquonocoFaction-200" />
+        <part Name="Description" Short="It's fur is soft and shiny. It looks at you with a smile." />
+        <part Name="Render" DisplayName="Kealak" Tile="cpnk_chiromorphs/chiromorph.png" ColorString="&amp;R" DetailColor="y"/>
+        <tag Name="Gender" Value="neuter" />
+        <part Name="GivesRep" />
+        <property Name="Role" Value="NPC" />
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+        <part Name="ConversationScript" ConversationID="cpnk_chiromorphs_Kealak" />
+        <part Name="Interesting" />
+        <xtagGrammar Proper="true" />
+    </object>
+    <object Name="cpnk_chiromorphs_Pansel" Inherits="cpnk_chiromorphs_Chiromorph">
+        <part Name="Render" DisplayName="Warden Pansel" Tile="cpnk_chiromorphs/chiromorph.png" ColorString="&amp;B" DetailColor="y"/>
+        <tag Name="Gender" Value="nonspecific" />
+        <part Name="Brain" Wanders="false" Factions="Wardens-100,Winged Mammals-100,cpnk_chiromorphs_MiquonocoFaction-200" />
+        <part Name="GivesRep" />
+        <part Name="Description" Short="They sheath themself in carbide armor." />
+        <stat Name="Level" Value="26" />
+        <stat Name="Strength" sValue="27" />
+        <stat Name="Agility" sValue="26" />
+        <stat Name="Toughness" sValue="23" />
+        <stat Name="Intelligence" sValue="16" />
+        <stat Name="Willpower" sValue="22" />
+        <stat Name="Ego" sValue="18" />
+        <stat Name="Hitpoints" sValue="150" />
+        <mutation Name="Metamorphosis" Level="5" />
+        <mutation Name="LifeDrain" Level="6" />
+        <inventoryobject Blueprint="Urberry" Number="2" />
+        <inventoryobject Blueprint="Dagger4" BoostModChance="true" Number="2" />
+        <inventoryobject Blueprint="Carbide Plate Armor" />
+        <skill Name="Endurance_Calloused" />
+		<skill Name="Persuasion_Intimidate" />
+        <skill Name="Tactics_Charge" />
+        <skill Name="ShortBlades" />
+        <skill Name="ShortBlades_Jab" />
+        <skill Name="ShortBlades_Bloodletter" />
+        <skill Name="ShortBlades_Hobble" />
+        <skill Name="ShortBlades_Rejoinder" />
+        <skill Name="ShortBlades_Shank" />
+        <property Name="Role" Value="NPC" />
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+        <part Name="ConversationScript" ConversationID="cpnk_chiromorphs_Pansel" />
+        <part Name="Interesting" />
+        <part Name="Lovely" />
+        <xtagGrammar Proper="true" />
+    </object>
+</objects>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+    <population Name="JungleZoneGlobals" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+            <object Chance="15" Number="1-3" Blueprint="cpnk_chiromorphs_Chiromorph"/>
+		</group>
+	</population>
+</populations>

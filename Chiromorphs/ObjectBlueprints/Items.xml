@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+    <object Name="cpnk_chiromorphs_Quaint Shawl" Inherits="BaseCloak">
+        <part Name="Armor" AV="0" DV="0" WornOn="Back" />
+        <part Name="Commerce" Value="2" />
+        <tag Name="Tier" Value="1" />
+        <part Name="Physics" Weight="1" Category="Clothes" />
+        <part Name="Description" Short="A magenda piece of fabric worn around the neck. Fashionable." />
+        <part Name="Render" DisplayName="quaint shawl" RenderString="]" Tile="items/sw_shawl.bmp" ColorString="&amp;m" DetailColor="M" />
+        <intproperty Name="Inorganic" Value="0" />
+    </object>
+    <object Name="cpnk_chiromorphs_TerrainMiquonoco" Inherits="Terrain">
+		<part Name="Render" DisplayName="Miquonoco" Tile="terrain/tile_location7.bmp" DetailColor="M^k" RenderString="127" ColorString="&amp;y" />
+		<part Name="Description" Short="A secluded colony of batfolk, hidden deep beneath the salt to escape the dangers of Qud's jungles." />
+		<tag Name="NoBiomes" Value="1" />
+		<xtagGrammar Proper="true" massNoun="false" />
+		<tag Name="Terrain" Value="Jungle" />
+        <tag Name="OverlayColor" Value="&amp;W" />
+    </object>
+</objects>

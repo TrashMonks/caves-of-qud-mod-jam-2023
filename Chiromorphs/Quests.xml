@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<quests>
+    <quest Name="The Munchies" Factions="cpnk_chiromorphs_MiquonocoFaction" Reputation="200" Level="5"
+             Accomplishment="You got some beetle jerky for the denizens of Miquonoco." 
+             Hagiograph="In the month of =month= of =year=, =name= provided sustinance for those in need."
+             HagiographCategory="DoesSomethingRad">
+
+        <step Name="Return with beetle jerky" XP="750">
+            <text>Get some beetle jerky for the denizens of Miquonoco.</text>
+        </step>
+    </quest>
+</quests>

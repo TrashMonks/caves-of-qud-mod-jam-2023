@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+    <conversation ID="cpnk_chiromorphs_Chiromorph">
+        <node ID="Start">
+            <text>
+                {{emote|*flaps wings at you*}}~
+                Hello, traveller! Live and drink.~
+                {{emote|*looks at you with big beady eyes*}}~
+                Ahhhh!~
+                {{emote|*sniffs you*}}~
+                {{emote|*squeaks*}}~
+                {{emote|*chirps*}}~
+                Do you have wares?~
+                Wow! A =player.apparentSpecies=!~
+                Are you a bug?~
+                Pardon me!
+            </text>
+            <choice GotoID="End">Live and drink.</choice>
+        </node>
+    </conversation>
+
+    <conversation ID="cpnk_chiromorphs_Kealak">
+        <node ID="Start" IfNotHaveQuest="The Munchies">
+            <text>
+                Live and drink traveller! You smell nice.
+            </text>
+            <choice Target="Smell">Oh, thank you.</choice>
+            <choice Target="MiquonocoInfo1">Why do you live underground?</choice>
+            <choice Target="Work">Do you have any work to offer?</choice>
+            <choice Target="End">Live and drink.</choice>
+        </node>
+        <node ID="Start" IfHaveActiveQuest="The Munchies">
+            <text>
+                Do you have the beetle jerky...........
+            </text>
+            <choice Target="Jerky" IfHaveBlueprint="Beetle Jerky">Yes. Here.</choice>
+            <choice Target="End">No, not yet.</choice>
+        </node>
+        <node ID="Start" IfHaveQuest="The Munchies" IfFinishedQuest="The Munchies">
+            <text>
+                Live and drink, beetle-sib.
+            </text>
+            <choice Target="End">Live and drink.</choice>
+        </node>
+        <node ID="Smell">
+            <text>{{emote|Kealak beams}}</text>
+            <choice Target="MiquonocoInfo1">Why do you live underground?</choice>
+            <choice Target="Work">Do you have any work to offer?</choice>
+            <choice Target="End">Live and drink.</choice>
+        </node>
+        <node ID="MiquonocoInfo1">
+            <text>The sun is bright and the jungle is deadly. Our ancestors make refuge in caves, and we take after them.</text>
+            <choice GotoID="MiquonocoInfo2">Do you get much trade?</choice>
+            <choice GotoID="End">Ah, I see. Live and drink.</choice>
+        </node>
+        <node ID="MiquonocoInfo2">
+            <text>We get the occasional traveller, like you. It's enough to keep the water flowing.</text>
+            <choice GotoID="End">Ah, I see. Live and drink.</choice>
+        </node>
+        <node ID="Work">
+            <text>I will reward you if you bring me beetle jerky. I've really been craving that.</text>
+            <choice GotoID="End" StartQuest="The Munchies">As you wish.</choice>
+            <choice GotoID="End">Unfortunately, I am preoccupied.</choice>
+        </node>
+        <node ID="Jerky">
+            <text>Oh my eaters!!! You're so cool! You're the best! Thank you so much, traveller.</text>
+            <choice Target="End">
+                <text>Live and drink, Kealak.</text>
+                <part Name="QuestHandler" QuestID="The Munchies" Action="Complete" />
+                <part Name="TakeItem" Blueprints="Beetle Jerky" Destroy="true" />
+                <part Name="ReceiveItem" Blueprints="cpnk_chiromorphs_Quaint Shawl,Bracelet3" />
+            </choice>
+        </node>
+    </conversation>
+
+    <conversation ID="cpnk_chiromorphs_Pansel">
+        <node ID="Start">
+            <text>
+                Don't do anything fractitious. I'll hear it.
+            </text>
+            <choice Target="MiquonocoInfo1">What can you tell me about Miquonoco?</choice>
+            <choice Target="Work">Do you have any work to offer?</choice>
+            <choice Target="End">Live and drink.</choice>
+        </node>
+        <node ID="MiquonocoInfo1">
+            <text>I live here!</text>
+            <choice Target="Work">Do you have any work to offer?</choice>
+            <choice Target="End">Oh.</choice>
+        </node>
+        <node ID="Work">
+            <text>I hear that Kealak has some work to offer. Try speaking with it?</text>
+            <choice Target="End">Thank you, live and drink.</choice>
+        </node>
+    </conversation>
+</conversations>
