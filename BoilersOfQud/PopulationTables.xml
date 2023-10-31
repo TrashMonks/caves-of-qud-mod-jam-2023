@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+
+ <!--
+	***************************
+    Boiler List
+    ***************************  
+    -->
+
+
+  <population Name="ducks_RandomBoiler">
+    <group Name="Ducks_BreedersorBelchers" Style="pickone">
+      <group Name="Breeders" Style="pickone" Weight="1">
+        <table Name="ducks_RandomBreeder" Weight="1" Number="1-2" />
+      </group>
+      <group Name="Belchers" Style="pickone" Weight="1">
+        <table Name="ducks_RandomBelcher" Weight="1" Number="1-4" />
+      </group>
+    </group>
+  </population>
+
+  <population Name="ducks_RandomBelcher">
+    <group Name="Belchers" Style="pickone">
+        <object Blueprint="ducks_StickyAcidBoilBelcher" />
+        <object Blueprint="ducks_LavaBoilBelcher" />
+        <object Blueprint="ducks_HealingBoilBelcher" />
+        <object Blueprint="ducks_ProteanBoilBelcher" />
+        <object Blueprint="ducks_OozeBoilBelcher" />
+		<object Blueprint="ducks_OilBoilBelcher" />
+        <object Blueprint="ducks_MoltenWaxBoilBelcher" />
+        <object Blueprint="ducks_AcidBoilBelcher" />
+        <object Blueprint="ducks_DiluteStaticBoilBelcher" />
+        <object Blueprint="ducks_StickyMagmaBoilBelcher" />
+    </group>
+  </population>
+
+  <population Name="ducks_RandomBreeder">
+    <group Name="Breeders" Style="pickone">
+        <object Blueprint="ducks_StickyAcidBoilBreeder" />
+        <object Blueprint="ducks_LavaBoilBreeder" />
+        <object Blueprint="ducks_HealingBoilBreeder" />
+        <object Blueprint="ducks_OozeBoilBreeder" />
+		<object Blueprint="ducks_OilBoilBreeder" />
+        <object Blueprint="ducks_MoltenWaxBoilBreeder" />
+        <object Blueprint="ducks_AcidBoilBreeder" />
+        <object Blueprint="ducks_DiluteStaticBoilBreeder" />
+        <object Blueprint="ducks_StickyMagmaBoilBreeder" />
+        <object Blueprint="ducks_SlipperyBoilBreeder" />
+    </group>
+  </population>
+
+
+ <!-- Fungal Patches -->
+
+    <population Name="FungalJunglePopulation" Load="Merge">
+        <group Name="Creatures" Load="Merge">
+        <table Name="ducks_RandomBoiler" Number="1-2" Chance="10" />
+        </group>
+    </population>
+
+    <population Name="FungalBiome1" Load="Merge">
+        <group Name="Creatures" Load="Merge">
+        <table Name="ducks_RandomBoiler" Number="1" Chance="1" />
+        </group>
+    </population>
+
+    <population Name="FungalBiome2" Load="Merge">
+        <group Name="Creatures" Load="Merge">
+        <table Name="ducks_RandomBoiler" Number="1-2" Chance="5" />
+        </group>
+    </population>
+
+    <population Name="FungalBiome3" Load="Merge">
+        <group Name="Creatures" Load="Merge">
+        <table Name="ducks_RandomBoiler" Number="1-3" Chance="10" />
+        </group>
+    </population>
+
+  <!-- Rainbow Wood -->
+
+    <population Name="RainbowWoodZoneGlobals" Load="Merge">
+        <table Name="ducks_RandomBoiler" Number="1-3" Chance="25" />
+    </population>
+
+    <population Name="RainbowWoodPerSector" Load="Merge">
+        <group Name="Creatures" Load="Merge">
+        <table Name="ducks_RandomBoiler" Number="1" Chance="5" />
+        </group>
+    </population>
+ 
+
+    <!-- Cave Populations -->
+
+
+    <population Name="Tier6CavePopulation" Load="Merge">
+        <group Name="Contents" Load="Merge">
+            <group Name="Creatures" Load="Merge">
+            <table Name="ducks_RandomBoiler" Number="1-2" Chance="1" />
+            </group>
+        </group>
+    </population>
+    
+    <population Name="Tier7CavePopulation" Load="Merge">
+        <group Name="Contents" Load="Merge">
+            <group Name="Creatures" Load="Merge">
+            <table Name="ducks_RandomBoiler" Number="1-3" Chance="5" />
+            </group>
+        </group>
+    </population>
+    
+    <population Name="Tier8CavePopulation" Load="Merge">
+        <group Name="Contents" Load="Merge">
+            <group Name="Creatures" Load="Merge">
+            <table Name="ducks_RandomBoiler" Number="1-4" Chance="10" />
+            </group>
+        </group>
+    </population>
+
+
+    <!-- Cave Populations -->
+
+
+
+    <population Name="Tier6RuinsCreatures" Load="Merge">
+        <group Name="Creatures" Load="Merge">
+         <table Name="ducks_RandomBoiler" Number="1" Chance="1" />
+        </group>
+    </population>
+    
+    <population Name="Tier7RuinsCreatures" Load="Merge">
+        <group Name="Creatures" Load="Merge">
+        <table Name="ducks_RandomBoiler" Number="1-2" Chance="5" />
+        </group>
+    </population>
+    
+    <population Name="Tier8RuinsCreatures" Load="Merge">
+        <group Name="Creatures" Load="Merge">
+        <table Name="ducks_RandomBoiler" Number="1-3" Chance="10" />
+        </group>
+    </population>
+
+
+    <!-- Lairs -->
+
+    <population Name="LairOwners_Fungal" Load="Merge">
+        <group Name="Options" Load="Merge">
+        <table Name="ducks_RandomBelcher"/>
+        <table Name="ducks_RandomBreeder"/>
+        </group>
+    </population>
+
+    
+
+
+
+
+</populations>
+
+

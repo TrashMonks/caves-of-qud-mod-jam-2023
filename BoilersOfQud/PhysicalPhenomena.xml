@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+
+ <!--
+	***************************
+    Mixed Liquids
+    ***************************  
+	-->
+
+
+
+	<object Name="ducks_MagmaticAsphaltPuddle" Inherits="Water">
+		<part Name="LiquidVolume" MaxVolume="-1" Volume="500" InitialLiquid="asphalt-500,lava-500" />
+	</object>
+	<object Name="ducks_HoneyedAcidPuddle" Inherits="Water">
+		<part Name="LiquidVolume" MaxVolume="-1" Volume="500" InitialLiquid="honey-500,acid-500" />
+	</object>
+
+	<object Name="ducks_ProteanPuddle" Inherits="Water">
+		<part Name="LiquidVolume" MaxVolume="-1" Volume="500" InitialLiquid="proteangunk-1000" />
+	</object>
+
+	<object Name="ducks_SlippyPuddle" Inherits="Water">
+		<part Name="LiquidVolume" MaxVolume="-1" Volume="500" InitialLiquid="ink-500,gel-500" />
+	</object>
+
+
+</populations>

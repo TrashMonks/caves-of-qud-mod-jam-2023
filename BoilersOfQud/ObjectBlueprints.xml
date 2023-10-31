@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  
+    <!--
+	***************************
+    Boilers
+    ***************************  
+	-->
+
+  <object Name="ducks_BaseBoiler" Inherits="SapientMutatedFungus">
+      <part Name="Brain" Mobile="true" Wanders="true" Hostile="false" Factions="Fungi-100" />
+      <part Name="Corpse" CorpseChance="25" CorpseBlueprint="ducks_BoilerCorpse" />
+      <part Name="ConversationScript" ConversationID="SapientFungi" ClearLost="true" />
+      <part Name="FungusProperties" Rooted="false" />
+      <stat Name="Intelligence" sValue="16,1d3,(t)d1" />
+      <stat Name="Willpower" sValue="16,1d3,(t)d1" />
+      <stat Name="Ego" sValue="16,1d3,(t)d1" />
+      <stat Name="AcidResistance" Value="25" />
+      <stat Name="HeatResistance" Value="25" />
+      <part Name="AISeekHealingPool" />
+      <removepart Name="MentalShield" />
+      <removepart Name="NoKnockdown" />
+    	<tag Name="BleedLiquid" Value="gel-1000" />
+      <tag Name="BleedColor" Value="&amp;c" />
+		  <tag Name="BleedPrefix" Value="{{c|gelled}}" />
+      <tag Name="ImmuneToFungus" />
+      <tag Name="WaterRitualLiquid" Value="proteangunk" />
+      <tag Name="AggregateWith" Value="Boilers" />
+      <tag Name="BaseObject" Value="*noinherit" />
+      <tag Name="NoHateFactions" Value="Oozes" />
+      <tag Name="NoSleep" />
+      <skill Name="Tactics" />
+      <skill Name="Tactics_Throwing" />
+      <property Name="Role" Value="Controller" />
+  </object>
+
+	<object Name="ducks_BoilerCorpse" Inherits="Corpse">
+    	<part Name="Render" DisplayName="boiler corpse" ColorString="&amp;y" />
+      <part Name="Description" Short="The shambling arcology has ground to a halt, the extant life of decay slowly fading into naught but a necropolis to what had once been glorious." /> 
+      <part Name="Food" Message="The cold slime clings." />
+    	<part Name="Physics" Weight="200" />
+    	<part Name="Commerce" Value="100" />
+    	<tag Name="Tier" Value="6" />
+    	<tag Name="DynamicObjectsTable:Corpses" />
+	</object>
+
+  <!--
+    ***************************  
+	-->
+
+  <object Name="ducks_BaseBoilBelcher" Inherits="ducks_BaseBoiler">
+    <stat Name="AV" Value="9" />
+    <stat Name="Level" Value="25" />
+    <stat Name="Hitpoints" Value="165" />
+    <stat Name="Speed" Value="125" />
+    <part Name="Description" Short="Guttation beads along swollen, spongy limbs, pooling trapped within soft membranous sacs. It is an arcology of creation and decay, swift-footed and nimble as it detaches the delicate boils dangling from its flesh, diaphanous membranes swollen to bursting with the life-liquids of the boiler. " />
+    <part Name="AIThrowAndScoot" />
+    <intproperty Name="ThrowRangeBonus" Value="4" />
+  </object>
+
+    <object Name="ducks_StickyAcidBoilBelcher" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="sticky acidic boil belcher" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;W"  DetailColor="g"  />
+      <part Name="FabricateFromSelf" ChargeUse="0" FabricateBlueprint="ducks_StickyAcidGrenadeBoil" FabricateVerb="excrete" BatchSize="3" HitpointsPer="1" AIUseForThrowing="true" AIHitpointsThreshold="10" HitpointsThreshold="5" EnergyCost="100" Cooldown="1d2+1" IsBioScannable="true" />
+      <stat Name="AcidResistance" Value="125" />
+    </object>
+
+    <object Name="ducks_LavaBoilBelcher" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="magmatic boil belcher" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;W" DetailColor="R"  />
+      <part Name="FabricateFromSelf" ChargeUse="0" FabricateBlueprint="ducks_LavaGrenadeBoil" FabricateVerb="excrete" BatchSize="3" HitpointsPer="1" AIUseForThrowing="true" AIHitpointsThreshold="10" HitpointsThreshold="5" EnergyCost="100" Cooldown="1d2+1" IsBioScannable="true" />
+      <stat Name="HeatResistance" Value="125" />   
+    </object>
+
+    <object Name="ducks_HealingBoilBelcher" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="convalescent boil belcher" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;y" DetailColor="C"  />
+      <part Name="FabricateFromSelf" ChargeUse="0" FabricateBlueprint="ducks_HealingGrenadeBoil" FabricateVerb="excrete" BatchSize="3" HitpointsPer="1" AIUseForThrowing="true" AIHitpointsThreshold="10" HitpointsThreshold="5" EnergyCost="100" Cooldown="1d2+1" IsBioScannable="true" />
+    </object>
+
+    <object Name="ducks_ProteanBoilBelcher" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="primordial boil belcher" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;c" DetailColor="C"  />
+      <part Name="FabricateFromSelf" ChargeUse="0" FabricateBlueprint="ducks_ProteanGrenadeBoil" FabricateVerb="excrete" BatchSize="3" HitpointsPer="1" AIUseForThrowing="true" AIHitpointsThreshold="10" HitpointsThreshold="5" EnergyCost="100" Cooldown="1d2+1" IsBioScannable="true" />
+    </object>
+
+    <object Name="ducks_OozeBoilBelcher" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="oozing boil belcher" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;K" DetailColor="y"  />
+      <part Name="FabricateFromSelf" ChargeUse="0" FabricateBlueprint="ducks_OozeGrenadeBoil" FabricateVerb="excrete" BatchSize="3" HitpointsPer="1" AIUseForThrowing="true" AIHitpointsThreshold="10" HitpointsThreshold="5" EnergyCost="100" Cooldown="1d2+1" IsBioScannable="true" />
+    </object>
+
+    <object Name="ducks_OilBoilBelcher" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="oily boil belcher" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;y" DetailColor="K"  />
+      <part Name="FabricateFromSelf" ChargeUse="0" FabricateBlueprint="ducks_OilGrenadeBoil" FabricateVerb="excrete" BatchSize="3" HitpointsPer="1" AIUseForThrowing="true" AIHitpointsThreshold="10" HitpointsThreshold="5" EnergyCost="100" Cooldown="1d2+1" IsBioScannable="true" />
+      <stat Name="HeatResistance" Value="50" />    
+    </object>
+
+    <object Name="ducks_MoltenWaxBoilBelcher" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="waxen boil belcher" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;y" DetailColor="Y"  />
+      <part Name="FabricateFromSelf" ChargeUse="0" FabricateBlueprint="ducks_MoltenWaxGrenadeBoil" FabricateVerb="excrete" BatchSize="3" HitpointsPer="1" AIUseForThrowing="true" AIHitpointsThreshold="10" HitpointsThreshold="5" EnergyCost="100" Cooldown="1d2+1" IsBioScannable="true" />
+    </object>
+
+    <object Name="ducks_AcidBoilBelcher" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="acidic boil belcher" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;g" DetailColor="G"  />
+      <part Name="FabricateFromSelf" ChargeUse="0" FabricateBlueprint="ducks_AcidGrenadeBoil" FabricateVerb="excrete" BatchSize="3" HitpointsPer="1" AIUseForThrowing="true" AIHitpointsThreshold="10" HitpointsThreshold="5" EnergyCost="100" Cooldown="1d2+1" IsBioScannable="true" />
+         <stat Name="AcidResistance" Value="125" />
+    </object>
+
+    <object Name="ducks_DiluteStaticBoilBelcher" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="glitching boil belcher" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;y" DetailColor="y"  />
+      <part Name="FabricateFromSelf" ChargeUse="0" FabricateBlueprint="ducks_DiluteStaticGrenadeBoil" FabricateVerb="excrete" BatchSize="3" HitpointsPer="1" AIUseForThrowing="true" AIHitpointsThreshold="10" HitpointsThreshold="5" EnergyCost="100" Cooldown="1d2+1" IsBioScannable="true" />
+      <part Name="RandomColors" />
+    </object>
+
+    <object Name="ducks_StickyMagmaBoilBelcher" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="magmatic asphalt boil belcher" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;K" DetailColor="r"  />
+      <part Name="FabricateFromSelf" ChargeUse="0" FabricateBlueprint="ducks_StickyMagmaGrenadeBoil" FabricateVerb="excrete" BatchSize="3" HitpointsPer="1" AIUseForThrowing="true" AIHitpointsThreshold="10" HitpointsThreshold="5" EnergyCost="100" Cooldown="1d2+1" IsBioScannable="true" />
+      <stat Name="HeatResistance" Value="125" />
+    </object>
+
+
+  <!--
+    ***************************  
+	--> 
+
+  <object Name="ducks_BoilBreeder" Inherits="ducks_BaseBoiler">
+    <part Name="Brain" Mobile="true" Wanders="false" Factions="Fungi-100" />
+    <stat Name="AV" Value="9" />
+    <stat Name="Level" Value="25" />
+    <stat Name="Hitpoints" Value="65" />
+    <stat Name="Speed" Value="25" />
+    <part Name="Description" Short="Guttation beads along swollen, spongy limbs, pooling trapped within soft membranous sacs. It is an arcology of creation and decay, moving with the slow certainty of a glacier as its bloated sporespawn detach from their host-mother. They pulsate with promise, filled taut with the life-liquids of a future boiler, oozing across the ground towards a nesting spot." />
+    <part Name="Swarmer" ExtraBonus="2"/>
+  </object>
+
+
+    <object Name="ducks_LavaBoilBreeder" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="magmatic boil breeder" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;W" DetailColor="R"  />
+      <part Name="Nest" TurnsPerSpawn="3-6" NumberSpawned="1-3" SpawnMessage="A boil sloughs off the boiler's flesh, slopping against the ground and oozing onward." SpawnParticle="&amp;w." BlueprintSpawned="ducks_LavaSwollenBoil" />
+      <stat Name="HeatResistance" Value="125" />
+    </object>
+
+    <object Name="ducks_HealingBoilBreeder" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="convalescent boil breeder" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;y" DetailColor="C" />
+      <part Name="Nest" TurnsPerSpawn="3-6" NumberSpawned="1-3" SpawnMessage="A boil sloughs off the boiler's flesh, slopping against the ground and oozing onward." SpawnParticle="&amp;w." BlueprintSpawned="ducks_LavaSwollenBoil" />
+    </object>
+
+    <object Name="ducks_StickyAcidBoilBreeder" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="honeyed acid boil breeder" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;W"  DetailColor="g" />
+      <part Name="Nest" TurnsPerSpawn="3-6" NumberSpawned="1-3" SpawnMessage="A boil sloughs off the boiler's flesh, slopping against the ground and oozing onward." SpawnParticle="&amp;w." BlueprintSpawned="ducks_LavaSwollenBoil" />
+          <stat Name="AcidResistance" Value="125" />
+    </object>
+
+    <object Name="ducks_AcidBoilBreeder" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="acidic boil breeder" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;g" DetailColor="G"  />
+      <part Name="Nest" TurnsPerSpawn="3-6" NumberSpawned="1-3" SpawnMessage="A boil sloughs off the boiler's flesh, slopping against the ground and oozing onward." SpawnParticle="&amp;w." BlueprintSpawned="ducks_LavaSwollenBoil" />
+          <stat Name="AcidResistance" Value="125" />
+    </object>
+
+    <object Name="ducks_MoltenWaxBoilBreeder" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="waxen boil breeder" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;y" DetailColor="Y"  />
+      <part Name="Nest" TurnsPerSpawn="3-6" NumberSpawned="1-3" SpawnMessage="AA boil sloughs off the boiler's flesh, slopping against the ground and oozing onward" SpawnParticle="&amp;w." BlueprintSpawned="ducks_LavaSwollenBoil" />
+    </object>
+
+    <object Name="ducks_OilBoilBreeder" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="oiled boil breeder" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;y" DetailColor="K"  />
+      <part Name="Nest" TurnsPerSpawn="3-6" NumberSpawned="1-3" SpawnMessage="A boil sloughs off the boiler's flesh, slopping against the ground and oozing onward." SpawnParticle="&amp;w." BlueprintSpawned="ducks_LavaSwollenBoil" />
+      <stat Name="HeatResistance" Value="50" />  
+    </object>
+
+    <object Name="ducks_DiluteStaticBoilBreeder" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="glitching boil breeder" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;W" DetailColor="R"  />
+      <part Name="Nest" TurnsPerSpawn="3-6" NumberSpawned="1-3" SpawnMessage="A boil sloughs off the boiler's flesh, slopping against the ground and oozing onward" SpawnParticle="&amp;w." BlueprintSpawned="ducks_LavaSwollenBoil" />
+    <part Name="RandomColors" />
+    </object>
+
+    <object Name="ducks_StickyMagmaBoilBreeder" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="magmatic asphalt boil breeder" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;K" DetailColor="r"  />
+      <part Name="Nest" TurnsPerSpawn="3-6" NumberSpawned="1-3" SpawnMessage="A boil sloughs off the boiler's flesh, slopping against the ground and oozing onward" SpawnParticle="&amp;w." BlueprintSpawned="ducks_LavaSwollenBoil" />
+      <stat Name="HeatResistance" Value="125" />
+    </object>
+
+    <object Name="ducks_OozeBoilBreeder" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="oozing boil breeder" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;K" DetailColor="y" />
+      <part Name="Nest" TurnsPerSpawn="3-6" NumberSpawned="1-3" SpawnMessage="A boil sloughs off the boiler's flesh, slopping against the ground and oozing onward" SpawnParticle="&amp;w." BlueprintSpawned="ducks_LavaSwollenBoil" />
+    </object>
+
+    <object Name="ducks_SlipperyBoilBreeder" Inherits="ducks_BaseBoilBelcher">
+      <part Name="Render" DisplayName="slippery boil breeder" RenderString="B" Tile="ducks_boilbelcher1.png" ColorString="&amp;Y" DetailColor="k"  />
+      <part Name="Nest" TurnsPerSpawn="3-6" NumberSpawned="1-3" SpawnMessage="A boil sloughs off the boiler's flesh, slopping against the ground and oozing onward." SpawnParticle="&amp;w." BlueprintSpawned="ducks_LavaSwollenBoil" />
+    </object>    
+
+
+
+  
+  <!--
+	***************************
+    Weapon Boils
+    ***************************  
+	-->
+
+
+    <object Name="ducks_BaseSwollenBoil" Inherits="MutatedFungus">
+    <part Name="Brain" Wanders="true" Mobile="true" Factions="Fungi-100" />
+    <part Name="Description" Short="A diaphanous membrane stretched taut around dense fluids, trembling with the potential to burst outwards." /> 
+    <part Name="FallsApart" Duration="4-15" />
+    <stat Name="Speed" Value="125" />
+    <tag Name="NoVillageFarming" />
+    <tag Name="BaseObject" Value="*noinherit" />
+    <property Name="Role" Value="Minion" />
+    </object>
+
+    <object Name="ducks_LavaSwollenBoil" Inherits="ducks_BaseSwollenBoil">
+    <part Name="Render" DisplayName="swollen boil" RenderString="r" Tile="ducks_swollenboil1.png" ColorString="&amp;W" DetailColor="R"  />
+		<part Name="LiquidBurst" EelChance="0" Liquid="LavaPuddle" />
+    </object>
+
+    <object Name="ducks_HealingSwollenBoil" Inherits="ducks_BaseSwollenBoil">
+    <part Name="Render" DisplayName="swollen boil" RenderString="r" Tile="ducks_swollenboil1.png" ColorString="&amp;y" DetailColor="C"  />
+		<part Name="LiquidBurst" EelChance="0" Liquid="ConvalessencePuddle" />
+    </object>
+
+    <object Name="ducks_StickyAcidSwollenBoil" Inherits="ducks_BaseSwollenBoil">
+    <part Name="Render" DisplayName="swollen boil" RenderString="r" Tile="ducks_swollenboil1.png" ColorString="&amp;W"  DetailColor="g"  />
+		<part Name="LiquidBurst" EelChance="0" Liquid="ducks_HoneyedAcidPuddle" />
+    </object>
+
+    <object Name="ducks_OoozeSwollenBoil" Inherits="ducks_BaseSwollenBoil">
+    <part Name="Render" DisplayName="swollen boil" RenderString="r" Tile="ducks_swollenboil1.png" ColorString="&amp;K" DetailColor="y"  />
+		<part Name="LiquidBurst" EelChance="0" Liquid="OozePool" />
+    </object>
+
+    <object Name="ducks_AcidSwollenBoil" Inherits="ducks_BaseSwollenBoil">
+    <part Name="Render" DisplayName="swollen boil" RenderString="r" Tile="ducks_swollenboil1.png" ColorString="&amp;g" DetailColor="G"  />
+		<part Name="LiquidBurst" EelChance="0" Liquid="AcidPuddle" />
+    </object>
+
+    <object Name="ducks_MoltenWaxSwollenBoil" Inherits="ducks_BaseSwollenBoil">
+    <part Name="Render" DisplayName="swollen boil" RenderString="r" Tile="ducks_swollenboil1.png" ColorString="&amp;y" DetailColor="Y"  />
+		<part Name="LiquidBurst" EelChance="0" Liquid="MoltenWaxPuddle" />
+    </object>
+
+    <object Name="ducks_OilSwollenBoil" Inherits="ducks_BaseSwollenBoil">
+    <part Name="Render" DisplayName="swollen boil" RenderString="r" Tile="ducks_swollenboil1.png" ColorString="&amp;y" DetailColor="K"  />
+		<part Name="LiquidBurst" EelChance="0" Liquid="OilPuddle" />
+    </object>
+
+    <object Name="ducks_DiluteStaticSwollenBoil" Inherits="ducks_BaseSwollenBoil">
+    <part Name="Render" DisplayName="swollen boil" RenderString="r" Tile="ducks_swollenboil1.png" ColorString="&amp;y" DetailColor="k"  />
+		<part Name="LiquidBurst" EelChance="0" Liquid="DiluteWarmStaticPuddle" />
+    <part Name="RandomColors" />
+    </object>
+
+    <object Name="ducks_StickyMagmaSwollenBoil" Inherits="ducks_BaseSwollenBoil">
+    <part Name="Render" DisplayName="swollen boil" RenderString="r" Tile="ducks_swollenboil1.png" ColorString="&amp;K" DetailColor="r"   />
+		<part Name="LiquidBurst" EelChance="0" Liquid="ducks_MagmaticAsphaltPuddle" />
+    </object>
+
+    <object Name="ducks_SlipperySwollenBoil" Inherits="ducks_BaseSwollenBoil">
+    <part Name="Render" DisplayName="swollen boil" RenderString="r" Tile="ducks_swollenboil1.png" ColorString="&amp;Y" DetailColor="k"   />
+		<part Name="LiquidBurst" EelChance="0" Liquid="ducks_SlippyPuddle" />
+    </object>
+
+
+  <!--
+	***************************
+    Throwing Boils
+    ***************************  
+	--> 
+
+  <object Name="ducks_BaseGrenadeBoil" Inherits="Grenade">
+    <part Name="Render" DisplayName="fragile boil" Tile="ducks_swollenboil1.png" ColorString="&amp;Y" DetailColor="R" />
+    <part Name="Physics" Weight="5" />
+    <part Name="Commerce" Value="5" />
+		<part Name="TinkerItem" Bits="0" CanDisassemble="false" CanBuild="false" />
+    <removepart Name="Metal" />
+		<tag Name="BaseObject" Value="*noinherit" />
+		<tag Name="Tier" Value="0" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+		<tag Name="ExcludeFromTurretStock" />
+		<tag Name="Mods" Value="None" />
+  </object>
+
+    <object Name="ducks_HealingGrenadeBoil" Inherits="ducks_BaseGrenadeBoil">
+		  <part Name="DeploymentGrenade" Blueprint="ConvalessencePuddle" Count="1d4+4" Radius="1" RealRadius="false" LoyalToThrower="false" ActivationVerb="pop" BlockedBySolid="true" BlockedByNonEmpty="true" DustPuff="true" DustPuffEach="false" />
+		  <part Name="DeployableInfrastructure" DeployNoun="gland" DeployVerb="squeeze" ObjectBlueprint="ConvalessencePuddle" Cells="4" />
+    </object>
+
+    <object Name="ducks_StickyAcidGrenadeBoil" Inherits="ducks_BaseGrenadeBoil">
+		  <part Name="DeploymentGrenade" Blueprint="ducks_HoneyedAcidPool" Count="1d4+4" Radius="1" RealRadius="false" LoyalToThrower="false" ActivationVerb="pop" BlockedBySolid="true" BlockedByNonEmpty="true" DustPuff="true" DustPuffEach="false" />
+		  <part Name="DeployableInfrastructure" DeployNoun="gland" DeployVerb="squeeze" ObjectBlueprint="ducks_HoneyedAcidPool" Cells="4" />
+    </object>
+  
+    <object Name="ducks_LavaGrenadeBoil" Inherits="ducks_BaseGrenadeBoil">
+		  <part Name="DeploymentGrenade" Blueprint="LavaPuddle" Count="1d4+4" Radius="1" RealRadius="false" LoyalToThrower="false" ActivationVerb="pop" BlockedBySolid="true" BlockedByNonEmpty="true" DustPuff="true" DustPuffEach="false" />
+		  <part Name="DeployableInfrastructure" DeployNoun="gland" DeployVerb="squeeze" ObjectBlueprint="LavaPuddle" Cells="4" />
+    </object>
+
+    <object Name="ducks_OozeGrenadeBoil" Inherits="ducks_BaseGrenadeBoil">
+		  <part Name="DeploymentGrenade" Blueprint="OozePool" Count="1d4+4" Radius="1" RealRadius="false" LoyalToThrower="false" ActivationVerb="pop" BlockedBySolid="true" BlockedByNonEmpty="true" DustPuff="true" DustPuffEach="false" />
+		  <part Name="DeployableInfrastructure" DeployNoun="gland" DeployVerb="squeeze" ObjectBlueprint="OozePool" Cells="4" />
+    </object>
+
+    <object Name="ducks_OilGrenadeBoil" Inherits="ducks_BaseGrenadeBoil">
+		  <part Name="DeploymentGrenade" Blueprint="OilPuddle" Count="1d4+4" Radius="1" RealRadius="false" LoyalToThrower="false" ActivationVerb="pop" BlockedBySolid="true" BlockedByNonEmpty="true" DustPuff="true" DustPuffEach="false" />
+		  <part Name="DeployableInfrastructure" DeployNoun="gland" DeployVerb="squeeze" ObjectBlueprint="OilPuddle" Cells="4" />
+    </object>
+
+    <object Name="ducks_MoltenWaxGrenadeBoil" Inherits="ducks_BaseGrenadeBoil">
+		  <part Name="DeploymentGrenade" Blueprint="MoltenWaxPuddle" Count="1d4+4" Radius="1" RealRadius="false" LoyalToThrower="false" ActivationVerb="pop" BlockedBySolid="true" BlockedByNonEmpty="true" DustPuff="true" DustPuffEach="false" />
+		  <part Name="DeployableInfrastructure" DeployNoun="gland" DeployVerb="squeeze" ObjectBlueprint="MoltenWaxPuddle" Cells="4" />
+    </object>
+
+    <object Name="ducks_AcidGrenadeBoil" Inherits="ducks_BaseGrenadeBoil">
+		  <part Name="DeploymentGrenade" Blueprint="AcidPuddle" Count="1d4+4" Radius="1" RealRadius="false" LoyalToThrower="false" ActivationVerb="pop" BlockedBySolid="true" BlockedByNonEmpty="true" DustPuff="true" DustPuffEach="false" />
+		  <part Name="DeployableInfrastructure" DeployNoun="gland" DeployVerb="squeeze" ObjectBlueprint="AcidPuddle" Cells="4" />
+    </object>
+
+    <object Name="ducks_ProteanGrenadeBoil" Inherits="ducks_BaseGrenadeBoil">
+		  <part Name="DeploymentGrenade" Blueprint="ducks_ProteanPuddle" Count="1d4+4" Radius="1" RealRadius="false" LoyalToThrower="false" ActivationVerb="pop" BlockedBySolid="true" BlockedByNonEmpty="true" DustPuff="true" DustPuffEach="false" />
+		  <part Name="DeployableInfrastructure" DeployNoun="gland" DeployVerb="squeeze" ObjectBlueprint="ducks_ProteanPuddle" Cells="4" />
+    </object>
+
+    <object Name="ducks_DiluteStaticGrenadeBoil" Inherits="ducks_BaseGrenadeBoil">
+		  <part Name="DeploymentGrenade" Blueprint="DilutedWarmStaticPuddle" Count="1d4+4" Radius="1" RealRadius="false" LoyalToThrower="false" ActivationVerb="pop" BlockedBySolid="true" BlockedByNonEmpty="true" DustPuff="true" DustPuffEach="false" />
+		  <part Name="DeployableInfrastructure" DeployNoun="gland" DeployVerb="squeeze" ObjectBlueprint="DilutedWarmStaticPuddle" Cells="4" />
+    </object>
+
+    <object Name="ducks_StickyMagmaGrenadeBoil" Inherits="ducks_BaseGrenadeBoil">
+		  <part Name="DeploymentGrenade" Blueprint="ducks_MagmaticAsphaltPuddle" Count="1d4+4" Radius="1" RealRadius="false" LoyalToThrower="false" ActivationVerb="pop" BlockedBySolid="true" BlockedByNonEmpty="true" DustPuff="true" DustPuffEach="false" />
+		  <part Name="DeployableInfrastructure" DeployNoun="gland" DeployVerb="squeeze" ObjectBlueprint="ducks_MagmaticAsphaltPuddle" Cells="4" />
+    </object>
+
+ </objects>
