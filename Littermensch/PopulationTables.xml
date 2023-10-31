@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+<population Name="DeepJungleZoneGlobals-Creatures" Load="Merge">
+    <object Chance="7" Number="1" Blueprint="Modjam2023_FiremenschInert" />
+</population>
+  
+ <population Name="Modjam2023_LitterFire">
+		<group Name="Items" Style="pickone">
+				<object Weight="5" Blueprint="MiasmaticAsh80" />
+		</group>
+	</population>
+ </populations>

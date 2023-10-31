@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+
+<!-- this is pretty jank, but I wanted to do something unique while being limited to XML only -xuv8r -->
+
+<object Name="Modjam2023_Littermensch" Inherits="Cragmensch">
+	<removepart Name="BurnToAshesIfOrganic" />
+	<part Name="Render" DisplayName="littermensch" Tile="creatures/sw_bugbear.bmp" RenderString="t" ColorString="&amp;w" DetailColor="g" />
+	<part Name="Corpse" CorpseChance="100" CorpseBlueprint="Modjam2023_LeafLitter" BurntCorpseChance="100" BurntCorpseBlueprint="Modjam2023_Conflagmensch" VaporizedCorpseChance="100" VaporizedCorpseBlueprint="Modjam2023_Conflagmensch" />
+	<part Name="Physics" FlameTemperature="150" VaporTemperature="300" />
+	<part Name="Description" Short="Dessicated packed earth lurches uneasily and locks eyes with you. Bits of dried leaves and twigs crumble off as =pronouns.subjective= =verb:step:afterpronoun=, but =pronouns.subjective= never =verb:seem:afterpronoun= to lose any mass." />
+	<stat Name="HeatResistance" Value="-25" />
+    <stat Name="ColdResistance" Value="30" />
+    <stat Name="AcidResistance" Value="60" />
+    <stat Name="Speed" Value="50" />
+    <stat Name="AV" Value="11" />
+    <stat Name="Level" Value="25" />
+    <stat Name="Hitpoints" Value="75" />
+	<stat Name="XPValue" sValue="100" />
+	<intproperty Name="Bleeds" Value="0" /> <!-- too dry! -->
+</object>
+
+<object Name="Modjam2023_Conflagmensch" Inherits="Modjam2023_Littermensch">
+	<part Name="Render" DisplayName="{{dark fiery|conflagmensch}}" Tile="creatures/infernomensch" RenderString="t" ColorString="&amp;r" DetailColor="Y" />
+	<part Name="AnimatedMaterialGeneric" AnimationLength="4" DetailColorAnimationFrames="0=Y,2=R" />
+	<part Name="Corpse" CorpseChance="100" CorpseBlueprint="Modjam2023_RichAsh" BurntCorpseChance="0" BurntCorpseBlueprint="Ashes" VaporizedCorpseChance="0" VaporizedCorpseBlueprint="Ashes" />
+	<part Name="Description" Short="The smell of stale earth is suddenly and sharply interrupted by a hot wave of carbon as =pronouns.subjective= =verb:shake:afterpronoun= the dry death from =pronouns.possessive= newly gangly frame." />
+	<part Name="Physics" FlameTemperature="99999999" VaporTemperature="99999999" FreezeTemperature="-9999" BrittleTemperature="-9999"  />
+	<part Name="LightSource" Lit="true" Radius="5" />
+	<stat Name="HeatResistance" Value="150" />
+    <stat Name="ColdResistance" Value="-20" />
+	<skill Name="Tactics_Charge" />
+	<skill Name="ShortBlades" />
+	<stat Name="Speed" Value="120" />
+	<stat Name="Level" Value="30" />
+	<stat Name="AV" Value="12" />
+	<stat Name="Hitpoints" Value="100" />
+	<stat Name="Agility" Boost="2" />
+	<part Name="UnityPrefabImposter" PrefabID="Prefabs/Particles/MagmaCrabFlames" />
+	<inventoryobject Blueprint="Modjam2023_FiremenschClaw" Number="2" />
+	<part Name="SoundRender" Sound="Sounds/StatusEffects/sfx_statusEffect_onFire_lp"></part>
+	<property Name="XPValue" Value="1000" />
+	<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	<intproperty Name="Bleeds" Value="1" />
+	<tag Name="BleedLiquid" Value="oil-1000" />
+	<tag Name="Humanoid" Value="*delete" />		<!-- I've been having a problem with the evolved form sometimes spawning with its own items -->
+	<intproperty Name="Humanoid" Value="0" /> 	<!-- this is undesirable; these two lines SHOULD fix that..? idk about side effects though  -->
+</object>
+
+<object Name="Modjam2023_FiremenschClaw" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="{{dark fiery|fiery claw}}" />
+    <part Name="MeleeWeapon" BaseDamage="1d6" HitBonus="4" Skill="ShortBlades" Stat="Strength" Slot="Hand" />
+    <part Name="ElementalDamage" Damage="1d6+6" Attributes="Fire" />
+	<part Name="MaxPenetration" Max="1"></part>
+</object>
+
+<object Name="Modjam2023_LeafLitter" Inherits="Garbage">
+	<part Name="Render" DisplayName="leaf litter" Tile="Assets_Content_Textures_Tiles_Tile-7-3.png" RenderString="%" ColorString="&amp;w" Occluding="false" />
+	<part Name="Description" Short="A pile of organic debris." />
+	<part Name="BurnGenerateObjectInCell" Chance="50" Table="Modjam2023_LitterFire" PerZone="true" />
+	<intproperty Name="Inorganic" Value="0" />
+	<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+</object>
+
+<object Name="Modjam2023_RichAsh" Inherits="Preservable">
+	<part Name="Render" DisplayName="{{sparkling|enriched ash}}" RenderString="%" ColorString="&amp;Y" TileColor="&amp;Y" DetailColor="y" RenderLayer="5" Tile="Items/sw_ash_4.bmp" />
+	<part Name="Commerce" Value="70" />
+    <part Name="Description" Short="Potassium and calcium carbonates provide a nutritious substrate from which extant life may flourish out of its pyrolized predecessors." />
+    <part Name="PreparedCookingIngredient" type="starch" charges="5" />
+	<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+</object>
+
+</objects>

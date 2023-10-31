@@ -1,0 +1,10 @@
+{
+    "id": "xuv8r_littermensch",
+    "loadOrder": 1,
+    "title": "{{nervous|littermensch}}",
+    "description": "(Monster Mash Modjam 2023) Adds the 'littermensch' mob.",
+    "version": "1",
+    "author": "{{M|xuv8r}}",
+    "tags": "Creature",
+    "previewImage": "preview.png"
+}
