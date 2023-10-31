@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="GearhuRobofo" Inherits="BaseRobot">
+    <part Name="Render" DisplayName="{{M|Gearhu-Robofo, Reprogrammed Granimatronic}}" Tile="ectafoole/gearhurobofo.png" ColorString="&amp;w" DetailColor="R" />
+    <part Name="Description" Short="Not so still as a cherub, nor as quiet, nor as majestic, nor even as dangerous as the lowliest mechanical simulacrum, and yet it moves in hideous parody of its namesake and inspiration alike. Dull carmine streaks of light reflect weakly from the scratched enamel of its patchwork body. As those scrap metal panels vibrate to the beat of a noisy two-stroke engine, so too does the light exaggerate that shuddering beat. It seems almost to be shivering in eager anticipation of the action to come."></part>
+    <part Name="Body" Anatomy="HumanoidRobot" />
+    <part Name="Brain" Hostile="false" Factions="Barathrumites-100" />
+    <tag Name="Gender" Value="neuter" />
+    <stat Name="AV" Value="2" />
+    <stat Name="DV" Value="0" />
+    <stat Name="Level" Value="2"></stat>
+    <stat Name="Strength" sValue="18" />
+    <stat Name="Agility" sValue="16" />
+    <stat Name="Toughness" sValue="20" />
+    <stat Name="Intelligence" sValue="5" />
+    <stat Name="Willpower" sValue="18" />
+    <stat Name="Ego" sValue="22" />
+    <part Name="LightSource" Lit="true" Radius="1" />
+    <skill Name="ShortBlades" />
+    <skill Name="ShortBlades_Bloodletter" />
+    <stat Name="Hitpoints" Value="69"></stat>
+    <part Name="Pettable" />
+    <tag Name="PetResponse" Value="GRAAAs at the top of its speakers,sings in a long-lost language,GRAHs,GRAs,goes GRA,does a GRAAH,emits crackling noises,plays an eerie music box tune" />
+    <tag Name="Pet"/>
+    <tag Name="StartingPet"/>
+    <tag Name="PrimaryLimbType" Value="Hand" />
+    <inventoryobject Blueprint="ectafoole_SolderedNail" Number="2-4" />
+    <inventoryobject Blueprint="ectafoole_SpringtrapBite" Number="1" />
+    <xtagGrammar Proper="true"></xtagGrammar>
+    <part Name="ConversationScript" ConversationID="ectafoole_GearhuRobofo" />
+    <property Name="Story" Value="ectafoole_Gearhu_Robofo_Story" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+  </object>
+  
+  <object Name="ectafoole_SpringtrapBite" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="{{filthy|springtrap bite}}" />
+    <part Name="Description" Short="Complain all you want. Y'all're lucky that I didn't make this do 8d7 damage just for the pun." />
+    <part Name="MeleeWeapon" BaseDamage="2d2" MaxStrengthBonus="2" Skill="Axe" Stat="Strength" Slot="Face" />
+  </object>
+  
+  <object Name="ectafoole_Eddy" Inherits="BaseRobot">
+    <part Name="Render" DisplayName="{{M|Eddy, Who Dreamed of Gra}}" Tile="ectafoole/eddy.png" ColorString="&amp;w" DetailColor="C" />
+    <part Name="Description" Short="Once, this desk fan was a credit to deskhood. Had Fate not conspired to grant it cursed life, it might still have been. Now, a screaming motor tells wordless sermons of another world and spins its blades to carry its message on the wind. Whether by its own fervor or another's, the preacher summons clanking legs and snapping manipulators to construct its new flock."></part>
+    <part Name="Body" Anatomy="HexapedalRobot" />
+    <tag Name="Gender" Value="neuter" />
+    <xtagGrammar Proper="true" />
+    <tag Name="PrimaryLimbType" Value="Face" />
+    <part Name="Brain" Hostile="true" Wanders="false" Factions="Beasts-100" />
+    <inventoryobject Blueprint="ectafoole_Fanblade" Number="1" />
+    <inventoryobject Blueprint="nuclear cell" Number="1-3" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <skill Name="Axe" />
+    <skill Name="Axe_Dismember" />
+    <skill Name="Axe_Cleave" />
+    <stat Name="AV" Value="3" />
+    <stat Name="DV" Value="0" />
+    <stat Name="Level" Value="12"></stat>
+    <stat Name="Hitpoints" Value="80"></stat>
+  </object>
+  
+    <object Name="ectafoole_Fanblade" Inherits="NaturalWeapon">
+    <part Name="MeleeWeapon" BaseDamage="1d8" Skill="Axe" Stat="Strength" Slot="Face" />
+    <part Name="Render" DisplayName="{{cloudy|rotary countenance}}" />
+    <part Name="Metal" />
+    <part Name="VibroWeapon" ChargeUse="0" />
+  </object>
+  
+  <object Name="ectafoole_Granimatronic" Inherits="BaseRobot">
+    <part Name="Render" DisplayName="granimatronic" Tile="ectafoole/granimatronic.png" ColorString="&amp;w" DetailColor="R" />
+    <part Name="Description" Short="Guttering, hot light in the darkness. The growling of a hungry engine, scales of ill-welded scrap-self rattling with menace. Chromed sawteeth and sharp points approach."></part>
+    <part Name="Brain" Hostile="true" Wanders="true" Factions="Beasts-100" />
+    <part Name="Body" Anatomy="HumanoidRobot" />
+    <tag Name="Gender" Value="neuter" />
+    <part Name="LightSource" Lit="true" Radius="1" />
+    <skill Name="ShortBlades" />
+    <skill Name="ShortBlades_Bloodletter" />
+    <inventoryobject Blueprint="ectafoole_SolderedNail" Number="1-2" />
+    <inventoryobject Blueprint="ectafoole_SpringtrapBite" Number="1" />
+    <part Name="Swarmer" />
+    <stat Name="AV" Value="2" />
+    <stat Name="DV" Value="0" />
+    <stat Name="Level" Value="8"></stat>
+    <stat Name="Hitpoints" Value="30"></stat>
+    <tag Name="PrimaryLimbType" Value="Hand" />
+  </object>
+  
+  <object Name="ectafoole_SolderedNail" Inherits="BaseDagger">
+    <part Name="Render" DisplayName="{{filthy|soldered nail}}" Tile="ectafoole/solderednail.png" ColorString="&amp;r" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="2" BaseDamage="1" />
+    <part Name="Physics" Weight="0" />
+    <part Name="Commerce" Value="1" />
+    <part Name="Description" Short="Two ancient, rusted, precisely-machined nails join head-to-head with a shared cap of crude welding to form a dull but sturdy shiv." />
+    <part Name="Metal" />
+    <tag Name="Tier" Value="0" />
+  </object>
+  
+  <object Name="ectafoole_Eddys" Inherits="Terrain">
+    <part Name="Render" DisplayName="lone workshop" RenderString="030" Tile="ectafoole/eddys.png" DetailColor="y" ColorString="&amp;Y" />
+    <part Name="Description" Short="A metal box squats in the salt sand, making no promises about the gifts inside." />
+    <xtagGrammar Proper="false" massNoun="false" />
+    <tag Name="OverlayColor" Value="&amp;W" />
+    <tag Name="NoBiomes" Value="1"></tag>
+    <tag Name="Terrain" Value="Saltdunes" />
+  </object>
+  
+  
+  
+  
+  
+</objects>

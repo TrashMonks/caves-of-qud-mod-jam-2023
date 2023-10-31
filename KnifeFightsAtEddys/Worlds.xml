@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<worlds>
+  <world Name="JoppaWorld" Load="Merge">
+    <cell Name="Eddys" Inherits="SaltDesertCell" ApplyTo="ectafoole_Eddys" Mutable="false">
+      <zone Level="5-9" x="0-2" y="0-2" Name="sky above salt desert" IndefiniteArticle="the">
+        <builder Class="Sky"></builder>
+      </zone>
+
+    <zone Level="10" x="0-2" y="0-2" Name="salt desert" IndefiniteArticle="the" HasWeather="true" WindSpeed="0-60" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="50-3000">
+      <builder Class="SaltDunes"></builder>
+      <postbuilder Class="ZoneTemplate:SaltDesert"></postbuilder>
+      <builder Class="Music" Track="Caves1" Chance="100"></builder>
+     </zone>
+     
+      <zone Level="10" x="1" y="1" Name="lone workshop" ProperName="false" IndefiniteArticle="a">
+      <builder Class="SaltDunes"></builder>
+      <postbuilder Class="ZoneTemplate:SaltDesert"></postbuilder>
+        <map FileName="ectafoole_eddys.rpm"></map>
+        <builder Class="Music" Track="Caves1" Chance="100"></builder>
+      </zone> 
+    </cell>
+  </world>
+</worlds>

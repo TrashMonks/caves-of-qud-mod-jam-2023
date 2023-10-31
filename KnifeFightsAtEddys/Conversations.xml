@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+  <conversation ID="ectafoole_GearhuRobofo">
+    <node ID="Start">
+      <text>
+        {{emote|*deep breath*}} GRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!!!!!~
+        GRAAA!~
+        GRAAA!~
+        GRAAA!~
+        GRAAA!~
+        GRAAA!~
+        GRAAA!~
+        GRAAA!~
+        GRAAA!~
+        GRAAA!~
+        GRAH!~
+        GRAH!~
+        GRAH!~
+        GRAH!~
+        GRAH!~
+        GRAH!~
+        GRAH!~
+        GRAH!~
+        GRAH!~
+        GRA!~
+        GRA!~
+        GRA!~
+        GRA!~
+        GRA!~
+        GRA!~
+        GRA!~
+        Gra.~
+        Ah, so it goes.~
+        That's fair.~
+        Ehehehe.~
+        {{emote|*emits soft lofi music*}}
+      </text>
+      <choice GotoID="End">Live and Gra.</choice>
+    </node>
+  </conversation>
+  
+  <conversation ID="ectafoole_Granimatronic">
+    <node ID="Start">
+      <text>{{emote|*raucous clanking*}}</text>
+    </node>
+  </conversation>
+
+</conversations>
