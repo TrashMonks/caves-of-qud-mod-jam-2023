@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+	<population Name="Andrea52_GourdSentinel_Pumpkin Corpse">
+		<group Name="Items" Style="pickone">
+		    <object Weight="50" Number="1-2" Blueprint="Andrea52_GourdSentinel_Raw Pumpkin" />
+			<table Weight="50" Number="1-2" Name="MedScrap" />
+			<table Weight="10" Number="1-2" Name="Scrap 4R"  />
+			<table Weight="1" Number="1" Name="Cybernetics4"  />
+			<object Weight="1" Number="1-2" Blueprint="Andrea52_GourdSentinel_Human Meat" />
+		</group>
+	</population>
+
+	<population Name="Andrea52_GourdSentinel_Pumpkin Pack">
+		<group Name="Creatures" Style="pickone">
+			<group Weight="3" Name="Full pack" Style="pickeach">
+				<object Chance="100" Number="3-4" Blueprint="Andrea52_GourdSentinel_Lesser Gourd" />
+				<object Chance="75" Number="1" Blueprint="Andrea52_GourdSentinel_Greater Gourd"/>
+			</group>
+			<group Weight="1" Name="Solitary alpha" Style="pickone">
+				<object Weight="1" Blueprint="Andrea52_GourdSentinel_Greater Gourd"/>
+			</group>
+		</group>
+
+	</population>
+
+	<population Name="TombCreatures" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+			<table Name="Andrea52_GourdSentinel_Pumpkin Pack" Number="1" Weight="10"/>
+		</group>
+	</population>
+
+	<population Name="Tier5CaveCreatures" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+			<table Name="Andrea52_GourdSentinel_Pumpkin Pack" Number="1" Weight="5"/>
+		</group>
+	</population>
+
+	<population Name="JungleZoneGlobals" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+    		<object Chance="1" Number="1" Blueprint="Andrea52_GourdSentinel_Lesser Gourd"/>
+		</group>
+	</population>
+
+	<population Name="DeepJungleZoneGlobals-Creatures" Load="Merge">
+		<table Chance="1" Number="1" Name="Andrea52_GourdSentinel_Pumpkin Pack"/>
+	</population>
+</populations>

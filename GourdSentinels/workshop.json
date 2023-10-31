@@ -1,0 +1,8 @@
+{
+  "WorkshopId": 3064769235,
+  "Title": "Gourd Sentinel",
+  "Description": "Adds a new creature to Caves of Qud, the fearsome Gourd Sentinel! These pumpkin-like enemies are immobile, but pack a hefty wallop when you approach. They can be found in the Tomb of the Eaters, or less commonly, in stratas 21-25.\r\n\r\nMade for the 2023 Monster Mash modjam.",
+  "Tags": "Creature, Halloween",
+  "Visibility": "2",
+  "ImagePath": "preview.png"
+}

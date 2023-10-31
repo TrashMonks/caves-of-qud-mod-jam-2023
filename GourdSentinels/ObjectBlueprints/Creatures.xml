@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+
+	<object Name="Andrea52_GourdSentinel_Gourd Base" Inherits="MutatedVine">
+	    <part Name="Render" DisplayName="gourd sentinel" Tile="Andrea52_GourdSentinel/gourd_sentinel.png" TileColor="&amp;O" ColorString="&amp;O" DetailColor="g"/>
+        <part Name="Brain" Wanders="false" Hostile="true" Mobile="false"/>
+        <part Name="Description" Short="Circuitry gleams wetly behind vacant eyes carved of plantflesh. =pronouns.Possessive= gaping maw suggests a simple question — who was Eater and who was Eaten?"/>
+        <tag Name="Gender" Value="neuter" />
+    	<part Name="Corpse" CorpseChance="50" CorpseBlueprint="Andrea52_GourdSentinel_Gourd Sentinel Corpse" />
+    	<stag Name="HardMaterial" Value="rind" />
+    	<part Name="Body" Anatomy="Andrea52_GourdSentinel Gourd" />
+    	<tag Name="BleedLiquid" Value="sap-900,blood-100" />
+		<tag Name="BleedPrefix" Value="{{W|sappy}} and {{r|bloody}}" />
+		<tag Name="BleedColor" Value="&amp;r" />
+		<part Name="LightSource" Lit="true" Radius="4" />
+
+		<tag Name="BaseObject" Value="*noinherit" />
+
+		<stat Name="Intelligence" sValue="2,1d3,(t)d1" />
+		<stat Name="Willpower" sValue="13,1d3,(t)d1" />
+		<stat Name="Ego" sValue="13,1d3,(t)d1" />
+
+
+	</object>
+
+    <object Name="Andrea52_GourdSentinel_Greater Gourd" Inherits="Andrea52_GourdSentinel_Gourd Base">
+        <part Name="Render" DisplayName="greater gourd"/>
+        <part Name="Brain" Wanders="false" Hostile="true" Mobile="false"/>
+        <part Name="Description" Short="Circuitry gleams wetly behind vacant eyes carved of plantflesh, and its bulging rind is enormous. =pronouns.Possessive= gaping maw suggests a simple question — who was Eater and who was Eaten?"/>
+
+		<property Name="Role" Value="Brute" />
+
+		<stat Name="Level" Value="26"/>
+    	<stat Name="Hitpoints" Value="150" />
+		<stat Name="AV" Value="10"/>
+
+		<stat Name="Strength" sValue="16,1d3,(t)d1"/>
+		<stat Name="Agility" sValue="10,1d3,(t)d1"/>
+		<stat Name="Toughness" sValue="16,1d3,(t)d1"/>
+
+		<skill Name="Persuasion_MenacingStare" />
+		<skill Name="Cudgel" />
+		<skill Name="Cudgel_Bludgeon" />
+		<skill Name="Cudgel_Expertise" />
+		<skill Name="Cudgel_Slam" />
+		<skill Name="Axe_Expertise" />
+
+		<inventoryobject Blueprint="Andrea52_GourdSentinel_Gourd Jaws"/>
+		<inventoryobject Blueprint="Andrea52_GourdSentinel_Gourd Weapon"/>
+
+    </object>
+
+	<object Name="Andrea52_GourdSentinel_Lesser Gourd" Inherits="Andrea52_GourdSentinel_Gourd Base">
+		<part Name="Render" DisplayName="lesser gourd" Tile="Andrea52_GourdSentinel/lesser_gourd.png" TileColor="&amp;o" ColorString="&amp;o"/>
+		<part Name="Description" Short="Circuitry gleams wetly behind vacant eyes carved of plantflesh, and a candle flickers evilly at its center. =pronouns.Possessive= gaping maw suggests a simple question — who was Eater and who was Eaten?"/>
+
+		<property Name="Role" Value="Skirmisher" />
+
+		<stat Name="Level" Value="23"/>
+		<stat Name="Hitpoints" Value="75"/>
+		<stat Name="AV" Value="5"/>
+
+		<stat Name="Strength" sValue="10,1d3,(t)d1"/>
+		<stat Name="Agility" sValue="16,1d3,(t)d1"/>
+		<stat Name="Toughness" sValue="10,1d3,(t)d1"/>
+
+		<skill Name="Axe_Expertise" />
+		<skill Name="Pistol" />
+		<skill Name="Pistol_SteadyHands" />
+
+		<inventoryobject Blueprint="Andrea52_GourdSentinel_Gourd Jaws"/>
+		<inventoryobject Blueprint="Andrea52_GourdSentinel_Candle"/>
+	</object>
+
+	<object Name="Andrea52_GourdSentinel_Candle" Inherits="NaturalMissileWeapon">
+		<part Name="Render" DisplayName="eerie candle" ColorString="&amp;o" RenderString="*" />
+		<part Name="MissileWeapon" RangeIncrement="3" Skill="Pistol" AmmoChar="&amp;R^W&#15;"/>
+		<part Name="BioAmmoLoader" MaxCapacity="12" Available="12" TurnsToGenerate="4" ProjectileObject="Andrea52_GourdSentinel_Candleflame" />
+    	<tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Heavy Weapons/sfx_missile_flamethrower_fire" />
+		<tag Name="UsesSlots" Value="Body" />
+	</object>
+	<object Name="Andrea52_GourdSentinel_Candleflame" Inherits="TemporaryProjectile">
+		<part Name="Render" DisplayName="{{W|candleflame}}" />
+		<part Name="Projectile" BasePenetration="5" BaseDamage="1d4" ColorString="&amp;R" PassByVerb="flicker" Attributes="Heat Fire" />
+		<part Name="TemperatureOnHit" Amount="10d20" Max="false" OnWielderHit="false" />
+    	<part Name="TemperatureOnEntering" Amount="20d20" Max="false" OnWielderHit="false" />
+	</object>
+
+	<object Name="Andrea52_GourdSentinel_Gourd Jaws" Inherits="NaturalWeapon">
+    	<part Name="Render" DisplayName="gaping jaws" />
+    	<part Name="MeleeWeapon" Slot="Face" MaxStrengthBonus="9999" BaseDamage="2d4" Skill="Axe" />
+    	<part Name="LatchesOn" InitialSaveTarget="15" InitialSaveStat="Agility" InitialSaveDifficultyStat="Agility" MoveSaveTarget="15" MoveSaveStat="Strength" MoveSaveDifficultyStat="Strength" BreakSaveTarget="15" BreakSaveStat="Strength" BreakSaveDifficultyStat="Strength" Duration="3d4" AutoAttackOnMove="false" AutoAttackOnMoveAway="false" AutoAttackPerTurn="true" BloodSpatterOnLatch="true" />
+		<tag Name="Gender" Value="plural" />
+  	</object>
+
+	<object Name="Andrea52_GourdSentinel_Gourd Weapon" Inherits="NaturalWeapon">
+		<part Name="Render" DisplayName="rolling bulk" />
+    	<part Name="MeleeWeapon" Slot="Back" Stat="Strength" BaseDamage="2d2" Skill="Cudgel" />
+	</object>
+
+	<object Name="Andrea52_GourdSentinel_Gourd Sentinel Corpse" Inherits="Corpse">
+		<part Name="Render" DisplayName="pumpkin corpse" ColorString="&amp;O" TileColor="&amp;O"/>
+		<part Name="Description" Short="A lumpy orange sphere, now immobile and seemingly bereft of life." />
+		<part Name="Butcherable" OnSuccess="@Andrea52_GourdSentinel_Pumpkin Corpse" />
+		<part Name="Commerce" Value="1" />
+		<part Name="Physics" Weight="5" />
+		<tag Name="Tier" Value="5" />
+		<tag Name="DynamicObjectsTable:Corpses" />
+	</object>
+
+</objects>
