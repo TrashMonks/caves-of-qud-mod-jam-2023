@@ -126,7 +126,7 @@
         <tag Name="NoSparkingQuest" />
         <tag Name="OverlayColor" Value="&amp;r" />
         <tag Name="HangingSupport" />
-        <inventoryobject Blueprint="@Ingredients_Meat" Number="3" />
+        <inventoryobject Blueprint="@Random Behemoth Meats" Number="3" />
         <intproperty Name="InteriorRequired" Value="1" />
       </object>
 </objects>

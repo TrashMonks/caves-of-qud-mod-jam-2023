@@ -37,6 +37,49 @@
           <object Weight="10" Blueprint="HumanoidEquipment 4" />
         </group>
     </population>
+    <population Name="Random Behemoth Snacks">
+      <group Style="pickone">
+        <object Blueprint="Dreadroot Tuber" />
+        <object Blueprint="Spine Fruit" />
+        <object Blueprint="Plump Mushroom" />
+        <object Blueprint="Hoarshroom" />
+        <object Blueprint="Lah Petals" />
+        <object Blueprint="Clump of Grave Moss" />
+        <object Blueprint="Yuckwheat Stem" />
+        <object Blueprint="Lagroot Tuber" />
+        <object Blueprint="Vanta Petals" />
+        <object Blueprint="Bop Cheek" />
+        <object Blueprint="Bundle of Noisegrass" />
+      </group>
+  </population>    
+  <population Name="Random Behemoth Meats">
+    <group Style="pickone">
+      <object Blueprint="Raw Bear Meat" />
+      <object Blueprint="Raw Pig Meat" />
+      <object Blueprint="Raw Boar Meat" />
+      <object Blueprint="Raw Barkbiter Meat" />
+      <object Blueprint="Raw Beetle Meat" />
+      <object Blueprint="Raw Goat Meat" />
+      <object Blueprint="Raw Scorpiock Meat" />
+      <object Blueprint="Raw Frog Meat" />
+      <object Blueprint="Raw Fish Meat" />
+      <object Blueprint="Raw Worm Meat" />
+      <object Blueprint="Dawnglider Tail" />
+      <object Blueprint="Tongue Twist" />
+      <object Blueprint="Eyeless Crab Legs" />
+      <object Blueprint="Voider Gland" />
+      <object Blueprint="Psychal Gland" />
+    </group>
+</population>
+<population Name="Random Behemoth Butcherables">
+  <group Style="pickone">
+    <object Blueprint="Albino Ape Pelt" />
+    <object Blueprint="Ogre Ape Pelt" />
+    <object Blueprint="Black Puma Haunch" />
+    <object Blueprint="Salthopper Mandible" />
+    <object Blueprint="Albino Ape Heart" />
+  </group>
+</population>        
     <population Name="GlowWightWarParty">
         <group Style="pickeach">
           <object Chance="10" Blueprint="Gyre Wight of Agolgot" />

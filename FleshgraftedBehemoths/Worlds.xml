@@ -9,9 +9,12 @@
       <intproperty Name="AmbushChance" Value="10" />
       <widget Blueprint="HolyPlaceNephilimWidget" />
       <population Table="GlowWightWarParty" /> 
+      <population Table="Random Behemoth Snacks" /> 
+      <population Table="Random Behemoth Meats" /> 
+      <population Table="Random Behemoth Butcherables" /> 
     </zone>
     </cell>
-    <cell Name="Glow Wight Behemoth of Agolgot" Inherits="Glow Wight Behemoth">
+    <cell Name="Glow Wight Behemoth of Agolgot" >
       <boolproperty Name="JoinPartyLeaderPossible" Value="false" />
       <zone Level="10" x="1" y="1" Name="Glow Wight Behemoth Saddle" IncludeStratumInZoneDisplay="false">
       <builder Class="InteriorGround" />
@@ -20,9 +23,12 @@
       <intproperty Name="AmbushChance" Value="10" />
       <widget Blueprint="HolyPlaceNephilimWidget" />
       <population Table="AgolgotSiegeParty" />
+      <population Table="Random Behemoth Snacks" /> 
+      <population Table="Random Behemoth Meats" /> 
+      <population Table="Random Behemoth Butcherables" /> 
       </zone>
     </cell>
-    <cell Name="Glow Wight Behemoth of Bethsaida" Inherits="Glow Wight Behemoth">
+    <cell Name="Glow Wight Behemoth of Bethsaida" >
       <boolproperty Name="JoinPartyLeaderPossible" Value="false" />
       <zone Level="10" x="1" y="1" Name="Glow Wight Behemoth Saddle" IncludeStratumInZoneDisplay="false">
       <builder Class="InteriorGround" />
@@ -31,6 +37,9 @@
       <intproperty Name="AmbushChance" Value="10" />
       <widget Blueprint="HolyPlaceNephilimWidget" />
       <population Table="BethsaidaSiegeParty" />
+      <population Table="Random Behemoth Snacks" /> 
+      <population Table="Random Behemoth Meats" /> 
+      <population Table="Random Behemoth Butcherables" /> 
       </zone>
     </cell>
     <cell Name="Glow Wight Behemoth of QasQon" Inherits="Glow Wight Behemoth">
@@ -42,6 +51,9 @@
       <intproperty Name="AmbushChance" Value="10" />
       <widget Blueprint="HolyPlaceNephilimWidget" />
       <population Table="QasQonSiegeParty" />
+      <population Table="Random Behemoth Snacks" /> 
+      <population Table="Random Behemoth Meats" /> 
+      <population Table="Random Behemoth Butcherables" /> 
     </zone>
     </cell>
     <cell Name="Glow Wight Behemoth of Rermadon" Inherits="Glow Wight Behemoth">
@@ -53,6 +65,9 @@
       <intproperty Name="AmbushChance" Value="10" />
       <widget Blueprint="HolyPlaceNephilimWidget" />
       <population Table="RermadonSiegeParty" />
+      <population Table="Random Behemoth Snacks" /> 
+      <population Table="Random Behemoth Meats" /> 
+      <population Table="Random Behemoth Butcherables" /> 
       </zone>
     </cell>
     <cell Name="Glow Wight Behemoth of Shug'ruith" Inherits="Glow Wight Behemoth">        <boolproperty Name="JoinPartyLeaderPossible" Value="false" />
@@ -63,6 +78,9 @@
       <intproperty Name="AmbushChance" Value="10" />
       <widget Blueprint="HolyPlaceNephilimWidget" />
       <population Table="Shug'ruithSiegeParty" />
+      <population Table="Random Behemoth Snacks" /> 
+      <population Table="Random Behemoth Meats" /> 
+      <population Table="Random Behemoth Butcherables" /> 
       </zone>
     </cell>
   </world>
