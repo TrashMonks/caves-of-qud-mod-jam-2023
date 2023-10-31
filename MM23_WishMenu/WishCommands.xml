@@ -3,6 +3,7 @@
   <wish DisplayName="Toggle Godmode" Commands="idkfa"/>
   <wish DisplayName="Calm creatures" Commands="calm"/>
   <wish DisplayName="Swap bodies" Commands="swap"/>
+  <wish DisplayName="Beguile creature" Commands="beguile"/>
   <wish Commands="goto:JoppaWorld.5.2.1.2.10" Author="gnarf, librarianmage" ModName="Halloween Costumer"/>
   <wish Commands="goto:JoppaWorld.5.2.1.2.10" Author="Ilysen" ModName="Tealeaves"/>
   <wish Commands="goto:JoppaWorld.5.2.1.2.10" Author="CPNK" ModName="Sultan of Smoke"/>
