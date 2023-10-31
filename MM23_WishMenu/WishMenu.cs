@@ -64,13 +64,19 @@ namespace XRL.World.Parts
             );
         }
 
-        [GameBasedCacheInit]
+
+        [ModSensitiveStaticCache]
+        public static List<WishCommandXML> MenuItems = new List<WishCommandXML>();
+
         public static void CacheInit()
         {
-            MenuItems = new List<WishCommandXML>();
-            foreach (var stream in DataManager.YieldXMLStreamsWithRoot("wishcommands"))
+            MenuItems ??= new List<WishCommandXML>();
+            if (MenuItems.Count == 0)
             {
-                stream.HandleNodes(nodes);
+                foreach (var stream in DataManager.YieldXMLStreamsWithRoot("wishcommands"))
+                {
+                    stream.HandleNodes(nodes);
+                }
             }
         }
 
@@ -160,14 +166,11 @@ namespace XRL.World.Parts
             xml.DoneWithElement();
         }
 
-        [ModSensitiveStaticCache]
-        public static List<WishCommandXML> MenuItems = new List<WishCommandXML>();
 
         [WishCommand("mashup")]
         public static void MashupWish()
         {
-            if (MenuItems == null || MenuItems.Count == 0)
-                CacheInit();
+            CacheInit();
             var choice = Popup.ShowOptionList(
                 "Monster Mash-Up Wish Menu",
                 MenuItems.Select(a => a.DisplayText).ToArray(),
