@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  
+  <object Name="Burrowing Claws Claw Feet" Inherits="Pickaxe">
+    <part Name="Description" Short="A sharp, steel talon."/>
+    <part Name="MeleeWeapon" Skill="ShortBlades" Slot="Feet" />
+    <part Name="Render" DisplayName="Claw" Tile="Hazzary453_Shalehawk/Shalehawk_Claw.png" RenderString="\"/>
+    <part Name="NaturalEquipment" />
+    <part Name="NoBreak" />
+    <part Name="NoDamage" />
+    <part Name="Physics" IsReal="false" Solid="false" Takeable="false" Weight="0" Category="Natural Weapon" FreezeTemperature="-99999" BrittleTemperature="-99999" FlameTemperature="99999" VaporTemperature="99999" />
+    <intproperty Name="Natural" Value="1" />
+    <tag Name="NaturalGear" />
+    <tag Name="NoDefaultBehavior" />
+    <tag Name="NoSparkingQuest" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+    <removepart Name="TinkerItem" />
+    <tag Name="Mods" Value="None" />
+  </object>
+
+  <object Name = "Hazzary453_Shalehawk_Corpse_Male" Inherits="Human Corpse">
+    <part Name="Render" DisplayName="Male Shalehawk Corpse"/>
+    <removepart Name="Butcherable" />
+  </object>
+
+  <object Name = "Hazzary453_Shalehawk_Corpse_Female" Inherits="Human Corpse">
+    <part Name="Render" DisplayName="Female Shalehawk Corpse"/>
+    <part Name="Butcherable" OnSuccess="@Shalehawk Corpse Table"/>
+  </object>
+
+  <object Name = "Hazzary453_Shalehawk_Egg_Male" Inherits="Small Stone">
+    <part Name="Render" DisplayName="Shalehawk Egg" Tile="Hazzary453_Shalehawk/Shalehawk_Egg.png" RenderString="o" ColorString="&amp;r" DetailColor="w"/>
+    <part Name="Physics" Weight="5"/>
+    <part Name="Commerce" Value="50" />
+    <part Name="SummoningCurio" Creature="Hazzary453_Shalehawk_Male"/>
+    <part Name="Description" Short="A heavy egg, barely distinguishable from a common rock. It is well known that the chick will imprint on the first creature it sees, making these eggs valuble commodities."/>
+  </object>
+
+  <object Name = "Hazzary453_Shalehawk_Egg_Female" Inherits="Small Stone">
+    <part Name="Render" DisplayName="Shalehawk Egg" Tile="Hazzary453_Shalehawk/Shalehawk_Egg.png" RenderString="o" ColorString="&amp;r" DetailColor="w"/>
+    <part Name="Physics" Weight="5"/>
+    <part Name="Commerce" Value="50" />
+    <part Name="SummoningCurio" Creature="Hazzary453_Shalehawk_Female"/>
+    <part Name="Description" Short="A heavy egg, barely distinguishable from a common rock. It is well known that the chick will imprint on the first creature it sees, making these eggs valuble commodities."/>
+  </object>
+
+</objects>

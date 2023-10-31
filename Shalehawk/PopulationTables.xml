@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<populations>
+
+	<population Name="DesertCanyonZoneGlobals-Reachable" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+			<object Chance="8" Number="2d4" Blueprint="Hazzary453_Shalehawk_Male" />
+			<object Chance="8" Number="2d4" Blueprint="Hazzary453_Shalehawk_Female" />
+		</group>
+	</population>
+
+	<population Name="DesertCanyonCreatures" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+			<object Weight="15" Number="1-4" Blueprint="Hazzary453_Shalehawk_Male" />
+			<object Weight="15" Number="1-4" Blueprint="Hazzary453_Shalehawk_Female" />
+	    </group>
+ 	</population>
+
+	<population Name="LairOwners_DesertCanyon" Load="Merge">
+		<group Name="Options" Load="Merge">
+			<object Blueprint="Hazzary453_Shalehawk_Male" />
+			<object Blueprint="Hazzary453_Shalehawk_Female" />
+		</group>
+	</population>
+
+	<population Name="Shalehawk Corpse Table">
+		<group Name="Items" Style="pickone">
+			<object Number="1" Weight="20" Blueprint="Hazzary453_Shalehawk_Egg_Male"/>
+			<object Number="1" Weight="20" Blueprint="Hazzary453_Shalehawk_Egg_Female"/>
+			<object Number="1" Weight="60" Blueprint="Small Stone"/>
+		</group>
+	</population>
+</populations>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+
+  <object Name="Hazzary453_Shalehawk_Male" Inherits="BaseBird">
+    <part Name="Description" Short="You nearly mistake =pronouns.objective= for the rock on which =pronouns.subjective= =verb:perch:afterpronoun=. =pronouns.Possessive= stony feathers provide both excellent protection from the elements and a suprisingly effective camouflage. =pronouns.Subjective= =verb:glare:afterpronoun= down at the world below as =pronouns.possessive= talons scratch deep gouges where =pronouns.subjective= =verb:sit:afterpronoun=."/>
+    <part Name="Render" DisplayName="Shalehawk" Tile="Hazzary453_Shalehawk/Shalehawk.png" RenderString="b" ColorString="&amp;r" DetailColor="w" />
+    <part Name="Brain" Hostile="true"/>
+    <tag Name="Gender" Value="male" />
+
+    <skill Name="Persuasion_Intimidate"/>
+
+    <stat Name="Level" Value="5" />
+    <stat Name="Hitpoints" Value="20"/>
+    <stat Name="AV" Value="6"/>
+    <stat Name="DV" Value="-1"/>
+    <stat Name="Strength" sValue ="16"/>
+    <stat Name="Agility" sValue="18"/>
+    <stat Name="Toughness" sValue="14"/>
+    <stat Name="Ego" sValue="14"/>
+  
+    <mutation Name="BurrowingClaws" Level="1" BodyPartType="feet"/>
+    <inventoryobject Blueprint="Burrowing Claws Claw Feet" Number="1"/>
+
+    <tag Name="DynamicObjectsTable:Birds" />
+
+    <part Name="Corpse" CorpseChance="20" BurntCorpseChance="100" BurntCorpseBlueprint="Ashes" CorpseBlueprint="Hazzary453_Shalehawk_Corpse_Male"/>
+  </object>
+
+  <object Name="Hazzary453_Shalehawk_Female" Inherits="BaseBird">
+    <part Name="Description" Short="You nearly mistake =pronouns.objective= for the rock on which =pronouns.subjective= =verb:perch:afterpronoun=. =pronouns.Possessive= stony feathers provide both excellent protection from the elements and a suprisingly effective camouflage. =pronouns.Subjective= =verb:glare:afterpronoun= down at the world below as =pronouns.possessive= talons scratch deep gouges where =pronouns.subjective= =verb:sit:afterpronoun=."/>
+    <part Name="Render" DisplayName="Shalehawk" Tile="Hazzary453_Shalehawk/Shalehawk.png" RenderString="b" ColorString="&amp;r" DetailColor="w" />
+    <part Name="Brain" Hostile="true"/>
+    <tag Name="Gender" Value="female" />
+
+    <skill Name="Persuasion_Intimidate"/>
+
+    <stat Name="Level" Value="5" />
+    <stat Name="Hitpoints" Value="20"/>
+    <stat Name="AV" Value="6"/>
+    <stat Name="DV" Value="-1"/>
+    <stat Name="Strength" sValue ="16"/>
+    <stat Name="Agility" sValue="18"/>
+    <stat Name="Toughness" sValue="14"/>
+    <stat Name="Ego" sValue="14"/>
+  
+    <mutation Name="BurrowingClaws" Level="1" BodyPartType="feet"/>
+    <inventoryobject Blueprint="Burrowing Claws Claw Feet" Number="1"/>
+
+    <tag Name="DynamicObjectsTable:Birds"/>
+
+    <part Name="Corpse" CorpseChance="20" BurntCorpseChance="100" BurntCorpseBlueprint="Ashes" CorpseBlueprint="Hazzary453_Shalehawk_Corpse_Female"/>
+  </object>
+  
+</objects>
