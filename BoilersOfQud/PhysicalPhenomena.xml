@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<populations>
+<objects>
 
  <!--
 	***************************
     Mixed Liquids
-    ***************************  
+    ***************************
 	-->
 
 
@@ -25,4 +25,4 @@
 	</object>
 
 
-</populations>
+</objects>
