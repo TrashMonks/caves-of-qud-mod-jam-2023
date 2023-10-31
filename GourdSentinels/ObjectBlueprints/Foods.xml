@@ -21,6 +21,7 @@
 
 	<object Name="Andrea52_GourdSentinel_Human Meat" Inherits="Raw Meat">
 		<part Name="Render" DisplayName="{{r|human meat}}"/>
+        <part Name="Description" Short="Stinking meat was torn and sheared from human bone."/>
 		<part Name="Food" Satiation="Meal" IllOnEat="true" Message="A disgusting meal of sinew."/>
 	</object>
 </objects>

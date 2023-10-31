@@ -1,5 +1,17 @@
-v1.1
+v1.2.2
+Added description to human meat
+Reordered changelog
 
+v1.2.1
+Lesser gourds now dark orange.
+Updated preview image to match current colors.
+
+v1.2
+Split gourd sentinel into two different creatures, the Lesser Gourd (fires projectiles) and the Greater Gourd (powerful melee attacks).
+Lesser gourds spawn in the jungle occasionally.
+Gourd packs spawn commonly in the Tomb of the Eaters, semi-rarely in Tier 5 caves, and occasionally in the Deep Jungle.
+
+v1.1
 Now fire a custom flame projectile, instead of using pyrokinesis.
 Now bleed a mixture of sap and blood.
 Now act as a light source.
@@ -7,12 +19,5 @@ Lowered average Willpower and Ego.
 Removed intimidate (kept menacing stare).
 Various other balance changes.
 
-v1.2
 
-Split gourd sentinel into two different creatures, the Lesser Gourd (fires projectiles) and the Greater Gourd (powerful melee attacks).
-Lesser gourds spawn in the jungle occasionally.
-Gourd packs spawn commonly in the Tomb of the Eaters, semi-rarely in Tier 5 caves, and occasionally in the Deep Jungle.
 
-v1.2.1
-Lesser gourds now dark orange.
-Updated preview image to match current colors.
