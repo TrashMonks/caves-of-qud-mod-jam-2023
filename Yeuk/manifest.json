@@ -1,0 +1,9 @@
+{
+    "id": "GrizonII_Modding_Jam_1",
+    "title": "Yeuks",
+    "description": "Adds an urchin-humanoid species called yeuks. Made for the Monster Mash modding jam.",
+    "version": "0.1.0",
+    "author": "GrizonII",
+    "tags": "Creature",
+    "PreviewImage": "preview.png"
+}

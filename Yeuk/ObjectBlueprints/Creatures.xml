@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <object Name="GrizonII_Yeuk" Inherits="BaseHumanoid">
+    <part Name="Render" DisplayName="yeuk" Tile="GrizonII_Yeuk/yeuk.png" ColorString="&amp;B" DetailColor="y"/>
+    <part Name="Description" Short="A jagged mass hides under a ragged cloak. Set above is what almost looks like a mask of polished stone stained with an inky blue hue, which only upon a more careful inspection reveals itself to be layers of long, wiry spines interlocking into a smooth mesh. Dark, deep-set eyes gaze out from within. Other facial features lie invisible behind the lattice of spines. The back of =pronouns.possessive= head bursts outwards and looks painful to touch. Long, lithe arms swing alongside =pronouns.possessive= body. =pronouns.Possessive= choice of handwear suggests an affinity for objects which are reminiscent of =pronouns.possessive= own form."/>
+    <part Name="Brain" Hostile="false" Factions="Urchins-100"/>
+    <mutation Name="DarkVision" Level="1" />
+    <mutation Name="Quills" Level="6" />
+    <skill Name="ShortBlades" />
+    <skill Name="ShortBlades_Expertise" />
+    <skill Name="ShortBlades_Bloodletter" />
+    <skill Name="ShortBlades_Jab" />
+    <skill Name="ShortBlades_Shank" />
+    <skill Name="ShortBlades_Shank" />
+    <skill Name="Acrobatics" />
+    <skill Name="Acrobatics_Dodge" />
+    <stat Name="Level" Value="16" />
+    <stat Name="Hitpoints" Value="56"/>
+    <!-- <stat Name="AV" Value="1" /> -->
+    <stat Name="Strength" Boost="1" />
+    <stat Name="Agility" Boost="1" />
+    <intproperty Name="Bleeds" Value="1" />
+    <tag Name="BleedLiquid" Value="ink-1000" />
+    <part Name="Corpse" CorpseChance="30" CorpseBlueprint="GrizonII_Yeuk Corpse"/>
+    <tag Name="Culture" Value="Urchin" />
+    <stag Name="HardMaterial" Value="spines" />
+    <inventoryobject Blueprint="GrizonII_Yeuk Hand" Number="2" />
+    <inventoryobject Blueprint="@GrizonII_Yeuk Gear" Number="1" />
+  </object>
+  <object Name="GrizonII_Yeuk Corpse" Inherits="Corpse">
+    <part Name="Render" DisplayName="yeuk corpse" ColorString="&amp;B" TileColor="&amp;B" DetailColor="b"/>
+    <part Name="Physics" Weight="20" />
+    <part Name="Butcherable" OnSuccess="GrizonII_Yeuk Flesh" />
+    <intproperty Name="Bleeds" Value="1" />
+    <tag Name="BleedLiquid" Value="ink-1000" />
+    <part Name="Commerce" Value="1" />
+    <tag Name="Tier" Value="3" />
+    <tag Name="DynamicObjectsTable:Corpses" />
+  </object>
+  <object Name="GrizonII_Yeuk Hand" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="{{Y|fingers}}" />
+    <part Name="MeleeWeapon" BaseDamage="1d4+1" Skill="ShortBlades" Stat="Strength" Slot="Hand" />
+  </object>
+</objects>

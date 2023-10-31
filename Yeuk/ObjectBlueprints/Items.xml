@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="GrizonII_Spiked Carbide Gauntlets" Inherits="Carbide Gauntlets">
+    <part Name="ModSpiked" />
+  </object>
+  <object Name="GrizonII_Spiked Fullerite Gauntlets" Inherits="Fullerite Gauntlets">
+    <part Name="ModSpiked" />
+  </object>
+</objects>

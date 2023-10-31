@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+  <population Name="GrizonII_Yeuk Gear">
+    <group Name="Items" Style="pickone">
+      <object Weight="60" Number="1" Blueprint="Spiked Gauntlets" />
+      <object Weight="25" Number="1" Blueprint="GrizonII_Spiked Carbide Gauntlets" />
+      <object Weight="4" Number="1" Blueprint="GrizonII_Spiked Fullerite Gauntlets" />
+      <object Weight="1" Number="1" Blueprint="Ogre Fur Gloves" />
+    </group>
+    <table Name="DynamicInheritsTable:BaseCloak:Tier2-4" />
+  </population>
+  <population Name="Tier3CavePopulation" Load="Merge">
+    <group Name="Contents" Load="Merge">
+      <group Name="Creatures" Load="Merge">
+        <object Weight="5" Number="1-3" Blueprint="GrizonII_Yeuk" />
+      </group>
+    </group>
+  </population>
+  <population Name="Tier4CavePopulation" Load="Merge">
+    <group Name="Contents" Load="Merge">
+      <group Name="Creatures" Load="Merge">
+        <object Weight="8" Number="3-6" Blueprint="GrizonII_Yeuk" />
+      </group>
+    </group>
+  </population>
+</populations>

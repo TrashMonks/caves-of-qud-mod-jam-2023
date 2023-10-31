@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <object Name="GrizonII_Yeuk Flesh" Inherits="Raw Meat">
+    <part Name="Render" DisplayName="{{B|yeuk flesh}}" Tile="Items/sw_rawmeat1.bmp" ColorString="&amp;b" TileColor="&amp;b" DetailColor="B" />
+    <part Name="Description" Short="A stiff slab of indigo meat with a prickly texture." />
+    <part Name="Food" Message="With considerable effort your jaw manages to crunch the meat into a form that slides uncomfortably down your throat." />
+    <part Name="Physics" Weight="5" />
+    <part Name="Commerce" Value="4" />
+    <part Name="PreservableItem" Result="GrizonII_Mashed Yeuk Flesh" Number="5" />
+  </object>
+  <object Name="GrizonII_Mashed Yeuk Flesh" Inherits="Preservable">
+    <part Name="Render" DisplayName="{{B|mashed yeuk flesh}}" RenderString="%" ColorString="&amp;c" TileColor="&amp;c" DetailColor="B" RenderLayer="5" Tile="Items/sw_paste.bmp" />
+    <part Name="Description" Short="Indigo flesh fashioned into a gritty paste." />
+    <part Name="Commerce" Value="4" />
+    <part Name="PreparedCookingIngredient" type="reflect" charges="1" />
+    <tag Name="Meat" />
+    <tag Name="DynamicObjectsTable:Ruins_Ingredients" />
+  </object>
+</objects>
