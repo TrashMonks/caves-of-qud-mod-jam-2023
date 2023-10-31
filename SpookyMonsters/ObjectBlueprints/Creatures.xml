@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <object Name="mistersix_spooky_monsters_Saltwoven Ancestor" Inherits="BaseIssachari">
+    <part Name="Description" Short="=pronouns.Subjective= stands sentinel in the salt-blanketed dunes, wrapped in tattered strips. =pronouns.Possessive= weathered form, veiled in crimson patterns, echoes with the wisdom of ages past. Water no longer interests =pronouns.possessiveAdjective=, =pronouns.possessive= moisture long since given to the wind." />
+    <part Name="Render" DisplayName="saltwoven ancestor" Tile="mistersix_saltwoven_ancestor/mistersix_saltwoven_ancestor.png" ColorString="&amp;y" DetailColor="r" />
+    <stat Name="Speed" Value="66" />
+    <mutation Name="TimeDilation" Level="1" />
+    <mutation Name="LifeDrain" Level="1" />
+    <tag Name="WaterRitualLiquid" Value="salt" />
+  </object>
+
+  <object Name="mistersix_spooky_monsters_Saltwoven Hero" Inherits="mistersix_spooky_monsters_Saltwoven Ancestor">
+    <part Name="Render" ColorString="&amp;M" />
+    <part Name="GivesRep" />
+    <tag Name="Noclone" />
+  </object>
+
+  
+  <object Name="mistersix_spooky_monsters_Marsh Revenant" Inherits="BaseHumanoid">
+    <part Name="Description" Short="Travellers to Qud must steel themselves against many strange sights, this is well-known. But nothing prepared me for watching the shambling figure rise from where poor Tyrabas had fallen. -Shwyshwoshum the Steadfast" />
+    <part Name="Render" DisplayName="marsh revenant" Tile="mistersix_marsh_revenant/mistersix_marsh_revenant.png" ColorString="&amp;c" DetailColor="m" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="mistersix_spooky_monsters_Marsh Remnant" />
+  </object>
+
+  <object Name="mistersix_spooky_monsters_Marsh Remnant" Inherits="BaseHumanoid">
+    <part Name="Description" Short="'Never die in the swamp while carrying cloning draught.'  -Old Joppan Proverb" />
+    <part Name="Render" DisplayName="marsh remnant" Tile="mistersix_marsh_revenant/mistersix_marsh_remnant.png" ColorString="&amp;c" DetailColor="m" />
+    <stat Name="Speed" Value="50" />
+  </object>
+  
+</objects>
+

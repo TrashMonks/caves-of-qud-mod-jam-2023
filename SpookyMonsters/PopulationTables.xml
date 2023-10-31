@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<populations>
+  <!-- This is used for a 10% chance in SaltDesertZoneGlobals. -->
+  <population Name="IssachariParty" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <object Chance="5" Number="1-2" Blueprint="mistersix_spooky_monsters_Saltwoven Ancestor" />
+    </group>
+  </population>
+
+  <!-- Not sure we really want them spawning as random creatures? -->
+  <population Name="SaltDuneCreatures" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <group Name="Raiders" Load="Merge">
+	<object Weight="1" Chance="50" Number="1" Blueprint="mistersix_spooky_monsters_Saltwoven Ancestor" />
+      </group>
+    </group>
+  </population>
+
+  <population Name="LairOwners_Saltdunes" Load="Merge">
+    <group Name="Options" Load="Merge">
+      <object Blueprint="mistersix_spooky_monsters_Saltwoven Ancestor" Weight="5" />
+    </group>
+  </population>
+  
+  <population Name="SaltDesertPerSector" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <table Weight="10" Name="mistersix_SaltwovenPosse" />
+    </group>
+  </population>
+
+  <population Name="mistersix_SaltwovenPosse">
+    <group Name="AncestralHonorguard" Style="pickeach">
+      <object Number="1" Blueprint="mistersix_spooky_monsters_Saltwoven Hero" />
+      <object Number="2" Blueprint="Issachari Raider" />
+    </group>
+  </population>
+
+
+  <!-- Salt marsh -->
+  <population Name="SaltMarshZoneGlobals" Load="Merge">
+    <object Chance="15" Number="1" Blueprint="mistersix_spooky_monsters_Marsh Revenant" />
+  </population>
+
+  <population Name="SaltMarshPerSector" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <table Name="mistersix_spooky_monsters_Marsh Revenant" Number="2d6" Chance="5" /> 
+    </group>
+  </population>
+
+    <population Name="LairOwners_Saltmarsh" Load="Merge">
+    <group Name="Options" Load="Merge">
+      <object Blueprint="mistersix_spooky_monsters_Marsh Revenant" />
+    </group>
+  </population>
+
+</populations>
