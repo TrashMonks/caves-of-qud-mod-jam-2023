@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+	<!--
+		This is Tealeaves's conversation script.
+
+		As this file is a lot more self-explanatory than the object definition, it isn't heavily documented. That being said, At the time of writing, the wiki has a thorough rundown of conversation xml that should make understanding this easy to do: https://wiki.cavesofqud.com/wiki/Modding:Conversations
+	-->
+	<conversation ID="Ava_Tealeaves_TealeavesConversation">
+		<start ID="Greeting">
+			<text>
+				Hello friend?~
+				I am a friend.~
+				Live and drink.~
+				Would you like to learn about the jungle?~
+				Would you like to share water?~
+				Would you like to trade with me?
+			</text>
+			<!-- This part lets us add a prefix to each conversation option without having to copy and paste it in multiple spots. For any node that inherits Greeting, this is also inherited automatically and doesn't need to be defined; otherwise, we can use use another part tag with the Inherits value set to Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert and the game will handle the rest.  -->
+			<part Name="TextInsert" Spoken="true" Prepend="true" NewLines="2" Text="{{emote|*Tealeaves sits in silence for several moments, then speaks slowly.*}}" />
+			<choice Target="Asphodel" IfHaveActiveQuest="The Earl of Omonporch">What do you know about the Earl of Omonporch?</choice>
+			<choice Target="Story">Who are you?</choice>
+			<choice Target="Manners">Why do you speak so slowly?</choice>
+			<choice Target="Consortium">Are you from the Consortium?</choice>
+			<choice Target="NoTent">Why aren't you in a tent?</choice>
+			<choice Target="Stilt" IfTestState="Ava_Tealeaves_CanAskAboutStilt" IfNotTestState="Ava_Tealeaves_TalkedAboutStilt">Why is it that you stay here, in the Stilt? Is it not terribly hot and dry?</choice>
+			<choice ID="Exit" Target="End">Live and drink.</choice>
+		</start>
+		<node ID="OtherQuestions" Inherits="Greeting">
+			<text>It is okay.</text>
+		</node>
+
+		<node ID="Story" Inherits="Greeting">
+			<text>I think I am Tealeaves.</text>
+			<choice Target="Story_NotChosen" Priority="1">You aren't sure?</choice>
+		</node>
+		<node ID="Story_NotChosen">
+			<text>I did not choose my name. I am called Tealeaves because I have tea leaves.</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice Target="Story_CallYou">What would you like me to call you?</choice>
+			<choice UseID="OtherQuestions" />
+			<choice UseID="Exit" />
+		</node>
+		<node ID="Story_CallYou">
+			<text>You may call me Tealeaves.</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice ID="OtherQuestions" Target="OtherQuestions">There was more I wanted to ask.</choice>
+			<choice Target="End">Very well. Live and drink, Tealeaves.</choice>
+		</node>
+
+		<node ID="Manners" Inherits="Greeting">
+			<text>I am still learning.</text>
+		</node>
+
+		<node ID="Consortium">
+			<text>I think so? I am spawn-sirred by them.</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice Target="Consortium_Goods">What do you sell?</choice>
+			<choice Target="Consortium_SpawnSirred" SetBooleanState="Ava_Tealeaves_AskedAboutSponsorship,true">Spawn-sirred?</choice>
+			<choice UseID="Exit" />
+		</node>
+		<node ID="Consortium_Goods" Inherits="Consortium">
+			<text>Many things. Would you like to look? I can only give you one recoiler, though.</text>
+			<choice ID="Consortium_Trade" Priority="2">
+				<text>Yes, please.</text>
+				<part Name="Trade" />
+			</choice>
+			<choice Target="Consortium_Recoiler" Priority="1">That's odd. Why?</choice>
+		</node>
+		<node ID="Consortium_SpawnSirred" Inherits="Consortium">
+			<text>Yes. They give me things to trade and help me learn, and I give them water.</text>
+		</node>
+		<node ID="Consortium_Recoiler">
+			<text>People keep throwing them in the well.</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice UseID="OtherQuestions" />
+			<choice Target="End">Ah. Fair enough.</choice>
+		</node>
+
+		<node ID="NoTent" Inherits="Greeting">
+			<text>I don't want one.</text>
+		</node>
+
+		<node ID="Stilt">
+			<text>
+				{{emote|*Tealeaves sits in silence for many moments.*}}
+
+				I have thought this too. I do not want to take your time talking. You are busy?
+			</text>
+			<choice Target="Stilt_1">I'm not busy. I'd like to hear it, if you're willing.</choice>
+			<choice Target="OtherQuestions">Perhaps another time, then.</choice>
+		</node>
+		<node ID="Stilt_1">
+			<text>
+				I am thinking.
+			</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice Target="Stilt_2">...</choice>
+		</node>
+		<node ID="Stilt_2">
+			<text>
+				I do remember the jungle. Richer soil, loam and water for roots. Warm home.
+			</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice Target="Stilt_3">Why did you leave?</choice>
+		</node>
+		<node ID="Stilt_3">
+			<text>
+				No room? Mm. No place to learn, nothing to speak. Too loud for thinking.
+
+				Sorry. Understand words?
+			</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice Target="Stilt_4">Yes. Continue.</choice>
+			<choice Target="End">I'm afraid not. Perhaps later.</choice>
+		</node>
+		<node ID="Stilt_4">
+			<text>
+				Cannot learn alone. Need words? Need talking. Other people, new things.
+
+				Do I exist if nobody knows I exist? What is mind? What is me?
+
+				Am I real?
+			</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice Target="Stilt_5">Of course you are.</choice>
+			<choice Target="Stilt_5">I do not know if I can answer that.</choice>
+			<choice Target="Stilt_5">No.</choice>
+			<choice Target="Stilt_5">...</choice>
+		</node>
+		<node ID="Stilt_5">
+			<text>
+				Perhaps.
+
+				I would like to learn. So I moved here, to learn. Now I am learning by watching and listening.
+			</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice Target="Stilt_6">...</choice>
+		</node>
+		<node ID="Stilt_6">
+			<text>
+				I will not stay for many years. I want to see other new places too. But I am learning about me and everyone. I am okay with the salt and heat. I have enough water, and I am spawn-sirred.
+
+				For now I am Tealeaves. Maybe I will be someone else soon.
+			</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice Target="Stilt_End" SetBooleanState="Ava_Tealeaves_TalkedAboutStilt,true">Thank you for telling me, Tealeaves.</choice>
+		</node>
+		<node ID="Stilt_End" Inherits="Greeting">
+			<text>You're welcome.</text>
+		</node>
+
+		<node ID="Asphodel">
+			<text>I have heard of Asphodel but I have not met Asphodel. What are they like?</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice Target="Asphodel_HopingYouKnew">I was hoping to ask you that question.</choice>
+			<choice Target="Asphodel_Lease">How can I convince Asphodel to lease the Spindle to Barathrum?</choice>
+		</node>
+		<node ID="Asphodel_HopingYouKnew" Inherits="Asphodel">
+			<text>Ah.</text>
+		</node>
+		<node ID="Asphodel_Lease">
+			<text>I do not know. I am sorry.</text>
+			<part Inherits="Ava_Tealeaves_TealeavesConversation.Greeting.TextInsert" />
+			<choice Target="End">You are forgiven, Tealeaves. Live and drink.</choice>
+		</node>
+	</conversation>
+</conversations>

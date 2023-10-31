@@ -1,5 +1,146 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Map Width="80" Height="25" Load="Merge">
+    <cell X="15" Y="15">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="16" Y="15">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="17" Y="15">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="18" Y="15">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="19" Y="15">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="20" Y="15">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="21" Y="15">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="22" Y="15">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="23" Y="15">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="16" Y="16">
+        <object Name="Torchpost"></object>
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="17" Y="16">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="18" Y="16">
+        <object Name="Hookah"></object>
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="19" Y="16">
+        <object Name="Floor Cushion"></object>
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="20" Y="16">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="21" Y="16">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="22" Y="16">
+        <object Name="MarbleWalkway"></object>
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="23" Y="16">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="17" Y="17">
+        <object Name="MarbleWalkway"></object>
+        <object Name="Floor Cushion"></object>
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="18" Y="17">
+        <object Name="MarbleWalkway"></object>
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="19" Y="17">
+        <object Name="MarbleWalkway"></object>
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="20" Y="17">
+        <object Name="MarbleWalkway"></object>
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="21" Y="17">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="22" Y="17">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="23" Y="17">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="17" Y="18">
+        <object Name="MarbleWalkway"></object>
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="18" Y="18">
+        <object Name="MarbleWalkway"></object>
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="19" Y="18">
+        <object Name="MarbleWalkway"></object>
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="20" Y="18">
+        <object Name="MarbleWalkway"></object>
+        <object Name="Garbage"></object>
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="21" Y="18">
+        <object Name="MarbleWalkway"></object>
+        <object Name="Low Table"></object>
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="22" Y="18">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="23" Y="18">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+
+    <cell X="17" Y="19">
+        <object Name="NoStiltSpawn"></object>
+        <object Name="MarbleWalkway"></object>
+        <object Name="Garbage"></object>
+    </cell>
+    <cell X="18" Y="19">
+        <object Name="NoStiltSpawn"></object>
+        <object Name="MarbleWalkway"></object>
+    </cell>
+    <cell X="19" Y="19">
+        <object Name="NoStiltSpawn"></object>
+        <object Name="MarbleWalkway"></object>
+        <object Name="Ava_Tealeaves_Tealeaves"></object>
+    </cell>
+    <cell X="20" Y="19">
+        <object Name="NoStiltSpawn"></object>
+        <object Name="MarbleWalkway"></object>
+    </cell>
+    <cell X="21" Y="19">
+        <object Name="NoStiltSpawn"></object>
+        <object Name="MarbleWalkway"></object>
+    </cell>
+    <cell X="22" Y="19">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="23" Y="19">
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+    <cell X="19" Y="20">
+        <object Name="Chest" Owner="Newly Sentient Beings"></object>
+    </cell>
     <cell X="44" Y="22">
         <object Name="cpnk_smoke_SultanOfSmoke"></object>
     </cell>

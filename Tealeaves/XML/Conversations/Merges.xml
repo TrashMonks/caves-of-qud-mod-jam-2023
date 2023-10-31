@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+	<!-- This script adds a new dialogue option to Wardens Esther in the Stilt that adds a bit of extra dialogue referencing Tealeaves and who they are. -->
+	<conversation ID="WardenEsthers" Load="Merge">
+		<start ID="Welcome" Load="Merge">
+			<choice Target="Ava_Tealeaves_Tealeaves" IfNotTestState="Ava_Tealeaves_TealeavesDied">
+				<text>What can you tell me about the plant near Tszappur's tent?</text>
+			</choice>
+		</start>
+		<!-- Unlike the base Tealeaves conversation script, we append author and mod ID to these options because we're merging into a vanilla conversation.
+		I'm unsure if this is necessary, but I figure it can't hurt. -->
+		<node ID="Ava_Tealeaves_Tealeaves">
+			<text>Oh, that's Tealeaves. They've only arrived recently and they're still discovering themselves, but they're of a mind to remain here for the time being as a chandler. If you need a recoiler, they would be the one to ask.</text>
+			<choice Target="Ava_Tealeaves_Sponsor" IfTestState="Ava_Tealeaves_AskedAboutSponsorship">They mentioned that the Consortium is "spawn-sirring" them?</choice>
+			<choice Target="Ava_Tealeaves_Stilt" IfNotTestState="Ava_Tealeaves_TalkedAboutStilt" SetBooleanState="Ava_Tealeaves_CanAskAboutStilt,true">Why do they stay at the Stiltgrounds?</choice>
+			<choice ID="Ava_Tealeaves_OtherQuestions" Target="Welcome">I had other questions.</choice>
+			<choice ID="Ava_Tealeaves_Exit" Target="End">Live and drink, wardens.</choice>
+		</node>
+		<node ID="Ava_Tealeaves_Sponsor">
+			<text>{{emote|*The wardens laugh.*}}
+			
+			They mean to say that they're being sponsored. They've an agreement with the Consortium; they are provided with goods to sell, and they pay a tithe of their water in exchange.</text>
+			<choice Target="Ava_Tealeaves_Worrying">That's worrying.</choice>
+			<choice UseID="Ava_Tealeaves_OtherQuestions" />
+			<choice UseID="Ava_Tealeaves_Exit" />
+		</node>
+		<node ID="Ava_Tealeaves_Stilt">
+			<text>Perhaps you should ask them yourself.</text>
+			<choice UseID="Ava_Tealeaves_OtherQuestions" />
+			<choice Target="End">Perhaps I will.</choice>
+		</node>
+		<node ID="Ava_Tealeaves_Worrying" Inherits="Ava_Tealeaves_Sponsor">
+			<text>I thought so too. I made sure that I was present during the negotiations, and the church retains full authority to make changes to the sponsorship's terms as needed. The Consortium lacks a permanent fixture within the Stiltgrounds, and so thus far they have been willing to acquiesce if it means having a representative within the bazaar.
+			
+			Don't worry. We intend to ensure that they retain their independence and have space to grow without the Consortium making them into a tool to be used. I hope that helps.</text>
+		</node>
+	</conversation>
+</conversations>

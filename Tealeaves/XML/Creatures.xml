@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+	<!-- 
+		This is the base object for Tealeaves, containing all of their logic.
+
+		This object def is extensively documented, with pretty much every part and tag having a lengthy comment.
+		A lot of comments refer to the base game's data files; at the time of writing, the wiki has a helpful guide for finding these: https://wiki.cavesofqud.com/wiki/File_locations
+		This link might be dead in the future, in which case you can check community spaces or dig around in the game's install folder; look for StreamingAssets/Base. Once you start finding .xml and .rpm files, you know you're in the right place.
+	 -->
+	<object Name="Ava_Tealeaves_Tealeaves" Inherits="SapientMutatedBush">
+		<!-- The Render part determines how Tealeaves looks in both ascii and with tiles. In ascii, they appear as a green T; in tiles, they use the custom sprite found in Textures/Creatures/Tealeaves.png with a green tile color and a yellow detail color. -->
+		<part Name="Render" DisplayName="Tealeaves" RenderString="T" Tile="Creatures/Tealeaves.png" TileColor="&amp;G" DetailColor="W" />
+
+		<!-- Description is self-explanatory. -->
+		<part Name="Description" Short="Here is a young tree from the deep jungles, homed in a broad earthen planter and trepidly stretching towards the sky. Smooth bark and a dense canopy of slender leaves characterize the flowering shrub, who remains curiously silent for a Consortium hawker; reticently absorbing the sounds and scents of the Stiltgrounds with what might be equal parts placidity, curiosity, and vigilance, reserving =pronouns.possessive= words only for those pilgrims and traders that approach =pronouns.objective=." />
+
+		<!-- 
+			The Brain part determines a bunch of things and is what makes something from an object into a functional creature. For our purposes the defaults are mostly fine, and the defined properties are what handle faction membership and base demeanor.
+			
+			Unless otherwise specified, default creatures have a neutral demeanor and don't wander; in our case, Tealeaves is loved by newly sentient beings, which are its primary faction (though we could add secondary factions if we wanted by delimiting them with a comma, i.e. "Newly Sentient Beings-100,Snapjaws-50" would make them liked by snapjaws as well).
+			
+			Default creatures will wander around to different points on the screen. Like the other sapient plant NPCs in Qud, we need to manually prevent them from wandering or they'll walk off at random and not return back; we want Tealeaves staying in a consistent spot, day and night.
+
+			The Calm attribute makes Tealeaves docile instead of neutral, which prevents them from attacking characters on sight even if they're disliked by newly sentient beings - they would need to be hated for Tealeaves to attack them. (The counterpart to this is the Hostile attribute, which would set their demeanor to aggressive and thus cause them to attack everything without a positive newly sentient beings reputation on sight!)
+		-->
+		<part Name="Brain" Factions="Newly Sentient Beings-100" Wanders="False" Calm="True" />
+
+		<!-- This part just points to the conversation script Tealeaves uses, which you can find in Conversations/Tealeaves_Conversation.xml. -->
+		<part Name="ConversationScript" ConversationID="Ava_Tealeaves_TealeavesConversation" />
+
+		<!-- The GivesRep part lets Tealeaves be water ritualable. Since they're loved by newly sentient beings, that will be the main faction. -->
+		<part Name="GivesRep" />
+
+		<!-- The GameUnique part does a few things (like trying to prevent the game from creating multiple copies), but in our case we define a game state that will be set to true if Tealeaves dies. We then check this in the Wardens Esther conversation to prevent the option from appearing if Tealeaves is dead. -->
+		<part Name="GameUnique" DeathState="Ava_Tealeaves_TealeavesDied" />
+
+		<!-- 
+			In order, these next three properties:
+				1. Make Tealeaves into a merchant that sells tier 1 wares and restocks like regular merchants, consuming items that they buy in the process;
+				2. Add a single clay pot to Tealeaves's inventory, which they will equip automatically;
+				3. Add a single Stilt recoiler to Tealeaves's inventory, which the player can buy.
+			Tealeaves only stocks one recoiler here because it would require a custom builder to add the recoiler to their restocking inventory, and builders are defined in C#. To respect the "no scripting" limitation of the mod jam, we have them only sell a single one instead, and give a witty narrative reason in the conversation script. 
+		-->
+		<builder Name="Tier1Wares" />
+		<inventoryobject Blueprint="Clay Pot" />
+		<inventoryobject Blueprint="Six Day Stilt Recoiler" />
+
+		<!-- These stat names and values should be self-explanatory. -->
+		<stat Name="Level" Value="15" />
+		<stat Name="Hitpoints" Value="100" />
+
+		<!-- Mutations and skills use string IDs, both of which are defined with the name of their Class attribute in their xml defs (which are found in Mutations.xml and Skills.xml). -->
+		<mutation Name="Telepathy" Level="1" />
+		<mutation Name="PhotosyntheticSkin" Level="1" />
+		<skill Name="Discipline" />
+		<skill Name="Endurance_Weathered" />
+
+		<!-- This tag assigns Tealeaves's gender and default pronouns, which are they/them/their. You can check Genders.xml in the game's data files for a list of these. -->
+		<tag Name="Gender" Value="nonspecific" />
+
+		<!-- Prevents Tealeaves from trying to pathfind to a random bed at night to sleep in it. -->
+		<tag Name="NoSleep" />
+
+		<!-- This tag is used to make sure that Tealeaves is always admired by the Consortium of Phyta for "accepting their sponsorship". There are a lot of different permutations of this tag and it can do a lot of different things; check the base game's data files in Creatures.xml for more info on this, especially Q Girl and Barathrum the Old's object definitions. -->
+		<tag Name="staticFaction1" Value="Consortium,friend,accepting their sponsorship" />
+
+		<!-- Prevents Tealeaves from being hated by Mechanimists, the Merchants' Guild, the Fellowship of Wardens, pariahs, or the Cult of the Coiled Lamb. These are all string IDs of their respective factions, which you can find in Factions.xml within Qud's data files, and we define them here to prevent Tealeaves from getting into fights with the other static NPCs that show up in the Stilt. -->
+		<tag Name="NoHateFactions" Value="Mechanimists,Merchants,Wardens,Pariahs,Resheph" />
+
+		<!-- Prevents Tealeaves from being picked automatically by the game for use in dynamic encounters (i.e. spawning randomly, appearing as a sultan cultist, etc.) By enabling this tag, they will only ever appear where they're manually mapped in. -->
+		<tag Name="ExcludeFromDynamicEncounters" />
+
+		<!-- Makes Tealeaves's name a proper noun. -->
+		<xtagGrammar Proper="true" />
+
+		<!-- Finally, this special tag makes Tealeaves teach Wilderness Lore: Jungles as their water ritual skill. They come from the jungle, so it makes sense for them to teach it. -->
+		<xtagWaterRitual SellSkill="Survival_JungleSurvival" />
+	</object>
+
+	<!-- All of the following object definitions are merge loads into base game defs of the same name, to make sure they play nicely. -->
+	<object Name="Warden Esthers" Load="Merge">
+		<!-- At the time of writing, there doesn't seem to be a way to amend the value of tags when merging - only replacing them. As a result, we have to use the slightly destructive solution of replacing the whole tag, which we do by repeating the base value from the data files and simply appending Newly Sentient Beings to the end. -->
+		<tag Name="NoHateFactions" Value="Mechanimists,Merchants,Pariahs,Resheph,Newly Sentient Beings" />
+	</object>
+	<object Name="Lulihart" Load="Merge">
+		<tag Name="NoHateFactions" Value="Wardens,Mechanimists,Resheph,Newly Sentient Beings" />
+	</object>
+	<object Name="Tszappur" Load="Merge">
+		<tag Name="NoHateFactions" Value="Mechanimists,Pariahs,Wardens,Newly Sentient Beings" />
+	</object>
+</objects>
