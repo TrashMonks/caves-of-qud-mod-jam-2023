@@ -64,6 +64,7 @@ namespace XRL.World.Parts
         public static void HandleWishNode(XmlDataHelper xml)
         {
             WishCommandXML data = new WishCommandXML();
+            data.Renderable = Renderable.UITile("empty", "k", "k");
             data.Commands = xml.ParseAttribute("Commands", data.Commands, required: true);
             var firstCommand = data.Commands[0];
             if (firstCommand.StartsWith("item:"))
