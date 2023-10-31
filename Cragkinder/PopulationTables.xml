@@ -1,0 +1,23 @@
+<populations>
+
+    <population Name="AsphaltMines" Load="Merge">
+        <group Name="Creatures" Load="Merge">
+            <group Name="Cragmensch" Load="Merge">
+                <object Chance="10" Number="1-2" Blueprint="Bigsimple_Cragkinder" />
+            </group>
+        </group>
+    </population>        
+
+    <population Name="BethesdaSusaSurface" Load="Merge">
+        <object Chance="20" Number="1-2" Blueprint="Bigsimple_Cragkinder" />
+    </population>   
+
+    <population Name="BethesdaSusaWharf" Load="Merge">
+        <object Chance="30" Number="2-3" Blueprint="Bigsimple_Cragkinder" />
+    </population>
+
+    <population Name="BethesdaSusaStandardWard" Load="Merge">
+        <object Chance="20" Number="1-2" Blueprint="Bigsimple_Cragkinder" />
+    </population>
+
+</populations>

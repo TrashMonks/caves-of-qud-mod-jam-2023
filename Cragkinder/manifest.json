@@ -1,0 +1,9 @@
+{
+    "id": "Bigsimple_Cragkinder",
+    "title": "Cragkinder",
+    "description": "Adds the new infant Cragmench creature to Caves of Qud - credit to A Blessed Feline for the name",
+    "version": "0.1.0",
+    "author": "{{M|BigSimple}}",
+    "tags": "Creature",
+    "PreviewImage": "preview.png"
+}

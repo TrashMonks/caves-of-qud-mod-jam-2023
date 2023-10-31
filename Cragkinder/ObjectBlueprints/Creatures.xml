@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+
+  
+
+    <object Name="Cragmensch Boulderer" Load="Merge">
+        <inventoryobject Blueprint="Bigsimple_CragkinderSpawner" Number="1d2" Chance="100" />
+    </object>
+
+    <object Name="Bigsimple_CragkinderSpawner" Inherits="MediumBoulder">
+        <part Name="DeploymentGrenade" Blueprint="Bigsimple_Cragkinder" Count="1" Radius="1" RealRadius="true" LoyalToThrower="false" ActivationVerb="awakens from its slumber" BlockedBySolid="true" BlockedByNonEmpty="false" DustPuff="true" DustPuffEach="true" />
+        <part Name="Render" DisplayName="boulder" Tile="Items/sw_mediumboulder.bmp" RenderString="46" />
+        <part Name="ThrownWeapon" Damage="2d10+3" Penetration="9" />
+    </object>
+
+    <object Name="Bigsimple_Pebble" Inherits="BaseStone">
+        <part Name="Render" DisplayName="pebble" Tile="Items/sw_smallstone.bmp" />
+        <part Name="SizeAdjective" Adjective="tiny" />
+        <part Name="Physics" Weight="10"/>
+        <part Name="Description" Short="A piece of rock was water-cleaved from its birthing bed and tumbled by time into a tiny sphere." />
+        <part Name="ThrownWeapon" Damage="1d2" Penetration="5" />
+    </object>
+
+    <object Name="Bigsimple_Cragkinder_Face" Inherits="NaturalWeapon">
+        <part Name="Render" DisplayName="hoary face" />
+        <part Name="MeleeWeapon" HitBonus="4" BaseDamage="1d3" Skill="Cudgel" Stat="Strength" Slot="Body" />
+    </object>
+
+    <object Name="Bigsimple_Cragkinder" Inherits="Cragmensch">
+        <part Name="Description" Short="Though only a juvenile formation of carbon, this sizable life is older than most things considered alive." />
+        <part Name="Render" DisplayName="cragkinder" Tile="Bigsimple_Cragkinder/Cragkinder.png" ColorString="&amp;W" DetailColor="w" />
+        <part Name="Corpse" CorpseBlueprint="MediumBoulder" />
+    
+        <stat Name="Strength" Boost="1"  />
+        <stat Name="Toughness" Boost="1" />
+        <stat Name="Speed" sValue="50" Value="50" />
+        <stat Name="AV" sValue="10" Value="10" />
+        <stat Name="Level" sValue="5" Value="5" />
+        <stat Name="Hitpoints" sValue="15" Value="15" />
+
+        <skill Name="Cudgel_Slam"/>
+        <part Name="FabricateFromSelf" ChargeUse="0" FabricateBlueprint="Bigsimple_Pebble" FabricateVerb="excavate" BatchSize="1" HitpointsPer="1" AIUseForThrowing="true" AIHitpointsThreshold="10" HitpointsThreshold="5" EnergyCost="100" Cooldown="1d2" IsBioScannable="true" />
+		<inventoryobject Blueprint="Bigsimple_Pebble" Number="1" />
+        <inventoryobject Blueprint="Bigsimple_Cragkinder_Face" Number="1" />
+    </object>
+
+</objects>
+
+
