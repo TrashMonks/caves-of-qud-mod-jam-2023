@@ -20,7 +20,7 @@
     <tag Name="Species" Value="xtinak_CavesOfCudJam_aurochs" />
     <tag Name="Culture" Value="xtinak_CavesOfCudJam_Aurochs" />
     <tag Name="SecretAdjectives" Value="humanoid" />
-    <mutation Name="Horns" Level="1" HornsName="horn" DisplayName="Horn"/>
+    <mutation Name="Horns" Level="1" DisplayName="Horn"/>
     <mutation Name="HeightenedHearing" Level="2" />
     <mutation Name="HeightenedSmell" Level="3" />
     <mutation Name="ThickFur" Level="1" />
@@ -36,7 +36,7 @@
 	<part Name="Description" Short="A mess of unfortuntely fine looking meat and flesh is all that remains of this Aurochs." />
 	<part Name="Physics" Weight="400" />
     <part Name="Commerce" Value="20" />
-    <tag Name="Tier" Value="3" />    
+    <tag Name="Tier" Value="3" />
   </object>
     <object Name="xtinak_CavesOfCudJam_Aurochs Firebreather" Inherits="xtinak_CavesOfCudJam_Aurochs">
     <part Name="Render" DisplayName="aurochs firebreather" ColorString="&amp;y" DetailColor="R" />

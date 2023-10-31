@@ -35,7 +35,7 @@
 	</object>
 	<object Name="Unze_Mechannibal_Mechannibal_Secondary1" Inherits="NaturalWeapon">
 		<removepart Name="MeleeWeapon" />
-		<part Name="Shield" AV="5" DV="-4" Value="1" WornOn="Hand" />
+		<part Name="Shield" AV="5" DV="-4" WornOn="Hand" />
 		<part Name="Render" DisplayName="{{b|carbide}} {{c|shield-plate}}" />
 		<part Name="Metal" />
 	</object>

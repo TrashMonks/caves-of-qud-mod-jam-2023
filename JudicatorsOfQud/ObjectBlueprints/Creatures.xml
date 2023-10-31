@@ -27,7 +27,7 @@
     <inventoryobject Blueprint="UristJudicator_Launcher" />
     <part Name="Leader" popTable="UristJudicatorFollowers" />
   </object>
-    <object Name="UristMalfJudicator" Inherits="UristJudicator">
+  <object Name="UristMalfJudicator" Inherits="UristJudicator">
     <part Name="Body"  Anatomy="TreadedRobot" />
     <part Name="Brain" Factions="Robots-100" />
     <stat Name="AV" Value="8" />
@@ -71,7 +71,7 @@
     <property Name="Role" Value="Minion" />
     <stat Name="Speed" Value="120" />
   </object>
-    <object Name="UristBatonMinion" Inherits="BaseRobot">
+  <object Name="UristBatonMinion" Inherits="BaseRobot">
     <part Name="Body" Anatomy="HoverRobot" />
     <part Name="Brain" Hostile="false" Factions="Wardens-100" />
     <part Name="Description" Short="A tenuous orb of metal swims through the air, leaving thin bands of anasthetic mist behind them like vapor trails." />
@@ -115,4 +115,4 @@
     <removepart Name="BootSequence" />
     <part Name="Capacitor" Charge="2000" MaxCharge="2000" ChargeRate="120" ChargeDisplayStyle="glow" AltChargeDisplayProperty="" />
   </object>
-<objects>
+</objects>
