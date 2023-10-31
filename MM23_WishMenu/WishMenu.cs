@@ -8,9 +8,11 @@ using System.Linq;
 using XRL;
 using XRL.World;
 using XRL.UI;
+using XRL.Wish;
 
 namespace XRL.World.Parts
 {
+    [HasWishCommand]
     [HasModSensitiveStaticCache]
     [HasGameBasedStaticCache]
     public class MM23_Wish_Handler : IPlayerPart
@@ -42,6 +44,27 @@ namespace XRL.World.Parts
             }
         }
 
+        // this is for stable compat - replace with Renderable.UITile after 206 is stable
+        private static Renderable UITile(
+            string tilePath,
+            char foregroundColorCode = 'y',
+            char detailColorCode = 'w',
+            string noTileAlt = " ",
+            char noTileColor = '\0'
+        )
+        {
+            char useColorChar = noTileColor != '\0' ? noTileColor : foregroundColorCode;
+            string noColorCode = $"&{useColorChar}";
+
+            return new Renderable(
+                tilePath,
+                noTileAlt,
+                noColorCode,
+                "&" + foregroundColorCode,
+                detailColorCode
+            );
+        }
+
         [GameBasedCacheInit]
         [ModSensitiveCacheInit]
         public static void CacheInit()
@@ -64,11 +87,19 @@ namespace XRL.World.Parts
             { "wish", HandleWishNode },
         };
 
+        // also for 204.x compat - remove in 206.x there is default
+        private static List<string> parseCSV(string s) => s.Split(',').ToList();
+
         public static void HandleWishNode(XmlDataHelper xml)
         {
             WishCommandXML data = new WishCommandXML();
-            data.Renderable = Renderable.UITile("empty", "k", "k");
-            data.Commands = xml.ParseAttribute("Commands", data.Commands, required: true);
+            data.Renderable = UITile("empty", 'k', 'k');
+            data.Commands = xml.ParseAttribute(
+                "Commands",
+                data.Commands,
+                required: true,
+                parse: parseCSV
+            );
             var firstCommand = data.Commands[0];
             if (firstCommand.StartsWith("item:"))
                 firstCommand = firstCommand.Substring(5);
@@ -76,7 +107,7 @@ namespace XRL.World.Parts
             try
             {
                 sample = GameObject.createSample(firstCommand);
-                data.DisplayName = sample.DisplayName;
+                data.DisplayName = $"Spawn {sample.DisplayName}";
                 data.Renderable = new Renderable(sample.RenderForUI());
             }
             catch (Exception e)
@@ -90,7 +121,7 @@ namespace XRL.World.Parts
             if (!string.IsNullOrEmpty(icon))
             {
                 var colors = xml.ParseAttribute<string>("ColorPair", "yw");
-                data.Renderable = Renderable.UITile(icon, colors[0], colors[1]);
+                data.Renderable = UITile(icon, colors[0], colors[1]);
             }
             // if (string.IsNullOrEmpty(data.DisplayName))
             // {
@@ -108,26 +139,29 @@ namespace XRL.World.Parts
             return base.WantEvent(ID, cascade) || ID == CommandEvent.ID;
         }
 
+        [WishCommand("mashup")]
+        public static void MashupWish()
+        {
+            var choice = Popup.ShowOptionList(
+                "Monster Mash-Up Wish Menu",
+                MenuItems.Select(a => a.DisplayText).ToArray(),
+                AllowEscape: true,
+                Icons: MenuItems.Select(a => a.Renderable).ToArray()
+            );
+            if (choice >= 0)
+            {
+                foreach (var command in MenuItems[choice].Commands)
+                {
+                    XRL.World.Capabilities.Wishing.HandleWish(The.Player, command);
+                }
+            }
+        }
+
         public override bool HandleEvent(CommandEvent E)
         {
             if (MenuItems == null || MenuItems.Count == 0)
                 CacheInit();
-            if (E.Command == COMMAND_NAME)
-            {
-                var choice = Popup.ShowOptionList(
-                    "Monster Mash-Up Wish Menu",
-                    MenuItems.Select(a => a.DisplayText).ToArray(),
-                    AllowEscape: true,
-                    Icons: MenuItems.Select(a => a.Renderable).ToArray()
-                );
-                if (choice >= 0)
-                {
-                    foreach (var command in MenuItems[choice].Commands)
-                    {
-                        XRL.World.Capabilities.Wishing.HandleWish(The.Player, command);
-                    }
-                }
-            }
+            if (E.Command == COMMAND_NAME) { }
             return base.HandleEvent(E);
         }
     }

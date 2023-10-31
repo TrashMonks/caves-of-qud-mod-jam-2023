@@ -1,5 +1,36 @@
 <wishcommands>
-    <wish DisplayName="Toggle God Mode" Commands="idkfa" />
-    <wish Commands="Gnarf_Halloween Vendor" Author="gnarf" ModName="{{halloween}} costumer" />
-    <wish Commands="Gnarf_Issachari Water Guardian,Gnarf_Issachari Sniper,Gnarf_Issachari Elder" Author="gnarf" ModName="Issachari Evolved" />
+    <wish DisplayName="Teleport to the Six Day Stilt" Commands="goto:JoppaWorld.5.2.1.2.10" Author="CPNK" ModName="Sultan of Smoke"/>
+    <wish DisplayName="Spawn issachari" Commands="Gnarf_Issachari Water Guardian,Gnarf_Issachari Sniper,Gnarf_Issachari Elder" Author="gnarf, Caelyn Sandel, ontoclasm" ModName="Issachari Evolved"/>
+    <wish DisplayName="Spawn apiarch" Commands="Flaborized_Apiarchs_Apiarch" Author="Flaborized" ModName="Apiarchs of Qud"/>
+    <wish DisplayName="Teleport to the Six Day Stilt" Commands="goto:JoppaWorld.5.2.1.2.10" Author="Ilysen" ModName="Tealeaves"/>
+    <wish DisplayName="Spawn radiant sun" Commands="Radiant Sun" Author="acegiak" ModName="Radiant Sun"/>
+    <wish DisplayName="Spawn steel sentinel" Commands="Sal_SteelSentinel" Author="Salvadaddy" ModName="Steel Sentinel"/>
+    <wish DisplayName="Spawn slime hound" Commands="WileyBeast_SlimeHound" Author="WileyBeast" ModName="SlimeHounds"/>
+    <wish DisplayName="Spawn littermensch" Commands="Modjam2023_Littermensch" Author="xuv8r" ModName="Littermensch"/>
+    <wish DisplayName="Spawn gourds" Commands="Andrea52_GourdSentinel_Lesser Gourd,Andrea52_GourdSentinel_Greater Gourd" Author="a52" ModName="Gourd Sentinels"/>
+    <wish DisplayName="Teleport to the village of Miquonoco" Commands="goto:JoppaWorld.42.20.1.1.15" Author="CPNK" ModName="Chiromorphs"/>
+    <wish DisplayName="Spawn mud squids" Commands="Kabikaj_MuckSquid_Muck Squid,KabiKaj_MuckSquid_Squid Gunner,KabiKaj_MuckSquid_Squid Weirder" Author="KabiKaj" ModName="Mud Squids"/>
+    <wish DisplayName="Spawn scarapple tree" Commands="Gearlink_SCARAPPLE_ScarappleTree" Author="Gearlink" ModName="Scarapple"/>
+    <wish DisplayName="Spawn caustic raptor" Commands="visceralfield_monstermash_raptor" Author="visceralfield" ModName="Caustic Raptor"/>
+    <wish DisplayName="Teleport to the Six Day Stilt" Commands="goto:JoppaWorld.5.2.1.2.10" Author="gnarf, librarianmage" ModName="Halloween Costumer"/>
+    <wish DisplayName="Spawn mechannibal" Commands="Unze_Mechannibal_Mechannibal" Author="one_one" ModName="Mechannibal"/>
+    <wish DisplayName="Spawn judicator" Commands="UristJudicator" Author="Xurist" ModName="Judicators of Qud"/>
+    <wish DisplayName="Spawn silly entropic beings" Commands="PKSXB_TimepinchFinch,PKSXB_Dustbringer,PKSXB_SkellyJelly,PKSXB_FloatingI" Author="gamma_delta" ModName="Silly Entropic Beings"/>
+    <wish DisplayName="Spawn shalehawks" Commands="Hazzary453_Shalehawk_Male,Hazzary453_Shalehawk_Female" Author="Hazzary453" ModName="Shalehawk"/>
+    <wish DisplayName="Spawn behemoth" Commands="Glow Wight Behemoth of Rermadon" Author="coiledlamb" ModName="Fleshgrafted Behemoths"/>
+    <wish DisplayName="Deploy waygate spawner" Commands="Kernelmethod_MM23_Waygate Spawner" Author="kernelmethod" ModName="Mycogrigoric Alcoves"/>
+    <wish DisplayName="Spawn aurochs firebreather" Commands="xtinak_CavesOfCudJam_Aurochs Firebreather" Author="ckriech" ModName="Caves of Cud"/>
+    <wish DisplayName="Spawn mechanimist phylacter" Commands="IlluminatiSwag_Jam_GhostCaller" Author="astraldastard" ModName="A Specter is Haunting Qud"/>
+    <wish DisplayName="Spawn cragkinder" Commands="Bigsimple_Cragkinder" Author="Big Simple" ModName="Cragkinder"/>
+    <wish DisplayName="Spawn lichenthrope" Commands="lichenthrope" Author="tsunderebird" ModName="LICHENTHROPE"/>
+    <wish DisplayName="Spawn furniture" Commands="MAFT_MadSci,MAFT_LivingStarmchair,MAFT_LivingBedger,MAFT_LivingChairbear" Author="MAFT" ModName="Promethean Furniture"/>
+    <wish DisplayName="Spawn baboons" Commands="TrystVar_Cyberbaboons_Implanted Baboon,TrystVar_Cyberbaboons_Implanted Hulking Baboon,TrystVar_Cyberbaboons_Implanted Grenadier Baboon,TrystVar_Cyberbaboons_Implanted Gunner Baboon" Author="TrystVar" ModName="Baboons of Babel"/>
+    <wish DisplayName="Spawn convergence" Commands="Monosophy_LithConv_LumberingCrabhound,Monosophy_LithConv_LumberingCrabhoundSmall,Monosophy_LithConv_DecadentCannibal,Monosophy_LithConv_TwoHeadedAdynaton" Author="MONOPOLATOR" ModName="Lithostatic Convergence"/>
+    <wish DisplayName="Teleport to Eddy's" Commands="goto:JoppaWorld.6.16.1.1.10" Author="Caelyn Sandel" ModName="Knife Fight at Eddy's"/>
+    <wish DisplayName="Spawn disjecta membra" Commands="Wound-that-Walks,Cerebromunculus,Ascendant Watcher,Gruesome Hecatoncheire" Author="A Blessed Feline" ModName="Disjecta Membra"/>
+    <wish DisplayName="Spawn jellyface" Commands="Jellyface" Author="k0ba_n_miliv" ModName="Jellyface"/>
+    <wish DisplayName="Spawn ravens" Commands="HDBrownie_NVM_Melancholy Raven,HDBrownie_NVM_Passion Raven,HDBrownie_NVM_Morbidity Raven," Author="helado de brownie" ModName="NEVERMORE: Jam Edition"/>
+    <wish DisplayName="Spawn spooky monsters" Commands="mistersix_spooky_monsters_Saltwoven Ancestor,mistersix_spooky_monsters_Marsh Revenant,mistersix_spooky_monsters_Marsh Remnant" Author="mistersix420" ModName="Mistersix's Spooky Monsters"/>
+    <wish DisplayName="Spawn yeuk" Commands="GrizonII_Yeuk" Author="GrizonII" ModName="Yeuk"/>
+    <wish DisplayName="Spawn boilers" Commands="ducks_StickyAcidBoilBreeder,ducks_SlipperyBoilBreeder,ducks_StickyMagmaBoilBelcher,ducks_MoltenWaxBoilBelcher" Author="ddducks" ModName="Boilers of Qud"/>
 </wishcommands>
