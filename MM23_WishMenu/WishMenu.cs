@@ -13,7 +13,6 @@ using XRL.World;
 namespace XRL.World.Parts
 {
     [HasWishCommand]
-    [HasModSensitiveStaticCache]
     [HasGameBasedStaticCache]
     public class MM23_Wish_Handler : IPlayerPart
     {
@@ -66,7 +65,6 @@ namespace XRL.World.Parts
         }
 
         [GameBasedCacheInit]
-        [ModSensitiveCacheInit]
         public static void CacheInit()
         {
             MenuItems = new List<WishCommandXML>();
@@ -122,7 +120,7 @@ namespace XRL.World.Parts
                     data.Renderable = new Renderable(sample.RenderForUI());
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 // xml.HandleException(e);
             }
