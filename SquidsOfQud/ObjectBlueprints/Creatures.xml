@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <object Name="BaseCephalopod" Inherits="BaseAnimal">
+    <part Name="Body" Anatomy="Cephalopod" />
+    <part Name="Brain" Factions="Mollusks-100" />
+    <stat Name="Strength" sValue="14,1d6,(t-1)d3" />
+    <stat Name="Agility" sValue="14,1d2,(t-1)d2-1" />
+    <stat Name="Toughness" sValue="12,1d3,(t-1)d2" />
+    <stat Name="Intelligence" sValue="12" />
+    <stat Name="Willpower" sValue="19" />
+    <stat Name="Ego" sValue="20" />
+    <skill Name="Dual_Wield" />
+    <skill Name="Dual_Wield_Ambidexterity" />
+    <skill Name="Dual_Wield_Two_Weapon_Fighting" />
+    <tag Name="Class" Value="Cephalopod" />
+    <tag Name="Species" Value="Cephalopod" />
+    <tag Name="BaseObject" Value="*noinherit" />
+  </object>
+
+  <object Name="Kabikaj_MuckSquid_Muck Squid" Inherits="BaseCephalopod">
+    <part Name="Description" Short="Flecks of rust cling to glistening flesh where it spills through tears in the weirdwire veil. Waveform pupils eye you thoughtfully, perhaps regarding you as friend, or as foe. Salt water drips from a tentacle as it signs in a tongue unknown: you will have your answer shortly." />
+    <part Name="Render" DisplayName="mud squid" Tile="KabiKaj_MudSquid/MudSquidPiskel.png" ColorString="&amp;g" DetailColor="r" />
+    <mutation Name="SunderMind" Level="1" />
+    <mutation Name="Regeneration" Level="1" />
+    <mutation Name="Amphibious" Level="1" />
+
+    <inventoryobject Blueprint="Wire Strand" Number="10" />
+    <inventoryobject Blueprint="Shotgun Shell" Number="30" />
+
+    <skill Name="Rifles" />
+
+    <stat Name="Level" Value="13" />
+    <stat Name="Hitpoints" Value="30" />
+    <stat Name="DV" Value="12" />
+    <stat Name="Ego" sValue="20" />
+    <stat Name="Willpower" sValue="19" />
+
+    <tag Name="BaseObject" Value="*noinherit" />
+  </object>
+
+  <object Name="KabiKaj_MuckSquid_Squid Gunner" Inherits="Kabikaj_MuckSquid_Muck Squid">
+    <part Name="Render" DisplayName="mud squid gunner" Tile="KabiKaj_MudSquid/MudSquidPiskel.png" ColorString="&amp;g" DetailColor="r" />
+    <mutation Name="SunderMind" Level="1" />
+    <mutation Name="Regeneration" Level="3" />
+    <mutation Name="Amphibious" Level="1" />
+    <inventoryobject Blueprint="Pump Shotgun" Number="1" />
+    <inventoryobject Blueprint="Shotgun Shell" Number="30" />
+    <tag Name="DynamicObjectsTable:Snapjaws" />
+  </object>
+
+  <object Name="KabiKaj_MuckSquid_Squid Weirder" Inherits="Kabikaj_MuckSquid_Muck Squid">
+    <part Name="Render" DisplayName="mud squid weirder" Tile="KabiKaj_MudSquid/MudSquidPiskel.png" ColorString="&amp;G" DetailColor="R" />
+    <mutation Name="SunderMind" Level="3" />
+    <mutation Name="Regeneration" Level="1" />
+    <mutation Name="Amphibious" Level="1" />
+    <inventoryobject Blueprint="Wire Strand" Number="15" />
+    <inventoryobject Blueprint="Dagger" Number="4" />
+    <tag Name="DynamicObjectsTable:Snapjaws" />
+  </object>
+</objects>

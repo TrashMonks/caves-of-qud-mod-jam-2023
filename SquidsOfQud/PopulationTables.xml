@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<populations>
+  <population Name="KabiKaj_MuckSquid_Muck_Squids">
+    <group Name="Squids" Style="pickone">
+      <object Number="1" Blueprint="KabiKaj_MuckSquid_Squid Gunner" />
+      <object Number="1" Blueprint="KabiKaj_MuckSquid_Squid Weirder" />
+    </group>
+  </population>
+
+  <population Name="Mollusks" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <table Name="KabiKaj_MuckSquid_Muck_Squids" />
+    </group>
+  </population>
+
+  <population Name="Rustwells 3" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <table Name="KabiKaj_MuckSquid_Muck_Squids" />
+    </group>
+  </population>
+
+  <population Name="RustwellsBottomPool" Load="Merge">
+    <group Name="Creatures" Load="Merge">
+      <table Name="KabiKaj_MuckSquid_Muck_Squids" />
+    </group>
+  </population>
+</populations>
