@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<bodies>
+	<anatomies>
+
+		<anatomy Name="Gearlink_SCARAPPLE_RipeScarappleBody">
+      <part Type="Central Mass">
+        <part Type="Sensory Bud" />
+      </part>
+      <part Type="Back" />
+      <part Type="Lobe" Laterality="Right">
+        <part Type="Bifurcation" Laterality="Right" SupportsDependent="Bifurcations" />
+      </part>
+      <part Type="Lobe" Laterality="Left">
+        <part Type="Bifurcation" Laterality="Left" SupportsDependent="Bifurcations" />
+      </part>
+      <part Type="Missile Weapon" Laterality="Right" />
+      <part Type="Missile Weapon" Laterality="Left" />
+      <part Type="Bifurcations" DependsOn="Bifurcations" />
+      <part Type="Feet" />
+    </anatomy>
+
+	</anatomies>
+</bodies>

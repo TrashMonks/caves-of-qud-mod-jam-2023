@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+  <object Name="Gearlink_SCARAPPLE_ScarappleTree" Inherits="MutatedTree">
+    <part Name="Render" RenderIfDark="true" DisplayName="scarapple tree" Tile="Gearlink_Scarapple/ScarappleTree.png" ColorString="&amp;g" DetailColor="m"/>
+    <part Name="Description" Short="Runaway replication has rent =pronouns.possessive= bark into a patchwork of pale seams. Violet blobs dot the canopy and ripen towards ambulatory independence. Oversized branches bob up and down, judging =pronouns.possessive= fruits’ virtues as projectiles." />
+    <part Name="Brain" Hostile="true" Wanders="false" Mobile="false" Factions="Trees-100" />
+    <!-- Have the tree only occasionally drop a corpse since it can produce an item equivalent to an Ubernostrum injector. -->
+    <part Name="Corpse" CorpseChance="20" CorpseBlueprint="Gearlink_SCARAPPLE_ScarappleTreeCorpse" />
+    <stat Name="AV" Value="8" />
+    <stat Name="Level" Value="28" />
+    <stat Name="Hitpoints" Value="150" />
+  	<stat Name="Agility" Boost="2" />
+    <inventoryobject Blueprint="Gearlink_SCARAPPLE_ScarappleTreeBranch" Number="2" />
+    <stat Name="HeatResistance" Value="25" />
+    <stat Name="ColdResistance" Value="25" />
+    <stat Name="ElectricResistance" Value="25" />
+    <stat Name="AcidResistance" Value="25" />
+    <skill Name="Cudgel" />
+    <skill Name="Tactics_Throwing" />
+    <mutation Name="Regeneration" Level="10" />
+    <property Name="Role" Value="Artillery" />
+    <!-- Enables the tree to occasionally make a new ripe scarapple. ChargeUse is
+    set to 0 because FabricateFromSelf inherits from IPoweredPart and so by default
+    it will need power, which the tree shouldn't need to make more fruit. FabricateVerb
+    and FabricateAlternateSource modify the default message when the tree does so.
+    AIUseForThrowing being set to true will make the AI use this ability
+    offensively and equip the produced ripe scarapple as a thrown weapon. -->
+    <part Name="FabricateFromSelf" ChargeUse="0" FabricateBlueprint="Gearlink_SCARAPPLE_RipeScarapple" FabricateVerb="pluck" FabricateAlternateSource=" the canopy" BatchSize="1" HitpointsPer="0" AIUseForThrowing="true" EnergyCost="100" Cooldown="1d3+1" IsBioScannable="true" />
+    <!-- Prevents the player from swapping spaces with the tree, like how other
+    mutated tree creatures work. -->
+    <tag Name="Noswap" />
+    <tag Name="DynamicObjectsTable:DeepJungle_Creatures" />
+    <tag Name="DynamicObjectsTable:BaroqueRuins_Creatures" />
+  </object>
+  <object Name="Gearlink_SCARAPPLE_ScarappleTreeBranch" Inherits="NaturalWeapon">
+    <part Name="MeleeWeapon" HitBonus="5" BaseDamage="4d3" Skill="Cudgel" Stat="Strength" Slot="Hand" />
+    <part Name="Render" DisplayName="branch" />
+  </object>
+  <object Name="Gearlink_SCARAPPLE_ScarappleTreeCorpse" Inherits="Corpse">
+    <part Name="Render" DisplayName="scarapple bough" Tile="Gearlink_Scarapple/ScarappleBranch.png" ColorString="&amp;g" TileColor="&amp;g" DetailColor="m" />
+    <part Name="Description" Short="A bough thrashes about weakly, jeweled with swollen prizes." />
+    <part Name="Harvestable" OnSuccess="Gearlink_SCARAPPLE_UnripeScarapple" DestroyOnHarvest="true" />
+    <part Name="Commerce" Value="100" />
+    <part Name="Physics" Weight="30" />
+    <!-- By default, the Corpse object has a part which chooses a random splat
+    tile. This will override the custom ScarappleBranch.png tile, so it needs to
+    be removed. -->
+    <removepart Name="RandomTile" />
+    <tag Name="Tier" Value="7" />
+    <tag Name="DynamicObjectsTable:Corpses" />
+    <property Name="Role" Value="Uncommon" />
+  </object>
+
+  <object Name="Gearlink_SCARAPPLE_RipeScarapple" Inherits="MutatedPlant">
+    <stat Name="Strength" sValue="18,1d3,(t)d1" />
+    <stat Name="Agility" sValue="12,1d3,(t)d1" />
+    <stat Name="Toughness" sValue="18,1d3,(t)d1" />
+    <stat Name="Intelligence" sValue="8,1d3" />
+    <stat Name="Willpower" sValue="16,1d3,(t)d1" />
+    <stat Name="Ego" sValue="8,1d3" />
+    <part Name="Body" Anatomy="Gearlink_SCARAPPLE_RipeScarappleBody" />
+    <part Name="Render" DisplayName="ripe scarapple" Tile="Gearlink_Scarapple/RipeScarapple.png" ColorString="&amp;m" DetailColor="g"/>
+    <part Name="Description" Short="Fruit-flesh has bulged into approximations of limbs, tearing the rind into a mosaic reminiscent of their parent and epithet. A crater in the main body records the memory of a violent impact." />
+    <part Name="Brain" Hostile="true" Factions="Trees-100" />
+    <stat Name="AV" Value="7" />
+    <stat Name="Level" Value="16" />
+    <stat Name="Hitpoints" Value="25" />
+    <inventoryobject Blueprint="Gearlink_SCARAPPLE_RipeScarappleFist" Number="2" />
+    <!-- By default, the MutatedPlant object will bleed sap, but the scarapples
+    should bleed fruity juice (cider) as well so these tags need to be modified. a-->
+    <!-- Make the ripe scarapple bleed a 50/50 mixture of sap and cider. -->
+    <tag Name="BleedLiquid" Value="sap-500,cider-500" />
+    <!-- Don't override the BleedColor, since its fine if the ripe scarapple flashes
+    gold when bloodied. -->
+    <!-- Describe the ripe scarapple as sappy and juicy when bloodied. -->
+    <tag Name="BleedPrefix" Value="{{W|sappy}} and {{r|juicy}}" />
+    <!-- Make the ripe scarapple count as a thrown weapon when equipped so when
+    the scarapple tree equips a ripe scarapple generated via FabricateFromSelf, it
+    will function better than throwing any random item. -->
+    <part Name="ThrownWeapon" Damage="3d10+3" Penetration="12" />
+    <!-- Make it so the penetration and damage values of the ripe scarapple don't
+    get shown, so players don't see it when the scarapples are just walking around. -->
+		<tag Name="HideThrownWeaponPerformance"/>
+    <mutation Name="Regeneration" Level="10" />
+    <skill Name="Cudgel" />
+    <property Name="Role" Value="Minion" />
+  </object>
+  <object Name="Gearlink_SCARAPPLE_RipeScarappleFist" Inherits="NaturalWeapon">
+    <part Name="MeleeWeapon" HitBonus="5" BaseDamage="3d3" Skill="Cudgel" Stat="Strength" Slot="Hand" />
+    <part Name="Render" DisplayName="fruity fist" />
+  </object>
+
+  <object Name="Gearlink_SCARAPPLE_UnripeScarapple" Inherits="Starapple">
+    <part Name="Render" DisplayName="unripe scarapple" ColorString="&amp;m" DetailColor="g"/>
+    <part Name="Description" Short="A bruise-purple scarapple, unripe and thus incapable of locomotion. It quivers and bulges with new growth." />
+    <part Name="Physics" Category="Tonics" />
+    <part Name="PreservableItem" Result="Gearlink_SCARAPPLE_ScarappleJam" Number="5" />
+    <!-- Replicate the effect of an UbernostrumTonic. Set Eat="true" so the tonic
+    is applied when the scarapple is eaten, such as with Hoarshroom. -->
+    <part Name="Tonic" Eat="true" />
+    <part Name="Ubernostrum_Tonic_Applicator" />
+    <part Name="AIHealingTonicUse" />
+    <part Name="RulesDescription" Text="Duration: 5 rounds
+You recover 0.6 hit points per level (minimum 3) each round." AltForGenotype="True Kin" GenotypeAlt="Duration: 5 rounds
+You recover 0.9 hit points per level (minimum 5) each round." />
+    />
+    <part Name="Commerce" Value="75" />
+    <tag Name="SpecialCookingIngredient" />
+    <tag Name="ChooseToPreserve" />
+  </object>
+
+  <object Name="Gearlink_SCARAPPLE_ScarappleJam" Inherits="Preservable">
+    <part Name="Render" DisplayName="{{m|scarapple jam}}" ColorString="&amp;C" TileColor="&amp;C" DetailColor="m" Tile="Items/sw_Jam.bmp" />
+    <part Name="Commerce" Value="10" />
+    <part Name="Description" Short="Unripe scarapples were diced, mashed, and heated until they stopped moving, then jarred for later use. Bits of stringy pulp lay suspended in the fruity aether." />
+    <!-- Replicate the effects of Soul Curd. -->
+    <part Name="PreparedCookingIngredient" type="regenHightier" charges="1" />
+    <tag Name="Plant" />
+    <tag Name="DynamicObjectsTable:Jungle_Ingredients" />
+    <tag Name="DynamicObjectsTable:Ruins_Ingredients" />
+  </object>
+
+</objects>

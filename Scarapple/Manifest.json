@@ -1,0 +1,9 @@
+{
+    "id": "Gearlink_Scarapple",
+    "title": "Scarapples",
+    "description": "Adds the scarapple tree and its fruit to Qud. Made for the 2023 Monster Mash Mod Jam.",
+    "version": "0.1.0",
+    "author": "Gearlink",
+    "tags": "Creature",
+		"previewImage": "preview.png"
+}

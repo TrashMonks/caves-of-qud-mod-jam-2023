@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<populations>
+
+	<!-- Make it so scarapple trees and lone ripe scarapples can be found in the
+ 	deep jungle and baroque ruins, but are more common in the later. Make the chances
+	for both low since they are meant to be a tough, rare encounter. -->
+	<population Name="DeepJungleZoneGlobals-Creatures" Load="Merge">
+		<object Chance="2" Number="1" Blueprint="Gearlink_SCARAPPLE_ScarappleTree" />
+		<object Chance="4" Number="1" Blueprint="Gearlink_SCARAPPLE_RipeScarapple" />
+	</population>
+
+	<population Name="BaroqueRuinsZoneGlobals-Creatures" Load="Merge">
+		<object Chance="4" Number="1" Blueprint="Gearlink_SCARAPPLE_ScarappleTree" />
+		<object Chance="8" Number="1" Blueprint="Gearlink_SCARAPPLE_RipeScarapple" />
+	</population>
+
+	<!-- Make it so scarapple trees are potential lair owners in the deep jungle and baroque
+	ruins. -->
+	<population Name="LairOwners_DeepJungle" Load="Merge">
+		<group Name="Options" Load="Merge">
+			<object Blueprint="Gearlink_SCARAPPLE_ScarappleTree" />
+		</group>
+	</population>
+
+	<population Name="LairOwners_BaroqueRuins" Load="Merge">
+    <group Name="Options" Load="Merge">
+      <object Blueprint="Gearlink_SCARAPPLE_ScarappleTree" />
+    </group>
+  </population>
+
+	<!-- Make it so scarapple jam will appear in places where high tier ingredients
+ 	appear, such as kipper's inventories. -->
+	<population Name="Ingredients_MidTiers" Load="Merge">
+    <group Name="Items" Load="Merge">
+      <object Blueprint="Gearlink_SCARAPPLE_ScarappleJam" Number="1" Weight="5" />
+    </group>
+  </population>
+
+	<!-- Make it so unripe scarapples will appear in mid to high tier village
+	apothecaries' inventories and places where mid to high tier food appears. Based
+	on where urberries currently spawn. -->
+	<population Name="Village Apothecary 5" Load="Merge">
+    <group Name="Items" Load="Merge">
+      <object Blueprint="Gearlink_SCARAPPLE_UnripeScarapple" Number="0-1" Chance="50" />
+    </group>
+  </population>
+
+  <population Name="Village Apothecary 6" Load="Merge">
+    <group Name="Items" Load="Merge">
+      <object Blueprint="Gearlink_SCARAPPLE_UnripeScarapple" Number="0-1" Chance="50" />
+    </group>
+  </population>
+
+  <population Name="Village Apothecary 7" Load="Merge">
+    <group Name="Items" Load="Merge">
+      <object Blueprint="Gearlink_SCARAPPLE_UnripeScarapple" Number="1" Chance="50" />
+    </group>
+  </population>
+
+  <population Name="Village Apothecary 8" Load="Merge">
+    <group Name="Items" Load="Merge">
+      <object Blueprint="Gearlink_SCARAPPLE_UnripeScarapple" Number="1" Chance="50" />
+    </group>
+  </population>
+
+	<population Name="Food 5" Load="Merge">
+    <group Name="Items" Load="Merge">
+      <object Weight="1" Number="1" Blueprint="Gearlink_SCARAPPLE_UnripeScarapple" />
+    </group>
+  </population>
+
+  <population Name="Food 6" Load="Merge">
+    <group Name="Items" Load="Merge">
+      <object Weight="1" Number="1" Blueprint="Gearlink_SCARAPPLE_UnripeScarapple" />
+    </group>
+  </population>
+
+  <population Name="Food 7" Load="Merge">
+    <group Name="Items" Load="Merge">
+      <object Weight="1" Number="1" Blueprint="Gearlink_SCARAPPLE_UnripeScarapple" />
+    </group>
+  </population>
+
+  <population Name="Food 8" Load="Merge">
+    <group Name="Items" Load="Merge">
+      <object Weight="1" Number="1" Blueprint="Gearlink_SCARAPPLE_UnripeScarapple" />
+    </group>
+  </population>
+
+</populations>
