@@ -1,3 +1,6 @@
+// note from gnarf: I wrote this in like 1 hour at midnight, I'm not proud of it
+// open to PR's to clean up syntax/code organization of this little tool
+
 using ConsoleLib.Console;
 using System;
 using System.Collections.Generic;
