@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+  <conversation ID="Urist_Judicator">
+    <node ID="Start" IfTrueKin="true">
+      <text>
+        Aristocrat, this facility has been cordoned off! Please vacate the area.~
+        Is it really you after all this time? It's been millenia!~
+        Goodness, it's been quite some time since I've seen someone here. Where did everyone go?~
+        {{R|Warning:}} Entering this area may expose aristocrat to high pressure, low pressure, high temperatures, low temperatures, death, foul language, and {{B-b-K-y-Y sequence|neutron flux}} destablization.
+      </text>
+      <choice GotoID="End">Live and... remain ever rustless.</choice>
+    </node>
+
+    <node ID="Start">
+      <text>
+        Denizen, this facility has been cordoned off! Please vacate the area.~
+        {{R|Warning:}} Entering this area may expose denzien to high pressure, low pressure, high temperatures, low temperatures, death, foul language, and {{B-b-K-y-Y sequence|neutron flux}} destablization.~
+        Denizen, I detect your biological augments are terribly out of date! The nearest tuning station is: {{R|!!!9999999!!!}} parsangs north from here.~
+        Goodness, it's been quite some time since I've seen someone here. Where did everyone go?~
+        Stay safe denizen.
+      </text>
+      <choice GotoID="End">Live and... remain ever rustless.</choice>
+    </node>
+  </conversation>
+<conversations>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<populations>
+  <population Name="BaroqueRuinsZoneGlobals-Robots" Load="Merge">
+      <group Name="Creatures" Load="Merge">
+        <object Chance="5" Number="1" Blueprint="UristMalfJudicator" />
+        <object Chance="3" Number="1" Blueprint="UristJudicator" />
+      </group>
+  </population>
+  <population Name="RuinsZoneGlobals-Creatures" Load="Merge">
+      <group Name="Creatures" Load="Merge">
+        <object Chance="2" Number="1" Blueprint="UristMalfJudicator" />
+        <object Chance="5" Number="1" Blueprint="UristJudicator" />
+      </group>
+  </population>
+  <population Name="BaroqueRuinsZoneGlobals-Creatures" Load="Merge">
+      <group Name="Creatures" Load="Merge">
+        <object Chance="5" Number="1" Blueprint="UristMalfJudicator" />
+        <object Chance="3" Number="1" Blueprint="UristJudicator" />
+      </group>
+  </population>
+
+  <population Name="RuinsZoneGlobals-Robots" Load="Merge">
+      <group Name="Creatures" Load="Merge">
+        <object Chance="2" Number="1" Blueprint="UristMalfJudicator" />
+        <object Chance="5" Number="1" Blueprint="UristJudicator" />
+      </group>
+  </population>
+
+  <population Name="UristMolderFollowers">
+    <group Name="Creatures" Style="pickone">
+      <object Blueprint="UristPDMinion" Number="1" />
+    </group>
+  </population>
+
+  <population Name="UristJudicatorFollowers">
+    <group Name="Creatures" Style="pickone">
+      <object Blueprint="UristBatonMinion" Number="1" />
+    </group>
+  </population>
+</populations>

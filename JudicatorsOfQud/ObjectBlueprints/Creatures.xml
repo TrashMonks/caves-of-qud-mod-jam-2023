@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <object Name="UristJudicator" Inherits="BaseRobot">
+    <part Name="Body"  Anatomy="TreadedRobot" />
+    <part Name="Render" DisplayName="{{B|judicator}}" Tile="UristJamTextures/UristControlbot.png" RenderString="8" ColorString="&amp;c" DetailColor="W" />
+    <part Name="Description" Short="Imperishable chrome was cast into the likeness of the Eaters and bolted to a fullerite skeleton several magnitudes greater than its reference. A cloud of defense drones swarm eagerly around its antenna, though their only commander now is the warm buzz of static." />
+    <part Name="Brain" Factions="Wardens-100" />
+    <stat Name="AV" Value="15" />
+    <stat Name="Hitpoints" Value="700" />
+    <stat Name="Strength" sValue="55" />
+    <stat Name="Toughness" Boost="1" />
+    <stat Name="Willpower" Boost="2" />
+    <stat Name="Intelligence" sValue="25" />
+    <stat Name="Agility" Boost="1" />
+    <stat Name="Ego" sValue="30" />
+    <stat Name="Level" Value="32" />
+    <stat Name="Speed" Value="50" />
+    <skill Name="Cudgel" />
+    <skill Name="Cudgel_Slam" />
+    <skill Name="HeavyWeapons_Tank" />
+    <skill Name="Persuasion_Berate" />
+    <skill Name="Persuasion_InspiringPresence" />
+    <part Name="Corpse" CorpseChance="25" CorpseBlueprint="UristNeutronCore" />
+    <part Name="ConversationScript" ConversationID="Urist_Judicator" />
+    <tag Name="Gigantic" />
+    <inventoryobject Blueprint="UristJudicator_Baton" />
+    <inventoryobject Blueprint="UristJudicator_Launcher" />
+    <part Name="Leader" popTable="UristJudicatorFollowers" />
+  </object>
+    <object Name="UristMalfJudicator" Inherits="UristJudicator">
+    <part Name="Body"  Anatomy="TreadedRobot" />
+    <part Name="Brain" Factions="Robots-100" />
+    <stat Name="AV" Value="8" />
+    <part Name="Render" DisplayName="{{r|moldering judicator}}" Tile="UristJamTextures/UristControlbot.png" RenderString="8" ColorString="&amp;w" DetailColor="r" />
+    <part Name="Leader" popTable="UristMolderFollowers" />
+  </object>
+  <object Name="UristJudicator_Baton" Inherits="NaturalWeapon">
+    <part Name="MeleeWeapon" BaseDamage="1d8" Skill="Cudgel" Stat="Strength" Slot="Hand" />
+    <part Name="Render" DisplayName="stun rod" />
+    <tag Name="SwingSound" Value="Sounds/Melee/cudgels/sfx_melee_cudgel_oneHanded_metal_swing" />
+    <tag Name="BlockedSound" Value="Sounds/Melee/multiUseBlock/sfx_melee_metal_blocked" />
+    <part Name="ElementalDamage" Damage="5-10" Attributes="Electric" />
+    <part Name="StunOnHit" ChargeUse="0" Chance="25" Duration="2" />
+  </object>
+  <object Name="UristJudicator_Launcher" Inherits="NaturalMissileWeapon">
+    <part Name="Render" DisplayName="shoulder-mounted capsule launcher" ColorString="&amp;c" DetailColor="y" Tile="items/sw_techcannon_1.bmp" />
+    <part Name="Physics" UsesTwoSlots="true" Weight="200" />
+    <part Name="MissileWeapon" Skill="HeavyWeapons" AmmoChar="&amp;W-" ShotsPerAction="2" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="5" />
+    <part Name="EnergyAmmoLoader" ChargeUse="0" ProjectileObject="UristProjectileJudicatorStun" />
+    <part Name="Metal" />
+		<tag Name="NoDefaultBehavior" />
+    <part Name="AIShootCooldown" Cooldown="20" />
+    <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Heavy Weapons/sfx_missile_missileLauncher_fire" />
+  </object>
+  <object Name="UristProjectileJudicatorStun" Inherits="TemporaryProjectile">
+    <part Name="Render" DisplayName="{{C|gelatin capsule}}" ColorString="&amp;C" />
+    <part Name="Projectile" BasePenetration="1" BaseDamage="1d2" ColorString="&amp;G" />
+    <part Name="EmitGasOnHit" GasBlueprint="ConfusionGas" CellDensity="100" AdjacentDensity="60" />
+  </object>
+  <object Name="UristPDMinion" Inherits="BaseRobot">
+    <part Name="Body" Anatomy="HoverRobot" />
+    <part Name="Brain" Hostile="false" />
+    <part Name="Description" Short="A tenuous orb of rust swims through the air, yearning to expand into a cloud of red-gold hues." />
+    <part Name="Render" DisplayName="{{R|unstable}} suppression drone" ColorString="&amp;w" DetailColor="R" RenderString="*" Tile="UristJamTextures/UristPDBot" />
+    <stat Name="Level" Value="5" />
+    <stat Name="AV" Value="3" />
+    <stat Name="Hitpoints" Value="15" />
+    <tag Name="Species" Value="hover robot" />
+    <inventoryobject Blueprint="UristIntegratedPD" />
+    <part Name="FeralLahPod" damage="20-40" />
+    <property Name="Role" Value="Minion" />
+    <stat Name="Speed" Value="120" />
+  </object>
+    <object Name="UristBatonMinion" Inherits="BaseRobot">
+    <part Name="Body" Anatomy="HoverRobot" />
+    <part Name="Brain" Hostile="false" Factions="Wardens-100" />
+    <part Name="Description" Short="A tenuous orb of metal swims through the air, leaving thin bands of anasthetic mist behind them like vapor trails." />
+    <part Name="Render" DisplayName="suppression drone" ColorString="&amp;c" DetailColor="W" RenderString="*" Tile="UristJamTextures/UristPDBot" />
+    <stat Name="Level" Value="5" />
+    <stat Name="AV" Value="4" />
+    <stat Name="Hitpoints" Value="15" />
+    <tag Name="Species" Value="hover robot" />
+    <skill Name="Cudgel" />
+    <inventoryobject Blueprint="UristIntegratedPD" />
+    <inventoryobject Blueprint="Stun Rod" />
+    <inventoryobject Blueprint="Chem Cell" />
+    <property Name="Role" Value="Minion" />
+    <stat Name="Speed" Value="120" />
+  </object>
+
+  <object Name="UristNeutronCore" Inherits="StorageTank">
+    <part Name="Render" DisplayName="{{B-b-K-y-Y sequence|Neutron Reactor}}" Tile="UristJamTextures/Uristneutroncore.png" ColorString="&amp;K" DetailColor="B" />
+    <part Name="Description" Short="A dense shell of fullerite encases an inner inferno where the laws of physics go to die." />
+    <part Name="LiquidVolume" MaxVolume="1" Volume="1" StartVolume="1" InitialLiquid="neutronflux-1000" />
+    <part Name="TinkerItem" Bits="5567" CanDisassemble="true" CanBuild="false" />
+    <part Name="Physics" Weight="500" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="UristIntegratedPD" Inherits="Point-Defense Drone">
+    <part Name="NoBreak" />
+    <part Name="Render" DisplayName="Integrated Point Defense" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" Takeable="false" Organic="false" Weight="0" Category="Natural Missile Weapon" FreezeTemperature="-99999" BrittleTemperature="-99999" FlameTemperature="99999" VaporTemperature="99999" />
+    <part Name="NaturalEquipment" />
+    <intproperty Name="Natural" Value="1" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+    <tag Name="NaturalGear" />
+    <tag Name="NeverStack" />
+    <tag Name="ShowAsPhysicalFeature" />
+    <part Name="PoweredFloating" ChargeUse="0" />
+    <removepart Name="Examiner" />
+    <part Name="ZeroPointEnergyCollector" ChargeRate="100" World="JoppaWorld,OrbWorld" />
+    <part Name="PointDefense" ChargeUse="0" MinRange="2" MaxRange="5" TargetExplosives="80" TargetThrownWeapons="90" TargetArrows="70" TargetSlugs="40" TargetEnergy="0" />
+    <removepart Name="EnergyCellSocket" />
+    <removepart Name="BootSequence" />
+    <part Name="Capacitor" Charge="2000" MaxCharge="2000" ChargeRate="120" ChargeDisplayStyle="glow" AltChargeDisplayProperty="" />
+  </object>
+<objects>
