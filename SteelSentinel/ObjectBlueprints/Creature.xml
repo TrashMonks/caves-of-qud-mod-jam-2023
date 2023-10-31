@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <object Name="Sal_SteelSentinel" Inherits="Scrapbot">
+    <part Name="Description" Short="A hulking block of steel, with vaguely humanoid features chiseled onto it. Most theorize that it was used by the Eater's as a way to prevent intruders from escaping secure locations" />
+    <part Name="Render" DisplayName="Steel Sentinel" Tile="SentinelBot/sentinelbot.png" ColorString="&amp;Y^K" />
+
+    <inventoryobject Blueprint="Battle Axe5th" Number="1" />
+
+    <skill Name="Axe" />
+    <skill Name="Axe_ChargingStrike" />
+    <skill Name="Tactics_Charge" />
+    <skill Name="Axe_HookAndDrag" />
+
+    <stat Name="Hitpoints" Value="150" />
+    <stat Name="Level" Value="24" />
+    <stat Name="DV" Value="2" />
+    <stat Name="AV" Value="15" />
+    <stat Name="Ego" Value="10" />
+    <stat Name="Willpower" Value="10" />
+    <stat Name="Strength" Value="40" />
+    <stat Name="Agility" Value="12" />
+    <stat Name="Intelligence" Value="10" />
+    <part Name="MentalShield" />
+    <mutation Name="Teleportation" Level="27" />
+  </object>
+</objects>

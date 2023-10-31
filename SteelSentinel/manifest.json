@@ -1,0 +1,9 @@
+{
+    "id": "Sal_Sentinel Bot",
+    "title": "Steel Sentinel!",
+    "description": "Adds the new Sentinel Bot robot to Caves of Qud.",
+    "version": "0.1.0",
+    "author": "Sal",
+    "tags": "Creature",
+    "PreviewImage": "preview2.png"
+}
