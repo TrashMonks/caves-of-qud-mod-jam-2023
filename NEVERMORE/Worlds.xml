@@ -1,0 +1,21 @@
+<worlds>
+    <world Name="JoppaWorld" Load="Merge">
+        <cell Name="TheSpindle" Inherits="TheSpindle" ApplyTo="TerrainTheSpindle" Mutable="false">
+            <zone Level="10" x="1" y="1" Name="Spindle Channel" DisableForcedConnetions="Yes">
+                <map FileName="SpindleChannel.rpm"></map>
+                <builder Class="FlagInside"></builder>
+                <builder Class="AddBlueprintBuilder" Object="HDBrownie_NVM_Melancholy Raven"/>
+            </zone>
+            <zone Level="9" x="1" y="1" Name="Spindle Channel" DisableForcedConnetions="Yes">
+                <map FileName="SpindleChannel.rpm"></map>
+                <builder Class="FlagInside"></builder>
+                <builder Class="AddBlueprintBuilder" Object="HDBrownie_NVM_Passion Raven"/>
+            </zone>
+            <zone Level="8" x="1" y="1" Name="Spindle Channel" DisableForcedConnetions="Yes">
+                <map FileName="SpindleChannel.rpm"></map>
+                <builder Class="FlagInside"></builder>
+                <builder Class="AddBlueprintBuilder" Object="HDBrownie_NVM_Morbidity Raven"/>
+            </zone>
+        </cell>
+    </world>
+</worlds>

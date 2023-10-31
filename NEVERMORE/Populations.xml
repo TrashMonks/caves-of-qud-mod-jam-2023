@@ -1,0 +1,34 @@
+<populations>
+    <population Name="DesertCanyonZoneGlobals-Reachable" Load="Merge">
+        <group Name="Creatures" Load="Merge">
+            <object Chance="10" Number="2d6" Blueprint="HDBrownie_NVM_Raven" />
+        </group>
+    </population>
+    <population Name="FlowerFieldsPopulation" Load="Merge">
+        <group Name="Contents" Load="Merge">
+            <group Name="Creatures" Load="Merge">
+                <object Chance="10" Number="2d6" Blueprint="HDBrownie_NVM_Raven" />
+            </group>
+        </group>
+    </population>
+    <population Name="DesertCanyonCreatures" Load="Merge">
+        <group Name="Creatures" Load="Merge">
+            <object Weight="10" Number="2-3" Blueprint="HDBrownie_NVM_Raven" />
+        </group>
+    </population>
+    <population Name="FlowerfieldCreatures" Load="Merge">
+        <group Name="Creatures" Load="Merge">
+            <object Weight="10" Number="1-2" Blueprint="HDBrownie_NVM_Raven" />
+        </group>
+    </population>
+    <population Name="LairOwners_DesertCanyon" Load="Merge">
+        <group Name="Options" Load="Merge">
+            <object Blueprint="HDBrownie_NVM_Raven" />
+        </group>
+    </population>
+    <population Name="LairOwners_Flowerfields" Load="Merge">
+        <group Name="Options" Load="Merge">
+            <object Blueprint="HDBrownie_NVM_Raven" />
+        </group>
+    </population>
+</populations>

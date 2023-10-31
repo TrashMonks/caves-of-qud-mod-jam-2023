@@ -1,0 +1,11 @@
+<objects>
+    <object Name="HDBrownie_NVM_Raven Corpse" Inherits="Corpse">
+        <part Name="Render" DisplayName="raven corpse" />
+        <part Name="Description" Short="Shall quethe this raven nevermore." />
+    </object>
+
+    <object Name="HDBrownie_NVM_Unique Raven Corpse" Inherits="HDBrownie_NVM_Raven Corpse">
+        <part Name="Butcherable" OnSuccess="HDBrownie_NVM_Morbidity Heart" />
+        <tag Name="ExcludeFromDynamicEncounters" />
+    </object>
+</objects>

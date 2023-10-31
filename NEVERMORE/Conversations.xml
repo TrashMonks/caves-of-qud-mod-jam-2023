@@ -1,0 +1,104 @@
+<conversations>
+    <conversation ID="HDBrownie_NVM_Raven">
+        <node ID="Start">
+            <text>
+                {{emote|*CAAW*}} =MARKOVCORVIDSENTENCE= {{emote|*CAAW*}}
+            </text>
+            <text Priority="1" IfIn100="2">
+                {{emote|*CAAW*}} Restless in the spindle channel, phantom corvids three. {{emote|*CAAW*}}
+            </text>
+            <choice GotoID="End">Live and drink, nonsense bird.</choice>
+        </node>
+    </conversation>
+    <conversation ID="HDBrownie_NVM_Melancholy">
+        <node ID="Start">
+            <text>
+                Traveler, I shall not hear ye; circumstances make me weary,
+                So begone unless you have a treatment for my heart so sore.
+                Once my heart was light and floating, like a firefly emoting,
+                dancing with the motes that lit the outside of my study door.
+                Once I danced among the motes all floating past my study door;
+                Now my spirit will not soar.
+            </text>
+            <text Priority="1">
+                What is that you come here bearing? You who zip about wayfaring,
+                Have you brought the means to heal my heart the way it was before?
+                Please O Stranger, I beseech you, may my low entreaty reach you,
+                Grant me that small mote of light you carry, this I ask you for!
+                I'll be grateful evermore.
+                <part Name="HaveItem" Blueprints="Symbiotic Firefly,Luminous Mote" AllowTemporary="true" />
+            </text>
+            <text Priority="2" IfHaveState="HDBrownie_NVM_MelancholySated">
+                {{w|*The bird is silent, sated.*}}
+            </text>
+            <choice GotoID="Reward" TakeItem="Symbiotic Firefly,Luminous Mote" GiveItem="HDBrownie_NVM_Melancholy Heart" IfNotHaveState="HDBrownie_NVM_MelancholySated">
+                I've brought what you requested.
+                <part Name="HaveItem" Blueprints="Symbiotic Firefly,Luminous Mote" AllowTemporary="true" />
+            </choice>
+            <choice ID="End" GotoID="End">Live and drink, non-nonsense bird.</choice>
+        </node>
+        <node ID="Reward" SetBooleanState="HDBrownie_NVM_MelancholySated,true" />
+    </conversation>
+    <conversation ID="HDBrownie_NVM_Passion">
+        <node ID="Start">
+            <text>
+                Though you may not divine the rhyming scheme,
+                There lies in hiding much more than you see here.
+                Were you to simply peer past what may seem,
+                'Fore long the treasure would approach and be near.
+                O you errant upon the winding path,
+                There holds but one last bastion in my spirit;
+                I do beseech you, if as Cupid hath,
+                You come across a mighty bow, please hear it:
+                Do be so cordial as to let it free,
+                Entrust it to my wings, so strong and agile.
+                Do go, posthaste, and bring that bow to me.
+            </text>
+            <text Priority="2" IfHaveState="HDBrownie_NVM_PassionSated">
+                {{w|*The bird is silent, sated.*}}
+            </text>
+            <choice GotoID="Reward" TakeItem="Compound Bow,Turbow" GiveItem="HDBrownie_NVM_Passion Heart" IfNotHaveState="HDBrownie_NVM_PassionSated">
+                I've brought what you requested.
+                <part Name="HaveItem" Blueprints="Compound Bow,Turbow" AllowTemporary="true" />
+            </choice>
+            <choice GotoID="BigReward" GiveItem="HDBrownie_NVM_Heart Sleeve">
+                Here. Three different hearts.
+                <part Name="HaveItem" Blueprints="HDBrownie_NVM_Melancholy Heart" />
+                <part Name="HaveItem" Blueprints="HDBrownie_NVM_Passion Heart" />
+                <part Name="HaveItem" Blueprints="HDBrownie_NVM_Morbidity Heart" />
+            </choice>
+            <choice ID="End" GotoID="End">Live and drink, advanced nonsense bird.</choice>
+        </node>
+        <node ID="Reward" SetBooleanState="HDBrownie_NVM_PassionSated,true" />
+        <node ID="BigReward">
+            <part Name="TakeItem" Blueprints="HDBrownie_NVM_Melancholy Heart,HDBrownie_NVM_Passion Heart,HDBrownie_NVM_Morbidity Heart" Amount="*" />
+        </node>
+    </conversation>
+    <conversation ID="HDBrownie_NVM_Morbidity">
+        <node ID="Start">
+            <text>
+                {{w|*The corvid simply stares directly through you, trembling slightly, seeing not you but only possibilities beyond you.*}}
+            </text>
+            <choice GotoID="Hello">Hello?</choice>
+            <choice ID="End" GotoID="End">Live and drink, unsettling bird.</choice>
+        </node>
+        <node ID="Hello">
+            <text>{{w|*There is no reply. You're not sure if the bird is even aware of your presence.}}</text>
+            <choice GotoID="Poem">I was expecting a poem.</choice>
+            <choice UseID="End" />
+        </node>
+        <node ID="Poem">
+            <text>
+                {{w|*The silence shatters like brittle glass.*}} Then steal it bleeding from my chest.
+            </text>
+            <choice GotoID="What">I'm sorry? What?</choice>
+            <choice UseID="End" />
+        </node>
+        <node ID="What">
+            <text>
+                There is no poem so moving as the snuffing of a flame.
+            </text>
+            <choice GotoID="End">... Uh, okay. Live and drink.</choice>
+        </node>
+    </conversation>
+</conversations>

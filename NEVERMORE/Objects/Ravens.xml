@@ -1,0 +1,58 @@
+<objects>
+    <object Name="HDBrownie_NVM_Raven" Inherits="BaseBird">
+        <part Name="Render" DisplayName="squall raven" Tile="HDBrownie NVM Raven.png" ColorString="&amp;K" DetailColor="w" />
+        <part Name="Description" Short="Oil-black feathers, beak the color of night and eyes of void befitting the symbol of portent. Naysayers are stunned to silence with a mere shriek." />
+        <part Name="Brain" Factions="Strangers-100,Birds-100" />
+        <part Name="Corpse" CorpseChance="100" CorpseBlueprint="HDBrownie_NVM_Raven Corpse" />
+        <tag Name="Species" Value="raven" />
+        <part Name="ConversationScript" ConversationID="HDBrownie_NVM_Raven" />
+
+        <stat Name="Level" Value="12" />
+
+        <mutation Name="StunningForce" Level="5" />
+    </object>
+
+    <object Name="HDBrownie_NVM_Raven NPC" Inherits="HDBrownie_NVM_Raven">
+        <part Name="Render" DisplayName="Lenore" Tile="HDBrownie NVM Raven NPC.png" />
+        <part Name="Corpse" CorpseBlueprint="HDBrownie_NVM_Unique Raven Corpse" />
+        <tag Name="Gender" Value="nonspecific" />
+        <tag Name="BaseObject" Value="*noinherit" />
+        <tag Name="ExcludeFromDynamicEncounters" />
+        <xtagGrammar Proper="true" />
+
+        <stat Name="Hitpoints" Value="100" />
+        <stat Name="Speed" Value="110" />
+
+        <mutation Name="StunningForce" Level="10" />
+    </object>
+
+    <object Name="HDBrownie_NVM_Melancholy Raven" Inherits="HDBrownie_NVM_Raven NPC">
+        <part Name="Render" DetailColor="b" />
+        <part Name="Titles" Primary="the {{b|Melancholic}}" />
+        <part Name="ConversationScript" ConversationID="HDBrownie_NVM_Melancholy" />
+
+        <stat Name="Level" Value="20" />
+
+        <mutation Name="TimeDilation" Level="10" />
+    </object>
+
+    <object Name="HDBrownie_NVM_Passion Raven" Inherits="HDBrownie_NVM_Raven NPC">
+        <part Name="Render" DetailColor="M" />
+        <part Name="Titles" Primary="the {{M|Passionate}}" />
+        <part Name="ConversationScript" ConversationID="HDBrownie_NVM_Passion" />
+
+        <stat Name="Level" Value="25" />
+
+        <mutation Name="Pyrokinesis" Level="15" />
+    </object>
+
+    <object Name="HDBrownie_NVM_Morbidity Raven" Inherits="HDBrownie_NVM_Raven NPC">
+        <part Name="Render" DetailColor="R" />
+        <part Name="Titles" Primary="the {{R|Morbid}}" />
+        <part Name="ConversationScript" ConversationID="HDBrownie_NVM_Morbidity" />
+
+        <stat Name="Level" Value="30" />
+
+        <mutation Name="LifeDrain" Level="20" />
+    </object>
+</objects>

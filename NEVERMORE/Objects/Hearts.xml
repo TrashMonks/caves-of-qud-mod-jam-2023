@@ -1,0 +1,32 @@
+<objects>
+    <object Name="HDBrownie_NVM_Base Heart" Inherits="Corpse">
+        <part Name="Render" Tile="HDBrownie NVM Heart.png" ColorString="&amp;r" />
+        <part Name="Description" Short="You know its sound too well." />
+        <removepart Name="RandomTile" />
+        <tag Name="BaseObject" Value="*noinherit" />
+        <tag Name="ExcludeFromDynamicEncounters" />
+    </object>
+
+    <object Name="HDBrownie_NVM_Melancholy Heart" Inherits="HDBrownie_NVM_Base Heart">
+        <part Name="Render" DisplayName="{{b|melancholic}} {{r|heart}}" DetailColor="b" />
+    </object>
+
+    <object Name="HDBrownie_NVM_Passion Heart" Inherits="HDBrownie_NVM_Base Heart">
+        <part Name="Render" DisplayName="{{M|passionate}} {{r|heart}}" DetailColor="M" />
+    </object>
+
+    <object Name="HDBrownie_NVM_Morbidity Heart" Inherits="HDBrownie_NVM_Base Heart">
+        <part Name="Render" DisplayName="{{R|morbid}} {{r|heart}}" DetailColor="R" />
+    </object>
+
+    <object Name="HDBrownie_NVM_Heart Sleeve" Inherits="BarathrumiteSafetyBand">
+        <part Name="Render" DisplayName="{{b-M-R-M sequence|heart sleeve}}" Tile="HDBrownie NVM Heart Sleeve.png" ColorString="&amp;c" DetailColor="M" />
+        <part Name="Description" Short="To wear one's heart on one's sleeve is to be both vulnerable and open to connection." />
+        <part Name="Physics" Weight="-10" />
+        <part Name="Armor" AV="-1" />
+        <part Name="RecoilOnDeath" DestinationZone="JoppaWorld.53.3.1.1.9" DestinationX="39" DestinationY="12" IsRealityDistortionBased="true" IsTechScannable="false" />
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+        <removepart Name="Cursed" />
+        <removepart Name="EnergyCellSocket" />
+    </object>
+</objects>
