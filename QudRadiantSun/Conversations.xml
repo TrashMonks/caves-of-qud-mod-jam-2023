@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+  <conversation ID="RadiantSun" Inherits="Robots">
+    <node ID="Start">
+      <text>
+        BE NOT AFRAID
+      </text>
+      <choice GotoID="End">It's ok. I'm not afraid of you.</choice>
+      <choice GotoID="Afraid">
+        <text>I am maybe a little afraid.</text>
+      </choice>
+    </node>
+	<node ID="Afraid">
+      <text>
+        DO NOT BE AFRAID
+      </text>
+      <choice GotoID="End">
+        <text>Oh no.</text>
+        <part Name="StartFight" />
+      </choice>
+	</node>
+  </conversation>
+  </conversations>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+
+<object Name="Radiant Sun" Inherits="BaseRobot">
+    <part Name="Body" Anatomy="HoverRobot" />
+    <part Name="Render" DisplayName="Radiant Sun" RenderString="6" ColorString="&amp;o" TileColor="&amp;Y" Tile="acegiak_RadiantSun/radiant_sun.png" DetailColor="o" />
+    <part Name="Description" Short="Dozens of mirror shards lay as petals around a central woeful eye of chrome, dusted with salt in sleep. When disturbed, the sun rises up, the petals dancing a weave around the eye, the gaze of which brings forth the radiant glory of the heavens." />
+    <part Name="Brain" Hostile="false" Wanders="false"/>
+    <stat Name="AV" Value="8" />
+    <stat Name="DV" Value="0" />
+    <stat Name="Level" Value="26" />
+    <stat Name="Hitpoints" Value="120" />
+	<stat Name="HeatResistance" Value="200" />
+    <stat Name="Speed" Value="40" />
+    <stat Name="MoveSpeed" Value="40" />
+    <part Name="DischargeOnDeath" />
+    <mutation Name="Wings" Level="10" />
+    <tag Name="Species" Value="hover robot" />
+	<tag Name="SeveredHeadBlueprint" Value="RobotHead6" />
+	<part Name="Slumberling" />
+	<mutation Name="FlamingHands" Level="8" BodyPartType="Chassis" CreateObject="false" />
+    <tag Name="DynamicObjectsTable:Saltdunes_Creatures" />
+    <tag Name="DynamicObjectsTable:Saltdunes_Creatures:Weight" Value="0.2" />
+    <property Name="Role" Value="Artillery" />
+    <tag Name="SimpleConversation" Value="BE NOT AFRAID" />
+	<part Name="ConversationScript" ConversationID="RadiantSun" ClearLost="true" />
+
+  </object>
+  
+  </objects>
