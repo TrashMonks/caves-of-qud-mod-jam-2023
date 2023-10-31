@@ -81,7 +81,7 @@ namespace XRL.World.Parts
             }
             catch (Exception e)
             {
-                xml.HandleException(e);
+                // xml.HandleException(e);
             }
             data.DisplayName = xml.ParseAttribute("DisplayName", data.DisplayName);
             data.Author = xml.ParseAttribute("Author", data.Author, required: true);
