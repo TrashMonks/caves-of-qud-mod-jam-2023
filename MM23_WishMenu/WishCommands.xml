@@ -4,6 +4,7 @@
   <wish DisplayName="Calm creatures" Commands="calm"/>
   <wish DisplayName="Swap bodies" Commands="swap"/>
   <wish DisplayName="Beguile creature" Commands="beguile"/>
+  <wish DisplayName="Set all faction rep to 2000" Commands="allloved" />
   <wish Commands="goto:JoppaWorld.5.2.1.2.10" Author="gnarf, librarianmage" ModName="Halloween Costumer"/>
   <wish Commands="goto:JoppaWorld.5.2.1.2.10" Author="Ilysen" ModName="Tealeaves"/>
   <wish Commands="goto:JoppaWorld.5.2.1.2.10" Author="CPNK" ModName="Sultan of Smoke"/>
