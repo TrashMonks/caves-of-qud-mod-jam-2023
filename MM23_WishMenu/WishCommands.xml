@@ -1,11 +1,10 @@
 <wishcommands>
-  <!-- TODO: cute icons for the wish -->
-  <wish DisplayName="Toggle Godmode" Commands="idkfa"/>
-  <wish DisplayName="Calm creatures" Commands="calm"/>
-  <wish DisplayName="Swap bodies" Commands="swap"/>
-  <wish DisplayName="Beguile creature" Commands="beguile"/>
-  <wish DisplayName="Set all faction rep to 2000" Commands="allloved"/>
-  <wish DisplayName="Gear up" Commands="stage6"/>
+  <wish DisplayName="Toggle Godmode" Commands="idkfa" Icon="Mutations/light_manipulation.bmp" ColorPair="wW"/>
+  <wish DisplayName="Calm creatures" Commands="calm" Icon="Mutations/narcolepsy.bmp" ColorPair="wW"/>
+  <wish DisplayName="Swap bodies" Commands="swap" Icon="Mutations/domination.bmp" ColorPair="wW"/>
+  <wish DisplayName="Beguile creature" Commands="beguile" Icon="Mutations/beguiling.bmp" ColorPair="wW"/>
+  <wish DisplayName="Set all faction rep to 2000" Commands="allloved" Icon="Mutations/two-hearted.bmp" ColorPair="wW"/>
+  <wish DisplayName="Gear up" Commands="stage6" Icon="Items/sw_longblade_1.bmp" ColorPair="wW"/>
   <wish Commands="goto:JoppaWorld.5.2.1.2.10" Author="gnarf, librarianmage" ModName="Halloween Costumer"/>
   <wish Commands="goto:JoppaWorld.5.2.1.2.10" Author="Ilysen" ModName="Tealeaves"/>
   <wish Commands="goto:JoppaWorld.5.2.1.2.10" Author="CPNK" ModName="Sultan of Smoke"/>
