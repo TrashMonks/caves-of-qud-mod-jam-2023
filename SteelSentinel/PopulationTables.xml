@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+
+<population Name="Tier4RuinsRobots" Load="Merge">
+	<group Name="Creatures" Style="pickone" Load="Merge">
+      <object Weight="1" Number="1" Blueprint="Sal_SteelSentinel" />  
+	</group>
+</population>
+
+<population Name="Tier5RuinsRobots" Load="Merge">
+	<group Name="Creatures" Style="pickone" Load="Merge">
+      <object Weight="5" Number="1" Blueprint="Sal_SteelSentinel" />  
+	</group>
+</population>
+
+<population Name="Tier6RuinsRobots" Load="Merge">
+	<group Name="Creatures" Style="pickone" Load="Merge">
+      <object Weight="2" Number="1" Blueprint="Sal_SteelSentinel" />  
+	</group>
+</population>
+</populations>
