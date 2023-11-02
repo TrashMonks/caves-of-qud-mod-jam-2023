@@ -71,9 +71,9 @@
     <object   Number="1" Blueprint="Cerebromunculus" />
   </population>
 
- <population Name="SmallViscera0" Style="pickeach">
- <object Chance="50" Number="1" Blueprint="Writhing Veins" />  
-      <table  Chance="100"  Number="1" Name="SmallVisceraSecond" />
+ <population Name="OneOfTwo" Style="pickone">
+ <object Weight="75" Number="1" Blueprint="SmallViscera" />  
+      <object Weight="25"  Number="1" Name="BigViscera" />
   </population>
 
   <population Name="BigViscera0" Style="pickeach">

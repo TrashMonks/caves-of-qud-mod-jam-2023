@@ -115,7 +115,6 @@ Or has the Signal’s voice disturbed its bed?
     <part Name="Projectile" BasePenetration="6" BaseDamage="1d8" ColorString="&amp;g" PassByVerb="arc" />
     <xtagGrammar adjunctNoun="glob" massNoun="true" />
     <part Name="PoisonOnHit" Chance="100" Strength="15" DamageIncrement="1d3" Duration="6-9" />
-    <part Name="ProneOnHit" Chance="100" SaveTarget="17" />
   </object>
 
 <object Name="Unblinking Eye" Inherits="BasePolyp">
@@ -249,7 +248,7 @@ Or has the Signal’s voice disturbed its bed?
     <part Name="Render" RenderIfDark="true" DisplayName="writhing veins" RenderString="011" ColorString="&amp;R" DetailColor="r" />
     <part Name="Brain" Hostile="true" Wanders="false" Mobile="false" Factions="Resheph-100" />
     <stat Name="Hitpoints" Value="3" />
-    <part Name="Description" Short="Shivering capillaries reach up towards the shin, eager for the mingling of your blood with theirs" />
+    <part Name="Description" Short="Shivering capillaries reach up towards the shin, eager for the mingling of your blood with theirs." />
      <tag Name="ExcludeFromDynamicEncounters" />
      <removepart Name="Combat" />
     <stat Name="Level" Value="14" />
@@ -275,7 +274,7 @@ Or has the Signal’s voice disturbed its bed?
   </object>  
 
  <object Name="Wound-that-Walks" Inherits="BaseHeadless">
-    <part Name="Render" DisplayName="wound-that-walks" Tile="Feline/MawM.png" RenderString="227" ColorString="&amp;r" DetailColor="y" />
+    <part Name="Render" DisplayName="wound-that-walks" RenderIfDark="false" Tile="Feline/MawM.png" RenderString="227" ColorString="&amp;r" DetailColor="y" />
     <part Name="Corpse" CorpseChance="0" />
     <stat Name="AV" Value="6" />
     <stat Name="Level" Value="24" />
@@ -311,7 +310,7 @@ Or has the Signal’s voice disturbed its bed?
   </object>
 
  <object Name="Cerebromunculus" Inherits="BaseHeadless">
-    <part Name="Render" DisplayName="cerebromunculus" Tile="Feline/BrainM.png" RenderString="227" ColorString="&amp;y" DetailColor="r" />
+    <part Name="Render" DisplayName="cerebromunculus" RenderIfDark="false" Tile="Feline/BrainM.png" RenderString="227" ColorString="&amp;y" DetailColor="r" />
     <tag Name="BodyDisplayName" Value="Humanoid" />
     <part Name="Body" Anatomy="Humanoid" />
     <part Name="Corpse" CorpseChance="0" />
@@ -350,7 +349,7 @@ Or has the Signal’s voice disturbed its bed?
   </object>
 
 <object Name="Ascendant Watcher" Inherits="BasePolyp">
-    <part Name="Render" DisplayName="ascendant watcher" Tile="Feline/EyeM.png" ColorString="&amp;Y" DetailColor="R"/>
+    <part Name="Render" DisplayName="ascendant watcher" RenderIfDark="false" Tile="Feline/EyeM.png" ColorString="&amp;Y" DetailColor="R"/>
     <part Name="Description" Short="That same nerve that once hoisted images from the life-world into the mind-world now hoists the swollen eye-thing towards the heavens." />
     <part Name="Brain" Hostile="true" Wanders="true" Mobile="true" Factions="Resheph-100" PointBlankRange="true" />
     <skill Name="Pistol_SteadyHands" />
@@ -388,7 +387,7 @@ Or has the Signal’s voice disturbed its bed?
   </object>
 
  <object Name="Gruesome Hecatoncheire" Inherits="BaseHeadless">
-    <part Name="Render" DisplayName="gruesome hecatoncheire" Tile="Feline/HandM.png" RenderString="227" ColorString="&amp;w"  DetailColor="r" />
+    <part Name="Render" DisplayName="gruesome hecatoncheire" RenderIfDark="false" Tile="Feline/HandM.png" RenderString="227" ColorString="&amp;w"  DetailColor="r" />
     <part Name="Corpse" CorpseChance="0" />
     <stat Name="AV" Value="0" />
     <stat Name="Level" Value="24" />
@@ -400,7 +399,7 @@ Or has the Signal’s voice disturbed its bed?
     <inventoryobject Blueprint="Gruesome_Metacarpals_Arm" Number="4" />
     <inventoryobject Blueprint="Gruesome_Metacarpals_Back" Number="1" />
     <inventoryobject Blueprint="Gruesome_Metacarpals_Body" Number="1" />
-    <part Name="Description" Short="Motions repeat in spasms as the hand-thing hobbles towards whatever its strange instinct drives it towards. Here is the instinctive grasp for the hand of a friend, here is the fond caress of a lover's face, here is the practiced mirroring of an unseen other's embrace. The pantomime folds in on itself, interrupts itself and returns to itself, all in service of a singular theme: Its player, with its countless ceaseless hands, is soething that wants to hold you very, very close." />
+    <part Name="Description" Short="Motions repeat in spasms as the hand-thing hobbles towards whatever its strange instinct drives it towards. Here is the instinctive grasp for the hand of a friend, here is the fond caress of a lover's face, here is the practiced mirroring of an unseen other's embrace. The pantomime folds in on itself, interrupts itself and returns to itself, all in service of a singular theme: Its player, with its countless ceaseless hands, is something that wants to hold you very, very close." />
     <skill Name="Dual_Wield_Offhand_Strikes" />
     <skill Name="LongBladesProficiency" />
     <skill Name="LongBladesImprovedAggressiveStance" />
@@ -432,8 +431,8 @@ Or has the Signal’s voice disturbed its bed?
   </object>	
 
 <object Name="Errant Myocardium" Inherits="BasePolyp">
-    <part Name="Render" DisplayName="errant myocardium" Tile="Feline/HeartM.png" ColorString="&amp;R" DetailColor="r"/>
-    <part Name="Description" Short="A beating human heart is held aloft by a crooked neck of thrumming flesh. Despite the mass of thumping muscle where a face should be, it carries itself with an almost regal bearing as though it were a hierarch to the restless pools of blood that surround its wake." />
+    <part Name="Render" DisplayName="errant myocardium" Tile="Feline/HeartM.png" RenderIfDark="false" ColorString="&amp;R" DetailColor="r"/>
+    <part Name="Description" Short="A beating human heart is held aloft by a crooked neck of thrumming flesh. Despite the mass of thumping muscle where a face should be, it carries itself with an almost regal bearing, as though it were a hierarch to the restless pools of blood that surround its wake." />
     <part Name="Brain" Hostile="true" Wanders="true" Mobile="true" Factions="Resheph-100" PointBlankRange="true" />
     <part Name="Body" Anatomy="Worm" />
     <skill Name="Cudgel_Expertise" />
@@ -503,9 +502,9 @@ Or has the Signal’s voice disturbed its bed?
     <tag Name="Gender" Value="plural" />
   </object>
 
- <object Name="Wandering Preacher" Inherits="BaseHumanoid">
+ <object Name="Wandering Preacher" Inherits="NPC">
     <part Name="Render" DisplayName="wandering preacher" Tile="creatures/sw_stranger1.bmp" RenderString="h" ColorString="&amp;Y" DetailColor="c" />
-    <part Name="Corpse" CorpseChance="50" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="50" CorpseBlueprint="SmallViscera" BurntCorpseChance="25" BurntCorpseBlueprint="BigViscera"  />
     <part Name="Brain" Hostile="false" Wanders="true" Mobile="true" Factions="Resheph-100" />
     <stat Name="AV" Value="3" />
     <stat Name="Level" Value="14" />
@@ -547,12 +546,12 @@ Or has the Signal’s voice disturbed its bed?
     <part Name="Render" DisplayName="wayward preacher" Tile="Feline/WaywardPreacher.png"  RenderString="h" ColorString="&amp;Y" DetailColor="r" />
     <part Name="ConversationScript" ConversationID="WaywardPreacher" />
     <part Name="Brain" Factions="Resheph-100" Wanders="true" Mobile="true"/>
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
-    <stat Name="Agility" Boost="1" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
+  <!--    <stat Name="Agility" Boost="1" /> -->
     <stat Name="Hitpoints" Value="75" />
     <stat Name="Level" Value="26" />
     <stat Name="AV" Value="5" />
-    <part Name="Description" Short="Only scraps remain of that mendicant regality with which the preachers carried themselves when they first began to wander into Qud a month or so ago, singing monodies to their Sultan and whispering hurriedly among themselves of a new and unknown plague. Gone is the trained precision of the surgeon&apos;s hands, and something strange and restless has grown into =pronouns.subjective= motions in its place. =pronouns.Subjective=  traveler&apos;s frock is ragged, =pronouns.subjective=  shawl is stained in grime, and though it is hard to make out in the shadow cast by =pronouns.subjective=  wide-brimmed hat, you swear you can see a glint of eerie hunger in =pronouns.subjective=  eyes. Something small catches the light beneath =pronouns.subjective=  dirty robes. A knife?" />
+    <part Name="Description" Short="Only scraps remain of that mendicant regality with which the preachers carried themselves when they first began to wander into Qud a month or so ago, singing monodies to their Sultan and whispering hurriedly among themselves of a new and unknown plague. Gone is the trained precision of the surgeon&apos;s hands, and something strange and restless has grown into =pronouns.possessive= motions in its place. =pronouns.Possessive= traveler&apos;s frock is ragged, =pronouns.possessive= shawl is stained in grime, and though it is hard to make out in the shadow cast by =pronouns.possessive= wide-brimmed hat, you swear you can see a glint of eerie hunger in =pronouns.possessive= eyes. Something small catches the light beneath =pronouns.subjective= dirty robes. A knife?" />
     <property Name="Role" Value="Skirmisher" />
     <skill Name="Acrobatics_Dodge" />
     <skill Name="CookingAndGathering_Butchery" />
@@ -574,7 +573,7 @@ Or has the Signal’s voice disturbed its bed?
     <inventoryobject Blueprint="Worn Burnoose" Number="1" Chance="100" />
     <inventoryobject Blueprint="Steel Butcher Knife" Number="1" Chance="100" />
     <inventoryobject Blueprint="Walking Stick" Number="1" Chance="100" />
-    <inventoryobject Blueprint="SalveTonic" Number="1d6-3" />
+    <inventoryobject Blueprint="SalveTonic" Number="1d6-4" />
     <inventoryobject Blueprint="UbernostrumTonic" Number="1d4-3" />
     <inventoryobject Blueprint="Witchwood Bark" Number="1d6-3" />
     <inventoryobject Blueprint="Membra_Gel Phial" Number="1d4-3" />
@@ -678,30 +677,31 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
 
 
 <object Name="SmallViscera" Inherits="BasePolyp">
-    <part Name="Render" DisplayName="{{R|viscera}}" ColorString="&amp;R" DetailColor="r" Tile="Items/sw_splat1.bmp" />
+    <part Name="Render" DisplayName="{{r|viscera}}" ColorString="&amp;R" DetailColor="r" Tile="Items/sw_splat1.bmp" />
     <part Name="Description" Short="The forces of slaughter have rearranged the parts of the body, and here they lie, rearranging themselves in accordance to the will of some other, stranger force. Forms of motion once confined to the world of the living are now writhing through the skin of the dead, and the corpse shudders and spasms like a sleeper in the thores of a nightmare. Something has died here, and something else is struggling to be born. " />
     <part Name="Brain" Hostile="false" Wanders="false" Mobile="false" Factions="Resheph-100" PointBlankRange="true" />
     <stat Name="AV" Value="0" />
     <removepart Name="Combat" />
          <tag Name="ExcludeFromDynamicEncounters" />
         <part Name="AmbientSoundGenerator" Sounds="Sounds/Damage/sfx_damage_elemental_bleeding-001,Sounds/Damage/sfx_damage_elemental_bleeding-002,Sounds/Damage/sfx_damage_elemental_bleeding-003,Sounds/Damage/sfx_damage_elemental_bleeding-004,Sounds/Damage/sfx_damage_elemental_bleeding-005" ChancePerThousand="500" />
-    <part Name="RandomTile" Tiles="Items/sw_splat1.bmp,Items/sw_splat2.bmp,Items/sw_splat3.bmp,Items/sw_splat4.bmp" />
+<part Name="RandomTile" Tiles="Items/sw_splat1.bmp,Items/sw_splat2.bmp,Items/sw_splat3.bmp,Items/sw_splat4.bmp" />
    <part Name="AnimatedMaterialGeneric" AnimationLength="100" ColorStringAnimationFrames="0=&amp;r,50=&amp;R" TileColorAnimationFrames="0=&amp;r,50=&amp;R" DetailColorAnimationFrames="0=R,50=r" />
     <stat Name="Level" Value="1" />
     <stat Name="Hitpoints" Value="1" />
-    <part Name="FallsApart" Duration="5-10" Message="{{r|The mass of viscera =verb:contort=, and a number of terrifying shapes take form.}}" />
+    <part Name="FallsApart" Duration="3-6" Message="{{r|The mass of viscera =verb:contort=, and a number of terrifying shapes take form.}}" />
     <tag Name="NoXP" />
       <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallVisceraSpawner" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallVisceraSpawner"  BurntCorpseChance="100" BurntCorpseBlueprint="SmallVisceraSpawner"  VaporizedCorpseChance="100" VaporizedCorpseBlueprint="SmallVisceraSpawner" />
   </object>
 
 <object Name="BigViscera" Inherits="SmallViscera">
+ <part Name="Render" DisplayName="{{r|viscera}}" ColorString="&amp;R" DetailColor="r" Tile="Items/sw_splat1.bmp" />
     <part Name="FallsApart" Duration="6-12" Message="{{r|The mass of viscera =verb:contort=, and a number of terrifying shapes take form.}}" />
     <tag Name="NoXP" />
          <tag Name="ExcludeFromDynamicEncounters" />
       <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
-    <part Name="RandomTile" Tiles="Items/sw_splat1.bmp,Items/sw_splat2.bmp,Items/sw_splat3.bmp,Items/sw_splat4.bmp" />
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigVisceraSpawner" />
+<part Name="RandomTile" Tiles="Items/sw_splat1.bmp,Items/sw_splat2.bmp,Items/sw_splat3.bmp,Items/sw_splat4.bmp"  />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigVisceraSpawner" BurntCorpseChance="100" BurntCorpseBlueprint="BigVisceraSpawner"  VaporizedCorpseChance="100" VaporizedCorpseBlueprint="BigVisceraSpawner" />
     <part Name="AnimatedMaterialGeneric" AnimationLength="50" ColorStringAnimationFrames="0=&amp;r,25=&amp;R" TileColorAnimationFrames="0=&amp;r,25=&amp;R" DetailColorAnimationFrames="0=R,25=r" />
   </object>
 
@@ -713,8 +713,12 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
       <part Name="PopulationSpawner" Range="3" Specification="@BigViscera" DestroyAfterSpawn="true" />
   </object>
 
+  <object Name="OneOfTwo" Inherits="Widget">
+      <part Name="PopulationSpawner" Specification="@OneOfTwo" DestroyAfterSpawn="true" />
+  </object>
+
  <object Name="Hide-Sheathed Hermit_Frenzied" Inherits="Hide-Sheathed Hermit">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  VaporizedCorpseChance="100" VaporizedCorpseBlueprint="SmallViscera" />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -724,7 +728,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Trash Monk_Frenzied" Inherits="Trash Monk">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Hero" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
@@ -734,7 +738,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Novice of the Sightless Way 2_Frenzied" Inherits="Novice of the Sightless Way 2">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -744,7 +748,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Issachari Raider_Frenzied" Inherits="Issachari Raider">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -754,7 +758,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Issachari Rifler_Frenzied" Inherits="Issachari Rifler">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera" />
     <property Name="Role" Value="Rare" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -764,7 +768,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Mechanimist Pilgrim_Frenzied" Inherits="Mechanimist Pilgrim">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Hero" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="ExcludeFromVillagePopulations" />
@@ -774,7 +778,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Mechnamist rummager_Frenzied" Inherits="Mechnamist rummager">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Hero" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
@@ -783,7 +787,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Templar Squire_Frenzied" Inherits="Templar Squire">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -793,7 +797,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Naphtaali Stalker_Frenzied" Inherits="Naphtaali Stalker">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera" />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -803,7 +807,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Naphtaali Runt_Frenzied" Inherits="Naphtaali Runt">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Rare" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -813,7 +817,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Snapjaw Feeder_Frenzied" Inherits="Snapjaw Feeder">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Rare" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="ExcludeFromVillagePopulations" />
@@ -823,7 +827,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Snapjaw Spearfiend_Frenzied" Inherits="Snapjaw Spearfiend">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Uncommon" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
@@ -833,7 +837,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Disciple of the Sightless Way_Frenzied" Inherits="Disciple of the Sightless Way">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -843,7 +847,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Snapjaw Trapper_Frenzied" Inherits="Snapjaw Trapper">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Uncommon" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -853,7 +857,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Cave Arconaut_Frenzied" Inherits="Cave Arconaut">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Hero" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -863,7 +867,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="HindrenPariah_Frenzied" Inherits="HindrenPariah">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Uncommon" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <mutation Name="Regeneration" Level="5" />
@@ -873,7 +877,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="HindrenScoutPariah_Frenzied" Inherits="HindrenScoutPariah">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Uncommon" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="ExcludeFromVillagePopulations" />
@@ -883,7 +887,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Snapjaw Howler_Frenzied" Inherits="Snapjaw Howler">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="OneOfTwo" BurntCorpseChance="66" BurntCorpseBlueprint="OneOfTwo"  />
     <property Name="Role" Value="Uncommon" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -893,7 +897,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Goatfolk Bully_Frenzied" Inherits="Goatfolk Bully">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="66" BurntCorpseBlueprint="SmallViscera" />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -903,7 +907,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Goatfolk Hornblower_Frenzied" Inherits="Goatfolk Hornblower">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="66" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -913,7 +917,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Goatfolk Sower_Frenzied" Inherits="Goatfolk Sower">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="66" BurntCorpseBlueprint="SmallViscera" />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
@@ -923,7 +927,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Goatfolk Yurtwarden_Frenzied" Inherits="Goatfolk Yurtwarden">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="66" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Rare" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="ExcludeFromVillagePopulations" />
@@ -933,7 +937,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Goatfolk Shaman_Frenzied" Inherits="Goatfolk Shaman">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="66" BurntCorpseBlueprint="SmallViscera" />
     <property Name="Role" Value="Hero" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -943,7 +947,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Goatfolk Thrall_Frenzied" Inherits="Goatfolk Thrall">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="66" BurntCorpseBlueprint="SmallViscera" />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -953,7 +957,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Psyberneticist_Frenzied" Inherits="Psyberneticist">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="66" BurntCorpseBlueprint="BigViscera" />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
@@ -963,7 +967,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Psyberneticist_Frenzied" Inherits="Psyberneticist">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
@@ -973,7 +977,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Barathrumite Tinker_Frenzied" Inherits="Barathrumite Tinker">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Rare" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="ExcludeFromVillagePopulations" />
@@ -983,7 +987,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Barathrumite Arconaut_Frenzied" Inherits="Barathrumite Arconaut">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Rare" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="ExcludeFromVillagePopulations" />
@@ -993,7 +997,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Dervish of the Sightless Way_Frenzied" Inherits="Dervish of the Sightless Way">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Rare" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="ExcludeFromVillagePopulations" />
@@ -1003,7 +1007,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Mysterious Gunslinger_Frenzied" Inherits="Mysterious Gunslinger">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera" />
     <property Name="Role" Value="Hero" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="ExcludeFromVillagePopulations" />
@@ -1013,7 +1017,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Juicing Cannibal_Frenzied" Inherits="Juicing Cannibal">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -1023,7 +1027,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="BananaRancher_Frenzied" Inherits="BananaRancher">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Hero" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
@@ -1033,7 +1037,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Knight Templar_Frenzied" Inherits="Knight Templar">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Hero" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="ExcludeFromVillagePopulations" />
@@ -1043,7 +1047,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Gunner-Knight Templar_Frenzied" Inherits="Gunner-Knight Templar">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Hero" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -1053,7 +1057,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Banner-Knight Templar_Frenzied" Inherits="Banner-Knight Templar">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera" />
     <property Name="Role" Value="Uncommon" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -1063,7 +1067,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Newfather_Frenzied" Inherits="Newfather">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Hero" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="NoLibrarian" />
@@ -1072,7 +1076,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Knight Commander of the Holy Temple_Frenzied" Inherits="Knight Commander of the Holy Temple">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Uncommon" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
@@ -1082,7 +1086,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Phylactery Squire_Frenzied" Inherits="Phylactery Squire">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Hero" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -1092,7 +1096,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Graverobber_Frenzied" Inherits="Graverobber">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
@@ -1102,7 +1106,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="MopangoCharioteer_Frenzied" Inherits="MopangoCharioteer">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
@@ -1112,7 +1116,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="MopangoTombdweller_Frenzied" Inherits="MopangoTombdweller">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
@@ -1122,7 +1126,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="High Dervish of the Sightless Way_Frenzied" Inherits="High Dervish of the Sightless Way">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Hero" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
@@ -1132,7 +1136,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Trash Abbot_Frenzied" Inherits="Trash Abbot">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Hero" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -1142,7 +1146,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Reef Hermit_Frenzied" Inherits="Reef Hermit">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Hero" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -1152,7 +1156,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Glow Wight Apotheote_Frenzied" Inherits="Glow Wight Apotheote">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Hero" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
@@ -1162,7 +1166,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
   </object> 
 
 <object Name="Arch Dervish of the Sightless Way_Frenzied" Inherits="Arch Dervish of the Sightless Way">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Hero" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="ExcludeFromVillagePopulations" />
