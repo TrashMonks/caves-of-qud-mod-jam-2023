@@ -3,9 +3,15 @@ Compilation mod pack for the [Caves of Qud Modding Jam: Monster Mash](https://it
 
 Wish for `mashup` or press <kbd>ctrl</kbd>-<kbd>shift</kbd>-<kbd>W</kbd> (Monster Mash-Up Wish Menu, beta only!) to open a menu for easy wishing for the pack's contents (thanks gnarf!).
 
+**A note on balance:** this pack is intended to let one sample from the various things added by all of the mods and will likely result an extremely chaotic Caves of Qud run. Each of these mods is available individually at the submissions page linked above, should you wish for a more curated experience.
+
 This version of the pack is for the stable version of Caves of Qud.
 
 **Warning:** Do not run this pack simultaneous with any of the mods contained within.
+
+## Updates & Fixes
+
+We will do our best to ensure that this pack remains working until the Creatures of the 7th Plague beta gets merged into the stable version of the game, after which this branch will be abandoned. If you update a mod that is included in this pack, please let us know or open a PR!
 
 ## License
 
