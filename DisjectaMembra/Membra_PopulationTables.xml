@@ -287,6 +287,24 @@
 
  -->
 
+
+    <population Name="Rustwells Surface" Load="Merge">
+    <object Chance="10" Number="1" Blueprint="Wandering Preacher" />
+  </population>
+
+    <population Name="Rustwells 1" Load="Merge">
+    <object Chance="10" Number="1" Blueprint="Wandering Preacher" />
+  </population>
+
+  <population Name="Rustwells 2" Load="Merge">
+    <object Chance="10" Number="1" Blueprint="Wandering Preacher" />
+  </population>
+
+  <population Name="Rustwells 3" Load="Merge">
+    <object Chance="10" Number="1" Blueprint="Wandering Preacher" />
+  </population>
+
+
 <population Name="GritGateSurfaceZoneGlobals" Load="Merge">
       <object Chance="3" Blueprint="Hide-Sheathed Hermit_Frenzied"/>
       <object Chance="1" Number="1" Blueprint="Novice of the Sightless Way 2_Frenzied" />
@@ -312,13 +330,13 @@
     <object Chance="5" Number="1" Blueprint="Wandering Preacher" />
   </population>
 
-   <population Name="Redrock1PerSector-Creatures">
+   <population Name="Redrock1PerSector-Creatures" Load="Merge">
     <group Load="Merge" Name="Creatures">
       <object Weight="10" Number="1" Blueprint="Wandering Preacher" />
     </group>
   </population>
 
-    <population Name="Redrock2PerSector-Creatures">
+    <population Name="Redrock2PerSector-Creatures" Load="Merge">
     <group Load="Merge" Name="Creatures">
       <object Weight="10" Number="1" Blueprint="Wandering Preacher" />
     </group>
@@ -327,7 +345,7 @@
    
 <population Name="Redrock3PerSector-Creatures" Load="Merge">    
     <group Name="Creatures" Load="Merge">
-      <object Weight="5" Number="1" Blueprint="Wandering Preacher" />
+      <object Weight="10" Number="1" Blueprint="Wandering Preacher" />
       </group>
   </population>
 
