@@ -41,7 +41,7 @@
 <object Name="Spinal Fleshgraft" Inherits="Base Fleshgraft">
     <part Name="Render" DisplayName= "{{psychalflesh|spinal fleshgraft}}" ColorString="&amp;m" TileColor="&amp;r" Tile="sw_flesh_exoskeleton.png" DetailColor="m" />
     <part Name="Description" Short="Shaped in the metamorphic numen, this squirming casque of flesh encases its host and imbues them with lifestuff. Two limbs jut out from it, needlepoint edges searching for prey." />
-    <part Name="AnimatedMaterialGeneric" AnimationLength="200" DetailColorAnimationFrames="0=r,50=R,100=M,150=w" MustBeUnderstood="true" />
+    <part Name="AnimatedMaterialGeneric" AnimationLength="200" DetailColorAnimationFrames="0=r,20=R,40=M,180=w" MustBeUnderstood="true" />
     <part Name="Physics" Weight="15" />
     <part Name="Commerce" Value="1666" />
     <part Name="BootSequence" BootTime="10" VerbOnBootInitialized="screech" VerbOnBootAborted="shudder" VerbOnBootDone="pulse" ComputePowerFactor="0" />
@@ -87,7 +87,7 @@
   </object>
   <object Name="Satiating Fangs" Inherits="BaseFangs">
 		<part Name="Render" DisplayName="{{r|satiating}} fangs" ColorString="&amp;m" DetailColor="r" />
-		<part Name="LifeDrainOnHit" Damage="5-10" Chance="100" />
+		<part Name="LifeDrainOnHit" Damage="3-5" Chance="50" />
 		<part Name="DiseaseOnHit" Chance="5" />
 		<part Name="BleedingOnHit" Amount="1d2" SaveTarget="20" Stack="true" />
 	</object>
@@ -97,10 +97,10 @@
     <part Name="Commerce" Value="20" />
     <part Name="Description" Short="A ruined scrap of foul hide flaps rhythmically in the salt wind. A plague looms on the horizon, its flagbearers drawing close." />
     <tag Name="Tier" Value="5" />
-    <part Name="Banner" Faction="Glow Wights" Effect="WarTrance" />
+    <part Name="Banner" Faction="Glow Wights"/>
     <part Name="Physics" Weight="15" Organic="true" />
     <part Name="Springy" Factor="0.9" />
-    <tag Name="UsesSlots" Value="Back,Hand" />
+    <tag Name="UsesSlots" Value="Back" />
   </object>
   <object Name="Filth Figurine" Inherits="BaseCurrency">
     <part Name="Render" DisplayName="{{filthy|apotheote}} figurine" Tile="sw_apotheote_figurine.png" DetailColor="w" RenderString="*" ColorString="&amp;r" RenderLayer="5" />

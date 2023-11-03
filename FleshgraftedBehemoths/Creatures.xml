@@ -2,7 +2,7 @@
 <objects>
     <object Name="Base Glow Wight Behemoth" Inherits="BaseHumanoid">
 		<part Name="Render" DisplayName="gyre wight behemoth" Tile="sw_glow_wight_behemoth.png" RenderString="Z" ColorString="&amp;m" TileColor="&amp;G" DetailColor="m" />
-		<part Name="Description" Short="This hulking beast feels no pain, no fear of war. =pronouns.Subjective= =verb:press:afterpronoun= forwards resolutely, linksib at =pronouns.possessive= back, urging =pronouns.objective= on. =pronouns.Possessive= eyes glow with an ominous hue, and =pronouns.possessive= needlepoint shoulder limbs lash out at perceived threats." />
+		<part Name="Description" Short="=pronouns.Subjective= wanders through the foggy dreamspace between two worlds, moving steadily through the half-remembered fragments of lost times towards the opalescent light of a star slouching on the horizon. =pronouns.Objective= linksib sends signals by way of nervelinks to alert =pronouns.objective= of nearby threats, and =pronouns.possessive= needlepoint pincers and writhing fists lash out violently in response." />
 		<part Name="Brain" Factions="Glow Wights-100,Girsh-50" />
         <part Name="Corpse" CorpseChance="50" CorpseBlueprint="Base Glow Wight Behemoth Corpse" />
         <part Name="Interior" Cell="Glow Wight Behemoth" FallDistance="1" /> 
@@ -11,7 +11,7 @@
         <part Name="RandomMutations" Mental="0" Physical="3-4" PhysicalLevel="8-12" />
         <mutation Name="DarkVision" Level="1" />
         <stat Name="AV" Boost="6" />
-        <stat Name="DV" Boost="-3" />
+        <stat Name="DV" Boost="-2" />
 		<stat Name="Strength" Boost="2" />
 		<stat Name="Toughness" Boost="3" />
         <stat Name="Ego" Boost="-1" />
@@ -51,12 +51,13 @@
         <tag Name="PrimaryLimbType" Value="Hand" />
 		<tag Name="WaterRitualLiquid" Value="blood" />
         <tag Name="DynamicObjectsTable:MoonStair_Creatures" Value="*noinherit" />
+        <tag Name="SimpleConversation" Value="{{emote|*The giant being is lost in a deep sleep. It cannot converse with you in this manner.*}}" />
         <property Name="Role" Value="Tank" />
 	</object>
     <object Name="Base Glow Wight Behemoth Corpse" Inherits="Corpse">
         <part Name="Render" DisplayName="gyre wight behemoth corpse" />
         <part Name="Butcherable" OnSuccess="@Glow Wight Behemoth Corpse" />
-        <part Name="Description" Short="A strewn pile of flesh and viscera coats the battlefield pools of blood and red mist. A strange piece of meat sticking from it still squirms."/>
+        <part Name="Description" Short="A strewn pile of flesh and viscera coats the battlefield in pools of blood and red mist. This massive beast dreams in silence forevermore."/>
         <part Name="PopulationSpawner" Specification="@GlowWightWarParty" DestroyAfterSpawn="false" />
         <part Name="Food" IllOnEat="true" Message="You feel a horrible nausea set in." />
         <tag Name="Tier" Value="8" />
@@ -91,42 +92,56 @@
     </object>
     <object Name="Glow Wight Behemoth of Algogot Corpse" Inherits="Base Glow Wight Behemoth Corpse">
         <part Name="PopulationSpawner" Specification="@AlgogotCorpseParty" DestroyAfterSpawn="false" />
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"/>
     </object>
     <object Name="Glow Wight Behemoth of Bethsaida Corpse" Inherits="Base Glow Wight Behemoth Corpse">
         <part Name="PopulationSpawner" Specification="@BethsaidaCorpseParty" DestroyAfterSpawn="false" />
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"/>
     </object>
     <object Name="Glow Wight Behemoth of QasQon Corpse" Inherits="Base Glow Wight Behemoth Corpse">
         <part Name="PopulationSpawner" Specification="@QasQonCorpseParty" DestroyAfterSpawn="false" />
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"/>
     </object>
     <object Name="Glow Wight Behemoth of Rermadon Corpse" Inherits="Base Glow Wight Behemoth Corpse">
         <part Name="PopulationSpawner" Specification="@RermadonCorpseParty" DestroyAfterSpawn="false" />
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"/>
     </object>
     <object Name="Glow Wight Behemoth of Shug'ruith Corpse" Inherits="Base Glow Wight Behemoth Corpse">
         <part Name="PopulationSpawner" Specification="@Shug'ruithCorpseParty" DestroyAfterSpawn="false" />
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"/>
     </object>
     <object Name="Furious Gyre Wight of Agolgot" Inherits="Gyre Wight of Agolgot">
         <part Name="Brain" Feelings="Player:-650"/>
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"/>
     </object>
     <object Name="Furious Gyre Wight of Bethsaida" Inherits="Gyre Wight of Bethsaida">
         <part Name="Brain" Feelings="Player:-650"/>
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"/>
     </object>
     <object Name="Furious Gyre Wight of Qas" Inherits="Gyre Wight of Qas">
         <part Name="Brain" Feelings="Player:-650"/>
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"/>
     </object>
     <object Name="Furious Gyre Wight of Qon" Inherits="Gyre Wight of Qon">
         <part Name="Brain" Feelings="Player:-650"/>
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"/>
     </object>
     <object Name="Furious Gyre Wight of Rermadon" Inherits="Gyre Wight of Rermadon">
         <part Name="Brain" Feelings="Player:-650"/>
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"/>
     </object>
     <object Name="Furious Gyre Wight of Shug'ruith" Inherits="Gyre Wight of Shug'ruith">
         <part Name="Brain" Feelings="Player:-650"/>
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"/>
+    </object>
+    <object Name="Furious Glow Wight Linksib" Inherits="Glow Wight Linksib">
+        <part Name="Brain" Feelings="Player:-650"/>
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"/>
     </object>
     <object Name="Glow Wight Linksib" Inherits="Glow Wight">
         <part Name="Render" DisplayName="gyre wight linksib" RenderString="z" ColorString="&amp;m" DetailColor="c" Tile="sw_glow_wight_siegedriver.png" />
         <part Name="AIVehiclePilot" Type="Base Glow Wight Behemoth" SearchRadius="15" OnCombatStart="true" />
         <part Name="Description" Short="Sworn on oaths of blood between two wights, the concepts of transmutation and kinship are entwined. Now they go as one, ferrying kin and swearing no other allegiances." />
-        <part Name="Brain" Feelings="Player:-650"/>
         <inventoryobject Blueprint="Leather Whip" Number="1" />
         <inventoryobject Blueprint="Profaned Banner" Number="1" />
         <inventoryobject Blueprint="Satiating Fangs" Number="1" />

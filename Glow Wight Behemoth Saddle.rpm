@@ -110,7 +110,7 @@
   </cell>
   <cell X="2" Y="1">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Web"></object>
+    <object Name="Glowing Pustule"></object>
   </cell>
   <cell X="3" Y="1">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
@@ -118,11 +118,10 @@
   </cell>
   <cell X="4" Y="1">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="BloodCanteen"></object>
   </cell>
   <cell X="5" Y="1">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Campfire Remains"></object>
+    <object Name="N-Ary Remains"></object>
   </cell>
   <cell X="6" Y="1">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
@@ -133,7 +132,7 @@
   </cell>
   <cell X="8" Y="1">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Hollowed Pod"></object>
+    <object Name="Empty Pod"></object>
   </cell>
   <cell X="9" Y="1">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
@@ -141,7 +140,7 @@
   </cell>
   <cell X="10" Y="1">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Hollowed Pod"></object>
+    <object Name="Empty Pod"></object>
   </cell>
   <cell X="11" Y="1">
     <object Name="Glow Wight Behemoth Saddle Wall"></object>
@@ -225,26 +224,22 @@
   </cell>
   <cell X="2" Y="2">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Glowing Pustule"></object>
   </cell>
   <cell X="3" Y="2">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
   </cell>
   <cell X="4" Y="2">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Raw Worm Meat"></object>
+    <object Name="BloodCanteen"></object>
   </cell>
   <cell X="5" Y="2">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Garbage"></object>
   </cell>
   <cell X="6" Y="2">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
   </cell>
   <cell X="7" Y="2">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Garbage"></object>
   </cell>
   <cell X="8" Y="2">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
@@ -255,7 +250,6 @@
   </cell>
   <cell X="10" Y="2">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Garbage"></object>
   </cell>
   <cell X="11" Y="2">
     <object Name="Warpglass Table"></object>
@@ -336,10 +330,11 @@
   </cell>
   <cell X="1" Y="3">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Chalkboard"></object>
+    <object Name="Linksib Tether"></object>
   </cell>
   <cell X="2" Y="3">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
+    <object Name="Bonehewn Rest"></object>
   </cell>
   <cell X="3" Y="3">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
@@ -366,8 +361,8 @@
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
   </cell>
   <cell X="11" Y="3">
-    <object Name="Glowing Pustule"></object>
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
+    <object Name="Glowing Pustule"></object>
   </cell>
   <cell X="12" Y="3">
     <object Name="Glow Wight Behemoth Saddle Wall"></object>
@@ -447,6 +442,7 @@
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
   </cell>
   <cell X="2" Y="4">
+    <object Name="Glow Wight Behemoth Saddle Floor"></object>
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
   </cell>
   <cell X="3" Y="4">
@@ -556,14 +552,12 @@
   </cell>
   <cell X="2" Y="5">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Garbage"></object>
   </cell>
   <cell X="3" Y="5">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
   </cell>
   <cell X="4" Y="5">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Garbage"></object>
   </cell>
   <cell X="5" Y="5">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
@@ -584,7 +578,6 @@
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
   </cell>
   <cell X="11" Y="5">
-    <object Name="Glowing Pustule"></object>
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
   </cell>
   <cell X="12" Y="5">
@@ -667,39 +660,36 @@
   </cell>
   <cell X="2" Y="6">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Web"></object>
-    <object Name="Glowing Pustule"></object>
   </cell>
   <cell X="3" Y="6">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
+    <object Name="Glowing Pustule"></object>
   </cell>
   <cell X="4" Y="6">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
   </cell>
   <cell X="5" Y="6">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Garbage"></object>
   </cell>
   <cell X="6" Y="6">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
   </cell>
   <cell X="7" Y="6">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Ogre Ape Pelt"></object>
   </cell>
   <cell X="8" Y="6">
+    <object Name="Bonehewn Rest"></object>
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
   </cell>
   <cell X="9" Y="6">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Campfire Remains"></object>
+    <object Name="N-Ary Remains"></object>
   </cell>
   <cell X="10" Y="6">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
   </cell>
   <cell X="11" Y="6">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Garbage"></object>
   </cell>
   <cell X="12" Y="6">
     <object Name="Glow Wight Behemoth Saddle Wall"></object>
@@ -779,18 +769,16 @@
   </cell>
   <cell X="2" Y="7">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Web"></object>
+    <object Name="Moonjute Rucksack"></object>
   </cell>
   <cell X="3" Y="7">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Web"></object>
   </cell>
   <cell X="4" Y="7">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
     <object Name="Warpglass Table"></object>
   </cell>
   <cell X="5" Y="7">
-    <object Name="Glow Wight Behemoth Saddle Floor"></object>
     <object Name="Cystic Lounger"></object>
   </cell>
   <cell X="6" Y="7">
@@ -798,18 +786,19 @@
   </cell>
   <cell X="7" Y="7">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
+    <object Name="Vile Basin"></object>
   </cell>
   <cell X="8" Y="7">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Hollowed Pod"></object>
+    <object Name="Empty Pod"></object>
   </cell>
   <cell X="9" Y="7">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Garbage"></object>
+    <object Name="Glowing Pustule"></object>
   </cell>
   <cell X="10" Y="7">
     <object Name="Glow Wight Behemoth Saddle Floor"></object>
-    <object Name="Hollowed Pod"></object>
+    <object Name="Empty Pod"></object>
   </cell>
   <cell X="11" Y="7">
     <object Name="Glow Wight Behemoth Saddle Wall"></object>

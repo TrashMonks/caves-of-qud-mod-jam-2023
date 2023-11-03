@@ -76,10 +76,35 @@
     <object Blueprint="Albino Ape Pelt" />
     <object Blueprint="Ogre Ape Pelt" />
     <object Blueprint="Black Puma Haunch" />
-    <object Blueprint="Salthopper Mandible" />
+    <object Blueprint="SalthopperMandible" />
     <object Blueprint="Albino Ape Heart" />
   </group>
-</population>        
+</population>    
+<population Name="Random Behemoth Fangs">
+  <group Style="pickone">
+    <object Blueprint="Girshling Fangs" />
+    <object Blueprint="Rank Fangs" />
+    <object Blueprint="Incadescent Fangs" />
+    <object Blueprint="Zigzag Fangs" />
+    <object Blueprint="Satiating Fangs" />
+  </group>
+</population>
+<population Name="Random Behemoth Trash">
+  <group Style="pickeach">
+    <object Blueprint="Garbage" Number="10-17" />
+    <object Blueprint="Bones" Number="3-7"/>
+    <object Blueprint="Web" Number="4-10" Hint="AlongWall" />
+    <table Chance="50,25,10" Name="Junk 2" />
+  </group>
+</population>     
+<population Name="Random Behemoth World Spawner">
+  <group Name="Random Behemoth World Spawner" Style="pickeach">
+    <table Name="Random Behemoth Butcherables" Count="0-1" />
+    <table Name="Random Behemoth Snacks" Count="0-2" />
+    <table Name="Random Behemoth Meats" Count="0-2" />
+    <table Name="Random Behemoth Trash" />
+  </group>
+</population>       
     <population Name="GlowWightWarParty">
         <group Style="pickeach">
           <object Chance="10" Blueprint="Gyre Wight of Agolgot" />

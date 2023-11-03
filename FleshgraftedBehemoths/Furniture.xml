@@ -23,14 +23,20 @@
         <intproperty Name="InteriorRequired" Value="1" />
       </object>
       <object Name="Glow Wight Behemoth Saddle Gate" Inherits="VehicleGolemExit">
-		<part Name="Render" DisplayName="gazing gate" RenderLayer="1" ColorString="&amp;W" TileColor="&amp;K" DetailColor="m" RenderString="008" Tile="Furniture/sw_gazing_gate_closed.png" />
-		<part Name="Description" Short="Mesmerizing hides coalesce and separate in the form of a door." />
-		<part Name="InteriorPortal" OpenTile="Furniture/sw_gazing_gate_opened.png" ExitOnEnteredCell="true"/>
-		<tag Name="Gender" Value="neuter" />
+		    <part Name="Render" DisplayName="gazing gate" RenderLayer="1" ColorString="&amp;W" TileColor="&amp;K" DetailColor="M" RenderString="008" Tile="Furniture/sw_gazing_gate_closed.png" />
+		    <part Name="Description" Short="Mesmerizing hides coalesce and separate in the form of a door." />
+		    <part Name="InteriorPortal" OpenTile="Furniture/sw_gazing_gate_opened.png" ExitOnEnteredCell="true"/>
+        <stat Name="Hitpoints" Value="1000" />
+        <stat Name="AV" Value="20" />
+        <stat Name="AcidResistance" Value="100" />
+        <stat Name="HeatResistance" Value="100" />
+        <stat Name="ColdResistance" Value="100" />
+        <stat Name="ElectricResistance" Value="100" />
+		    <tag Name="Gender" Value="neuter" />
         <tag Name="PaintWith" Value="Glow Wight Behemoth Saddle Wall" />
         <intproperty Name="InteriorRequired" Value="1" />
-		<xtagGrammar iArticle="" />
-	</object>
+		    <xtagGrammar iArticle="" />
+	    </object>
       <object Name="Vile Basin" Inherits="Vessel">
         <part Name="Render" DisplayName="vile basin" ColorString="&amp;m" DetailColor="K" Tile="Furniture/sw_vile_basin_empty.png" RenderLayer="6" Occluding="false" />
         <part Name="RandomTile" Tiles="Furniture/sw_vile_basin_1.png,Furniture/sw_vile_basin_2.png,Furniture/sw_vile_basin_3.png" />
@@ -44,14 +50,16 @@
         <intproperty Name="InteriorRequired" Value="1" />
       </object>
       <object Name="VehicleBehemothSaddle" Inherits="BasePortableChair">
-		<part Name="Render" DisplayName="yawning saddle" ColorString="&amp;y" TileColor="&amp;g" DetailColor="M" Tile="Furniture/sw_yawning_saddle.png" />
-		<part Name="Description" Short="A flesh maw opens, and within it a simple cushion rests." />
-		<part Name="Physics" Weight="100" />
-		<part Name="Chair" Level="2" Securing="true" />
-		<stat Name="Hitpoints" Value="1000" />
-		<part Name="VehicleSeat" />
-		<tag Name="BodyType" Value="AnimalChair" />
-		<tag Name="ExcludeFromDynamicEncounters" />
+		    <part Name="Render" DisplayName="yawning saddle" ColorString="&amp;y" TileColor="&amp;g" DetailColor="M" Tile="Furniture/sw_yawning_saddle.png" />
+		    <part Name="Description" Short="A flesh maw opens, and within it a simple cushion rests." />
+		    <part Name="Physics" Weight="100" />
+		    <part Name="Chair" Level="2" Securing="true" />
+		    <stat Name="Hitpoints" Value="1000" />
+        <stat Name="AV" Value="20" />
+		    <part Name="VehicleSeat" />
+		    <tag Name="BodyType" Value="AnimalChair" />
+		    <tag Name="ExcludeFromDynamicEncounters" />
+        <tag Name="NoSparkingQuest" Value="*noinherit"/>
         <intproperty Name="InteriorRequired" Value="1" />
 	</object>
     <object Name="Cystic Lounger" Inherits="BaseChair">
@@ -61,7 +69,7 @@
         <part Name="Description" Short="Flesh was twisted into a sickening bowl. Its ports screech in delight as lifestuff is pumped inwards, ensuring it is pre-warmed for your comfort." />
         <part Name="Chair" Level="3" />
         <part Name="Commerce" Value="10" />
-        <part Name="Examiner" Complexity="4" />
+        <part Name="Examiner" Complexity="2" />
         <stat Name="AV" Value="6" />
         <stat Name="DV" Value="0" />
         <stat Name="Hitpoints" Value="80" />
@@ -70,6 +78,7 @@
         <part Name="LiquidVolume" MaxVolume="128" Volume="128" StartVolume="64-128" InitialLiquid="blood-800,ooze-100,slime-100" />
         <tag Name="NamingTag" Value="Animated" />
         <tag Name="Tier" Value="6" />
+        <tag Name="NoSparkingQuest" Value="*noinherit"/>
         <stag Name="Torture" />
         <intproperty Name="InteriorRequired" Value="1" />
       </object>
@@ -81,10 +90,11 @@
         <tag Name="LiveAnimal" />
         <stag Name="LightSource" />
         <tag Name="TechTier" Value="6" />
-        <part Name="Harvestable" OnSuccess="Glowsphere" StartRipeChance="2:3" DestroyOnHarvest="false" HarvestVerb="burst" RipeColor="&amp;M" RipeTileColor="&amp;M" RipeDetailColor="Y" UnripeColor="&amp;m" UnripeTileColor="&amp;m" UnripeDetailColor="k" />
+        <tag Name="NoSparkingQuest" Value="*noinherit"/>
+        <part Name="Harvestable" OnSuccess="Glowsphere" StartRipeChance="1:2" DestroyOnHarvest="false" HarvestVerb="burst" RipeColor="&amp;M" RipeTileColor="&amp;M" RipeDetailColor="Y" UnripeColor="&amp;m" UnripeTileColor="&amp;m" UnripeDetailColor="k" />
         <intproperty Name="InteriorRequired" Value="1" />
       </object>
-      <object Name="Hollowed Pod" Inherits="BaseBed">
+      <object Name="Empty Pod" Inherits="BaseBed">
         <part Name="Render" DisplayName="empty pod" ColorString="&amp;b" TileColor="&amp;K" DetailColor="r" Tile="Furniture/sw_empty_pod.png" Occluding="false" RenderIfDark="true" />
         <part Name="Physics" Weight="260" />
         <part Name="Description" Short="Blood pumps through the once-egg, filling it with traces of warm life." />
@@ -93,29 +103,56 @@
         <part Name="LeakWhenBroken" />
         <part Name="Examiner" Complexity="2" />
         <tag Name="HeroNameTitleDescriptor" Value="Sickening,Damp,Bleeding,Swollen and Wet" />
-        <tag Name="HeroNameTitleClientele" Value="the Plagues,the Sick,the Unborn, Mutated Ones" />
+        <tag Name="HeroNameTitleClientele" Value="the Plagues,the Sick,the Unborn,Mutated Ones" />
+        <tag Name="NoSparkingQuest" Value="*noinherit"/>
         <tag Name="Tier" Value="3" />
         <stag Name="Torture" />
         <intproperty Name="InteriorRequired" Value="1" />
       </object>
-      <object Name="Warpglass Table" Inherits="Table">
-        <part Name="Render" DisplayName="warpglass table" ColorString="&amp;K" DetailColor="M" RenderString="227" Tile="Furniture/sw_warpglass_table_1.png" Occluding="false" RenderIfDark="true" />
-        <part Name="RandomTile" Tiles="Furniture/sw_warpglass_table_1.png,Furniture/sw_warpglass_table_2.png,Furniture/sw_warpglass_table_3.png" />
-        <tag Name="EmptyTile" Value="*delete" />
-        <tag Name="FullTile" Value="*delete" />
-        <tag Name="EmptyDetailColor" Value="M" />
-        <tag Name="FullDetailColor" Value="M" />
-        <part Name="Physics" Weight="100" Organic="false" />
-        <tag Name="HeroNameTitleDescriptor" Value="Flat,Level,L-Shaped,Sturdy" />
-        <part Name="Description" Short="Glass was shaped on a cosmic loom, imbuing it with an unearthly glow." />
-        <part Name="LightSource" Lit="true" Radius="2" />
+      <object Name="Bonehewn Rest" Inherits="Chest">
+        <part Name="Render" DisplayName="bonehewn rest" ColorString="&amp;K" DetailColor="y" RenderString="227" Tile="Furniture/sw_bonehewn_rest_empty.png" Occluding="false" RenderIfDark="true" />
+        <part Name="Physics" Weight="1" Organic="true" />
+        <part Name="Description" Short="Osseous matter was shaved to glasslike smoothness. The bone fragments inside are frequently lit on fire to give prophetic visions of the future." />
+        <part Name="Organic" />
+        <tag Name="EmptyTile" Value="Furniture/sw_bonehewn_rest_empty.png" />
+        <tag Name="FullTile" Value="Furniture/sw_bonehewn_rest_full.png" />
+        <tag Name="EmptyDetailColor" Value="y" />
+        <tag Name="FullDetailColor" Value="y" />
         <tag Name="TakeDamageSound" Value="Sounds/Damage/sfx_damage_glass" />
         <tag Name="DeathSounds" Value="Sounds/Damage/sfx_destroy_glass" />
-        <part Name="Metal" />
+        <inventoryobject Blueprint="@Random Behemoth Fangs" Number="1d2-1" />
+        <inventoryobject Blueprint="Bones" Number="1d3-1" />
         <intproperty Name="InteriorRequired" Value="1" />
     </object>
+    <object Name="Moonjute Rucksack" Inherits="Chest">
+      <part Name="Render" DisplayName="moonjute rucksack" Tile="Furniture/sw_moonjute_rucksack.png" DetailColor="m" ColorString="&amp;K" RenderString="254" Occluding="false" RenderIfDark="true" RenderLayer="6" />
+      <part Name="Physics" Organic="True" Takeable="false" />
+      <part Name="Description" Short="Kaleidoscopic fibers were twisted into the form of space." />
+      <part Name="InteriorContainer" />
+      <tag Name="OverlayColor" Value="&amp;m" />
+      <tag Name="ExcludeFromDynamicEncounters" />
+      <tag Name="NoSparkingQuest" Value="*noinherit"/>
+      <intproperty Name="InteriorRequired" Value="1" />
+    </object>
+    <object Name="Warpglass Table" Inherits="Table">
+      <part Name="Render" DisplayName="warpglass table" ColorString="&amp;K" DetailColor="M" RenderString="227" Tile="Furniture/sw_warpglass_table_1.png" Occluding="false" RenderIfDark="true" />
+      <part Name="RandomTile" Tiles="Furniture/sw_warpglass_table_1.png,Furniture/sw_warpglass_table_2.png,Furniture/sw_warpglass_table_3.png" />
+      <tag Name="EmptyTile" Value="*delete" />
+      <tag Name="FullTile" Value="*delete" />
+      <tag Name="EmptyDetailColor" Value="M" />
+      <tag Name="FullDetailColor" Value="M" />
+      <part Name="Physics" Weight="100" Organic="false" />
+      <tag Name="HeroNameTitleDescriptor" Value="Flat,Level,L-Shaped,Sturdy" />
+      <part Name="Description" Short="Glass was spun on a cosmic loom, imbuing it with an unearthly glow." />
+      <part Name="LightSource" Lit="true" Radius="2" />
+      <tag Name="TakeDamageSound" Value="Sounds/Damage/sfx_damage_glass" />
+      <tag Name="DeathSounds" Value="Sounds/Damage/sfx_destroy_glass" />
+      <part Name="Metal" />
+      <tag Name="NoSparkingQuest" Value="*noinherit"/>
+      <intproperty Name="InteriorRequired" Value="1" />
+  </object>
     <object Name="Putrid Rotisserie" Inherits="Furniture">
-        <part Name="Render" DisplayName="putrid rotisserie" Tile="Furniture/sw_meat_rack_empty.png" DetailColor="r" ColorString="&amp;w" RenderString="182" />
+        <part Name="Render" DisplayName="putrid rotisserie" Tile="Furniture/sw_meat_rack_empty.png" DetailColor="K" ColorString="&amp;r" RenderString="182" />
         <part Name="Container" />
         <part Name="Inventory" />
         <part Name="Description" Short="The flesh of wretched creatures has been skewered and left to rot. Bits of gore collect on the chopping block below." />
@@ -126,7 +163,42 @@
         <tag Name="NoSparkingQuest" />
         <tag Name="OverlayColor" Value="&amp;r" />
         <tag Name="HangingSupport" />
-        <inventoryobject Blueprint="@Random Behemoth Meats" Number="3" />
+        <tag Name="NoSparkingQuest" Value="*noinherit"/>
+        <inventoryobject Blueprint="@Random Behemoth Meats" Number="1d4-1" />
+        <intproperty Name="InteriorRequired" Value="1" />
+      </object>
+      <object Name="Linksib Tether" Inherits="MountedFurniture">
+        <part Name="Render" DisplayName="hypnagogic tether" RenderString="222" Tile="Furniture/sw_linksib_tether.png" ColorString="&amp;m" DetailColor="c" />
+        <part Name="Description" Short="Warped chrome encloses a celestial atlas, its shining crystals aligning to distant stars to divine the location of buried cradles. A ritual carving looms below, transmitting the behemoth's dreamstuff." />
+        <part Name="AnimatedMaterialGeneric" AnimationLength="210" DetailColorAnimationFrames="0=c,180=C,190=Y,200=C" MustBeUnderstood="false" />
+        <part Name="Examiner" Unknown="UnknownBizarreContraption" Alternate="UnknownBizarreContraption" Complexity="4"/>
+        <part Name="Physics" Weight="50" />
+        <part Name="ConversationScript" ConversationID="Linksib Tether" ChargeUse="1" />
+        <part Name="ChargeSink" ChargeUse="1" NameForStatus="Lucid Probe" />
+        <part Name="ZeroPointEnergyCollector" ChargeRate="20" World="JoppaWorld,OrbWorld" />
+        <part Name="Circuitry" />
+        <stat Name="Hitpoints" Value="1000" />
+        <stat Name="AV" Value="20" />
+        <tag Name="ExcludeFromDynamicEncounters" />
+        <tag Name="NoSparkingQuest" Value="*noinherit"/>
+        <intproperty Name="InteriorRequired" Value="1" />
+      </object>
+      <object Name="N-Ary Campfire" Inherits="Campfire">
+        <part Name="Render" Tile="Furniture/sw_n-ary_campfire_noflame.png" DisplayName="n-ary campfire" RenderString="249" ColorString="&amp;K" DetailColor="m" Occluding="false" RenderIfDark="true" />
+        <removepart Name="AnimatedMaterialFire"/>
+        <part Name="AnimatedMaterialGeneric" AnimationLength="210" DetailColorAnimationFrames="0=m,170=M,190=Y,200=M," />
+        <part Name="EmitSmoke" ChanceOnEndTurn="4"/>
+        <part Name="UnityPrefabImposter" PrefabID="Prefabs/Particles/CampfireBlueFlames" />
+        <part Name="Description" Short="The branch of an n-ary tree was broken off and shaped into a crystal lune. Azure flames dance around it in crystalline light, and smokey dreamfog fills the air." />
+        <part Name="Campfire" ExtinguishBlueprint="N-Ary Remains" />
+        <tag Name="NoSparkingQuest" Value="*noinherit"/>
+        <intproperty Name="InteriorRequired" Value="1" />
+      </object>
+      <object Name="N-Ary Remains" Inherits="Campfire Remains">
+        <part Name="Render" Tile="Furniture/sw_n-ary_campfire_noflame.png" ColorString="&amp;k" DetailColor="m" DisplayName="n-ary campfire remains" RenderString="249" Occluding="false" RenderIfDark="true" />
+        <part Name="Description" Short="The twisted branch of an n-ary tree now sits scorched and unused, a charred reminder of entropy." />
+        <part Name="CampfireRemains" Blueprint="N-Ary Campfire"/>
+        <tag Name="NoSparkingQuest" Value="*noinherit"/>
         <intproperty Name="InteriorRequired" Value="1" />
       </object>
 </objects>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+  <conversation ID="Linksib Tether" Inherits="">
+    <node ID="Start">
+      <text>
+        {{emote|*As your hand touches the carving, a fragmented thought reaches through the dreamfog and enters your mind:*}} 
+        {{entropic|=MARKOVSENTENCE=}}
+        {{emote|*The effigy returns to its waking sleep.*}}
+      </text>
+      <choice GotoID="End">Live and dream, resting behemoth.</choice>
+    </node>
+  </conversation>
+</conversations>
