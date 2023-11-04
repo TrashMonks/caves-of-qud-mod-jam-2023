@@ -1,3 +1,6 @@
+v1.2.3
+Added a new pumpkin pie sprite by Coiled Lorb
+
 v1.2.2
 Added description to human meat
 Reordered changelog

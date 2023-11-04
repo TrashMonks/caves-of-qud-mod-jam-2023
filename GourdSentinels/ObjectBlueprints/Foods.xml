@@ -12,7 +12,7 @@
     </object>
 
     <object Name="Andrea52_GourdSentinel_Pumpkin Pie" Inherits="Preservable">
-        <part Name="Render" DisplayName="{{O|pumpkin pie}}" Tile="items/sw_pie.bmp" ColorString="&amp;O" TileColor="&amp;O" DetailColor="w"/>
+        <part Name="Render" DisplayName="{{O|pumpkin pie}}" Tile="Andrea52_GourdSentinel/pumpkin_pie_by_coiled_lorb.png" ColorString="&amp;O" TileColor="&amp;O" DetailColor="w"/>
         <part Name="Description" Short="Orange custard fills a frame of delicate pastry. The gourd has been tamed."/>
         <part Name="Food" Satiation="Meal" Message="It's warm, fragrant, and delicious."/>
         <part Name="Commerce" Value="10"/>
