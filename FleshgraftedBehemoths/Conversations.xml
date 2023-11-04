@@ -10,4 +10,22 @@
       <choice GotoID="End">Live and dream, resting behemoth.</choice>
     </node>
   </conversation>
+  <conversation ID="Behemoth Linksib">
+    <node ID="Start">
+      <text>
+        {{emote|*=pronouns.Objective= eyes focus forwards, scanning the horizon for threats.*}}~
+        Keep away from me. This is my charge.
+      </text>
+      <choice GotoID="End">Live and roam, tethered sib.</choice>
+    </node>
+  </conversation>  
+  <conversation ID="Glow Wight Behemoth">
+    <node ID="Start">
+      <text>
+        {{emote|*The giant being is lost in a deep sleep. =pronouns.Subjective= cannot converse with you in this manner.*}}~
+        {{emote|*The massive creature twists =pronouns.possessive= neck towards the sky, then back to the horizon in front of =pronouns.objective=, almost ritualistically.*}}
+      </text>
+      <choice GotoID="End">Live and dream, resting behemoth.</choice>
+    </node>
+  </conversation>  
 </conversations>

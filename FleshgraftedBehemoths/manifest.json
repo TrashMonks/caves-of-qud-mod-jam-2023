@@ -2,9 +2,9 @@
 	"id": "FleshgraftedBehemoths",
 	"loadorder": 0,
 	"title": "{{m|Fleshgrafted Behemoths}}",
-	"description": "Adds gigantic gyre wights to ferry cultists around qud. Comes with a new a piece of body armor, if you can kill one. Thanks to Umbral Reaver for the sprite.",
+	"description": "Adds gigantic gyre wights to ferry cultists around qud. Comes with a new a piece of body armor, if you can kill one.",
 	"tags": "Creature",
 	"version": "1.0",
 	"author": "{{sphynx|Lamb}}",
-    "previewImage": "fleshgraftbehemothpreview.png"
+    "previewImage": "preview.png"
 }

@@ -107,6 +107,7 @@
     <part Name="Description" Short="A disgusting depiction of an apotheote, cast in flesh and aged bone." />
     <part Name="Commerce" Value="60" />
     <part Name="WantToAutoexplore" AdjacentAction="Autoget" />
+    <tag Name="Mods" Value="None"/>
     <tag Name="Tier" Value="1" />
   </object>
   <object Name="Agolgot Figurine" Inherits="Filth Figurine">

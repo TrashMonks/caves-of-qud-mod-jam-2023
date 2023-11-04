@@ -111,7 +111,7 @@
       </object>
       <object Name="Bonehewn Rest" Inherits="Chest">
         <part Name="Render" DisplayName="bonehewn rest" ColorString="&amp;K" DetailColor="y" RenderString="227" Tile="Furniture/sw_bonehewn_rest_empty.png" Occluding="false" RenderIfDark="true" />
-        <part Name="Physics" Weight="1" Organic="true" />
+        <part Name="Physics" Weight="1" Organic="true" Owner="Glow-Wights" />
         <part Name="Description" Short="Osseous matter was shaved to glasslike smoothness. The bone fragments inside are frequently lit on fire to give prophetic visions of the future." />
         <part Name="Organic" />
         <tag Name="EmptyTile" Value="Furniture/sw_bonehewn_rest_empty.png" />
@@ -129,6 +129,9 @@
       <part Name="Physics" Organic="True" Takeable="false" />
       <part Name="Description" Short="Kaleidoscopic fibers were twisted into the form of space." />
       <part Name="InteriorContainer" />
+      <part Name="Interesting" />
+      <removepart Name="Inventory" />
+      <removepart Name="Container" />
       <tag Name="OverlayColor" Value="&amp;m" />
       <tag Name="ExcludeFromDynamicEncounters" />
       <tag Name="NoSparkingQuest" Value="*noinherit"/>
@@ -155,7 +158,7 @@
         <part Name="Render" DisplayName="putrid rotisserie" Tile="Furniture/sw_meat_rack_empty.png" DetailColor="K" ColorString="&amp;r" RenderString="182" />
         <part Name="Container" />
         <part Name="Inventory" />
-        <part Name="Description" Short="The flesh of wretched creatures has been skewered and left to rot. Bits of gore collect on the chopping block below." />
+        <part Name="Description" Short="The flesh of wretched creatures has been skewered and left to rot. Bits of gore congeal on the chopping block below." />
         <part Name="Physics" Weight="50" Owner="Glow-Wights" />
         <part Name="LiquidProducer" Liquid="blood" VariableRate="50-100" ChanceSkipSameCell="50" PureOnFloor="true" />
         <tag Name="EmptyTile" Value="Furniture/sw_meat_rack_empty.png" />

@@ -94,9 +94,27 @@
     <object Blueprint="Garbage" Number="10-17" />
     <object Blueprint="Bones" Number="3-7"/>
     <object Blueprint="Web" Number="4-10" Hint="AlongWall" />
-    <table Chance="50,25,10" Name="Junk 2" />
   </group>
-</population>     
+</population>
+<population Name="Random Behemoth Moonjute Trash">
+  <group Style="pickeach">
+    <object Blueprint="Garbage" Number="5-8" />
+    <object Blueprint="Bones" Number="2-5"/>
+    <table Chance="50,25,10" Name="Junk 1" />
+    <table Chance="25,10,5" Name="Junk 2" />
+  </group>
+</population>      
+<population Name="Random Behemoth Figurines">
+  <group Style="pickone">
+    <object Blueprint="Filth Figurine"/>
+    <object Blueprint="Agolgot Figurine"/>
+    <object Blueprint="Bethsaida Figurine"/>
+    <object Blueprint="Qas Figurine"/>
+    <object Blueprint="Qon Figurine"/>
+    <object Blueprint="Rermadon Figurine"/>
+    <object Blueprint="Shug'ruith Figurine"/>
+  </group>
+</population>  
 <population Name="Random Behemoth World Spawner">
   <group Name="Random Behemoth World Spawner" Style="pickeach">
     <table Name="Random Behemoth Butcherables" Count="0-1" />
@@ -105,6 +123,15 @@
     <table Name="Random Behemoth Trash" />
   </group>
 </population>       
+<population Name="Random Behemoth Moonjute Spawner">
+  <group Name="Random Behemoth World Spawner" Style="pickeach">
+    <table Name="Random Behemoth Butcherables" Count="0-1" />
+    <table Name="Random Behemoth Snacks" Count="0-2" />
+    <table Name="Random Behemoth Meats" Count="0-2" />
+    <table Name="Random Behemoth Moonjute Trash" />
+    <table Name="Random Behemoth Figurines" Count="0-1"/>
+  </group>
+</population>      
     <population Name="GlowWightWarParty">
         <group Style="pickeach">
           <object Chance="10" Blueprint="Gyre Wight of Agolgot" />
@@ -228,27 +255,27 @@
       </population>
       <population Name="AgolgotCyst" Load="merge">
         <group Name="Options" Style="pickeach" Load="merge">
-            <object Chance="10" Blueprint="Glow Wight Behemoth of Algogot"/>
+            <object Chance="5" Blueprint="Glow Wight Behemoth of Algogot"/>
         </group>
       </population>
       <population Name="BethsaidaCyst" Load="merge">
         <group Name="Options" Style="pickeach" Load="merge">
-            <object Chance="10" Blueprint="Glow Wight Behemoth of Bethsaida"/>
+            <object Chance="5" Blueprint="Glow Wight Behemoth of Bethsaida"/>
         </group>
       </population>
       <population Name="QasQonCyst" Load="merge">
         <group Name="Options" Style="pickeach" Load="merge">
-            <object Chance="10" Blueprint="Glow Wight Behemoth of QasQon"/>
+            <object Chance="5" Blueprint="Glow Wight Behemoth of QasQon"/>
         </group>
       </population>
       <population Name="RermadonCyst" Load="merge">
         <group Name="Options" Style="pickeach" Load="merge">
-            <object Chance="10" Blueprint="Glow Wight Behemoth of Rermadon"/>
+            <object Chance="5" Blueprint="Glow Wight Behemoth of Rermadon"/>
         </group>
       </population>
       <population Name="ShugruithCyst" Load="merge">
         <group Name="Options" Style="pickeach" Load="merge">
-            <object Chance="10" Blueprint="Glow Wight Behemoth of Shug'ruith"/>
+            <object Chance="5" Blueprint="Glow Wight Behemoth of Shug'ruith"/>
         </group>
       </population>
 </populations>
