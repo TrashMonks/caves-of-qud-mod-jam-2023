@@ -14,10 +14,6 @@
     <skill Name="Rifles" />
     <skill Name="Rifle_SteadyHands" />
     <skill Name="Tactics_Throwing" />
-    <!-- For versions < 2.0.206.0 -->
-    <skill Name="Dual_Wield" />
-    <skill Name="Dual_Wield_Offhand_Strikes" />
-    <!-- For versions > 2.0.206.0 -->
     <skill Name="Multiweapon_Proficiency" />
     <skill Name="Multiweapon_Expertise" />
     <mutation Name="Telepathy" />
