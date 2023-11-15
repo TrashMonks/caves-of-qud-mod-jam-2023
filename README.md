@@ -8,7 +8,7 @@ Wish for `mashup` or press <kbd>ctrl</kbd>-<kbd>shift</kbd>-<kbd>W</kbd> (Monste
 
 **A note on balance:** this pack is intended to let one sample from the various things added by all of the mods and will likely result an extremely chaotic Caves of Qud run. Each of these mods is available individually at the submissions page linked above, should you wish for a more curated experience.
 
-This version of the pack is for the (now) current version of Caves of Qud.
+This version of the pack is for the (now) current 206.X version of Caves of Qud.
 
 **Warning:** Do not run this pack simultaneous with any of the mods contained within.
 
