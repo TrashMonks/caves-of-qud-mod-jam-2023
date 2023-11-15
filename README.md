@@ -8,17 +8,17 @@ Wish for `mashup` or press <kbd>ctrl</kbd>-<kbd>shift</kbd>-<kbd>W</kbd> (Monste
 
 **A note on balance:** this pack is intended to let one sample from the various things added by all of the mods and will likely result an extremely chaotic Caves of Qud run. Each of these mods is available individually at the submissions page linked above, should you wish for a more curated experience.
 
-This version of the pack is for the beta version of Caves of Qud.
+This version of the pack is for the (now) current version of Caves of Qud.
 
 **Warning:** Do not run this pack simultaneous with any of the mods contained within.
 
 ## Installation
 
 Download links:
-* 204.X, stable
+* 204.X, legacy
   * [GitHub](https://github.com/TrashMonks/caves-of-qud-mod-jam-2023/archive/refs/heads/stable.zip)
   * [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3070047441)
-* 206.X, beta
+* 206.X, stable
   * [GitHub](https://github.com/TrashMonks/caves-of-qud-mod-jam-2023/archive/refs/heads/main.zip)
   * [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3070036521)
 * [Steam Workshop Collection](https://steamcommunity.com/sharedfiles/filedetails/?id=3069326052)
