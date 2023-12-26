@@ -4,7 +4,7 @@
    <!--    
 That corpse you planted last year in your garden,
 Has it begun to sprout? Will it bloom this year?
-Or has the Signal’s voice disturbed its bed?
+Or has the Signal's voice disturbed its bed?
 -->
 <object Name="BasePolyp" Inherits="Animal">
     <part Name="Body" Anatomy="Polyp" />
@@ -70,7 +70,7 @@ Or has the Signal’s voice disturbed its bed?
   </object>
 
  <object Name="Gibbering Maw" Inherits="BasePolyp">
-    <part Name="Render" RenderIfDark="false" DisplayName="gibbering maw" Tile="Feline/MawS.png" ColorString="&amp;r" DetailColor="y"/>
+    <part Name="Render" RenderIfDark="true" DisplayName="gibbering maw" Tile="Feline/MawS.png" ColorString="&amp;r" DetailColor="y"/>
     <part Name="Description" Short="It permits no silence around the shape that is its self. Inscrutable ravings spill forth from the depths of its throat, only occasionally broken up by frenzied breathing or the sudden, agonied howl. Perhaps this is why it is so eager to sink its forearm-sized teeth into anything that happens to come close enough for it to reach: We are beings of silence, and it, to its essence, is not. Though of course, there is always the possibility that it simply bites because it is hungry." />
      <tag Name="ExcludeFromDynamicEncounters" />
     <part Name="Brain" PointBlankRange="false" />
@@ -104,21 +104,24 @@ Or has the Signal’s voice disturbed its bed?
      <tag Name="ExcludeFromDynamicEncounters" />
     <part Name="Physics" Weight="1" />
     <part Name="MissileWeapon" AmmoChar="&amp;g&#15;" Skill="Rifle" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="0" />
-    <part Name="BioAmmoLoader" MaxCapacity="1" Available="0" TurnsToGenerate="32" ProjectileObject="ProjectileVomit" />
-    <part Name="AIShootCooldown" Cooldown="1-50" />
+    <!-- <part Name="BioAmmoLoader" MaxCapacity="1" VariableTurnsToGenerate="8d8" StartAvailable="1d32-31" ProjectileObject="ProjectileVomit" />
+    <part Name="AIShootCooldown" Cooldown="10+1d7" />-->
+     <part Name="BioAmmoLoader" MaxCapacity="1" VariableTurnsToGenerate="8d8" StartAvailable="0" ProjectileObject="ProjectileVomit" />
+    <part Name="AIShootCooldown" Cooldown="10+1d7" />
     <tag Name="UsesSlots" Value="Body" />
     <tag Name="MissileFireSound" Value="LowSpit" />
-        <part Name="ProneOnHit" Chance="100" SaveTarget="30" />
+        <!--<part Name="ProneOnHit" Chance="100" SaveTarget="30" />-->
   </object>
   <object Name="ProjectileVomit" Inherits="TemporaryProjectile">
     <part Name="Render" Tile="Mutations/slime_glands.bmp" ColorString="&amp;g" DisplayName="{{g|vomit}}" />
     <part Name="Projectile" BasePenetration="6" BaseDamage="1d8" ColorString="&amp;g" PassByVerb="arc" />
     <xtagGrammar adjunctNoun="glob" massNoun="true" />
     <part Name="PoisonOnHit" Chance="100" Strength="15" DamageIncrement="1d3" Duration="6-9" />
+      <part Name="ProneOnHit" Chance="100" SaveTarget="13"  />
   </object>
 
 <object Name="Unblinking Eye" Inherits="BasePolyp">
-    <part Name="Render" RenderIfDark="false" DisplayName="unblinking eye" Tile="Feline/EyeS.png" ColorString="&amp;Y" DetailColor="R"/>
+    <part Name="Render" RenderIfDark="true" DisplayName="unblinking eye" Tile="Feline/EyeS.png" ColorString="&amp;Y" DetailColor="R"/>
     <part Name="Description" Short="You tell yourself that it has no face, that it is only an eye without even as much as a lid. You tell yourself that out of all the emotions found in the world, there is none that can be displayed solely through the dilations and the contortions of an eye. You tell yourself that it has no brain, that surely it cannot think and that certainly it cannot judge. It does not help. Meeting the gaze of that vast and staring thing, you cannot shake the feeling that it looks at you as though it sees something inside you that nobody else ever has. " />
     <part Name="Brain" PointBlankRange="true" />
     <part Name="ConversationScript" ConversationID="PsychicViscera" />
@@ -135,13 +138,15 @@ Or has the Signal’s voice disturbed its bed?
   </object>
 
  <object Name="Bloodshot Retina" Inherits="NaturalMissileWeapon">
-    <part Name="Render" DisplayName="bloodshot retina" ColorString="&amp;R" />
+    <part Name="Render" DisplayName="{{R|bloodshot retina}}" ColorString="&amp;R" />
     <part Name="MissileWeapon" RangeIncrement="14" Skill="Pistol"  ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" />
     <part Name="EnergyAmmoLoader" ChargeUse="0" ProjectileObject="Projectile_Recognition" />
     <tag Name="UsesSlots" Value="Face" />
+    <part Name="AIStopShootingImmuneTargets" />
    <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Pistols/sfx_missile_psychalFleshgun_fire" />
   </object>
   <object Name="Projectile_Recognition" Inherits="TemporaryEnergyProjectile">
+      <tag Name="ImpactSound" Value="Sounds/Abilities/sfx_ability_mutation_massMind_activate" />
     <part Name="Render" DisplayName="{{G|flash of recognition}}" ColorString="&amp;G" />
     <part Name="Projectile" BasePenetration="9" BaseDamage="1d6" ColorString="&amp;G" PassByVerb="glint" Attributes="Mental Psionic" />
     <part Name="TreatAsSolid" GazeBased="true" RealityDistortionBased="true" Hits="false" RequiresPhaseMatch="false" Message="The darkness consumes =subject.t=!" />
@@ -149,7 +154,7 @@ Or has the Signal’s voice disturbed its bed?
 
 
 <object Name="Swollen Brain" Inherits="BasePolyp">
-    <part Name="Render" RenderIfDark="false" DisplayName="swollen brain" Tile="Feline/BrainS.png" ColorString="&amp;y" DetailColor="r"/>
+    <part Name="Render" RenderIfDark="true" DisplayName="swollen brain" Tile="Feline/BrainS.png" ColorString="&amp;y" DetailColor="r"/>
     <part Name="Description" Short="Countless ridges and valleys mar the surface of the grayish dome, and amidst these valleys, a pattern can be traced. What hand has carved the lines of a half-remembered poem into this vast and bulging cerebrum? Why are the shapes of the folds in this brain so similar to the shapes of the clouds around the Spindle? Is that the face of a loved one? Step closer, and you may come to understand." />
     <skill Name="Shield_Block" />
      <tag Name="ExcludeFromDynamicEncounters" />
@@ -182,10 +187,11 @@ Or has the Signal’s voice disturbed its bed?
   </object>
 
 <object Name="Grasping Mass of Hands" Inherits="BasePolyp">
-    <part Name="Render" RenderIfDark="false" Tile="Feline/HandS.png" DisplayName="grasping mass of hands" ColorString="&amp;w" DetailColor="r"/>
+    <part Name="Render" RenderIfDark="true" Tile="Feline/HandS.png" DisplayName="grasping mass of hands" ColorString="&amp;w" DetailColor="r"/>
     <part Name="Description" Short="Stray elbows and shoulder-joints knot the inside of each appendage as they sway and wave in a wind unknown to all but them." />
-    <skill Name="Dual_Wield_Offhand_Strikes" />
+    <skill Name="Multiweapon_Proficiency" />
     <skill Name="LongBladesProficiency" />
+    <skill Name="Acrobatics_SwiftReflexes" />
     <part Name="ConversationScript" ConversationID="PsychicViscera" />
     <stat Name="AV" Value="0" />
     <stat Name="Level" Value="14" />
@@ -252,7 +258,7 @@ Or has the Signal’s voice disturbed its bed?
      <tag Name="ExcludeFromDynamicEncounters" />
      <removepart Name="Combat" />
     <stat Name="Level" Value="14" />
-    <part Name="Impaler" ClusterSize="1d7+2" Damage="1d4" BleedDamage="1d2" AlternateBlueprintChance="0" AlternateBlueprint="Shuddering Clot"/>
+    <part Name="Impaler" ClusterSize="1d7+2" Damage="1d4" NeedsToBeHidden="false" BleedDamage="1d2" AlternateBlueprintChance="0" AlternateBlueprint="Shuddering Clot"/>
     <tag Name="Species" Value="veins" />
     <tag Name="ExcludeFromHostiles" />
     <removepart Name="ConversationScript" />
@@ -268,7 +274,7 @@ Or has the Signal’s voice disturbed its bed?
 <object Name="Writhing Veins_Temporary" Inherits="Writhing Veins">
     <stat Name="Level" Value="1" />
      <tag Name="ExcludeFromDynamicEncounters" />
-    <part Name="Impaler" ClusterSize="1d7+2" Damage="1d4" BleedDamage="1d2-1" AlternateBlueprintChance="0" AlternateBlueprint="Shuddering Clot"/>
+    <part Name="Impaler" ClusterSize="1d7+2" Damage="1d4" NeedsToBeHidden="false" BleedDamage="1d2-1" AlternateBlueprintChance="0" AlternateBlueprint="Shuddering Clot"/>
     <tag Name="ExcludeFromHostiles" />
     <part Name="FallsApart" Duration="8-16" Message="=subject.T= =verb:recede=." />
   </object>  
@@ -374,13 +380,15 @@ Or has the Signal’s voice disturbed its bed?
   </object>
 
 <object Name="Watcher_Bloodshot Retina" Inherits="NaturalMissileWeapon">
-    <part Name="Render" DisplayName="bloodshot retina" ColorString="&amp;R" />
+    <part Name="Render" DisplayName="{{R|bloodshot retina}}" ColorString="&amp;R" />
     <part Name="MissileWeapon" RangeIncrement="14" Skill="Pistol"  ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" />
     <part Name="EnergyAmmoLoader" ChargeUse="0" ProjectileObject="Projectile_Regret" />
     <tag Name="UsesSlots" Value="Face" />
-     <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Pistols/sfx_missile_psychalFleshgun_fire" />
+    <part Name="AIStopShootingImmuneTargets" />
+    <tag Name="MissileFireSound" Value="Sounds/Missile/Fires/Pistols/sfx_missile_psychalFleshgun_fire" />
   </object>
   <object Name="Projectile_Regret" Inherits="TemporaryEnergyProjectile">
+      <tag Name="ImpactSound" Value="Sounds/Abilities/sfx_ability_mutation_massMind_activate" />
     <part Name="Render" DisplayName="{{c|flash of regret}}" ColorString="&amp;c" />
     <part Name="Projectile" BasePenetration="10" BaseDamage="2d6" ColorString="&amp;c" PassByVerb="glint" Attributes="Mental Psionic" />
     <part Name="TreatAsSolid" GazeBased="true" RealityDistortionBased="true" Hits="false" RequiresPhaseMatch="false" Message="The darkness consumes =subject.t=!" />
@@ -400,7 +408,7 @@ Or has the Signal’s voice disturbed its bed?
     <inventoryobject Blueprint="Gruesome_Metacarpals_Back" Number="1" />
     <inventoryobject Blueprint="Gruesome_Metacarpals_Body" Number="1" />
     <part Name="Description" Short="Motions repeat in spasms as the hand-thing hobbles towards whatever its strange instinct drives it towards. Here is the instinctive grasp for the hand of a friend, here is the fond caress of a lover's face, here is the practiced mirroring of an unseen other's embrace. The pantomime folds in on itself, interrupts itself and returns to itself, all in service of a singular theme: Its player, with its countless ceaseless hands, is something that wants to hold you very, very close." />
-    <skill Name="Dual_Wield_Offhand_Strikes" />
+    <skill Name="Multiweapon_Proficiency" />
     <skill Name="LongBladesProficiency" />
     <skill Name="LongBladesImprovedAggressiveStance" />
     <tag Name="PrimaryLimbType" Value="Hand" />
@@ -443,6 +451,7 @@ Or has the Signal’s voice disturbed its bed?
     <skill Name="Cudgel_Slam" />
     <skill Name="Cudgel_Backswing" />
     <skill Name="Acrobatics_SwiftReflexes" />
+      <skill Name="SingleWeaponFighting_OpportuneAttacks" />
         <part Name="Corpse" CorpseChance="100" CorpseBlueprint="Membra_BloodDeepPool"/>
      <tag Name="Noswap" Value="*delete" />
     <stat Name="AV" Value="0" />
@@ -519,6 +528,8 @@ Or has the Signal’s voice disturbed its bed?
     <skill Name="Cudgel_Conk" />
     <skill Name="Cudgel_Bludgeon" />
     <skill Name="Discipline_Meditate" />
+    <skill Name="Physic_StaunchWounds" />
+    <skill Name="Physic_Nostrums" />
     <part Name="AISelfPreservation" Threshold="25" />
     <inventoryobject Blueprint="Wide-brimmed Hat" Number="1" Chance="100" />
     <inventoryobject Blueprint="Worn Burnoose" Number="1" Chance="100" />
@@ -531,14 +542,19 @@ Or has the Signal’s voice disturbed its bed?
     <inventoryobject Blueprint="UbernostrumTonic" Number="1d8-7" />
     <inventoryobject Blueprint="Witchwood Bark" Number="1d4-2" />
     <inventoryobject Blueprint="Membra_Gel Phial" Number="1d4-3" />
+    <inventoryobject Blueprint="Membra_Gel Bottle" Number="1d8-7" />
     <inventoryobject Blueprint="Convalessence Phial" Number="1d8-7" />
     <inventoryobject Blueprint="Bandage" Number="0-6" Chance="100" />
     <part Name="AIShootAndScoot" Duration="1d1" />
-    <tag Name="RandomPronounSet" Value="genericpersonal,personal,any,generate,generate" />
   </object>
 
   <object Name="Membra_Gel Phial" Inherits="Phial">
     <part Name="LiquidVolume" StartVolume="1" InitialLiquid="gel-100" />
+    <tag Name="NoSparkingQuest" />
+  </object>
+
+   <object Name="Membra_Gel Bottle" Inherits="Spraybottle">
+    <part Name="LiquidVolume" StartVolume="1" MaxVolume="2" ManualSeal="true" InitialLiquid="gel-100" />
     <tag Name="NoSparkingQuest" />
   </object>
 
@@ -551,7 +567,7 @@ Or has the Signal’s voice disturbed its bed?
     <stat Name="Hitpoints" Value="75" />
     <stat Name="Level" Value="26" />
     <stat Name="AV" Value="5" />
-    <part Name="Description" Short="Only scraps remain of that mendicant regality with which the preachers carried themselves when they first began to wander into Qud a month or so ago, singing monodies to their Sultan and whispering hurriedly among themselves of a new and unknown plague. Gone is the trained precision of the surgeon&apos;s hands, and something strange and restless has grown into =pronouns.possessive= motions in its place. =pronouns.Possessive= traveler&apos;s frock is ragged, =pronouns.possessive= shawl is stained in grime, and though it is hard to make out in the shadow cast by =pronouns.possessive= wide-brimmed hat, you swear you can see a glint of eerie hunger in =pronouns.possessive= eyes. Something small catches the light beneath =pronouns.subjective= dirty robes. A knife?" />
+    <part Name="Description" Short="Only scraps remain of that mendicant regality with which the preachers carried themselves when they first began to wander into Qud a month or so ago, singing monodies to their Sultan and whispering hurriedly among themselves of a new and unknown plague. Gone is the trained precision of the surgeon&apos;s hands, and something strange and restless has grown into =pronouns.possessive= motions in its place. =pronouns.Possessive= traveler&apos;s frock is ragged, =pronouns.possessive= shawl is stained in grime, and though it is hard to make out in the shadow cast by =pronouns.possessive= wide-brimmed hat, you swear you can see a glint of eerie hunger in =pronouns.possessive= eyes. Something small catches the light beneath =pronouns.possessive= dirty robes. A knife?" />
     <property Name="Role" Value="Skirmisher" />
     <skill Name="Acrobatics_Dodge" />
     <skill Name="CookingAndGathering_Butchery" />
@@ -564,6 +580,9 @@ Or has the Signal’s voice disturbed its bed?
     <skill Name="ShortBlades_Jab" />
     <skill Name="ShortBlades_Hobble" />
     <skill Name="Tactics_Juke" />
+    <skill Name="Physic_AmputateLimb" />
+    <skill Name="Physic_StaunchWounds" />
+    <skill Name="Physic_Nostrums" />
     <skill Name="ShortBlades_PointedCircle" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="NoLibrarian" />
@@ -585,7 +604,7 @@ Or has the Signal’s voice disturbed its bed?
 
  <object Name="BaseGrossShrine" Inherits="Statue">
     <part Name="Render" DisplayName="gruesome shrine" ColorString="&amp;y" DetailColor="r" Occluding="false" Tile="Feline/GrossStatue.png" />
-             <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+             <tag Name="ExcludeFromDynamicEncounters" />
     <part Name="Shrine" />
         <tag Name="BaseObject" Value="*noinherit" />
             <removepart Name="UnityPrefabImposter"  />
@@ -721,6 +740,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  VaporizedCorpseChance="100" VaporizedCorpseBlueprint="SmallViscera" />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="NoLibrarian" />
@@ -729,9 +749,10 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
 
 <object Name="Trash Monk_Frenzied" Inherits="Trash Monk">
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
-    <property Name="Role" Value="Hero" />
+    <!-- <property Name="Role" Value="Hero" /> --> <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="NoLibrarian" />
     <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
@@ -743,6 +764,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <mutation Name="Regeneration" Level="5" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="NoLibrarian" />
     <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
   </object> 
@@ -751,6 +773,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="NoLibrarian" />
     <mutation Name="Regeneration" Level="5" />
@@ -761,6 +784,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera" />
     <property Name="Role" Value="Rare" />
     <mutation Name="Regeneration" Level="5" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="NoLibrarian" />
@@ -769,9 +793,10 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
 
 <object Name="Mechanimist Pilgrim_Frenzied" Inherits="Mechanimist Pilgrim">
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
-    <property Name="Role" Value="Hero" />
+    <!-- <property Name="Role" Value="Hero" /> --> <property Name="Role" Value="Rare" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="NoLibrarian" />
     <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
@@ -779,8 +804,9 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
 
 <object Name="Mechnamist rummager_Frenzied" Inherits="Mechnamist rummager">
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
-    <property Name="Role" Value="Hero" />
+    <!-- <property Name="Role" Value="Hero" /> --> <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="NoLibrarian" />
     <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
@@ -799,6 +825,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
 <object Name="Naphtaali Stalker_Frenzied" Inherits="Naphtaali Stalker">
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera" />
     <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <mutation Name="Regeneration" Level="5" />
@@ -809,6 +836,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
 <object Name="Naphtaali Runt_Frenzied" Inherits="Naphtaali Runt">
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="ExcludeFromVillagePopulations" />
@@ -842,6 +870,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <mutation Name="Regeneration" Level="5" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="NoLibrarian" />
     <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
   </object> 
@@ -858,29 +887,43 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
 
 <object Name="Cave Arconaut_Frenzied" Inherits="Cave Arconaut">
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
-    <property Name="Role" Value="Hero" />
+    <!-- <property Name="Role" Value="Hero" /> --> <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="NoLibrarian" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <mutation Name="Regeneration" Level="5" />
     <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
   </object> 
 
 <object Name="HindrenPariah_Frenzied" Inherits="HindrenPariah">
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
-    <property Name="Role" Value="Uncommon" />
+    <!-- <property Name="Role" Value="Uncommon" /> --> <property Name="Role" Value="Rare" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="NoLibrarian" />
     <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
   </object> 
 
 <object Name="HindrenScoutPariah_Frenzied" Inherits="HindrenScoutPariah">
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  />
-    <property Name="Role" Value="Uncommon" />
+    <!-- <property Name="Role" Value="Uncommon" /> --> <property Name="Role" Value="Rare" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+  <object Name="Gyre Wight of Bethsaida_Frenzied" Inherits="Gyre Wight of Bethsaida">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="50" BurntCorpseBlueprint="SmallViscera"  VaporizedCorpseChance="100" VaporizedCorpseBlueprint="SmallViscera" />
+    <property Name="Role" Value="Rare" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="NoLibrarian" />
     <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
@@ -900,6 +943,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="66" BurntCorpseBlueprint="SmallViscera" />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="NoLibrarian" />
@@ -910,6 +954,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="66" BurntCorpseBlueprint="SmallViscera"  />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="NoLibrarian" />
@@ -920,6 +965,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="66" BurntCorpseBlueprint="SmallViscera" />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="NoLibrarian" />
@@ -932,16 +978,18 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="NoLibrarian" />
     <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
   </object> 
 
 <object Name="Goatfolk Shaman_Frenzied" Inherits="Goatfolk Shaman">
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="SmallViscera" BurntCorpseChance="66" BurntCorpseBlueprint="SmallViscera" />
-    <property Name="Role" Value="Hero" />
+    <!-- <property Name="Role" Value="Hero" /> --> <property Name="Role" Value="Hero" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <mutation Name="Regeneration" Level="5" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="NoLibrarian" />
     <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
   </object> 
@@ -952,6 +1000,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <mutation Name="Regeneration" Level="5" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="NoLibrarian" />
     <part Name="LiquidProximityFrenzies" Range="5" Duration="8-16" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
   </object> 
@@ -960,16 +1009,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="66" BurntCorpseBlueprint="BigViscera" />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
-    <mutation Name="Regeneration" Level="5" />
-    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
-    <tag Name="NoLibrarian" />
-    <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
-  </object> 
-
-<object Name="Psyberneticist_Frenzied" Inherits="Psyberneticist">
-    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
-    <property Name="Role" Value="Rare" />
-    <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="NoLibrarian" />
@@ -983,6 +1023,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="NoLibrarian" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
   </object> 
 
@@ -992,6 +1033,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
     <mutation Name="Regeneration" Level="5" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="NoLibrarian" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
   </object> 
@@ -1002,16 +1044,18 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="NoLibrarian" />
     <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
   </object> 
 
 <object Name="Mysterious Gunslinger_Frenzied" Inherits="Mysterious Gunslinger">
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera" />
-    <property Name="Role" Value="Hero" />
+    <!-- <property Name="Role" Value="Hero" /> --> <property Name="Role" Value="Rare" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="NoLibrarian" />
     <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
   </object> 
@@ -1023,6 +1067,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="NoLibrarian" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
   </object> 
 
@@ -1099,6 +1144,7 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="NoLibrarian" />
@@ -1127,9 +1173,10 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
 
 <object Name="High Dervish of the Sightless Way_Frenzied" Inherits="High Dervish of the Sightless Way">
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
-    <property Name="Role" Value="Hero" />
+    <!-- <property Name="Role" Value="Hero" /> --> <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="NoLibrarian" />
     <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
@@ -1137,45 +1184,58 @@ A kneeling figure ritually disemboweling themselves. One hand holds a knife, whi
 
 <object Name="Trash Abbot_Frenzied" Inherits="Trash Abbot">
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
-    <property Name="Role" Value="Hero" />
+    <!-- <property Name="Role" Value="Hero" /> --> <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="NoLibrarian" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
   </object> 
 
 <object Name="Reef Hermit_Frenzied" Inherits="Reef Hermit">
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
-    <property Name="Role" Value="Hero" />
+    <!-- <property Name="Role" Value="Hero" /> --> <property Name="Role" Value="Rare" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="NoLibrarian" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
   </object> 
 
-<object Name="Glow Wight Apotheote_Frenzied" Inherits="Glow Wight Apotheote">
+<object Name="Gyre Wight Apotheote_Frenzied" Inherits="Gyre Wight Apotheote">
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
     <property Name="Role" Value="Hero" />
     <tag Name="ExcludeFromVillagePopulations" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="NoLibrarian" />
+    <tag Name="ExcludeFromDynamicEncounters" />
     <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
   </object> 
 
 <object Name="Arch Dervish of the Sightless Way_Frenzied" Inherits="Arch Dervish of the Sightless Way">
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
-    <property Name="Role" Value="Hero" />
+    <!-- <property Name="Role" Value="Hero" /> --> <property Name="Role" Value="Rare" />
+    <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
+    <tag Name="ExcludeFromVillagePopulations" />
+    <mutation Name="Regeneration" Level="5" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+    <tag Name="NoLibrarian" />
+    <part Name="LiquidProximityFrenzies"
+     Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
+  </object> 
+
+<object Name="Grand Newfather_Frenzied" Inherits="Grand Newfather">
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="BigViscera" BurntCorpseChance="75" BurntCorpseBlueprint="BigViscera"  />
+    <property Name="Role" Value="Uncommon" />
     <tag Name="DeathSounds" Value="Sounds/Abilities/sfx_ability_mutation_regeneration_limbRegrowth" />
     <tag Name="ExcludeFromVillagePopulations" />
     <mutation Name="Regeneration" Level="5" />
     <tag Name="NoLibrarian" />
     <part Name="LiquidProximityFrenzies" Range="6" Duration="16-32" LiquidMustBeConnectedByLiquid="false" BerserkOnDealDamage="false" BerserkImmediately="false" PreferBleedingTarget="true" />
   </object> 
-
-
 
 
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <populations>
-
 <!-- BELOW THIS POINT   -->
 
 <population Name="GrossStatues">
@@ -19,23 +18,21 @@
     </group>
   </population>
 
- <population Name="CommonOddEncounters" Load="Merge">
-    <group Name="Types"  Load="Merge">
-   <group Name="GrossStatues" Weight="2" Style="pickeach">
-        <table Chance="100" Weight="5" Name="GrossEncounter" Number="1" />
-      </group>
-         </group>
-          </population>
+ 
 
            <population Name="GrossEncounter" Style="pickeach">
    <group Name="GrossStatues"  Style="pickeach">
         <table Chance="100" Weight="5" Name="GrossStatues" Number="1" Hint="AlongWall" />
-        <object Number="0-10" Chance="25" Blueprint="Grave Goods" Hint="Adjacent:100,AdjacentToStartsWith:defaced" />
+          <group Name="Offerings" Chance="25" Style="pickone">
+        <object Number="0-10" Weight="75" Blueprint="Grave Goods" Hint="Adjacent:100,AdjacentToStartsWith:defaced" />
+         <object Number="0-10" Weight="25" Blueprint="Bones" Hint="Adjacent:100,AdjacentToStartsWith:defaced" />
+        </group>
       </group>
        <table Number="3-7" Chance="75" Name="Membra_Stationary"  />
+        <object Number="1" Chance="25" Blueprint="Writhing Veins" />
   <group Name="GrossThings" Chance="50" Style="pickone">
         <table Number="1" Weight="5" Name="Membra_Mobile"  />
-        <object Number="1" Chance="45" Blueprint="WaywardPreacher" />
+        <object Number="1" Weight="45" Blueprint="Wayward Preacher" />
          </group>
           </population>
 
@@ -403,6 +400,7 @@
 
  <population Name="BethesdaSusaSurface" Load="Merge">
       <object Chance="4" Number="1" Blueprint="Psyberneticist_Frenzied" />
+      <object Chance="3" Number="1" Blueprint="Gyre Wight of Bethsaida_Frenzied" />
       <object Chance="15" Number="1" Blueprint="Wandering Preacher" />
       <object Chance="5" Number="1" Blueprint="Mechnamist rummager_Frenzied"/>
       <object Chance="3" Number="1" Blueprint="Disciple of the Sightless Way_Frenzied" />
@@ -414,6 +412,7 @@
       <object Chance="8" Number="1" Blueprint="Psyberneticist_Frenzied" />
       <object Chance="16" Number="1-2" Blueprint="Mechnamist rummager_Frenzied"/>
       <object Chance="8" Number="1" Blueprint="Disciple of the Sightless Way_Frenzied" />
+      <object Chance="8" Number="1-2" Blueprint="Gyre Wight of Bethsaida_Frenzied" />
       <object Chance="15" Number="1" Blueprint="Wandering Preacher" />
       <object Chance="1" Number="1" Blueprint="Juicing Cannibal_Frenzied" />
       <object Chance="5" Number="1" Blueprint="Mysterious Gunslinger_Frenzied" />
@@ -421,6 +420,7 @@
 
 <population Name="BethesdaSusaWharfOutskirts" Load="Merge">
       <object Chance="1" Number="1" Blueprint="Psyberneticist_Frenzied" />
+      <object Chance="1" Number="1" Blueprint="Gyre Wight of Bethsaida_Frenzied" />
       <object Chance="2" Number="1" Blueprint="Mechnamist rummager_Frenzied"/>
       <object Chance="1" Number="1" Blueprint="Disciple of the Sightless Way_Frenzied" />
       <object Chance="1" Number="1" Blueprint="Juicing Cannibal_Frenzied" />
@@ -431,6 +431,7 @@
 <population Name="BethesdaSusaStandardWard" Load="Merge">
       <object Chance="8" Number="1" Blueprint="Psyberneticist_Frenzied" />
       <object Chance="16" Number="1-2" Blueprint="Mechnamist rummager_Frenzied"/>
+      <object Chance="8" Number="1-2" Blueprint="Gyre Wight of Bethsaida_Frenzied"/>
       <object Chance="8" Number="1" Blueprint="Disciple of the Sightless Way_Frenzied" />
       <object Chance="3" Number="1" Blueprint="Juicing Cannibal_Frenzied" />
       <object Chance="5" Number="1" Blueprint="Mysterious Gunslinger_Frenzied" />
@@ -439,6 +440,7 @@
 
 <population Name="BethesdaSusaUpperCryobarrio" Load="Merge">
       <object Chance="1" Number="1" Blueprint="Psyberneticist_Frenzied" />
+      <object Chance="1" Number="1" Blueprint="Gyre Wight of Bethsaida_Frenzied" />
       <object Chance="2" Number="1" Blueprint="Mechnamist rummager_Frenzied"/>
       <object Chance="1" Number="1" Blueprint="Juicing Cannibal_Frenzied" />
       <object Chance="3" Number="1" Blueprint="Wandering Preacher" />
@@ -472,8 +474,12 @@
  <group Name="TrashAndArconaut"  Load="Merge" >
   <object Number="1" Chance="8" Blueprint="Cave Arconaut_Frenzied" />
  </group>
+ <group Name="GrossStatues" Weight="200" Style="pickeach">
+        <table Chance="100" Weight="5" Name="GrossEncounter" Number="1" />
+      </group>
  </group>
   </population>
+
 
       <!--
 <population Name="RedrockLevel2Encounters" Load="Merge">
@@ -489,7 +495,7 @@
 <population Name="SultanDungeons_Cubbies_*Default"  Load="Merge">
  <group Name="Contents"  Load="Merge">
 <group Name="Arconauts"  Load="Merge">
-        <object Blueprint="Cave Arconaut_Frenzied" Number="1d4-2" Hint="RadialFromCenter:2" />
+        <object Blueprint="Cave Arconaut_Frenzied" Number="1d10-9" Hint="RadialFromCenter:2" />
 </group>
  </group>
   </population>
@@ -526,20 +532,38 @@
     <group Name="Contents" Load="Merge">
       <group Name="Group1" Load="Merge">
         <table Weight="16" Name="FrenziedTemplar" />
-        <object Weight="2" Number="1d4" Blueprint="Templar Squire_Frenzied" />
+      <table Weight="2" Name="FrenziedSquires" />
       </group>
       <group Name="Group2" Load="Merge">
         <table Weight="16" Name="FrenziedTemplar" />
-        <object Weight="2" Number="1d4" Blueprint="Templar Squire_Frenzied" />
+       <table Weight="2" Name="FrenziedSquires" />
       </group>
       <group Name="Group3" Load="Merge">
         <table Weight="16" Name="FrenziedTemplar" />
-        <object Weight="2" Number="1d4" Blueprint="Templar Squire_Frenzied" />
+      <table Weight="2" Name="FrenziedSquires" />
       </group>
     </group>
   </population>
 
-
+<population Name="FrenziedSquires">
+       <group Name="Creatures" Chance="100" Style="pickeach">
+      <group Name="First" Style="pickone">
+        <object Weight="100" Number="1" Blueprint="Templar Squire_Frenzied" />
+      </group>
+       <group Name="Second" Chance="100" Style="pickone">
+         <object Weight="50" Number="1" Blueprint="Templar Squire_Frenzied" />
+         <object Weight="50" Number="1" Blueprint="Templar Squire" />
+      </group>
+       <group Name="Third" Chance="100" Style="pickone">
+         <object Weight="75" Number="1" Blueprint="Templar Squire_Frenzied" />
+         <object Weight="25" Number="1" Blueprint="Templar Squire" />
+      </group>
+       <group Name="Fourth" Chance="75" Style="pickone">
+        <object Weight="25" Number="1" Blueprint="Templar Squire_Frenzied" />
+         <object Weight="75" Number="1" Blueprint="Templar Squire" />
+         </group>
+    </group>
+  </population>
 
 
   <population Name="FrenziedTemplar">
@@ -551,6 +575,13 @@
       <object Blueprint="Newfather_Frenzied" />
     </group>
   </population>
+
+  	<population Name="FrenziedBarathrumites">
+		<group Name="Options" Style="pickone">			
+			<object Blueprint="Barathrumite Tinker_Frenzied" />
+			<object Blueprint="Barathrumite Arconaut_Frenzied" />
+		</group>
+	</population>
 
 
   <population Name="Templar Weighted Toward Knight" Load="Merge" >
@@ -567,6 +598,93 @@
       <table Weight="4" Name="FrenziedTemplar" />
     </group>
   </population>
+
+  <population Name="OmonporchBattle_Major" Load="Merge">
+		<group Name="Options" Load="Merge">
+      <object Blueprint="Templar Squire_Frenzied" Number="1d7-6" />
+			<table Name="FrenziedBarathrumites" Number="1d7-6" />
+		</group>
+	</population>
+
+  <population Name="OmonporchBattle_Major_KnightCommander" Load="Merge">
+		<group Name="Options" Load="Merge">
+    <group Name="Frenzied" Style="pickone">
+    	<object Blueprint="Gunner-Knight Templar_Frenzied" Number="1d12-10" />
+      		<object Blueprint="Knight Templar_Frenzied" Number="1d12-10" />
+    </group>
+			<table Name="FrenziedBarathrumites" Number="1d6-4" />
+			<table Name="FrenziedTemplar" Number="1d10-8" />
+		</group>
+	</population>
+
+   <population Name="OmonporchBattle_Major_GrandNewfather" Load="Merge">
+		<group Name="Options" Load="Merge">
+    <group Name="Frenzied" Style="pickone">
+    	<object Blueprint="Gunner-Knight Templar_Frenzied" Number="1d12-10" />
+      		<object Blueprint="Knight Templar_Frenzied" Number="1d12-10" />
+    </group>
+			<table Name="FrenziedBarathrumites" Number="1d6-4" />
+			<table Name="FrenziedTemplar" Number="1d10-8" />
+		</group>
+	</population>
+
+   <population Name="OmonporchBattle_Major_TemplarMech" Load="Merge">
+		<group Name="Options" Load="Merge">
+    <group Name="Frenzied" Style="pickone">
+    	<object Blueprint="Gunner-Knight Templar_Frenzied" Number="1d12-10" />
+      		<object Blueprint="Knight Templar_Frenzied" Number="1d12-10" />
+    </group>
+			<table Name="FrenziedBarathrumites" Number="1d6-4" />
+			<table Name="FrenziedTemplar" Number="1d10-8" />
+		</group>
+	</population>
+
+  <population Name="OmonporchBattle_Minor" Load="Merge">
+		<group Name="Options" Load="Merge">
+			<group Name="Frenzied" Style="pickone">
+					<object Blueprint="Gunner-Knight Templar_Frenzied" Number="1d13-12" />
+					<object Blueprint="Knight Templar_Frenzied" Number="1d13-12" />
+			</group>
+			<table Name="FrenziedBarathrumites" Number="1d9-7" />
+			<table Name="FrenziedTemplar" Number="1d8-7" />		
+		</group>
+	</population>
+
+  	<population Name="OmonporchBattle_Ezra" Load="Merge">
+		<group Name="Options" Load="Merge">
+			<table Name="FrenziedTemplar" Number="1d13-12" />
+			<table Name="FrenziedBarathrumites" Number="1d12-10" />
+		</group>
+	</population>
+
+<population Name="OmonporchBattle_Reinforcements_Major" Load="Merge">
+		<group Name="Options" Load="Merge">
+				<group Name="Frenzied" Style="pickone">
+					<object Blueprint="Gunner-Knight Templar_Frenzied" Number="1d13-12" />
+					<object Blueprint="Knight Templar_Frenzied" Number="1d13-12" />
+				</group>	
+			<table Name="FrenziedBarathrumites" Number="1d10-8" />
+			<table Name="FrenziedTemplar" Number="1d8-7" />
+		</group>
+	</population>
+
+  <population Name="OmonporchBattle_Reinforcements_Minor"  Load="Merge">
+		<group Name="Options"  Load="Merge">
+			<group  Name="Frenzied" Style="pickone">
+					<object Blueprint="Gunner-Knight Templar_Frenzied" Number="1d13-12" />
+					<object Blueprint="Knight Templar_Frenzied" Number="1d13-12" />
+				</group>
+			<table Name="FrenziedBarathrumites" Number="1d12-10" />
+			<table Name="FrenziedTemplar" Number="1d13-12" />		
+		</group>
+	</population>
+
+  <population Name="OmonporchBattle_Reinforcements_Ezra" Load="Merge">
+		<group Name="Options" Load="Merge">			
+			<table Name="FrenziedTemplar" Number="1d8-7" />
+			<table Name="FrenziedBarathrumites" Number="1d8-7" />		
+		</group>
+	</population>
 
   <population Name="TombCreatures" Load="Merge">
     <group Name="Creatures" Load="Merge">
@@ -620,7 +738,7 @@
   </population>
 
 <population Name="MoonStairZoneGlobals-Creatures" Load="Merge">
-		<object Chance="2" Number="1-2" Blueprint="Glow Wight Apotheote_Frenzied" />
+		<object Chance="2" Number="1-2" Blueprint="Gyre Wight Apotheote_Frenzied" />
 	</population>
 
 

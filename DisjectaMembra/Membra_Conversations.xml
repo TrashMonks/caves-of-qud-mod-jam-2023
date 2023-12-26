@@ -27,7 +27,7 @@ Some amidst our Order have taken to claiming that the writhing masses of hands a
 It always lifts my spirit to see the little shrines that the people of this land have raised to Resheph. Makes me sick to think that someone or something is out there, defacing them into gruesome displays.~
 In the highest Tomb of the Spindle, they say, Resheph lies buried in a sarcophagus of burnished azzurum. The schismatics of the Sisterhood claim that all Histories are false and that the true History is written on the walls of these Tombs. I don&apos;t believe them, of course, but if it is true, I wonder what secrets the Tomb of Resheph could hold.~
 The thing about this strange new illness that perplexes me the most is how there doesn&apos;t seem to be any clear vector to it at all. There&apos;s nothing in the water, nothing in the air, and nothing in the wounds of those bit by the wretched things it leaves behind. One man dies peacefully while another&apos;s corpse splits open into a thousand horrors, with no rhyme or reason to it.~
-The only commonality that we have been able to identify between the various outbreaks of the writhing flesh is as follows: The stronger the being, be it in flesh or in mind, the worse the horrors that will crawl from its corpse once it perishes.~
+The only commonality that we have been able to identify between the various outbreaks of the writhing flesh is as follows: The stronger the being, be it in flesh or in mind, the worse the horrors that will crawl from its corpse once it perishes.
       </text>
  <choice GotoID="Second">*sit and listen for a while.*</choice>
       <choice GotoID="End">Live and drink, pilgrim.</choice>
@@ -57,7 +57,7 @@ Some amidst our Order have taken to claiming that the writhing masses of hands a
 It always lifts my spirit to see the little shrines that the people of this land have raised to Resheph. Makes me sick to think that someone or something is out there, defacing them into gruesome displays.~
 In the highest Tomb of the Spindle, they say, Resheph lies buried in a sarcophagus of burnished azzurum. The schismatics of the Sisterhood claim that all Histories are false and that the true History is written on the walls of these Tombs. I don&apos;t believe them, of course, but if it is true, I wonder what secrets the Tomb of Resheph could hold.~
 The thing about this strange new illness that perplexes me the most is how there doesn&apos;t seem to be any clear vector to it at all. There&apos;s nothing in the water, nothing in the air, and nothing in the wounds of those bit by the wretched things it leaves behind. One man dies peacefully while another&apos;s corpse splits open into a thousand horrors, with no rhyme or reason to it.~
-The only commonality that we have been able to identify between the various outbreaks of the writhing flesh is as follows: The stronger the being, be it in flesh or in mind, the worse the horrors that will crawl from its corpse once it perishes.~
+The only commonality that we have been able to identify between the various outbreaks of the writhing flesh is as follows: The stronger the being, be it in flesh or in mind, the worse the horrors that will crawl from its corpse once it perishes.
       </text>
  <choice GotoID="Second">*sit and listen for a while.*</choice>
       <choice GotoID="End">Live and drink, pilgrim.</choice>
@@ -87,7 +87,7 @@ Some amidst our Order have taken to claiming that the writhing masses of hands a
 It always lifts my spirit to see the little shrines that the people of this land have raised to Resheph. Makes me sick to think that someone or something is out there, defacing them into gruesome displays.~
 In the highest Tomb of the Spindle, they say, Resheph lies buried in a sarcophagus of burnished azzurum. The schismatics of the Sisterhood claim that all Histories are false and that the true History is written on the walls of these Tombs. I don&apos;t believe them, of course, but if it is true, I wonder what secrets the Tomb of Resheph could hold.~
 The thing about this strange new illness that perplexes me the most is how there doesn&apos;t seem to be any clear vector to it at all. There&apos;s nothing in the water, nothing in the air, and nothing in the wounds of those bit by the wretched things it leaves behind. One man dies peacefully while another&apos;s corpse splits open into a thousand horrors, with no rhyme or reason to it.~
-The only commonality that we have been able to identify between the various outbreaks of the writhing flesh is as follows: The stronger the being, be it in flesh or in mind, the worse the horrors that will crawl from its corpse once it perishes.~
+The only commonality that we have been able to identify between the various outbreaks of the writhing flesh is as follows: The stronger the being, be it in flesh or in mind, the worse the horrors that will crawl from its corpse once it perishes.
       </text>
  <choice GotoID="Third">*sit and listen for a while.*</choice>
       <choice GotoID="End">Live and drink, pilgrim.</choice>
@@ -111,8 +111,8 @@ It is said that behind the great Door to the Tomb of the Eaters, a vast and ceas
 I have been told that Great Golgotha was first built as a dumping-ground for the plague-dead of the Gyre, one thousand years ago. If this is true, why does it still overflow with sickness and filth? All of our stories tell us what Resheph was the greatest of healers, but how many must there have been that Resheph could not heal?~
 The old world is dying, you see, and what we are seeing before us is the new world struggling to be born. Things have learnt to walk that ought to thrum beneath the skin. Now is the time of monsters.~
 Have you ever sat down and listened, truly listened, to what the Gibbering Maw has to say? Oh the stories it tells, believe me!~
-Amidst surgeons, Resheph is known as “He of the thousand graves.” And yet, every surgeon knows that Resheph was never buried. This is the first paradox of our Order.~
-It is not a disease, despite what the others would tell you. Say a man builds a house and says that it will last a hundred years. When the hundredth year comes, and the house falls to rubble, the man who says that the house died of a disease is the one who we laugh at.~
+Amidst surgeons, Resheph is known as &quot;He of the thousand graves.&quot; And yet, every surgeon knows that Resheph was never buried. This is the first paradox of our Order.~
+It is not a disease, despite what the others would tell you. Say a man builds a house and says that it will last a hundred years. When the hundredth year comes, and the house falls to rubble, the man who says that the house died of a disease is the one who we laugh at.
       </text>
  <choice GotoID="Second">*sit and listen for a while.*</choice>
       <choice GotoID="End">Live and drink, pilgrim.</choice>
@@ -133,8 +133,8 @@ It is said that behind the great Door to the Tomb of the Eaters, a vast and ceas
 I have been told that Great Golgotha was first built as a dumping-ground for the plague-dead of the Gyre, one thousand years ago. If this is true, why does it still overflow with sickness and filth? All of our stories tell us what Resheph was the greatest of healers, but how many must there have been that Resheph could not heal?~
 The old world is dying, you see, and what we are seeing before us is the new world struggling to be born. Things have learnt to walk that ought to thrum beneath the skin. Now is the time of monsters.~
 Have you ever sat down and listened, truly listened, to what the Gibbering Maw has to say? Oh the stories it tells, believe me!~
-Amidst surgeons, Resheph is known as “He of the thousand graves.” And yet, every surgeon knows that Resheph was never buried. This is the first paradox of our Order.~
-It is not a disease, despite what the others would tell you. Say a man builds a house and says that it will last a hundred years. When the hundredth year comes, and the house falls to rubble, the man who says that the house died of a disease is the one who we laugh at.~
+Amidst surgeons, Resheph is known as &quot;He of the thousand graves.&quot; And yet, every surgeon knows that Resheph was never buried. This is the first paradox of our Order.~
+It is not a disease, despite what the others would tell you. Say a man builds a house and says that it will last a hundred years. When the hundredth year comes, and the house falls to rubble, the man who says that the house died of a disease is the one who we laugh at.
       </text>
  <choice GotoID="Third">*sit and listen for a while.*</choice>
       <choice GotoID="End">Live and drink, pilgrim.</choice>
@@ -155,8 +155,8 @@ It is said that behind the great Door to the Tomb of the Eaters, a vast and ceas
 I have been told that Great Golgotha was first built as a dumping-ground for the plague-dead of the Gyre, one thousand years ago. If this is true, why does it still overflow with sickness and filth? All of our stories tell us what Resheph was the greatest of healers, but how many must there have been that Resheph could not heal?~
 The old world is dying, you see, and what we are seeing before us is the new world struggling to be born. Things have learnt to walk that ought to thrum beneath the skin. Now is the time of monsters.~
 Have you ever sat down and listened, truly listened, to what the Gibbering Maw has to say? Oh the stories it tells, believe me!~
-Amidst surgeons, Resheph is known as “He of the thousand graves.” And yet, every surgeon knows that Resheph was never buried. This is the first paradox of our Order.~
-It is not a disease, despite what the others would tell you. Say a man builds a house and says that it will last a hundred years. When the hundredth year comes, and the house falls to rubble, the man who says that the house died of a disease is the one who we laugh at.~
+Amidst surgeons, Resheph is known as &quot;He of the thousand graves.&quot; And yet, every surgeon knows that Resheph was never buried. This is the first paradox of our Order.~
+It is not a disease, despite what the others would tell you. Say a man builds a house and says that it will last a hundred years. When the hundredth year comes, and the house falls to rubble, the man who says that the house died of a disease is the one who we laugh at.
       </text>
  <choice GotoID="Second">*sit and listen for a while.*</choice>
       <choice GotoID="End">Live and drink, pilgrim.</choice>
@@ -215,7 +215,7 @@ I could not save them... I could not save them all...~
 They will be born into a world without things like me. Perhaps they will venerate me. Perhaps they will raise monuments in my name.~
 It will not last forever, of course. I lack the skill to make it last forever. Sooner or later, it will all come apart. But this is all I can give them.~
 You know I have seen the way that the blood clouds in the waterglass whenever you raise it to your lips. I know you have seen the way my hands shake whenever I lay them on the stiffened legs of the people. You know you have the full right to resent me, after that I did to the others. I wish you would just let me heal you, as you healed me in Susa.~
-Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.~
+Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.
       </text>
  <choice GotoID="Second">*sit and listen for a while.*</choice>
       <choice GotoID="End">Live and drink, whatever it is that you are.</choice>
@@ -271,7 +271,7 @@ I could not save them... I could not save them all...~
 They will be born into a world without things like me. Perhaps they will venerate me. Perhaps they will raise monuments in my name.~
 It will not last forever, of course. I lack the skill to make it last forever. Sooner or later, it will all come apart. But this is all I can give them.~
 You know I have seen the way that the blood clouds in the waterglass whenever you raise it to your lips. I know you have seen the way my hands shake whenever I lay them on the stiffened legs of the people. You know you have the full right to resent me, after that I did to the others. I wish you would just let me heal you, as you healed me in Susa.~
-Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.~
+Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.
       </text>
  <choice GotoID="Second">*sit and listen for a while.*</choice>
       <choice GotoID="End">Live and drink, whatever it is that you are.</choice>
@@ -327,7 +327,7 @@ I could not save them... I could not save them all...~
 They will be born into a world without things like me. Perhaps they will venerate me. Perhaps they will raise monuments in my name.~
 It will not last forever, of course. I lack the skill to make it last forever. Sooner or later, it will all come apart. But this is all I can give them.~
 You know I have seen the way that the blood clouds in the waterglass whenever you raise it to your lips. I know you have seen the way my hands shake whenever I lay them on the stiffened legs of the people. You know you have the full right to resent me, after that I did to the others. I wish you would just let me heal you, as you healed me in Susa.~
-Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.~
+Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.
       </text>
  <choice GotoID="Third">*sit and listen for a while.*</choice>
       <choice GotoID="End">Live and drink, whatever it is that you are.</choice>
@@ -387,7 +387,7 @@ I could not save them... I could not save them all...~
 They will be born into a world without things like me. Perhaps they will venerate me. Perhaps they will raise monuments in my name.~
 It will not last forever, of course. I lack the skill to make it last forever. Sooner or later, it will all come apart. But this is all I can give them.~
 You know I have seen the way that the blood clouds in the waterglass whenever you raise it to your lips. I know you have seen the way my hands shake whenever I lay them on the stiffened legs of the people. You know you have the full right to resent me, after that I did to the others. I wish you would just let me heal you, as you healed me in Susa.~
-Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.~
+Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.
       </text>
  <choice GotoID="Second">*sit and listen for a while.*</choice>
       <choice GotoID="End">Live and drink, whatever it is that you are.</choice>
@@ -444,7 +444,7 @@ I could not save them... I could not save them all...~
 They will be born into a world without things like me. Perhaps they will venerate me. Perhaps they will raise monuments in my name.~
 It will not last forever, of course. I lack the skill to make it last forever. Sooner or later, it will all come apart. But this is all I can give them.~
 You know I have seen the way that the blood clouds in the waterglass whenever you raise it to your lips. I know you have seen the way my hands shake whenever I lay them on the stiffened legs of the people. You know you have the full right to resent me, after that I did to the others. I wish you would just let me heal you, as you healed me in Susa.~
-Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.~
+Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.
       </text>
  <choice GotoID="Second">*sit and listen for a while.*</choice>
       <choice GotoID="End">Live and drink, whatever it is that you are.</choice>
@@ -501,7 +501,7 @@ I could not save them... I could not save them all...~
 They will be born into a world without things like me. Perhaps they will venerate me. Perhaps they will raise monuments in my name.~
 It will not last forever, of course. I lack the skill to make it last forever. Sooner or later, it will all come apart. But this is all I can give them.~
 You know I have seen the way that the blood clouds in the waterglass whenever you raise it to your lips. I know you have seen the way my hands shake whenever I lay them on the stiffened legs of the people. You know you have the full right to resent me, after that I did to the others. I wish you would just let me heal you, as you healed me in Susa.~
-Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.~
+Sometimes I catch myself wishing that it was I who walked these frigid halls, drops of blood playing at the edge of my mouth, acting all coy as I cough into my habit and say that it&apos;s nothing.
       </text>
  <choice GotoID="Third">*sit and listen for a while.*</choice>
       <choice GotoID="End">Live and drink, whatever it is that you are.</choice>
