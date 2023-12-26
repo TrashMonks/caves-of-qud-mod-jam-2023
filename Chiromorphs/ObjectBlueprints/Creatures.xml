@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <objects>
     <object Name="cpnk_chiromorphs_Chiromorph" Inherits="Bat">
-        <part Name="Description" Short="Short and scraggly. An assortment of fur and scarves shroud =pronouns.possessive= small body. =pronouns.possessive= =verb:has:afterpronoun= ears the size of dinner plates and large wings that can wrap around =pronouns.possessive= entire body. Large black eyes peer at you curiously." />
+        <part Name="Description" Short="Short and scraggly. An assortment of fur and scarves shroud =pronouns.possessive= small body. =pronouns.Subjective= =verb:have:afterpronoun= ears the size of dinner plates and large wings that can wrap around =pronouns.possessive= entire body. Large black eyes peer at you curiously." />
         <part Name="Render" DisplayName="chiromorph" Tile="cpnk_chiromorphs/chiromorph.png" ColorString="&amp;M" DetailColor="y"/>
         <stat Name="Level" Value="8" />
         <stat Name="AV" Value="2" />
@@ -57,7 +57,7 @@
         <mutation Name="Metamorphosis" Level="5" />
         <mutation Name="LifeDrain" Level="6" />
         <inventoryobject Blueprint="Urberry" Number="2" />
-        <inventoryobject Blueprint="Dagger4" BoostModChance="true" Number="2" />
+        <inventoryobject Blueprint="Dagger4" Number="2" />
         <inventoryobject Blueprint="Carbide Plate Armor" />
         <skill Name="Endurance_Calloused" />
 		<skill Name="Persuasion_Intimidate" />
