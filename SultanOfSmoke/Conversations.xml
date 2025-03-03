@@ -6,22 +6,46 @@
                 I'm movin' different.~
                 This shit ain't nothin' to me, man.~
                 I'm a dog. I'm bitin' the force bubbles in the bath.~
-                We smokin' Primordial Sludge.~
-                Smokin' that Coiled Lamb stilt dweller Hot and Spiny deluxe smooth peridot scratcher skunk bubba kush.~
+                Smokin' that Coiled Lamb deluxe smooth peridot scratcher skunk megadram kasaphescence kush.~
                 We smokin' beetlebum.~
-                They must have amnesia, they forgot that I'm Sultan~
-                I'm sick in the head~
-                Reach for my neck, you'll get turned into an example
+                I'm sick in the head.~
+                Reach for my neck, you'll get turned into an example.~
+                We straight gassin', cuttin' straight to the fulcrete. Haha.~
+                I'm not loyal to anybody. I'm a pariah.~
+                I'm on 12 ubernostrum injectors smokin' on Q-Girl dick.~
+                We smokin' mangrove gelatinous prism boogers.~
+                We snortin' that good Six Day Stilt Hot and Spiny jibblies.~
+                They must have amnesia, they forgot that I'm xem.~
+                I'm on that Rainbow Wood soupy sludge.~
+                I'm on them Ekuemekiyyen greens. I'm on them Omonporch Asphodelytes.~
+                I left my zetachrome pumps in Eyn Roj. I'll have to stunt on them next time.~
+                We smokin' warm static you stupid piece of shit, I'll fucking kill you.~
+                I don't give a fuck if I get decapitated. I get plenty of head anyway.~
+                I'm high on 12 hulk honey injectors, looking to beat the cum out of an irritable palm.~
+                Call that pussy the asphalt mines, cus I'm in this bitch and I can't get out.~
+                Last guy who ran off on the pack got choked out by some Ulnar Stimulators. The last thing he ever saw was the engraving on them. Slowly faded into darkness, and I let the Argent Fathers take him.~
+                There are cherrydotters under my skin. I need to dig them out with a gaslight kris.~
+                Ze broke my heart, had me shadowboxing behind the Spindle in my 2005 BR nanoweave vest, fork horned helm, and some croccasins.~
+                That cloaca yummy, ooze. That cloaca doin' it for me, ooze.~
+                When I got the phase cannon, I be shootin' straight rope.~
+                Ops wanted some initiative, blew up their entire parasang. I'm moving like a tumbling pod.~
+                I was flippin' bricks for Abram I before y'all even became a type-1 civilizaton.~
+                I got inter-dimensional seekers dropping the pin as we speak. They'll take anyone back over there.~
+                I'm back to back with Ptoh, shaking the fucking universe. This is an army of two.~
+                Popped a love injector, got straight to fucking.~
+                My freshwater long. My waterskins deep.~
+                Gulpin' prism perch by the gallon, my tummy feel crazy.~
+                Optical multiscanner got me seein' shit.~
+                They thought they could stop a nephilim. I'm back.~
+                If I had a dram for every time they said I gave a shit, I'd be dehydrated.~
+                Threw the opp into an imperial sarcophagus, watched his ass get pulled apart into a million pieces. Turned his sorry ass into some data.~
+                I got strands of RNA in my hookah. Every puff is an insult to the Eaters.
             </text>
             <choice GotoID="Fr">Are you really a Sultan?</choice>
-            <choice GotoID="gamesonyophone">What do you sell?</choice>
-            <choice GotoID="End">Live and smoke, Sultan.</choice>
+            <choice GotoID="End">Live and smoke, friend.</choice>
         </start>
         <node ID="Fr" Inherits="Welcome">
-            No, but the name sounds cool.
-        </node>
-        <node ID="gamesonyophone" Inherits="Welcome">
-            All kinds of grassy consumables. We straight gassin cutting straight to the bricks ha ha. I'm nice with it. Ha ha. I have no sympathy. I live for this shit. 
+            No.
         </node>
     </conversation>
 </conversations>

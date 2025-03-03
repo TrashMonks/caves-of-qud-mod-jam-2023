@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <objects>
     <object Name="cpnk_smoke_SultanOfSmoke" Inherits="NPC">
-        <part Name="Description" Short="It's difficult to make out =pronouns.possessive= appearance through the smoke that surrounds =pronouns.objective=" />
-        <part Name="Render" DisplayName="{{Y-y|Tahokia, Sultan of Smoke}}" Tile="Assets_Content_Textures_Creatures_sw_stranger1.bmp" ColorString="&amp;C" DetailColor="c"/>
+        <tag Name="PronounSet" Value="xe/xem/xyr" />
+        <part Name="Description" Short="It's difficult to make out xyr appearance through the smoke that surrounds xem." />
+        <part Name="Render" DisplayName="{{Y-y|Dracala, Sultan of Smoke}}" Tile="creatures/caste_flipped_16.bmp" ColorString="&amp;C" DetailColor="c"/>
         <stat Name="Level" Value="8" />
         <stat Name="AV" Value="2" />
         <stat Name="DV" Value="2" />
@@ -14,7 +15,6 @@
         <stat Name="Intelligence" sValue="15,1d4" />
         <stat Name="Willpower" sValue="15,1d4" />
         <stat Name="Ego" sValue="24,1d4" />
-        <tag Name="RandomGender" Value="elverson,males,females,collective,female,male,nonspecific,nonspecific,neuter,neuter,neuter" />
         <part Name="ConversationScript" ConversationID="cpnk_smoke_SultanOfSmoke" />
         <tag Name="Genotype" Value="Mutated Human" />
         <tag Name="NoHateFactions" Value="Mechanimists,Merchants,Pariahs,Resheph" />
@@ -27,6 +27,7 @@
         <inventoryobject Blueprint="Torch" Number="3-6" />
         <inventoryobject Blueprint="Giant Beetle Corpse" Number="0-1" />
         <inventoryobject Blueprint="SoupPhial" Number="0-1" />
+        <inventoryobject Blueprint="Ekuemekiyyen Greens" Number="1-2" />
         <mutation Name="FlamingHands" Level="4" BodyPartType="Hands" />
         <mutation Name="Kindle" Level="4" />
         <part Name="Interesting" />
