@@ -1,7 +1,7 @@
 {
   "WorkshopId": 3064769235,
   "Title": "Gourd Sentinel",
-  "Description": "Adds a new creature to Caves of Qud, the fearsome Gourd Sentinel! These pumpkin-like enemies are immobile, but pack a hefty wallop when you approach. They can be found in the Tomb of the Eaters, or less commonly, in stratas 21-25.\r\n\r\nMade for the 2023 Monster Mash modjam.",
+  "Description": "Adds two new creatures to Caves of Qud, the Lesser and Greater Gourds! These pumpkin-like enemies are immobile, but pack a hefty wallop when you approach. The Lesser Gourds can fire projectiles, but have weaker melee attacks. Greater gourds have no projectile attacks, but have powerful stunning attacks. Lesser Gourds can rarely be found in the jungle, while packs of gourds can be found commonly in the Tomb of the Eaters, uncommonly in tier 5 strata, and rarely in the Deep Jungle.\n\nMade for the 2023 Monster Mash modjam.",
   "Tags": "Creature, Halloween",
   "Visibility": "2",
   "ImagePath": "preview.png"

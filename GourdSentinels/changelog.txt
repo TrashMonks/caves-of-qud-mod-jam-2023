@@ -1,3 +1,7 @@
+v1.2.4
+Leafy green username
+Updated manifest.json to match steam description
+
 v1.2.3
 Added a new pumpkin pie sprite by Coiled Lorb
 

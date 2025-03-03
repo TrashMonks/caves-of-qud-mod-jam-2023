@@ -25,13 +25,13 @@
 
 	<population Name="TombCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<table Name="Andrea52_GourdSentinel_Pumpkin Pack" Number="1" Weight="10"/>
+			<table Name="Andrea52_GourdSentinel_Pumpkin Pack" Number="1" Weight="5"/>
 		</group>
 	</population>
 
 	<population Name="Tier5CaveCreatures" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-			<table Name="Andrea52_GourdSentinel_Pumpkin Pack" Number="1" Weight="5"/>
+			<table Name="Andrea52_GourdSentinel_Pumpkin Pack" Number="1" Weight="2"/>
 		</group>
 	</population>
 
