@@ -1,0 +1,8 @@
+{
+  "WorkshopId": 3066907283,
+  "Title": "Tealeaves",
+  "Description": "[i]A new merchant has appeared in the Stiltgrounds. They're still figuring themselves out, but in the meantime they've got a lucrative deal with the Consortium while they learn about the world, and they're serving as a chandler-in-training north of Tszappur's tent. If you're passing through, why not go say hello? They've got a modest stock of things -- including a recoiler for the Six Day Stilt, which has proven fairly elusive these days.[/i]\r\n\r\n[i]Only one per person, though. People keep throwing them down the well.[/i]\r\n\r\n[hr][/hr]\r\n\r\nIntroduces Tealeaves, a newly sentient tea from the deep jungle. They're a written NPC, with their own personality, dialogue, and water ritual skill. You can find them settled outdoors just north of there Tszappur stands; Tealeaves stocks tier 1 wares, in addition to a single non-restocking Six Day Stilt recoiler.\r\n\r\nThis mod was developed over the course of a little under a day for the [url=https://itch.io/jam/caves-of-qud-modding-jam-1]Monster Mash[/url] modding jam. If you want to see all of the dialogue, make sure you talk to Wardens Esther a bit too.\r\n\r\nThis mod is released under Creative Commons Zero, so the whole thing is in the public domain. You can find its source code on [url=https://github.com/Ilysen/Tealeaves]GitHub[/url]; everything is heavily documented for the sake of being a useful learning resource, so feel free to dig around and use sections of the code for your own things.\r\n\r\nThe sprite for Tealeaves was graciously provided by coiledlamb, who agreed to release it under CC0. Thank you!",
+  "Tags": "Stable,NPC",
+  "Visibility": "2",
+  "ImagePath": "preview.png"
+}

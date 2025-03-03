@@ -41,7 +41,7 @@
 				3. Add a single Stilt recoiler to Tealeaves's inventory, which the player can buy.
 			Tealeaves only stocks one recoiler here because it would require a custom builder to add the recoiler to their restocking inventory, and builders are defined in C#. To respect the "no scripting" limitation of the mod jam, we have them only sell a single one instead, and give a witty narrative reason in the conversation script. 
 		-->
-		<builder Name="Tier1Wares" />
+		<part Name="GenericInventoryRestocker" Table="Tier1Wares" />
 		<inventoryobject Blueprint="Clay Pot" />
 		<inventoryobject Blueprint="Six Day Stilt Recoiler" />
 
@@ -79,7 +79,7 @@
 
 	<!-- All of the following object definitions are merge loads into base game defs of the same name, to make sure they play nicely. -->
 	<object Name="Warden Esthers" Load="Merge">
-		<!-- At the time of writing, there doesn't seem to be a way to amend the value of tags when merging - only replacing them. As a result, we have to use the slightly destructive solution of replacing the whole tag, which we do by repeating the base value from the data files and simply appending Newly Sentient Beings to the end. -->
+		<!-- At the time of writing, there doesn't seem to be a way to amend the value of tags when merging - only replacing them. As a result, we have to use the slightly destructive solution of replacing the whole tag, which we do by repeating the base value from the data files and simply appending newly sentient beings to the end. -->
 		<tag Name="NoHateFactions" Value="Mechanimists,Merchants,Pariahs,Resheph,Newly Sentient Beings" />
 	</object>
 	<object Name="Lulihart" Load="Merge">

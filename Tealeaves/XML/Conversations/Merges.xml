@@ -30,7 +30,7 @@
 			<choice Target="End">Perhaps I will.</choice>
 		</node>
 		<node ID="Ava_Tealeaves_Worrying" Inherits="Ava_Tealeaves_Sponsor">
-			<text>I thought so too. I made sure that I was present during the negotiations, and the church retains full authority to make changes to the sponsorship's terms as needed. The Consortium lacks a permanent fixture within the Stiltgrounds, and so thus far they have been willing to acquiesce if it means having a representative within the bazaar.
+			<text>I thought so too. I made sure that the church retains full authority to make changes to the sponsorship's terms as needed. The Consortium lacks a permanent fixture within the Stiltgrounds, so they have been willing to acquiesce if it means having a representative within the bazaar.
 			
 			Don't worry. We intend to ensure that they retain their independence and have space to grow without the Consortium making them into a tool to be used. I hope that helps.</text>
 		</node>
