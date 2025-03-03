@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <populations>
-    <population Name="JungleZoneGlobals" Load="Merge">
+    <population Name="JungleCavePopulation" Load="Merge">
 		<group Name="Creatures" Load="Merge">
-            <object Chance="7" Number="1-3" Blueprint="cpnk_chiromorphs_Chiromorph"/>
+            <object Weight="1" Number="1" Blueprint="cpnk_chiromorphs_Chiromorph"/>
+		</group>
+	</population>
+    <population Name="DeepJungleCavePopulation" Load="Merge">
+		<group Name="Creatures" Load="Merge">
+            <object Weight="1" Number="1" Blueprint="cpnk_chiromorphs_Chiromorph"/>
 		</group>
 	</population>
 </populations>

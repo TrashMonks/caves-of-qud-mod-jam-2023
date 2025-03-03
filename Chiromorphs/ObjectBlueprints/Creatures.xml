@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <objects>
     <object Name="cpnk_chiromorphs_Chiromorph" Inherits="Bat">
+        <part Name="Body" Anatomy="Batfolk" />
+		<tag Name="Species" Value="batfolk" />		
+        <tag Name="PrimaryLimbType" Value="Hand" />
         <part Name="Description" Short="Short and scraggly. An assortment of fur and scarves shroud =pronouns.possessive= small body. =pronouns.Subjective= =verb:have:afterpronoun= ears the size of dinner plates and large wings that can wrap around =pronouns.possessive= entire body. Large black eyes peer at you curiously." />
-        <part Name="Render" DisplayName="chiromorph" Tile="cpnk_chiromorphs/chiromorph.png" ColorString="&amp;M" DetailColor="y"/>
+        <part Name="Render" DisplayName="chiromorph" Tile="cpnk_chiromorphs/chiromorph.png" ColorString="&amp;y" DetailColor="M"/>
         <stat Name="Level" Value="8" />
         <stat Name="AV" Value="2" />
         <stat Name="DV" Value="2" />
@@ -19,8 +22,10 @@
         <inventoryobject Blueprint="Bat_Bite" Number="1" />
         <inventoryobject Blueprint="cpnk_chiromorphs_Quaint Shawl" Number="1" />
         <inventoryobject Blueprint="Urberry" Number="0-1" />
-        <inventoryobject Blueprint="Dagger2" Number="1" />
-        <part Name="ConversationScript" ConversationID="cpnk_chiromorphs_Chiromorph" />
+        <inventoryobject Blueprint="Dagger2" Number="0-1" />
+        <part Name="ConversationScript" ConversationID="cpnk_chiromorphs_Chiromorph" ClearLost="true" />
+        <mutation Name="HeightenedHearing" />
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
     </object>
     <object Name="cpnk_chiromorphs_Chiromorph Corpse" Inherits="Humanoid Corpse">
         <part Name="Render" DisplayName="chiromorph corpse" />
@@ -31,7 +36,7 @@
     <object Name="cpnk_chiromorphs_Kealak" Inherits="cpnk_chiromorphs_Chiromorph">
         <part Name="Brain" Hostile="false" Wanders="false" Factions="Winged Mammals-100,cpnk_chiromorphs_MiquonocoFaction-200" />
         <part Name="Description" Short="It's fur is soft and shiny. It looks at you with a smile." />
-        <part Name="Render" DisplayName="Kealak" Tile="cpnk_chiromorphs/chiromorph.png" ColorString="&amp;R" DetailColor="y"/>
+        <part Name="Render" DisplayName="Kealak" Tile="cpnk_chiromorphs/chiromorph.png" ColorString="&amp;y" DetailColor="R"/>
         <tag Name="Gender" Value="neuter" />
         <part Name="GivesRep" />
         <property Name="Role" Value="NPC" />
@@ -41,7 +46,7 @@
         <xtagGrammar Proper="true" />
     </object>
     <object Name="cpnk_chiromorphs_Pansel" Inherits="cpnk_chiromorphs_Chiromorph">
-        <part Name="Render" DisplayName="Warden Pansel" Tile="cpnk_chiromorphs/chiromorph.png" ColorString="&amp;B" DetailColor="y"/>
+        <part Name="Render" DisplayName="Warden Pansel" Tile="cpnk_chiromorphs/chiromorph.png" ColorString="&amp;y" DetailColor="B"/>
         <tag Name="Gender" Value="nonspecific" />
         <part Name="Brain" Wanders="false" Factions="Wardens-100,Winged Mammals-100,cpnk_chiromorphs_MiquonocoFaction-200" />
         <part Name="GivesRep" />
@@ -72,7 +77,6 @@
         <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
         <part Name="ConversationScript" ConversationID="cpnk_chiromorphs_Pansel" />
         <part Name="Interesting" />
-        <part Name="Lovely" />
         <xtagGrammar Proper="true" />
     </object>
 </objects>

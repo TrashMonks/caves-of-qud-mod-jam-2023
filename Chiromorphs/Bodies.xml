@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<bodies>
+    <bodyparttypevariants>
+        <bodyparttypevariant VariantOf="Hand" Type="Wing" Mobility="1" DefaultBehavior="SoftManipulator" UsuallyOn="Body" />
+        <bodyparttypevariant VariantOf="Hands" Type="Wings" ImpliedBy="Wing" />
+        <bodyparttypevariant VariantOf="Feet" Type="Claws" Mobility="1" />
+    </bodyparttypevariants>
+    <anatomies>
+        <anatomy Name="Batfolk">
+            <part Type="Head">
+                <part Type="Face" />
+            </part>
+            <part Type="Back" />
+                <part Type="Wing" Laterality="Right" SupportsDependent="Hands" />
+                <part Type="Wing" Laterality="Left" SupportsDependent="Hands" />
+            <part Type="Missile Weapon" Laterality="Right" />
+            <part Type="Missile Weapon" Laterality="Left" />
+            <part Type="Wings" DependsOn="Wings" />
+            <part Type="Claws" />
+        </anatomy>
+    </anatomies>
+</bodies>

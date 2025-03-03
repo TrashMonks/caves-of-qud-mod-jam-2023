@@ -3,8 +3,4 @@
     <cell X="6" Y="16">
         <object Name="ectafoole_Eddys"></object>
     </cell>
-
-    <cell X="42" Y="20">
-        <object Name="cpnk_chiromorphs_TerrainMiquonoco"></object>
-    </cell>
 </Map>

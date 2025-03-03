@@ -22,9 +22,8 @@
     <conversation ID="cpnk_chiromorphs_Kealak">
         <node ID="Start" IfNotHaveQuest="The Munchies">
             <text>
-                Live and drink traveller! You smell nice.
+                Live and drink traveller! You are in my house.
             </text>
-            <choice Target="Smell">Oh, thank you.</choice>
             <choice Target="MiquonocoInfo1">Why do you live underground?</choice>
             <choice Target="Work">Do you have any work to offer?</choice>
             <choice Target="End">Live and drink.</choice>
@@ -40,12 +39,6 @@
             <text>
                 Live and drink, beetle-sib.
             </text>
-            <choice Target="End">Live and drink.</choice>
-        </node>
-        <node ID="Smell">
-            <text>{{emote|Kealak beams}}</text>
-            <choice Target="MiquonocoInfo1">Why do you live underground?</choice>
-            <choice Target="Work">Do you have any work to offer?</choice>
             <choice Target="End">Live and drink.</choice>
         </node>
         <node ID="MiquonocoInfo1">
@@ -76,7 +69,7 @@
     <conversation ID="cpnk_chiromorphs_Pansel">
         <node ID="Start">
             <text>
-                Don't do anything fractitious. I'll hear it.
+                I see all.
             </text>
             <choice Target="MiquonocoInfo1">What can you tell me about Miquonoco?</choice>
             <choice Target="Work">Do you have any work to offer?</choice>
