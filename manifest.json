@@ -1,9 +1,9 @@
 {
-  "id": "CavesOfQudModJam2023",
-  "title": "Monster Mash-Up (206.X, stable)",
-  "description": "Compilation mod pack for the {{Y|Caves of Qud Modding Jam: Monster Mash}}, ran at the end of October 2023. See all the entries at {{C|https://itch.io/jam/caves-of-qud-modding-jam-1/entries}}!\n\nWish for 'mashup' or press ctrl-shift-W (Monster Mash-Up Wish Menu) to open a menu for easy wishing for the pack's contents.\n\n{{W|Warning:}} Do not run this pack simultaneous with any of the mods contained within.",
-  "tags": "monsters, mod pack",
-  "version": "1.1",
-  "author": "Mod Jam Participants and Organizers",
-  "previewimage": "pack.png"
+  "ID": "CavesOfQudModJam2023",
+  "Title": "Monster Mash-Up",
+  "Description": "Compilation mod pack for the {{Y|Caves of Qud Modding Jam: Monster Mash}}, which ran at the end of October 2023. See all the entries at {{C|https://itch.io/jam/caves-of-qud-modding-jam-1/entries}}!\n\nUse the in-game wish menu (Debug > Wish Menu) for easy wishing for the pack's contents.\n\n{{W|Warning:}} Do not run this pack simultaneous with any of the mods contained within.",
+  "Tags": "monsters,mod pack",
+  "Version": "1.4",
+  "Author": "Mod Jam Participants and Organizers",
+  "PreviewImage": "preview.png"
 }
