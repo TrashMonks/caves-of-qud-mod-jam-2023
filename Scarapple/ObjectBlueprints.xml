@@ -52,6 +52,7 @@
   </object>
 
   <object Name="Gearlink_SCARAPPLE_RipeScarapple" Inherits="MutatedPlant">
+    <part Name="Physics" Takeable="true" />
     <stat Name="Strength" sValue="18,1d3,(t)d1" />
     <stat Name="Agility" sValue="12,1d3,(t)d1" />
     <stat Name="Toughness" sValue="18,1d3,(t)d1" />

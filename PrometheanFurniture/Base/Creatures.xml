@@ -85,9 +85,9 @@
         <property Name="Role" Value="Brute" />
         <skill Name="ShortBlades" />
         <skill Name="ShortBlades_Bloodletter" />
-        <skill Name="Dual_Wield" />
-        <skill Name="Dual_Wield_Ambidexterity" />
-        <skill Name="Dual_Wield_Two_Weapon_Fighting" />
+        <skill Name="Multiweapon_Fighting" />
+        <skill Name="Multiweapon_Expertise" />
+        <skill Name="Multiweapon_Mastery" />
         <inventoryobject Blueprint="MAFT_LivingStarmchairSpines" Number="5"/>
     </object>
     <object Name="MAFT_LivingStarmchairSpines" Inherits="NaturalWeapon" >

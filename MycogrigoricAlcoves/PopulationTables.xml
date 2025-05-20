@@ -18,7 +18,7 @@
   </population>
 
   <population Name="Kernelmethod_MM23_Fungal Infections">
-    <group Style="pickone">
+    <group Name="Infection" Style="pickone">
       <object Blueprint="WaxInfection" />
       <object Blueprint="MumblesInfection" />
       <object Blueprint="LuminousInfection" />
@@ -61,14 +61,14 @@
   </population>
 
   <population Name="Kernelmethod_MM23_Spiking Mycogrigori Corpse">
-    <group Style="pickone">
+    <group Name="Corpse" Style="pickone">
       <table Name="Kernelmethod_MM23_Mycogrigori Corpse" />
       <object Blueprint="Kernelmethod_MM23_Fungal Brainspike" />
     </group>
   </population>
 
   <population Name="Kernelmethod_MM23_Cleaving Mycogrigori Corpse">
-    <group Style="pickone">
+    <group Name="Corpse" Style="pickone">
       <table Name="Kernelmethod_MM23_Mycogrigori Corpse" />
       <object Blueprint="Kernelmethod_MM23_Fungal Whipcleave" />
     </group>
@@ -82,7 +82,7 @@
 
   <!-- Generic collections -->
   <population Name="Kernelmethod_MM23_ScienceObjects">
-    <group Style="pickone">
+    <group Name="Object" Style="pickone">
       <object Blueprint="Light Sculpture" Weight="80" />
       <object Blueprint="Globe" Weight="50" />
       <object Blueprint="Orrery" Weight="50" />
@@ -92,7 +92,7 @@
   </population>
 
   <population Name="Kernelmethod_MM23_Seats">
-    <group Style="pickone">
+    <group Name="Seat" Style="pickone">
       <object Blueprint="Floor Cushion" Weight="50" />
       <object Blueprint="Kline" Weight="50" />
       <object Blueprint="Stool" Weight="50" />
@@ -104,7 +104,7 @@
 
   <!-- Hookah spots -->
   <population Name="Kernelmethod_MM23_HookahSpotSeats">
-    <group Style="pickone">
+    <group Name="Seat" Style="pickone">
       <object Blueprint="Floor Cushion" Weight="100" />
       <object Blueprint="Kline" Weight="50" />
       <object Blueprint="Massage Chair" Weight="10" />
@@ -112,7 +112,7 @@
   </population>
 
   <population Name="Kernelmethod_MM23_HookahSpotRefreshments">
-    <group Style="pickone" Chance="40">
+    <group Name="Refreshment" Style="pickone" Chance="40">
       <object Blueprint="Preserved Food Basket" Weight="80" />
       <object Blueprint="Woven Basket" Weight="20" />
       <object Blueprint="Jug" Weight="50" />
@@ -123,7 +123,7 @@
   </population>
 
   <population Name="Kernelmethod_MM23_HookahSpotObjects">
-    <group Style="pickone">
+    <group Name="Object" Style="pickone">
       <object Blueprint="Rectangular Bells" Weight="100" />
       <object Blueprint="Harp" Weight="100" />
       <object Blueprint="Chalkboard" Weight="100" />
@@ -150,7 +150,7 @@
     **********************
   -->
   <population Name="Kernelmethod_MM23_3x3 Zone Chunks">
-    <group Style="pickone">
+    <group Name="Chunk" Style="pickone">
       <object Blueprint="Kernelmethod_MM23_Hookah Spot" Weight="50" />
       <object Blueprint="Kernelmethod_MM23_Library 3x3" Weight="50" />
       <object Blueprint="Kernelmethod_MM23_Starapple Farm 3x3" Weight="50" />
@@ -162,7 +162,7 @@
   </population>
 
   <population Name="Kernelmethod_MM23_6x5 Zone Chunks">
-    <group Style="pickone">
+    <group Name="Chunk" Style="pickone">
       <object Blueprint="Kernelmethod_MM23_Large Hookah Spot" Weight="50" />
       <object Blueprint="Kernelmethod_MM23_Library 6x5" Weight="50" />
       <object Blueprint="Kernelmethod_MM23_Starapple Farm 6x5" Weight="50" />

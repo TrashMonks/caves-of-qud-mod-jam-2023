@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Map Width="80" Hight="25">
-    <cell X="6" Y="16">
-        <object Name="ectafoole_Eddys"></object>
-    </cell>
-</Map>

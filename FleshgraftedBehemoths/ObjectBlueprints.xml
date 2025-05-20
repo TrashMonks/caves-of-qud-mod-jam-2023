@@ -5,7 +5,7 @@
     <part Name="Armor" AV="2" DV="-2" WornOn="Back" CarryBonus="10" />
     <part Name="ArmsOnEquip" BaseHands="Pincers" DefaultHandBehavior="Nephal_Claw_Chord" Category="Arthropod"/>
     <part Name="MutationOnEquip" ClassName="Analgesia"/>
-    <part Name="LeakWhenBroken" Liquid="blood" />
+    <part Name="LeakWhenBroken" />
     <tag Name="BleedLiquid" Value="blood-1000" />
     <tag Name="Species" Value="living flesh" />
     <tag Name="LiveAnimal" />

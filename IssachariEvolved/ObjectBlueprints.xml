@@ -16,7 +16,7 @@
     <part Name="Description" Short="Crimson passementerie marks the careworn youth as the bearer of a sacred charge. =pronouns.Subjective= =verb:whisper:afterpronoun= a mnemonic older than the salt beneath =pronouns.possessive= boots." />
     <stat Name="Hitpoints" Value="25" />
     <stat Name="Level" Value="10" />
-    <mutation Name="FreezingHands" Level="4" />
+    <mutation Name="FreezingRay" Level="4" />
     <part Name="RandomMutations" Mental="1d1" MentalLevel="1d3" />
     <inventoryobject Blueprint="Waterskin" Number="1" />
     <tag Name="DynamicObjectsTable:Saltdunes_Creatures" />

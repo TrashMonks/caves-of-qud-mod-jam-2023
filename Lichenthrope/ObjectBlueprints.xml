@@ -4,7 +4,6 @@
 <object Name="lichenthrope" Inherits="BaseDog">
     <part Name="Render" DisplayName="Lichenthrope" Tile="lichenthrope.png" TileColor="y" DetailColor="g" RenderString="u" ColorString="&amp;W" />
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="Grave Moss" />
-    <stat Name="Level" Value="24" />
     <stat Name="AV" Value="12" />
     <stat Name="DV" Value="8" />
     <stat Name="Hitpoints" Value="100" />
@@ -26,10 +25,10 @@
     <skill Name="ShortBlades" />
     <skill Name="ShortBlades_Expertise" />
     <skill Name="ShortBlades_Bloodletter" />
-    <skill Name="Dual_Wield" />
-    <skill Name="Dual_Wield_Ambidexterity" />
-    <skill Name="Dual_Wield_Offhand_Strikes" />
-    <skill Name="Dual_Wield_Two_Weapon_Fighting" />
+    <skill Name="Multiweapon_Fighting" />
+    <skill Name="Multiweapon_Expertise" />
+    <skill Name="Multiweapon_Proficiency" />
+    <skill Name="Multiweapon_Mastery" />
     <property Name="Role" Value="Brute" />
     <tag Name="DynamicObjectsTable:Mountains_Creatures" />
   </object>

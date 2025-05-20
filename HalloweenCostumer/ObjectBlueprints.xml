@@ -10,7 +10,7 @@
     <tag Name="Tier" Value="1" />
   </object>
   <object Name="Gnarf_Halloween Vendor" Inherits="BaseMerchant">
-    <part Name="Render" DisplayName="{{halloween|halloween}} costumer" ColorString="&amp;y" DetailColor="m" RenderString="h" Tile="Creatures/caste_flipped_18.bmp" />
+    <part Name="Render" DisplayName="{{halloween|halloween}} costumer" ColorString="&amp;y" DetailColor="m" RenderString="h" Tile="Creatures/caste_18.bmp" />
     <part Name="ConversationScript" ConversationID="haberdasher" />
     <tag Name="GenericInventoryRestockerPopulationTable" Value="Gnarf_Halloween Costumes Inventory" />
     <tag Name="HeroGenericInventoryRestockerPopulationTable" Value="Gnarf_Halloween Costumes Inventory_Legendary" />

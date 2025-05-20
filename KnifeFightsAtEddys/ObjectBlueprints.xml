@@ -47,7 +47,7 @@
     <tag Name="PrimaryLimbType" Value="Face" />
     <part Name="Brain" Hostile="true" Wanders="false" Factions="Beasts-100" />
     <inventoryobject Blueprint="ectafoole_Fanblade" Number="1" />
-    <inventoryobject Blueprint="nuclear cell" Number="1-3" />
+    <inventoryobject Blueprint="Nuclear Cell" Number="1-3" />
     <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
     <skill Name="Axe" />
     <skill Name="Axe_Dismember" />
@@ -103,7 +103,17 @@
     <tag Name="Terrain" Value="Saltdunes" />
   </object>
   
-  
+  <!-- Recovered from Qud build 204.90 -->
+  <object Name="Metal Desk" Inherits="Chest">
+    <part Name="Render" DisplayName="metal desk" ColorString="&amp;c" />
+    <part Name="Description" Short="A sleekly designed metal desk that looks worn with age." />
+    <part Name="Inventory" Builder="InventoryChestJunk3" />
+    <part Name="Metal" />
+    <tag Name="Tier" Value="3" />
+    <tag Name="NoSparkingQuest" />
+    <intproperty Name="Inorganic" Value="1" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+  </object>
   
   
   

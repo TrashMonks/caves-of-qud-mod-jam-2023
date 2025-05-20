@@ -18,7 +18,7 @@
     <tag Name="Species" Value="hover robot" />
 	<tag Name="SeveredHeadBlueprint" Value="RobotHead6" />
 	<part Name="Slumberling" />
-	<mutation Name="FlamingHands" Level="8" BodyPartType="Chassis" CreateObject="false" />
+	<mutation Name="FlamingRay" Level="8" BodyPartType="Chassis" CreateObject="false" />
     <tag Name="DynamicObjectsTable:Saltdunes_Creatures" />
     <tag Name="DynamicObjectsTable:Saltdunes_Creatures:Weight" Value="0.2" />
     <property Name="Role" Value="Artillery" />

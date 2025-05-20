@@ -9,7 +9,7 @@
         <builder Class="AddWidgetBuilder" Blueprint="AmbientLight" />
         <intproperty Name="AmbushChance" Value="10" />
         <population Table="Kernelmethod_MM23_WaygateZonePopulation" />
-        <music Track="MehmetsMorning" />
+        <music Track="Music/Mehmets Morning" />
       </zone>
     </cell>
   </world>

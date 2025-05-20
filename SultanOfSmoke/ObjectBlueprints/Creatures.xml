@@ -3,7 +3,7 @@
     <object Name="cpnk_smoke_SultanOfSmoke" Inherits="NPC">
         <tag Name="PronounSet" Value="xe/xem/xyr" />
         <part Name="Description" Short="It's difficult to make out xyr appearance through the smoke that surrounds xem." />
-        <part Name="Render" DisplayName="{{Y-y|Dracala, Sultan of Smoke}}" Tile="creatures/caste_flipped_16.bmp" ColorString="&amp;C" DetailColor="c"/>
+        <part Name="Render" DisplayName="{{Y-y|Dracala, Sultan of Smoke}}" Tile="creatures/caste_16.bmp" ColorString="&amp;C" DetailColor="c"/>
         <stat Name="Level" Value="8" />
         <stat Name="AV" Value="2" />
         <stat Name="DV" Value="2" />
@@ -28,7 +28,7 @@
         <inventoryobject Blueprint="Giant Beetle Corpse" Number="0-1" />
         <inventoryobject Blueprint="SoupPhial" Number="0-1" />
         <inventoryobject Blueprint="Ekuemekiyyen Greens" Number="1-2" />
-        <mutation Name="FlamingHands" Level="4" BodyPartType="Hands" />
+        <mutation Name="FlamingRay" Level="4" BodyPartType="Hands" />
         <mutation Name="Kindle" Level="4" />
         <part Name="Interesting" />
         <xtagGrammar Proper="true" />

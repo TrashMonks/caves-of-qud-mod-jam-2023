@@ -4,6 +4,7 @@
     <bodyparttypevariant VariantOf="Hand" Type="Pincer" DefaultBehavior="HardManipulator" Category="Arthropod" />
     <bodyparttypevariant VariantOf="Hand" Type="Sucker" DefaultBehavior="SoftManipulator" Mobility="1" UsuallyOn="Body" />
     <bodyparttypevariant VariantOf="Hands" Type="Suckers" ImpliedBy="Sucker" />
+    <bodyparttypevariant VariantOf="Back" Type="Mantle" />
   </bodyparttypevariants>
 
   <anatomies>

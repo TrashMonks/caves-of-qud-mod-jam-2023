@@ -61,7 +61,7 @@
 	</object>
 	<object Name="Unze_Mechannibal_Mechannibal_Secondary5" Inherits="NaturalMissileWeapon">
 		<part Name="Render" DisplayName="{{rocket|flamethrower}} {{c|armcannon}}" />
-		<part Name="MissileWeapon" Skill="Rifle" bShowShotsPerAction="false" NoWildfire="true" MaxRange="12" AnimationDelay="20" AmmoChar="f" ShotsPerAction="3" AmmoPerAction="3" ShotsPerAnimation="1" WeaponAccuracy="10" />
+		<part Name="MissileWeapon" Skill="Rifle" ShowShotsPerAction="false" NoWildfire="true" MaxRange="12" AnimationDelay="20" AmmoChar="f" ShotsPerAction="3" AmmoPerAction="3" ShotsPerAnimation="1" WeaponAccuracy="10" />
 		<part Name="BioAmmoLoader" MaxCapacity="6" Available="6" TurnsToGenerate="2" ProjectileObject="Unze_Mechannibal_Fireball" />
 		<tag Name="MissileFireSound" Value="flamethrower" />
 		<part Name="Metal" />

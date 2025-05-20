@@ -97,7 +97,7 @@
     <skill Name="Persuasion_Intimidate" />
     <skill Name="Persuasion_SnakeOiler" />
     <mutation Name="ForceBubble" Level="4" />
-    <builder Name="Tier7Wares" />
+    <part Name="GenericInventoryRestocker" Table="Tier7Wares" />
     <tag Name="Merchant" />
     <tag Name="InventoryPopulationTable" Value="Kernelmethod_MM23_BaseFungusInventory" />
     <tag Name="ExcludeFromDynamicEncounters" />

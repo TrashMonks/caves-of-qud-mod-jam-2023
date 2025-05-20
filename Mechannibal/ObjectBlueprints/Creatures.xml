@@ -19,7 +19,7 @@
 		<tag Name="DynamicObjectsTable:Hills_Creatures" />
 		<tag Name="DynamicObjectsTable:Mountains_Creatures" />
 		<tag Name="InventoryPopulationTable" Value="Unze_Mechannibal_Mechannibal_Equipment" />
-		<part Name="BodyPartInventory" ByInherit="BaseRobot:0-2" />
+		<part Name="BodyPartInventory" ByInherit="BaseRobot::0-2" />
 		
 	</object>
 </objects>

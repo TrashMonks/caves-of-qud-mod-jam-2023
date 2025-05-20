@@ -7,7 +7,7 @@
     <inventoryobject Blueprint="Battle Axe5th" Number="1" />
 
     <skill Name="Axe" />
-    <skill Name="Axe_ChargingStrike" />
+    <skill Name="Cudgel_ChargingStrike" />
     <skill Name="Tactics_Charge" />
     <skill Name="Axe_HookAndDrag" />
 

@@ -3,7 +3,7 @@
     <object Name="Base Glow Wight Behemoth" Inherits="BaseHumanoid">
 		<part Name="Render" DisplayName="gyre wight behemoth" Tile="sw_glow_wight_behemoth.png" RenderString="Z" ColorString="&amp;m" TileColor="&amp;G" DetailColor="m" />
 		<part Name="Description" Short="=pronouns.Subjective= wanders through the foggy dreamspace between two worlds, moving steadily through the half-remembered fragments of lost times towards the opalescent light of a star slouching on the horizon. =pronouns.Possessive= linksib sends signals by way of nerve-links to alert =pronouns.objective= of nearby threats, and =pronouns.possessive= needlepoint pincers and writhing fists lash out violently in response." />
-		<part Name="Brain" Factions="Glow Wights-100,Girsh-50" />
+		<part Name="Brain" Factions="Gyre Wights-100,Girsh-50" />
         <part Name="Corpse" CorpseChance="50" CorpseBlueprint="Base Glow Wight Behemoth Corpse" />
         <part Name="Interior" Cell="Glow Wight Behemoth" FallDistance="1" /> 
         <part Name="VehiclePilotPopulation" Blueprint="Glow Wight Linksib"/>
@@ -139,7 +139,7 @@
         <part Name="Brain" Feelings="Player:-650"/>
         <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"/>
     </object>
-    <object Name="Glow Wight Linksib" Inherits="Glow Wight">
+    <object Name="Glow Wight Linksib" Inherits="BaseGyreWight">
         <part Name="Render" DisplayName="gyre wight linksib" RenderString="z" ColorString="&amp;m" DetailColor="c" Tile="sw_glow_wight_siegedriver.png" />
         <part Name="AIVehiclePilot" Type="Base Glow Wight Behemoth" SearchRadius="15" OnCombatStart="true" />
         <part Name="Description" Short="Sworn on oaths of blood between two wights, the concepts of transmutation and kinship are entwined. Now they go as one, ferrying kin and swearing no other allegiances." />

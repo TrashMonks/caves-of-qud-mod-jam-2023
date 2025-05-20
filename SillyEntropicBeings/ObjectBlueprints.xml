@@ -3,7 +3,7 @@
 <objects>
   <object Name="PKSXB_BaseEye" Inherits="BaseOoze">
     <part Tile="PKSXB&#x2F;eye.png" Name="Render" DetailColor="B" ColorString="&amp;Y" DisplayName="[Eye]" RenderString="233" />
-    <part Factions="highly entropic beings-100" Name="Brain" />
+    <part Factions="Entropic-100" Name="Brain" />
     <tag Value="*noinherit" Name="BaseObject" />
   </object>
   <object Name="PKSXB_FloatingI" Inherits="PKSXB_BaseEye">
@@ -24,7 +24,7 @@
   <object Name="PKSXB_TimepinchFinch" Inherits="BaseBird">
     <part Tile="Creatures&#x2F;sw_chavvah_bird.bmp" Name="Render" DetailColor="Y" ColorString="&amp;m" DisplayName="{{dreamy|timepinch}} finch" />
     <part Short="Its leyline-straight beak preens its iridescent feathers across surreal axes. The air around it puckers with stolen time, and savored moments shine in the darkness of its mirror eyes." Name="Description" />
-    <part Factions="highly entropic beings-100,birds-80" Name="Brain" />
+    <part Factions="Entropic-100,birds-80" Name="Brain" />
     <mutation Level="25" Name="TimeDilation" />
     <stat sValue="22" Name="Level" />
     <stat sValue="25" Name="Willpower" />
@@ -48,7 +48,7 @@ You feel peculiarly out of the timestream." />
   <object Name="PKSXB_SkellyJelly" Inherits="BaseOoze">
     <part DisplayName="amniotic anachronite" Name="Render" />
     <part Short="Barely a grain of its 6D bulk intersects this soap-bubble slice of the universe. When struck, ripples tesser up its hyper-membrane, and its cytoplasm flows ana and kata to fill the void." Name="Description" />
-    <part Factions="highly entropic beings-100,Oozes-80" Hostile="true" Name="Brain" />
+    <part Factions="Entropic-100,Oozes-80" Hostile="true" Name="Brain" />
     <part Name="HologramMaterial" />
     <part CorpseChance="100" Name="Corpse" CorpseBlueprint="PKSXB_SkellyJellySpawnerWidget" />
     <inventoryobject Blueprint="PKSXB_SkellyJelly_Whacker" Number="4" />
@@ -79,7 +79,7 @@ You feel peculiarly out of the timestream." />
   <object Name="PKSXB_DustbringerBase" Inherits="BaseStar">
     <part Tile="Creatures&#x2F;sw_monad.bmp" Name="Render" DetailColor="R" ColorString="&amp;Y" DisplayName="{{sunslag|dust}}bringer [base]" />
     <part DetailColorAnimationFrames="0=R,100=r,200=O,250=W,300=o" Name="AnimatedMaterialGeneric" HighFrameOffset="300" AnimationLength="360" LowFrameOffset="1" />
-    <part Factions="highly entropic beings-100" Name="Brain" />
+    <part Factions="Entropic-100" Name="Brain" />
     <part Radius="8" Name="LightSource" Lit="true" />
     <inventoryobject Blueprint="PKSXB_Dustbringer_Whacker" Number="1" />
     <stat sValue="100" Name="HeatResistance" />
@@ -108,7 +108,7 @@ You feel peculiarly out of the timestream." />
     <part Tile="Terrain&#x2F;sw_crack.bmp" Name="Render" DetailColor="R" ColorString="&amp;Y" DisplayName="[base spark]" />
     <part Short="Fractalline energy like the core of a star skitters across the baked earth." Name="Description" />
     <part DetailColorAnimationFrames="0=R,100=r,200=O,250=W,300=o" Name="AnimatedMaterialGeneric" HighFrameOffset="300" AnimationLength="360" LowFrameOffset="1" />
-    <part Factions="Newly Sentient Beings-100,highly entropic beings-80" Name="Brain" />
+    <part Factions="Newly Sentient Beings-100,Entropic-80" Name="Brain" />
     <part BurntCorpseBlueprint="PolypCache" CorpseChance="10" Name="Corpse" CorpseBlueprint="PKSXB_CantorDust" VaporizedCorpseChance="100" VaporizedCorpseBlueprint="PolypCache" BurntCorpseChance="30" />
     <intproperty Value="0" Name="Bleeds" />
     <tag Value="*noinherit" Name="BaseObject" />

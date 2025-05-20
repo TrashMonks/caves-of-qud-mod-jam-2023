@@ -100,7 +100,7 @@
   <object Name="UristIntegratedPD" Inherits="Point-Defense Drone">
     <part Name="NoBreak" />
     <part Name="Render" DisplayName="Integrated Point Defense" Visible="false" />
-    <part Name="Physics" IsReal="false" Solid="false" Takeable="false" Organic="false" Weight="0" Category="Natural Missile Weapon" FreezeTemperature="-99999" BrittleTemperature="-99999" FlameTemperature="99999" VaporTemperature="99999" />
+    <part Name="Physics" IsReal="false" Solid="false" Takeable="true" Organic="false" Weight="0" Category="Natural Missile Weapon" FreezeTemperature="-99999" BrittleTemperature="-99999" FlameTemperature="99999" VaporTemperature="99999" />
     <part Name="NaturalEquipment" />
     <intproperty Name="Natural" Value="1" />
     <tag Name="ExcludeFromDynamicEncounters" />

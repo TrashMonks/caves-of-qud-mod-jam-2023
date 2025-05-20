@@ -113,7 +113,6 @@
         <part Name="Render" DisplayName="bonehewn rest" ColorString="&amp;K" DetailColor="y" RenderString="227" Tile="Furniture/sw_bonehewn_rest_empty.png" Occluding="false" RenderIfDark="true" />
         <part Name="Physics" Weight="1" Organic="true" Owner="Glow-Wights" />
         <part Name="Description" Short="Osseous matter was shaved to glasslike smoothness. The bone fragments inside are frequently lit on fire to give prophetic visions of the future." />
-        <part Name="Organic" />
         <tag Name="EmptyTile" Value="Furniture/sw_bonehewn_rest_empty.png" />
         <tag Name="FullTile" Value="Furniture/sw_bonehewn_rest_full.png" />
         <tag Name="EmptyDetailColor" Value="y" />
@@ -166,7 +165,6 @@
         <tag Name="NoSparkingQuest" />
         <tag Name="OverlayColor" Value="&amp;r" />
         <tag Name="HangingSupport" />
-        <tag Name="NoSparkingQuest" Value="*noinherit"/>
         <inventoryobject Blueprint="@Random Behemoth Meats" Number="1d4-1" />
         <intproperty Name="InteriorRequired" Value="1" />
       </object>

@@ -13,13 +13,13 @@
     <part Name="SpawnWithLiquid" />
     <part Name="ConversationScript" ConversationID="Jellyface" />
     <stat Name="Speed" Value="100" />
-    <mutation Name="Stinger" Constructor="Paralyze" Level="15" />
+    <mutation Name="Stinger" Variant="Stinger Paralysis" Level="15" />
     <mutation Name="Telepathy" Level="10" />
     <mutation Name="SunderMind" Level="10" />
     <skill Name="Endurance_Swimming" />
-    <skill Name="Dual_Wield" />
-    <skill Name="Dual_Wield_Ambidexterity" />
-    <skill Name="Dual_Wield_Two_Weapon_Fighting" /> 
+    <skill Name="Multiweapon_Fighting" />
+    <skill Name="Multiweapon_Expertise" />
+    <skill Name="Multiweapon_Mastery" /> 
     <stat Name="AV" Value="0" />
     <stat Name="Level" Value="40" />
     <stat Name="Hitpoints" Value="400" />

@@ -23,7 +23,7 @@ Mixins designed for use by other objects.
     <part Name="NaturalEquipment" />
     <part Name="NoBreak" />
     <part Name="NoDamage" />
-    <part Name="Physics" IsReal="false" Solid="false" Takeable="false" Weight="0" Category="Natural Weapon" FreezeTemperature="-99999" BrittleTemperature="-99999" FlameTemperature="99999" VaporTemperature="99999" />
+    <part Name="Physics" IsReal="false" Solid="false" Takeable="true" Weight="0" Category="Natural Weapon" FreezeTemperature="-99999" BrittleTemperature="-99999" FlameTemperature="99999" VaporTemperature="99999" />
     <removepart Name="Examiner" />
     <intproperty Name="Natural" Value="1" />
     <tag Name="NaturalGear" />

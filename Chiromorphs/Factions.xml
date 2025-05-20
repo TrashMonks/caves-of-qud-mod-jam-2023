@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <factions>
-	<faction Name="cpnk_chiromorphs_MiquonocoFaction" DisplayName="roost of Miquonoco" Old="false" FormatWithArticle="true" Plural="false" InitialPlayerReputation="0" PositiveSound="Sounds/Reputation/sfx_reputation_village_positive" NegativeSound="Sounds/Reputation/sfx_reputation_village_negative">
+	<faction Name="cpnk_chiromorphs_MiquonocoFaction" DisplayName="roost of Miquonoco" Old="false" FormatWithArticle="true" Plural="false" InitialPlayerReputation="0" PositiveSound="Sounds/Reputation/sfx_reputation_village_positive" NegativeSound="Sounds/Reputation/sfx_reputation_village_negative" EmblemTile="terrain/tile_location7.bmp" EmblemTileColor="y" EmblemDetailColor="M">
 		<feeling About="Insects" Value="-100" />
 		<feeling About="*" Value="0" />
 		<interests>
