@@ -1,4 +1,4 @@
-<wishcommands>
+<monstermashwishcommands>
   <wish DisplayName="Toggle Godmode" Commands="idkfa" Icon="Mutations/light_manipulation.bmp" ColorPair="wW"/>
   <wish DisplayName="Calm creatures" Commands="calm" Icon="Mutations/narcolepsy.bmp" ColorPair="wW"/>
   <wish DisplayName="Swap bodies" Commands="swap" Icon="Mutations/domination.bmp" ColorPair="wW"/>
@@ -39,4 +39,4 @@
   <wish Commands="UristJudicator" Author="Xurist" ModName="Judicators of Qud"/>
   <wish Commands="Sal_SteelSentinel" Author="Salvadaddy" ModName="Steel Sentinel"/>
   <wish DisplayName="Spawn mud squids" Commands="Kabikaj_MuckSquid_Muck Squid,KabiKaj_MuckSquid_Squid Gunner,KabiKaj_MuckSquid_Squid Weirder" Author="KabiKaj" ModName="Mud Squids"/>
-</wishcommands>
+</monstermashwishcommands>

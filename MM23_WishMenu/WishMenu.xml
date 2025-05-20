@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wishcommands>
+  <wish DisplayName="Open the Monster Mash-Up wish menu" ModName="Monster Mash-Up" Author="Mod Jam Participants and Organizers" Commands="monstermashwishmenu" Icon="Creatures/sw_golem_mound.png" ColorPair="yw" />
+</wishcommands>
