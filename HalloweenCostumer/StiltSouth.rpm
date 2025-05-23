@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map ID="StiltSouth.rpm" Width="80" Height="25" Load="Merge">
+    <cell X="31" Y="10">
+        <object Name="Gnarf_Halloween Vendor"></object>
+        <object Name="NoStiltSpawn"></object>
+    </cell>
+</Map>

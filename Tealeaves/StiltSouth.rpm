@@ -141,13 +141,4 @@
     <cell X="19" Y="20">
         <object Name="Chest" Owner="Newly Sentient Beings"></object>
     </cell>
-
-    <cell X="31" Y="10">
-        <object Name="Gnarf_Halloween Vendor"></object>
-        <object Name="NoStiltSpawn"></object>
-    </cell>
-
-    <cell X="44" Y="22">
-        <object Name="cpnk_smoke_SultanOfSmoke"></object>
-    </cell>
 </Map>
