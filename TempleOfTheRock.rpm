@@ -1,4 +1,4 @@
-<Map Load="Merge">
+<Map ID="TempleOfTheRock.rpm" Load="Merge">
     <cell X="11" Y="22" Load="Replace">
         <object
         Name="IlluminatiSwag_Jam_GhostCaller">

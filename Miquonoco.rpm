@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Map Width="80" Height="25">
+<Map ID="Miquonoco.rpm" Width="80" Height="25">
   <cell X="0" Y="0">
     <object Name="Basalt"></object>
     <object Name="Rocky"></object>

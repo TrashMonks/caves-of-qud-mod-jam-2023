@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Map Width="80" Height="25">
+<Map ID="ectafoole_eddys.rpm" Width="80" Height="25">
   <cell X="0" Y="0"></cell>
   <cell X="1" Y="0"></cell>
   <cell X="2" Y="0"></cell>
